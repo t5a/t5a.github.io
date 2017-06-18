@@ -1,4 +1,15 @@
 {
+    "title": "$:/plugins/ajh/copy",
+    "author": "Andrew",
+    "core-version": ">=5.1.11",
+    "dependents": "$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/images $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet",
+    "description": "Copy Button",
+    "list": "readme",
+    "plugin-type": "plugin",
+    "source": "https://github.com/infurnoape/tw5-plugins",
+    "version": "0.0.22",
+    "type": "application/json",
+    "text": "{
     "tiddlers": {
         "$:/language/Buttons/Copy/Caption": {
             "text": "copy",
@@ -42,4 +53,4 @@
             "title": "$:/copy"
         }
     }
-}
+}"}
