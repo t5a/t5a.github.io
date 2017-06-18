@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="application-name" content="TiddlyWiki Plugin Library" />
+<meta name="application-version" content="v5.1.14" />
+<meta name="copyright" content="Copyright 2017 Andrew Harrison" />
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<title>TiddlyWiki Library for Plugins by Andrew Harrison</title>
+<script>
+var assetList = [
+    {
+        "title": "$:/plugins/ajh/copy",
+        "description": "Copy Button",
+        "author": "Andrew",
+        "version": "0.0.22",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/favorites",
+        "description": "Favorites",
+        "author": "Andrew",
+        "version": "3.0.3",
+        "core-version": ">=5.1.14",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/locations",
+        "description": "Locations Button",
+        "author": "Andrew",
+        "version": "0.0.2",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/openall",
+        "description": "Open All Button",
+        "author": "Andrew",
+        "version": "0.0.1",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/randombackground",
+        "description": "Random Background",
+        "author": "Andrew",
+        "version": "0.1.1",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/reduce",
+        "description": "Reduce Button",
+        "author": "Andrew",
+        "version": "0.0.1",
+        "core-version": ">=5.1.12",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/showfields",
+        "description": "Show Fields",
+        "author": "Andrew",
+        "version": "0.0.1",
+        "core-version": ">=5.1.14",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/tiddlycopy",
+        "description": "Tiddly Link Copy Button",
+        "author": "Andrew",
+        "version": "0.0.30",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/tiddlytime",
+        "description": "Tiddlytime Button",
+        "author": "Andrew",
+        "version": "0.0.8",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/tiddlyviewer",
+        "description": "Tiddly Viewer",
+        "author": "Andrew",
+        "version": "0.0.14",
+        "core-version": ">=5.1.11",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    },
+    {
+        "title": "$:/plugins/ajh/toplefttoolbar",
+        "description": "Top Left Toolbar",
+        "author": "Andrew",
+        "version": "0.0.10",
+        "core-version": ">=5.1.14",
+        "source": "https://github.com/infurnoape/tw5-plugins",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json"
+    }
+];
+
+/*\
+title: $:/plugins/tiddlywiki/pluginlibrary/libraryserver.js
+type: application/javascript
+module-type: library
+
+A simple HTTP-over-window.postMessage implementation of a standard TiddlyWeb-compatible server. It uses real HTTP to load the individual tiddler JSON files.
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+// Listen for window messages
+window.addEventListener("message",function listener(event){
+	console.log("plugin library: Received message from",event.origin);
+	console.log("plugin library: Message content",event.data);
+	switch(event.data.verb) {
+		case "GET":
+			if(event.data.url === "recipes/library/tiddlers.json") {
+				// Route for recipes/library/tiddlers.json
+				event.source.postMessage({
+					verb: "GET-RESPONSE",
+					status: "200",
+					cookies: event.data.cookies,
+					url: event.data.url,
+					type: "application/json",
+					body: JSON.stringify(assetList,null,4)
+				},"*");
+			} else if(event.data.url.indexOf("recipes/library/tiddlers/") === 0) {
+				var url = "recipes/library/tiddlers/" + encodeURIComponent(removePrefix(event.data.url,"recipes/library/tiddlers/"));
+				// Route for recipes/library/tiddlers/<uri-encoded-tiddler-title>.json
+				httpGet(url,function(err,responseText) {
+					if(err) {
+						event.source.postMessage({
+							verb: "GET-RESPONSE",
+							status: "404",
+							cookies: event.data.cookies,
+							url: event.data.url,
+							type: "text/plain",
+							body: "Not found"
+						},"*");
+					} else {
+						event.source.postMessage({
+							verb: "GET-RESPONSE",
+							status: "200",
+							cookies: event.data.cookies,
+							url: event.data.url,
+							type: "application/json",
+							body: responseText
+						},"*");
+					}
+				});
+			} else {
+				event.source.postMessage({
+					verb: "GET-RESPONSE",
+					status: "404",
+					cookies: event.data.cookies,
+					url: event.data.url,
+					type: "text/plain",
+					body: "Not found"
+				},"*");
+			}
+			break;
+	}
+},false);
+
+// Helper to remove string prefixes
+function removePrefix(string,prefix) {
+	if(string.indexOf(prefix) === 0) {
+		return string.substr(prefix.length);
+	} else {
+		return string;
+	}
+}
+
+// Helper for HTTP GET
+function httpGet(url,callback) {
+	var http = new XMLHttpRequest();
+	http.open("GET",url,true);
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+			callback(null,http.responseText);
+		}
+	};
+	http.send();
+}
+
+})();
+
+</script>
+</head>
+<body><h1>Hello Visitor</h1><p>This is the library for <a href="https://github.com/Infurnoape/tw5-plugins" target="_blank">plugins/ajh</a>. It is not intended to be opened directly in the browser.</p><p>See <a href="http://t5a.tiddlyspot.com/#Library" target="_blank">t5a.tiddlyspot.com/Library</a> for details of how to install plugins.</p></body>
+</html>
