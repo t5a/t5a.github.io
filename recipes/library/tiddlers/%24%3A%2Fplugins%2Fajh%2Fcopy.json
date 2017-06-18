@@ -39,7 +39,7 @@
             \"title\": \"$:/plugins/ajh/copy/readme\"
         },
         \"$:/plugins/ajh/copy/stylesheet\": {
-            \"text\": \"html .tc-copy-button button svg {\\\\\n    height: 1.4em;\\\\\n    width: 1.4em;\\\\\n}\\\\\n\\\\\n.tc-copy-button {\\\\n    fill                : #ccc;\\\\n}\\\\n\\\\n.tc-copy-button:hover {\\\\n    fill                : #888 !important;\\\\n}\",
+            \"text\": \"html .tc-copy-button button svg {\\\\n    height: 1.4em;\\\\n    width: 1.4em;\\\\n}\\\\n\\\\n.tc-copy-button {\\\\n    fill                : #ccc;\\\\n}\\\\n\\\\n.tc-copy-button:hover {\\\\n    fill                : #888 !important;\\\\n}\",
             \"title\": \"$:/plugins/ajh/copy/stylesheet\",
             \"tags\": \"$:/tags/Stylesheet\"
         },
