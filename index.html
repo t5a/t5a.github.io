@@ -11,15 +11,16 @@
 var assetList = [
     {
         "title": "$:/plugins/ajh/copy",
-        "description": "Copy Button",
-        "author": "Andrew",
-        "version": "0.0.22",
-        "core-version": ">=5.1.11",
-        "source": "https://github.com/infurnoape/tw5-plugins",
-        "plugin-type": "plugin",
-	"list": "readme",
-        "dependents": "$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/images $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet",
         "type": "application/json"
+	"author": "Andrew",
+	"core-version": ">=5.1.11",
+	"dependents": "$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/images $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet",
+	"description": "Copy Button",
+        "list": "readme",
+	"plugin-type": "plugin",
+	"readme": "This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nSimply drag $:/plugins/ajh/copy to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification",
+	"source": "https://github.com/infurnoape/tw5-plugins",
+        "version": "0.0.22"
     },
     {
         "title": "$:/plugins/ajh/favorites",
