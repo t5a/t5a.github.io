@@ -1,6 +1,5 @@
 {
     "title": "$:/plugins/ajh/favorites",
-    
     "type": "application/json",
     "author": "Andrew",
     "core-version": ">=5.1.14",
