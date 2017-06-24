@@ -45,7 +45,7 @@ var assetList = [
         "plugin-type": "plugin",
         "dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin adds the <span class='tc-btn-dropdown'>{{$:/plugins/ajh/locations/image}}</span>locations button to the Page Toolbar. The button will navigate to the Locations tiddler.\n\nSimply drag $:/plugins/ajh/locations to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/openall",
@@ -58,7 +58,7 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin adds the {{$:/plugins/ajh/openall/template}} button to the tag manager drop down menu using the{{$:/tags/TagDropdown||$:/core/ui/TagTemplate}}system tag. The open all button opens all non system tiddlers tagged with that drop down tag.\n\nSimply drag $:/plugins/ajh/openall to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/randombackground",
@@ -71,7 +71,7 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin replaces the page background image with a random one upon each refresh. Name the background tiddlers ~$:/plugins/ajh/randombackground/background# where # is a whole number between 0 and what is in ~$:/info/max-random. For example: ~$:/plugins/ajh/randombackground/background0, ~$:/plugins/ajh/randombackground/background1, ~$:/plugins/ajh/randombackground/background2, etc.\n\nAdd the ''attachment'' field with value of ''fixed'' or ''scroll'' and/or the ''size'' field with value of ''auto'', ''cover'', or ''contain'' for each background individually and it will supersede the global setting for that background.\n\nSimply drag [[$:/plugins/ajh/randombackground]] to the top of your tiddlywiki display, save and reload. Then add as many backgrounds as you would like.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Stylesheet\n* Default background"
     },
     {
         "title": "$:/plugins/ajh/reduce",
@@ -84,7 +84,7 @@ var assetList = [
         "plugin-type": "plugin",
         "dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin adds the <span class=\"tc-btn-dropdown\">{{$:/plugins/ajh/reduce/image}}</span>reduce button to the Editor Toolbar. The button will reduce text in the text field into a blob with duplicate words and spaces removed. When used with an external image or page like with ''_canonical_uri'' field, the text from the external page can be made to seem fully searchable within the wiki while conserving file size.\n\nSimply drag $:/plugins/ajh/reduce to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Keyboard shortcut\n* Icon\n* Template\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/showfields",
@@ -97,7 +97,7 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin adds to the settings tab in the control panel. It provides a field selector to add or remove fields to be viewed if any tiddler has them. Drag and drop selected to change the ordering.\n\nAlso, optionally add to a tiddler the field named ''show-field'' and in its contents add field names with or without a minus in front to show or hide them in that tiddler only.\n\nSimply drag $:/plugins/ajh/showfields to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Control settings\n* Template\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/tiddlycopy",
@@ -110,7 +110,7 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugins adds the <span class='tc-btn-dropdown'>{{$:/plugins/ajh/copy/images}}</span> copy button to the ''View Toolbar'' tab in the control panel. The copy button copies to the clipboard the title as a link if the path is defined in a ''tiddly'' field. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame and the copy button displays beside the title or gets listed on the more actions menu if it isn't selected on the View Toolbar.\n\n<mark>@@color:red; ''WARNING'' @@</mark>: Use of Tiddly Viewer to display untrusted web sites could be a security risk.\n\nThis plugin requires the [[Tiddly Viewer|http://tiddlyviewer.tiddlyspot.com]] and [[Copy|http://copy.tiddlyspot.com]] plugins.\n\nSimply drag $:/plugins/ajh/tiddlycopy to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Templates\n* Stylesheet"
     },
     {
         "title": "$:/plugins/ajh/tiddlytime",
@@ -123,33 +123,33 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin button displays time with seconds and several time spans when clicked. The tool tip displays todays date minus 78 days. Clicking the time reveals time, time + 15 minutes, time + 30 minutes, and time + 45 minutes.\n\nSimply drag $:/plugins/ajh/tiddlytime to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* JavaScript code modules\n* Button\n* Template\n* Stylesheet\n* Timestamp\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/tiddlyviewer",
         "description": "Tiddly Viewer",
         "author": "Andrew",
-        "version": "0.0.14",
         "core-version": ">=5.1.11",
-        "source": "https://github.com/infurnoape/tw5-plugins",
+        "list": "readme",
+	"version": "0.0.14",
+	"source": "https://github.com/infurnoape/tw5-plugins",
         "plugin-type": "plugin",
-	"list": "readme",
         "dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin displays external pages fully formatted instead of as just plain text. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame.\n\n<mark>@@color:red; ''WARNING'' @@</mark>: Use of Tiddly Viewer to display untrusted web sites could be a security risk.\n\nSimply drag $:/plugins/ajh/tiddlyviewer to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Template\n* Stylesheet"
     },
     {
         "title": "$:/plugins/ajh/toplefttoolbar",
         "description": "Top Left Toolbar",
         "author": "Andrew",
-        "version": "0.0.10",
         "core-version": ">=5.1.14",
-        "source": "https://github.com/infurnoape/tw5-plugins",
+        "list": "readme",
+	"version": "0.0.10",
+	"source": "https://github.com/infurnoape/tw5-plugins",
         "plugin-type": "plugin",
-	"list": "readme",
         "dependents": "",
         "type": "application/json",
-	"readme": ""
+	"readme": "This plugin adds the Top Left Toolbar to the Toolbars tab in the control panel. Drag and drop selected to change the ordering. It provides a list of buttons that have the $:/tags/PageControls tag and can be selected to appear in the Top left toolbar.<br>\n\nSimply drag $:/plugins/ajh/toplefttoolbar to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Stylesheet\n* Template\n* Toolbar"
     }
 ];
 
