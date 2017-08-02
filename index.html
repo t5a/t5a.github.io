@@ -19,7 +19,7 @@ var assetList = [
         "plugin-type": "plugin",
         "dependents": "",
         "type": "application/json",
-	"readme": "This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nSimply drag $:/plugins/ajh/copy to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification"
+	"readme": "This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification"
     },
     {
         "title": "$:/plugins/ajh/favorites",
@@ -32,7 +32,7 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": "<style>.tc-favorites {stroke:#000;stroke-width:5;fill:#ff0;} .tc-image-star-filled {height:1em;width:1em;}</style>This plugin adds the <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-btn-dropdown'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>Choose</$list> button to the View Toolbar and also the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> tab to the Sidebar. The button becomes <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-favorites'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>Favorite</$list> when selected and then the tiddler appears in the list on the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-favorites'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>favorite</$list> button in the tiddler.\n\nSimply drag $:/plugins/ajh/favorites to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint"
+	"readme": "<style>.tc-favorites {stroke:#000;stroke-width:5;fill:#ff0;} .tc-image-star-filled {height:1em;width:1em;}</style>This plugin adds the <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-btn-dropdown'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>Choose</$list> button to the View Toolbar and also the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> tab to the Sidebar. The button becomes <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-favorites'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>Favorite</$list> when selected and then the tiddler appears in the list on the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the <$list filter='[<tv-config-toolbar-icons>prefix[yes]]'><span class='tc-favorites'>{{$:/core/images/star-filled}}</span></$list> <$list filter='[<tv-config-toolbar-text>prefix[yes]]'>favorite</$list> button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/locations",
@@ -58,7 +58,19 @@ var assetList = [
         "plugin-type": "plugin",
 	"dependents": "",
         "type": "application/json",
-	"readme": "This plugin adds the {{$:/plugins/ajh/openall/template}} button to the tag manager drop down menu using the{{$:/tags/TagDropdown||$:/core/ui/TagTemplate}}system tag. The open all button opens all non system tiddlers tagged with that drop down tag.\n\nSimply drag $:/plugins/ajh/openall to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Caption and hint"
+	"readme": "This plugin adds the {{$:/plugins/ajh/openall/template}} button to the tag manager drop down menu using the{{$:/tags/TagDropdown||$:/core/ui/TagTemplate}}system tag. The open all button opens all non system tiddlers tagged with that drop down tag.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Caption and hint"
+    },
+    {
+        "title": "$:/plugins/ajh/plugintweaks",
+        "description": "Plugin Tweaks",
+        "author": "Andrew Harrison",
+        "core-version": ">=5.0.0",
+        "list": "readme",
+        "version": "0.0.1",
+        "plugin-type": "plugin",
+        "dependents": "",
+        "type": "application/json",
+	"readme": "This plugin adds to the appearance tab in the control panel. It provides edit fields for changing plugin stylesheet values that are stored in fields.\n\nThis plugin comprises:\n\n* Control settings\n* Template"
     },
     {
         "title": "$:/plugins/ajh/randombackground",
