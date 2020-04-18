@@ -10823,12 +10823,9 @@ color:$(foregroundColor)$;
 &quot;$:/language/Buttons/Plugged/Hint&quot;: { &quot;text&quot;: &quot;Remove from plugintools list&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Plugged/Hint&quot; },
 &quot;$:/language/Buttons/Plugged/Caption&quot;: { &quot;text&quot;: &quot;plugged&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Plugged/Caption&quot; } } }</pre>
 </div>
-<div created="20200412031946489" creator="Andrew Harrison" modified="20200418063636730" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/libraryformat">
-<pre>{ &quot;text&quot;: &quot;&lt;$view tiddler=&quot;$:/plugins/ajh/plugintools/plugin&quot; field=&quot;text&quot; format=jsencoded/&gt;
-
-&lt;$list filter=&quot;[[$:/plugins/ajh/plugintools/plugin]fields[]] -text&quot; variable=&quot;fname&quot;&gt;&lt;&lt;fname&gt;&gt;
-
-&lt;/$list&gt;</pre>
+<div created="20200412031946489" creator="Andrew Harrison" modified="20200418070921177" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/libraryformat">
+<pre>{ &quot;text&quot;: &quot;&lt;$view tiddler=&quot;$:/plugins/ajh/plugintools/plugin&quot; field=&quot;text&quot; format=jsencoded/&gt;},
+&lt;$list filter=&quot;[[$:/plugins/ajh/plugintools/plugin]fields[]butlast[]] -text&quot; variable=&quot;fname&quot;&gt;&quot;&lt;&lt;fname&gt;&gt;&quot;: &quot;&quot;,&lt;/$list&gt;&lt;$list filter=&quot;[[$:/plugins/ajh/plugintools/plugin]fields[]last[]] -text&quot; variable=&quot;fname&quot;&gt;&quot;&lt;&lt;fname&gt;&gt;&quot;: &quot;&quot;&lt;/$list&gt; }</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
 <pre>{
@@ -11085,7 +11082,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200418051551442" creator="Andrew Harrison" list="$:/plugins/ajh/plugintools/libraryformat [[My Adventure]] [[Plugin Library]]" modified="20200418063036186" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200418063809388" creator="Andrew Harrison" list="$:/plugins/ajh/plugintools/libraryformat [[My Adventure]] [[Plugin Library]]" modified="20200418070350901" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12065,7 +12062,7 @@ color:$(foregroundColor)$;
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:37:00 PM</pre>
+<pre>12:09:32 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
