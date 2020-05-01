@@ -1,1 +1,1 @@
-{ "title": "$:/plugins/ajh/test2", "type": "application/json", "text": "{ \"tiddlers\": { \"$:/test\": { \"text\": \"\", \"title\": \"$:/test\" } } } }
+{ "title": "$:/plugins/ajh/test2", "type": "plugin", "text": "{ \"tiddlers\": { \"$:/test\": { \"text\": \"\", \"title\": \"$:/test\" } } } }
