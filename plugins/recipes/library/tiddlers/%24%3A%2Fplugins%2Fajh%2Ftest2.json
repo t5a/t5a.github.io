@@ -1,1 +1,1 @@
-{ "title": "$:/plugins/ajh/tsst2", "type": "application/json", "plugin-type": "plugin", "text": "{ \"tiddlers\": { \"$:/test\": { \"text\": \"\", \"title\": \"$:/test\" } } } }" }
+{ "title": "$:/plugins/ajh/tsst2", "type": "application/json", "plugin-type": "plugin", "text": "{ \"tiddlers\": { \"$:/test\": { \"text\": \"\", \"title\": \"$:/test\" } } }" }
