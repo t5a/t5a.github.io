@@ -1,1 +1,0 @@
-{ "dependents": "", "description": "Plugin Title", "list": "readme", "plugin-type": "plugin", "source": "", "title": "$:/plugins/ajh/plugintools3/plugin", "type": "application/json", "version": "0.0.1", "text": "{ \"tiddlers\": { \"$:/plugins/ajh/plugintools3/copylibraryformat\": { \"text\": \"poop\", \"title\": \"$:/plugins/ajh/plugintools3/copylibraryformat\" } } } }
