@@ -323,13 +323,15 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools</li>
 
-<li>$:/plugins/ajh/plugintools/image2</li>
+<li>$:/plugins/ajh/plugintools/image</li>
 
 <li>$:/plugins/ajh/plugintools/list</li>
 
 <li>$:/plugins/ajh/plugintools/readme</li>
 
 <li>$:/plugins/ajh/plugintools/sidebar</li>
+
+<li>$:/plugins/ajh/plugintools/template</li>
 
 <li>$:/plugins/ajh/plugintweaks</li>
 
@@ -580,8 +582,6 @@ Error message and password prompt
 <li>I Don't Know</li>
 
 <li>Iframe Top Margin</li>
-
-<li>Image 4</li>
 
 <li>Investigate random</li>
 
@@ -10092,8 +10092,7 @@ Hello, my name is [[Andrew|http://t5a.tiddlyspot.com/#Andrew%20Harrison]] and th
     &quot;tiddlers&quot;: {
         &quot;Untitled&quot;: {
             &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;&lt;$list filter=\&quot;\&quot;\&quot;[[$:/plugins/ajh/plugintools]fields[]sort[]] -text\&quot;\&quot;\&quot; variable='fname'&gt;\&quot;&lt;&lt;fname&gt;&gt;\&quot;: \&quot;&lt;$view tiddler=\&quot;\&quot;\&quot;$:/plugins/ajh/plugintools\&quot;\&quot;\&quot; field=&lt;&lt;fname&gt;&gt;/&gt;\&quot;, &lt;/$list&gt;&quot;,
-            &quot;type&quot;: &quot;text/plain&quot;
+            &quot;text&quot;: &quot;30.1 32&quot;
         }
     }
 }</pre>
@@ -10405,7 +10404,7 @@ color:$(foregroundColor)$;
 <div author="Andrew" core-version="&gt;=5.1.14" dependents="$:/language/Buttons/Choose/Caption $:/language/Buttons/Choose/Hint $:/language/Buttons/Favorites/Caption $:/language/Buttons/Favorites/Hint $:/language/SideBar/Favorites/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/license $:/plugins/ajh/favorites/readme $:/plugins/ajh/favorites/SideBar $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template" description="Favorites" list="readme license" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.5">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/Choose/Caption&quot;: { &quot;text&quot;: &quot;choose&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Choose/Caption&quot; }, &quot;$:/language/Buttons/Choose/Hint&quot;: { &quot;text&quot;: &quot;Add to favorites list&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Choose/Hint&quot; }, &quot;$:/language/Buttons/Favorites/Caption&quot;: { &quot;text&quot;: &quot;favorite&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Caption&quot; }, &quot;$:/language/Buttons/Favorites/Hint&quot;: { &quot;text&quot;: &quot;Remove from favorites list&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Hint&quot; }, &quot;$:/language/SideBar/Favorites/Caption&quot;: { &quot;text&quot;: &quot;Favorites&quot;, &quot;title&quot;: &quot;$:/language/SideBar/Favorites/Caption&quot; }, &quot;$:/pluginlibrary/ajh/released&quot;: { &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;, &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;, &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;, &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;, &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot; }, &quot;$:/plugins/ajh/favorites/icon&quot;: { &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#ff0' stroke='#f90' stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='96,122' path={{$:/plugins/ajh/favorites/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/icon&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot; }, &quot;$:/plugins/ajh/favorites/image&quot;: { &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='64,96.1' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/image&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot;, &quot;path&quot;: &quot;l32.7,24.2c2.4,1.7 5.6,-0.6 4.6,-3.4l-12.4,-38.6l32.5,-23.8c2.4,-1.7 1.1,-5.5 -1.8,-5.5l-40.2,0l-12.5,-38.5c-0.9,-2.8 -4.8,-2.8 -5.8,0l-12.5,38.5l-40.2,0c-2.9,0 -4.2,3.8 -1.8,5.5l32.5,23.8l-12.4,38.6c-0.9,2.8 2.3,5.1 4.6,3.4l32.7,-24.2z&quot; }, &quot;$:/plugins/ajh/favorites/license&quot;: { &quot;text&quot;: &quot;{{!!url}}\nThis is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;, &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;, &quot;type&quot;: &quot;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/license&quot;, &quot;tags&quot;: &quot;$:/tags/License&quot;, &quot;license-type&quot;: &quot;Unlicense&quot; }, &quot;$:/plugins/ajh/favorites/readme&quot;: { &quot;text&quot;: &quot;This plugin adds the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Choose/Caption}}&lt;/$list&gt; button to the View Toolbar and also the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab to the Sidebar. The button becomes &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; when selected and then the tiddler appears in the list on the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab. The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; button in the tiddler.\n\nSimply drag $:/plugins/ajh/favorites to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/readme&quot; }, &quot;$:/plugins/ajh/favorites/SideBar&quot;: { &quot;text&quot;: &quot;\\define drop-actions()\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;\n&lt;div style='position: relative;'&gt;\n&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;\n&lt;div class='tc-droppable-placeholder'&gt;\n&amp;nbsp;\n&lt;/div&gt;\n&lt;div&gt;\n &lt;$link to={{!!title}}&gt;\n&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;\n&lt;/div&gt;\n&lt;/$droppable&gt;\n&lt;/div&gt;\n&lt;/$list&gt;\n&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/SideBar&quot;, &quot;tags&quot;: &quot;$:/tags/SideBar&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;caption&quot;: &quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/plugins/ajh/favorites/image}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot; }, &quot;$:/plugins/ajh/favorites/stylesheet&quot;: { &quot;text&quot;: &quot;.tc-tab-buttons + .tc-favorites-hidden {\n display: none;\n}\n.tc-tab-buttons button.tc-tab-selected {\n fill: {{!!tab-icon-selected-color}};\n stroke: {{!!tab-icon-outline-color}}; \n}\n.tc-tab-buttons button:not(.tc-tab-selected) {\n fill: {{!!tab-icon-unselected-color}};\n}\n.tc-favorites {\n stroke: {{!!button-outline-color}};\n stroke-width:5;\n fill: {{!!button-color}};\n}\n.tc-image-star-filled {\n height:1em;\n width:1em;\n}&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/stylesheet&quot;, &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;, &quot;tab-icon-unselected-color&quot;: &quot;#999&quot;, &quot;tab-icon-selected-color&quot;: &quot;#ff0&quot;, &quot;tab-icon-outline-color&quot;: &quot;#000&quot;, &quot;caption&quot;: &quot;Favorites&quot;, &quot;button-outline-color&quot;: &quot;#000&quot;, &quot;button-color&quot;: &quot;#ff0&quot; }, &quot;$:/plugins/ajh/favorites/template&quot;: { &quot;text&quot;: &quot;\\define add() [[$(currentTiddler)$]]\n\\define remove() -[[$(currentTiddler)$]]\n\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n&lt;$vars fill={{$:/plugins/ajh/favorites/stylesheet!!button-color}} stroke={{$:/plugins/ajh/favorites/stylesheet!!button-outline-color}} m='64,96.1' path={{$:/plugins/ajh/favorites/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/core/images/star-filled}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/template&quot;, &quot;tags&quot;: &quot;$:/tags/ViewToolbar&quot;, &quot;list-after&quot;: &quot;$:/core/ui/Buttons/more-tiddler-actions&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Favorites/Hint}}&quot;, &quot;caption&quot;: &quot;{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot; } } }</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/core/images/delete-button $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/plugintools/image2 [[Image 4]]" modified="20200517041220617" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/core/images/delete-button $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells" modified="20200517080029909" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -10626,16 +10625,21 @@ color:$(foregroundColor)$;
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
 </div>
-<div created="20200516075236746" creator="Andrew Harrison" modified="20200516231338417" modifier="Andrew Harrison" path="l-6.4 4.1-3 7.8-35.8 35.4 4.8 4.8 35.8-35.4 7.8-3 8.2-12.6-2.4-2.4c-1.4-1.4-2.4-2.4-2.5-2.4zm-96.6-2.9c-4.4 0.5-7.4 1.4-10.5 3.4-1.9 1.2-1.9 1.4-1 1.7 0.3 0.2 3.5 1.4 6.9 2.7 3.5 1.2 6.4 2.4 6.6 2.5 0.3 0.3 2.9 4.9 3.2 5.9 0.2 0.7 0.2 1-4.9 14.3-2.9 7.5-5.1 13.8-5.1 13.8 0 0.3 1.2 0.5 2 0.5 0.5 0 1.2 0.2 1.5 0.2 0.3 0.2 1.5 0.3 2.5 0.5 1 0.2 2 0.3 2.4 0.5 0.3 0.2 1.9 0.5 3.5 1 1.7 0.5 3.9 1.2 4.7 1.5 3.2 1.4 7.3 3.4 8.1 3.9 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.5 2.4 5.7 4.6 1.5 1.5 8.6 8.8 12 12.4 2 2 6.9 7.3 8.6 9 0.7 0.7 2.5 2.7 4.4 4.6 2.9 2.9 7.4 7.8 11.3 11.7 5.4 5.6 7.3 7.5 8.3 8.5 0.7 0.7 3.2 3.4 5.9 6.1 2.5 2.7 5.4 5.6 6.1 6.3 0.7 0.7 2.4 2.2 3.5 3.6 3.5 3.6 5.6 4.8 8.8 4.8 1.5 0 2 0 3-0.3 1.5-0.5 3.7-1.9 4.7-3.1 0.3-0.5 1-1.2 1.5-1.5 0.3-0.5 1-1.4 1.4-2.2 1-2.5 0.8-4.9-0.3-7.3-0.7-1.2-0.8-1.5-2.9-3.4-1-0.8-2.5-2.4-3.7-3.6-1.2-1-2.5-2.4-3-2.9-0.5-0.5-1.5-1.4-2.2-2-0.7-0.7-2.2-2-3.4-3.2-1.2-1.2-2.9-2.5-3.5-3.4-2.5-2.4-4.2-4.1-6.4-5.9-1.2-1-2.5-2.2-2.9-2.5-0.3-0.3-1.7-1.5-2.9-2.7-1.2-1.2-2.9-2.5-3.5-3.2-0.7-0.7-1.9-1.9-2.9-2.5-3.9-3.6-5.9-5.4-7.3-6.6-2.2-2.2-6.6-6.1-7.8-7.1-0.5-0.5-1.7-1.5-2.4-2.2-0.7-0.7-2.2-2-3.4-3.2-1.2-1-2.7-2.5-3.5-3.2-0.7-0.7-2-1.9-2.9-2.7-1.5-1.4-5.2-5.4-6.2-6.6-0.2-0.3-0.8-1.2-1.5-1.9-0.7-0.7-1.4-1.5-1.4-1.9-0.2-0.2-1-1.4-1.7-2.5-1.9-2.5-4.7-7.6-5.4-9.5-0.3-0.8-0.8-2.4-1.4-3.6-0.5-1.2-1.2-3.2-1.5-4.6-0.3-1.4-0.8-2.7-0.8-3.1-0.2-0.5-0.5-2-1-4.2-0.7-3.2-1.5-5.1-2.9-6.8-1.5-1.9-4.2-3.6-7.1-4.2-0.8-0.2-2.2-0.5-3.2-0.7-0.8-0.2-2.5-0.3-3.7-0.5-1.2 0-2.4-0.2-2.7-0.2-0.3 0-1.4 0-2 0.2l0.3 0.2 0.3-0.4zm9.5 28.4c1 .5 1.4 1.5.7 2.2-.6.3-.3.3-1 0-.5-.3-.7-.3-1 0-.3.2-.5.5-.7.8-.2.3 0 .7.7 1.2.8.8 1 1.4.3 2-.3.3-.3.3-.8.2-.7-.3-1-.3-1.5.2s-.5 1.2.2 1.7 1 1 .7 1.7c-.2.8-.5 1-1.2.7-.8-.3-1.5-.2-1.7.5-.2.5-.2.7.5 1.4.8.7 1 1.5.5 1.5-.2 0-.7-.2-1.4-.3-.8-.3-1.2-.5-1.4-1l-.3-.7 2.2-5.9c1.4-3.6 2.4-6.1 2.5-6.3.5-.3 1.4-.3 2.2 0zm11 3.9c.7.3.8.5 1 1 0 .3 0 1-.2 1.5-.3 1.2-3.2 8.8-3.7 9.8-.3.7-1.4 1.7-1.9 1.7 0 0-.5-.3-1.2-1-1-1-1.4-1.7-.8-2.2.2-.3.3-.3 1.7 0 .3.2.7 0 1-.3.5-.5.5-.8-.5-2-.8-.8-.8-1.4-.5-1.9.2-.5.5-.5 1.4 0 .5.3.7.3 1.2 0 .8-.5.7-1-.2-2-1-1-1.2-1.7-.7-2.2.3-.5.3-.5 1-.2s1.2.3 1.9-.2c.5-.3.3-1-.7-1.7l-.7-.7h.5c.3 0 .8.2 1.4.3zm12.2 12.4c0.8 0.3 5.4 4.8 28.9 27.8 16.7 16.5 27.9 27.7 28 28 0.3 0.8 0.3 1.9 0 2.5-0.2 0.3-1 1.4-2 2.4-1.4 1.4-1.9 1.9-2.7 2-0.8 0.3-1.2 0.3-1.9 0.2-0.7-0.2-5.1-4.6-28.9-27.8-15.5-15.3-28.2-27.8-28.4-28.2-0.2-0.3-0.3-0.8-0.3-1.2-0.2-1.4 0-1.9 2-3.7 2.9-2.7 3.4-3.1 5.2-2zm66.4 63.3c2 .7 3 1.5 3.9 3.4.5 1.2.7 1.4.7 3.2 0 2.2-.2 2.7-1.5 4.4-1 1.2-3 2.4-4.7 2.4-4.1.3-7.4-2.5-7.8-6.6 0-1 0-1.4.5-2.7.7-1.9 1.4-2.7 3.2-3.7 2-1.2 3.4-1.2 5.7-.3zm-68-61c-.3.2-2.5 2.2-2.9 2.9-.3.5-.3.5.3 1.2.7 1 55.1 54.5 55.4 54.7.2 0 .7-.2 1.5-.8 1.7-1.4 2.5-2.4 2.4-3.1-.2-.5-54.7-54.5-55.4-54.8-.5-.2-.7-.2-1.2 0h-.3zm-51-23c-0.2 0.3 0.3 4.1 0.5 5.1 0.8 2.4 1.7 3.9 5.6 8.7 0.8 1.2 1.7 2.2 1.7 2.2 0 0.2 0.2 0.3 0.3 0.5 0.2 0.2 0.7 0.8 1.2 1.4 0.8 1 1.5 2 3 4.1 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 0.5 0.3 1.7 1 2.4 1.4 0.7 0.3 1.4 0.8 1.7 1 0.5 0.5 1 0.5 1.4 0 0.5-0.7 2.4-5.9 2.4-6.3 0-0.3-0.2-0.5-1.4-0.7-0.7-0.2-1.4-0.3-1.7-0.3-0.2 0-1.2-0.2-2-0.3-2-0.2-3-0.7-3.4-1.5l-0.3-0.7 2-5.6c2.5-7 3.9-10.9 3.9-11.2 0-0.3-0.2-0.3-2.9 0.7l-2 0.8-6.9-2.5c-4.9-1.7-6.9-2.4-6.9-2.2v0.2zm43 41c-.8.3-1.9 1.2-2.4 2-.3.8-.3 2.4 0 3.1l.3.7-19.3 19c-20.3 20-19.9 19.7-20.9 22.4c-.5 1.5-.8 4.1-.5 5.8.7 3.2 3 5.8 6.4 6.8 1.9.5 4.6.5 6.4-.2 2.7-1 2.5-.7 22.8-20.7 18.2-18 19.4-19 19.8-18.7 1.7 1.2 4.4.3 5.4-1.9.5-1 .5-2 0-2.9-.5-1-14.9-14.9-15.7-15.3-.8-.3-1.5-.3-2.5 0z" tags="New $:/tags/Image" title="$:/plugins/ajh/plugintools/image2">
-<pre>&lt;svg width=&quot;128&quot; height=&quot;128&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-&lt;path d='m29.7,31.4c1,0.5 1.4,1.5 0.7,2.2 -0.6,0.3 -0.3,0.3 -1,0 -0.5,-0.3 -0.7,-0.3 -1,0 -0.3,0.2 -0.5,0.5 -0.7,0.8 -0.2,0.3 0,0.7 0.7,1.2 0.8,0.8 1,1.4 0.3,2 -0.3,0.3 -0.3,0.3 -0.8,0.2 -0.7,-0.3 -1,-0.3 -1.5,0.2 -0.5,0.5 -0.5,1.2 0.2,1.7 0.7,0.5 1,1 0.7,1.7 -0.2,0.8 -0.5,1 -1.2,0.7 -0.8,-0.3 -1.5,-0.2 -1.7,0.5 -0.2,0.5 -0.2,0.7 0.5,1.4 0.8,0.7 1,1.5 0.5,1.5 -0.2,0 -0.7,-0.2 -1.4,-0.3 -0.8,-0.3 -1.2,-0.5 -1.4,-1l-0.3,-0.7 2.2,-5.9c1.4,-3.6 2.4,-6.1 2.5,-6.3 0.5,-0.3 1.4,-0.3 2.2,0zm11,3.9c0.7,0.3 0.8,0.5 1,1 0,0.3 0,1 -0.2,1.5 -0.3,1.2 -3.2,8.8 -3.7,9.8 -0.3,0.7 -1.4,1.7 -1.9,1.7 0,0 -0.5,-0.3 -1.2,-1 -1,-1 -1.4,-1.7 -0.8,-2.2 0.2,-0.3 0.3,-0.3 1.7,0 0.3,0.2 0.7,0 1,-0.3 0.5,-0.5 0.5,-0.8 -0.5,-2 -0.8,-0.8 -0.8,-1.4 -0.5,-1.9 0.2,-0.5 0.5,-0.5 1.4,0 0.5,0.3 0.7,0.3 1.2,0 0.8,-0.5 0.7,-1 -0.2,-2 -1,-1 -1.2,-1.7 -0.7,-2.2 0.3,-0.5 0.3,-0.5 1,-0.2 0.7,0.3 1.2,0.3 1.9,-0.2 0.5,-0.3 0.3,-1 -0.7,-1.7 l -0.7,-0.7 h 0.5 c 0.3,0 0.8,0.2 1.4,0.3zm78.6,75.7 c 2,0.7 3,1.5 3.9,3.4 0.5,1.2 0.7,1.4 0.7,3.2 0,2.2 -0.2,2.7 -1.5,4.4 -1,1.2 -3,2.4 -4.7,2.4 -4.1,0.3 -7.4,-2.5 -7.8,-6.6 0,-1 0,-1.4 0.5,-2.7 0.7,-1.9 1.4,-2.7 3.2,-3.7 2,-1.2 3.4,-1.2 5.7,-0.3zM0.3,27c-0.2,0.3 0.3,4.1 0.5,5.1 0.8,2.4 1.7,3.9 5.6,8.7 0.8,1.2 1.7,2.2 1.7,2.2 0,0.2 0.2,0.3 0.3,0.5 0.2,0.2 0.7,0.8 1.2,1.4 0.8,1 1.5,2 3,4.1 1,1.4 1,1.7 0.7,2.9 -0.5,1.5 -0.3,1.9 0.8,2.5 0.5,0.3 1.7,1 2.4,1.4 0.7,0.3 1.4,0.8 1.7,1 0.5,0.5 1,0.5 1.4,0 0.5,-0.7 2.4,-5.9 2.4,-6.3 0,-0.3 -0.2,-0.5 -1.4,-0.7 -0.7,-0.2 -1.4,-0.3 -1.7,-0.3 -0.2,0 -1.2,-0.2 -2,-0.3 -2,-0.2 -3,-0.7 -3.4,-1.5l-0.3,-0.7 2,-5.6c2.5,-7 3.9,-10.9 3.9,-11.2 0,-0.3 -0.2,-0.3 -2.9,0.7l-2,0.8 -6.9,-2.5C2.4,27.5 0.4,26.8 0.4,27v0.2zm51.4,46.6c0,0 -6,-5.5 -6.1,-5.5 -0.8,-0.3 -1.5,-0.3 -2.5,0L43.3,68c-0.8,0.3 -1.9,1.2 -2.4,2 -0.3,0.8 -0.3,2.4 0,3.1l0.3,0.7 -19.3,19C1.6,112.8 2,112.5 1,115.2c-0.5,1.5 -0.8,4.1 -0.5,5.8 0.7,3.2 3,5.8 6.4,6.8 1.9,0.5 4.6,0.5 6.4,-0.2 2.7,-1 2.5,-0.7 22.8,-20.7 18.2,-18 19.4,-19 19.8,-18.7 1.7,1.2 4.4,0.3 5.4,-1.9 0.5,-1 0.5,-2 0,-2.9 -0.1,-0.1 -5.2,-5 -5.2,-5l4.3,-4c0,0 34.9,36.2 43.7,45.2 0.7,0.7 2.4,2.2 3.5,3.6 3.5,3.6 5.6,4.8 8.8,4.8 1.5,0 2,0 3,-0.3 1.5,-0.5 3.7,-1.9 4.7,-3.1 0.3,-0.5 1,-1.2 1.5,-1.5 0.3,-0.5 1,-1.4 1.4,-2.2 1,-2.5 0.8,-4.9 -0.3,-7.3 -0.7,-1.2 -0.8,-1.5 -2.9,-3.4 -1,-0.8 -2.5,-2.4 -3.7,-3.6C107.2,94.4 84.5,73.5 72,62.4L112.2,22.6 120,19.6 128.2,7 125.8,4.6c-1.4,-1.4 -2.4,-2.4 -2.5,-2.4l-6.5,3.7 -6.4,4.1 -3,7.8 -40.1,40.1C67.3,57.9 56.9,47.9 55.9,46.7 55.7,46.4 55.1,45.5 54.4,44.8 53.7,44.1 53,43.3 53,42.9 52.8,42.7 52,41.5 51.3,40.4 49.4,37.9 46.6,32.8 45.9,30.9 45.6,30.1 45.1,28.5 44.5,27.3 44,26.1 43.3,24.1 43,22.7 42.7,21.3 42.2,20 42.2,19.6 42,19.1 41.7,17.6 41.2,15.4 40.5,12.2 39.7,10.3 38.3,8.6 36.8,6.7 34.1,5 31.2,4.4 30.4,4.2 29,3.9 28,3.7 27.2,3.5 25.5,3.4 24.3,3.2 23.1,3.2 21.9,3 21.6,3 21.3,3 20.2,3 19.6,3.2L19.9,3.4 20.2,3C15.8,3.5 12.8,4.4 9.7,6.4 7.8,7.6 7.8,7.8 8.7,8.1c0.3,0.2 3.5,1.4 6.9,2.7 3.5,1.2 6.4,2.4 6.6,2.5 0.3,0.3 2.9,4.9 3.2,5.9 0.2,0.7 0.2,1 -4.9,14.3 -2.9,7.5 -5.1,13.8 -5.1,13.8 0,0.3 1.2,0.5 2,0.5 0.5,0 1.2,0.2 1.5,0.2 0.3,0.2 1.5,0.3 2.5,0.5 1,0.2 2,0.3 2.4,0.5 0.3,0.2 1.9,0.5 3.5,1 1.7,0.5 3.9,1.2 4.7,1.5 3.2,1.4 7.3,3.4 8.1,3.9 0.5,0.3 1.2,0.8 1.7,1 2.2,1.4 3.5,2.4 5.7,4.6l8.4,8.5'/&gt;&lt;/svg&gt;</pre>
+<div created="20200517064701793" creator="Andrew Harrison" modified="20200517075846584" modifier="Andrew Harrison" path="c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z" tags="$:/tags/Image" title="$:/plugins/ajh/plugintools/image">
+<pre>\define my-svg()
+&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+
+&lt;$vars m='30.1 31' path={{!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;</pre>
 </div>
-<div created="20200510214048164" creator="Andrew Harrison" list="$:/language/Buttons/Plugged/Caption $:/language/Buttons/Plugged/Hint $:/language/Buttons/Shadow/Caption $:/language/Buttons/Shadow/Hint $:/language/SideBar/Plugintools/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/plugintools/icon $:/plugins/ajh/plugintools/image $:/plugins/ajh/plugintools/license $:/plugins/ajh/plugintools/list $:/plugins/ajh/plugintools/plugin $:/plugins/ajh/plugintools/readme $:/plugins/ajh/plugintools/sidebar $:/plugins/ajh/plugintools/stylesheet $:/plugins/ajh/plugintools/template" modified="20200513034458285" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200510214048164" creator="Andrew Harrison" list="$:/language/Buttons/Plugged/Caption $:/language/Buttons/Plugged/Hint $:/language/Buttons/Shadow/Caption $:/language/Buttons/Shadow/Hint $:/language/SideBar/Plugintools/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/plugintools/icon $:/plugins/ajh/plugintools/image $:/plugins/ajh/plugintools/license $:/plugins/ajh/plugintools/list $:/plugins/ajh/plugintools/plugin $:/plugins/ajh/plugintools/readme $:/plugins/ajh/plugintools/sidebar $:/plugins/ajh/plugintools/stylesheet $:/plugins/ajh/plugintools/template" modified="20200517080041163" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
-<div created="20200510215535152" creator="Andrew Harrison" modified="20200513033442707" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
+<div created="20200510215535152" creator="Andrew Harrison" modified="20200517075605600" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
 <pre>\define my-svg()
-&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='1' d='m116.8 5.9$(p)$'/&gt;&lt;/svg&gt;
+&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='1' d='m30.1 31$(p)$'/&gt;&lt;/svg&gt;
 \end
 
 This plugin is an alternative to packaging a plugin using [[Node.js|http://tiddlywiki.com/#TiddlyWiki%20on%20Node.js]] or the [[browser developer console|http://tiddlywiki.com/dev/#How%20to%20create%20plugins%20in%20the%20browser]].
@@ -10665,7 +10669,7 @@ This plugin comprises:
 * Sidebar tab
 * Caption and hint</pre>
 </div>
-<div caption="&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-tab-buttons'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/SideBar/Plugintools/Caption}}&lt;/$list&gt;" created="20200510215240860" creator="Andrew Harrison" list-before="" modified="20200513034231359" modifier="Andrew Harrison" tags="$:/tags/SideBar" title="$:/plugins/ajh/plugintools/sidebar">
+<div caption="&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-tab-buttons'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/SideBar/Plugintools/Caption}}&lt;/$list&gt;" created="20200510215240860" creator="Andrew Harrison" list-before="" modified="20200517075754773" modifier="Andrew Harrison" tags="$:/tags/SideBar" title="$:/plugins/ajh/plugintools/sidebar">
 <pre>\define remove() -[[$(currentTiddler)$]]
 \define my-svg()
 &lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
@@ -10683,7 +10687,7 @@ This plugin comprises:
 &lt;/div&gt;&lt;div&gt;&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
 &lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
 &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
-&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='116.8 5.9' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
+&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='30.1 31' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;
 &lt;/$list&gt;
@@ -10706,6 +10710,37 @@ This plugin comprises:
 Pack Plugin
 &lt;/$button&gt;
 &lt;/$wikify&gt;</pre>
+</div>
+<div caption="{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}" created="20200517064932466" creator="Andrew Harrison" description="{{$:/language/Buttons/Shadow/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200517075823871" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/plugintools/template">
+<pre>\define add() [[$(currentTiddler)$]]
+\define remove() -[[$(currentTiddler)$]]
+\define my-svg()
+&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+
+&lt;$list filter='[list[$:/plugins/ajh/plugintools/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
+&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='30.1 31' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;
+&lt;/$list&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
+&lt;span class='tc-btn-text'&gt;
+&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/plugintools/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Shadow/Hint}} aria-label={{$:/language/Buttons/Shadow/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
+{{$:/plugins/ajh/plugintools/image}}
+&lt;/$list&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
+&lt;span class='tc-btn-text'&gt;
+&lt;$text text={{$:/language/Buttons/Shadow/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;&lt;/$list&gt;</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
 <pre>{
@@ -10974,7 +11009,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200412031644733" creator="Andrew Harrison" modified="20200513034418904" modifier="Andrew Harrison" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20200404153242251" creator="Andrew Harrison" modified="20200509214442324" modifier="Andrew Harrison" title="$:/state/sidebar">
+<div created="20200404153242251" creator="Andrew Harrison" modified="20200517075716612" modifier="Andrew Harrison" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200406134458678" creator="Andrew Harrison" modified="20200510053902449" modifier="Andrew Harrison" title="$:/state/tab--1498284803">
@@ -10986,8 +11021,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200404153259699" creator="Andrew Harrison" modified="20200411052136909" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200412032821233" creator="Andrew Harrison" modified="20200516094438723" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/SideBar</pre>
+<div created="20200412032821233" creator="Andrew Harrison" modified="20200517080105792" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div created="20200502051753084" creator="Andrew Harrison" modified="20200508062247845" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -10995,7 +11030,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200517045652235" creator="Andrew Harrison" list="$:/plugins/ajh/plugintools/image2 [[Image 4]] [[My Adventure]] [[Plugin Library]]" modified="20200517050119744" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200517064238402" creator="Andrew Harrison" list="" modified="20200517080020331" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -11955,11 +11990,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;740&quot;
+            &quot;text&quot;: &quot;864&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12104,8 +12139,8 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/toplefttoolbar" type="text/vnd.tiddlywiki" version="0.0.14">
 <pre></pre>
 </div>
-<div created="20200404153025074" creator="Andrew Harrison" modified="20200516230542869" modifier="Andrew Harrison" title="$:/temp/search">
-<pre>Svg</pre>
+<div created="20200404153025074" creator="Andrew Harrison" modified="20200517080104248" modifier="Andrew Harrison" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200407011051838" creator="Andrew Harrison" modified="20200407011051839" modifier="Andrew Harrison" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://infurnoape.github.io" url="https://infurnoape.github.io">
 <pre>loaded</pre>
@@ -12114,7 +12149,7 @@ This plugin comprises:
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>10:05:52 PM</pre>
+<pre>1:01:24 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -12742,11 +12777,6 @@ Before attempting to repack your plugin you should ensure that the plugin is sel
 </div>
 <div created="20160825000342590" creator="Andrew Harrison" list="" modified="20170630033741714" modifier="Andrew Harrison" tags="Examples" title="Iframe Top Margin">
 <pre>&lt;object id='myanchor' type='text/html' data='http://www.hypergurl.com/anchors.html#bottom' class='offset'&gt;&lt;/object&gt;</pre>
-</div>
-<div created="20200517041203998" creator="Andrew Harrison" modified="20200517050034001" modifier="Andrew Harrison" tags="" title="Image 4">
-<pre>&lt;svg viewBox=&quot;0 0 128 128&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-&lt;path d=&quot;m29.7 31.4c1 0.5 1.4 1.5 0.7 2.2-0.6 0.3-0.3 0.3-1 0-0.5-0.3-0.7-0.3-1 0-0.3 0.2-0.5 0.5-0.7 0.8s0 0.7 0.7 1.2c0.8 0.8 1 1.4 0.3 2-0.3 0.3-0.3 0.3-0.8 0.2-0.7-0.3-1-0.3-1.5 0.2s-0.5 1.2 0.2 1.7 1 1 0.7 1.7c-0.2 0.8-0.5 1-1.2 0.7-0.8-0.3-1.5-0.2-1.7 0.5-0.2 0.5-0.2 0.7 0.5 1.4 0.8 0.7 1 1.5 0.5 1.5-0.2 0-0.7-0.2-1.4-0.3-0.8-0.3-1.2-0.5-1.4-1l-0.3-0.7 2.2-5.9c1.4-3.6 2.4-6.1 2.5-6.3 0.5-0.3 1.4-0.3 2.2 0zm11 3.9c0.7 0.3 0.8 0.5 1 1 0 0.3 0 1-0.2 1.5-0.3 1.2-3.2 8.8-3.7 9.8-0.3 0.7-1.4 1.7-1.9 1.7 0 0-0.5-0.3-1.2-1-1-1-1.4-1.7-0.8-2.2 0.2-0.3 0.3-0.3 1.7 0 0.3 0.2 0.7 0 1-0.3 0.5-0.5 0.5-0.8-0.5-2-0.8-0.8-0.8-1.4-0.5-1.9 0.2-0.5 0.5-0.5 1.4 0 0.5 0.3 0.7 0.3 1.2 0 0.8-0.5 0.7-1-0.2-2-1-1-1.2-1.7-0.7-2.2 0.3-0.5 0.3-0.5 1-0.2s1.2 0.3 1.9-0.2c0.5-0.3 0.3-1-0.7-1.7l-0.7-0.7h0.5c0.3 0 0.8 0.2 1.4 0.3zm78.6 75.7c2 0.7 3 1.5 3.9 3.4 0.5 1.2 0.7 1.4 0.7 3.2 0 2.2-0.2 2.7-1.5 4.4-1 1.2-3 2.4-4.7 2.4-4.1 0.3-7.4-2.5-7.8-6.6 0-1 0-1.4 0.5-2.7 0.7-1.9 1.4-2.7 3.2-3.7 2-1.2 3.4-1.2 5.7-0.3zm-119-84c-0.2 0.3 0.3 4.1 0.5 5.1 0.8 2.4 1.7 3.9 5.6 8.7 0.8 1.2 1.7 2.2 1.7 2.2 0 0.2 0.2 0.3 0.3 0.5 0.2 0.2 0.7 0.8 1.2 1.4 0.8 1 1.5 2 3 4.1 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 0.5 0.3 1.7 1 2.4 1.4 0.7 0.3 1.4 0.8 1.7 1 0.5 0.5 1 0.5 1.4 0 0.5-0.7 2.4-5.9 2.4-6.3 0-0.3-0.2-0.5-1.4-0.7-0.7-0.2-1.4-0.3-1.7-0.3-0.2 0-1.2-0.2-2-0.3-2-0.2-3-0.7-3.4-1.5l-0.3-0.7 2-5.6c2.5-7 3.9-10.9 3.9-11.2s-0.2-0.3-2.9 0.7l-2 0.8-6.9-2.5c-4.9-1.7-6.9-2.4-6.9-2.2v0.2zm51.4 46.6s-6-5.5-6.1-5.5c-0.8-0.3-1.5-0.3-2.5 0l0.2-0.1c-0.8 0.3-1.9 1.2-2.4 2-0.3 0.8-0.3 2.4 0 3.1l0.3 0.7-19.3 19c-20.3 20-19.9 19.7-20.9 22.4-0.5 1.5-0.8 4.1-0.5 5.8 0.7 3.2 3 5.8 6.4 6.8 1.9 0.5 4.6 0.5 6.4-0.2 2.7-1 2.5-0.7 22.8-20.7 18.2-18 19.4-19 19.8-18.7 1.7 1.2 4.4 0.3 5.4-1.9 0.5-1 0.5-2 0-2.9-0.1-0.1-5.2-5-5.2-5l4.3-4s34.9 36.2 43.7 45.2c0.7 0.7 2.4 2.2 3.5 3.6 3.5 3.6 5.6 4.8 8.8 4.8 1.5 0 2 0 3-0.3 1.5-0.5 3.7-1.9 4.7-3.1 0.3-0.5 1-1.2 1.5-1.5 0.3-0.5 1-1.4 1.4-2.2 1-2.5 0.8-4.9-0.3-7.3-0.7-1.2-0.8-1.5-2.9-3.4-1-0.8-2.5-2.4-3.7-3.6-12.9-12.2-35.6-33.1-48.1-44.2l40.2-39.8 7.8-3 8.2-12.6-2.4-2.4c-1.4-1.4-2.4-2.4-2.5-2.4l-6.5 3.7-6.4 4.1-3 7.8-40.1 40.1s-10.4-10-11.4-11.2c-0.2-0.3-0.8-1.2-1.5-1.9s-1.4-1.5-1.4-1.9c-0.2-0.2-1-1.4-1.7-2.5-1.9-2.5-4.7-7.6-5.4-9.5-0.3-0.8-0.8-2.4-1.4-3.6-0.5-1.2-1.2-3.2-1.5-4.6s-0.8-2.7-0.8-3.1c-0.2-0.5-0.5-2-1-4.2-0.7-3.2-1.5-5.1-2.9-6.8-1.5-1.9-4.2-3.6-7.1-4.2-0.8-0.2-2.2-0.5-3.2-0.7-0.8-0.2-2.5-0.3-3.7-0.5-1.2 0-2.4-0.2-2.7-0.2s-1.4 0-2 0.2l0.3 0.2 0.3-0.4c-4.4 0.5-7.4 1.4-10.5 3.4-1.9 1.2-1.9 1.4-1 1.7 0.3 0.2 3.5 1.4 6.9 2.7 3.5 1.2 6.4 2.4 6.6 2.5 0.3 0.3 2.9 4.9 3.2 5.9 0.2 0.7 0.2 1-4.9 14.3-2.9 7.5-5.1 13.8-5.1 13.8 0 0.3 1.2 0.5 2 0.5 0.5 0 1.2 0.2 1.5 0.2 0.3 0.2 1.5 0.3 2.5 0.5s2 0.3 2.4 0.5c0.3 0.2 1.9 0.5 3.5 1 1.7 0.5 3.9 1.2 4.7 1.5 3.2 1.4 7.3 3.4 8.1 3.9 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.5 2.4 5.7 4.6l8.4 8.5&quot;/&gt;
-&lt;/svg&gt;</pre>
 </div>
 <div created="20170728140242677" creator="Andrew Harrison" modified="20170728140334228" modifier="Andrew Harrison" tags="[[Wish List]]" title="Investigate random">
 <pre>Google groups:	Investigation: Random -- But Within A Range</pre>
