@@ -319,6 +319,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/favorites/list</li>
 
+<li>$:/plugins/ajh/favorites/stylesheet</li>
+
 <li>$:/plugins/ajh/favorites/template</li>
 
 <li>$:/plugins/ajh/flipswitch/button</li>
@@ -10532,19 +10534,41 @@ color:$(foregroundColor)$;
 <pre>&lt;svg width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;svg width='600pt' height='600pt'
 viewBox='-8.5 -6 192 192'&gt;&lt;g fill='#ff0'&gt;{{$:/core/images/star-filled}}&lt;/g&gt;&lt;/svg&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20200520024323591" creator="Andrew Harrison" modified="20200520030321033" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/favorites/image">
-<pre>&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
-viewBox='-0.5 -1 192 192'&gt;&lt;g fill='#ff0' stroke='#000' stroke-width='2' stroke-linejoin='round'&gt;{{$:/core/images/star-filled}}&lt;/g&gt;&lt;/svg&gt;&lt;/svg&gt;</pre>
+<div created="20200520024323591" creator="Andrew Harrison" modified="20200520060038871" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/favorites/image">
+<pre>&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
+viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/template" modified="20200520031629161" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/template" modified="20200520060124285" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
-<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200520031613464" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
+<div button-color="#ff0" button-outline-color="#000" caption="Favorites" created="20200520052111807" creator="Andrew Harrison" modified="20200520052251043" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/favorites/stylesheet">
+<pre>.tc-tab-buttons + .tc-favorites-hidden {
+ display: none;
+}
+.tc-tab-buttons button.tc-tab-selected {
+ fill: {{!!tab-icon-selected-color}};
+ stroke: {{!!tab-icon-outline-color}}; 
+}
+.tc-tab-buttons button:not(.tc-tab-selected) {
+ fill: {{!!tab-icon-unselected-color}};
+}
+.tc-favorites {
+ stroke: {{!!button-outline-color}};
+ stroke-width:2;
+ stroke-linejoin:round;
+ fill: {{!!button-color}};
+}
+.tc-image-star-filled {
+ height:1em;
+ width:1em;
+}</pre>
+</div>
+<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200520060111857" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
 <pre>\define add() [[$(currentTiddler)$]]
 \define remove() -[[$(currentTiddler)$]]
 \define my-svg()
-&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
-viewBox='-0.5 -1 192 192'&gt;&lt;g fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' stroke-linejoin='round'&gt;{{$:/core/images/star-filled}}&lt;/g&gt;&lt;/svg&gt;&lt;/svg&gt;
+&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
+viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;
 \end
 
 &lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
@@ -11041,7 +11065,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200520023944227" creator="Andrew Harrison" list="$:/plugins/ajh/favorites/image $:/ControlPanel $:/plugins/ajh/favorites/template [[My Adventure]] [[Plugin Library]]" modified="20200520031627317" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200520050712848" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template [[My Adventure]] [[Plugin Library]]" modified="20200520060120762" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12012,7 +12036,7 @@ color:$(foregroundColor)$;
 <pre>$:/plugins/ajh/randombackground/background0</pre>
 </div>
 <div title="$:/temp/time">
-<pre>8:16:45 PM</pre>
+<pre>11:01:29 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
