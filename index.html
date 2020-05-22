@@ -333,6 +333,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools</li>
 
+<li>$:/plugins/ajh/plugintools/list</li>
+
 <li>$:/plugins/ajh/plugintweaks</li>
 
 <li>$:/plugins/ajh/randombackground</li>
@@ -376,6 +378,10 @@ Error message and password prompt
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/favorites</li>
 
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660</li>
 
 <li>$:/state/showeditpreview</li>
 
@@ -492,6 +498,8 @@ Error message and password prompt
 <li>Create color SVG icon from gif</li>
 
 <li>Deleted</li>
+
+<li>Draft of '$:/plugins/ajh/favorites/readme' by Andrew Harrison</li>
 
 <li>Draft of 'A2'</li>
 
@@ -10538,10 +10546,10 @@ viewBox='-8.5 -6 192 192'&gt;&lt;g fill='#ff0'&gt;{{$:/core/images/star-filled}}
 <pre>&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
 viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/template" modified="20200520060124285" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image" modified="20200522074233580" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
-<div button-color="#ff0" button-outline-color="#000" caption="Favorites" created="20200520052111807" creator="Andrew Harrison" modified="20200520052251043" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/favorites/stylesheet">
+<div button-color="#ff0" button-outline-color="#000" caption="Favorites" created="20200520052111807" creator="Andrew Harrison" modified="20200522073537613" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/favorites/stylesheet">
 <pre>.tc-tab-buttons + .tc-favorites-hidden {
  display: none;
 }
@@ -10552,31 +10560,30 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
 .tc-tab-buttons button:not(.tc-tab-selected) {
  fill: {{!!tab-icon-unselected-color}};
 }
-.tc-favorites {
+html .tc-tiddler-controls .tc-favorites svg {
+ fill: {{!!button-color}} !important;
+ overflow: visible;
  stroke: {{!!button-outline-color}};
- stroke-width:2;
  stroke-linejoin:round;
- fill: {{!!button-color}};
+ stroke-width:2;
 }
 .tc-image-star-filled {
  height:1em;
  width:1em;
 }</pre>
 </div>
-<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200520060111857" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
+<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200522074010557" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
 <pre>\define add() [[$(currentTiddler)$]]
 \define remove() -[[$(currentTiddler)$]]
 \define my-svg()
-&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
-viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;
+&lt;svg class='tc-image-button tc-favorites-linejoint tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='605pt' height='605pt'
+viewBox='-0.5 -0.5 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;
 \end
 
 &lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
 &lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
 &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
-&lt;$vars fill={{$:/plugins/ajh/favorites/stylesheet!!button-color}} stroke={{$:/plugins/ajh/favorites/stylesheet!!button-outline-color}}&gt;
 &lt;&lt;my-svg&gt;&gt;
-&lt;/$vars&gt;
 &lt;/$list&gt;
 &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
 &lt;span class='tc-btn-text'&gt;
@@ -10809,6 +10816,9 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
     &quot;description&quot;: &quot;{{$:/language/Buttons/Shadow/Hint}}&quot;,
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
+</div>
+<div created="20200522054442090" creator="Andrew Harrison" list="" modified="20200522074234782" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
 <pre>{
@@ -11044,20 +11054,26 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200520024205362" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>contents</pre>
 </div>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200522075743996" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>yes</pre>
+</div>
+<div created="20200522075747463" creator="Andrew Harrison" modified="20200522075747463" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
+<pre>contents</pre>
+</div>
 <div created="20200520024044968" creator="Andrew Harrison" modified="20200520024044968" modifier="Andrew Harrison" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200520023205521" creator="Andrew Harrison" modified="20200520023939649" modifier="Andrew Harrison" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200518201426438" creator="Andrew Harrison" modified="20200520024201507" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20200518201426438" creator="Andrew Harrison" modified="20200522082425770" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20200518201427813" creator="Andrew Harrison" modified="20200518201427813" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
+<div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200520025531576" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/SideBar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200522075359175" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -11065,7 +11081,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200520050712848" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template [[My Adventure]] [[Plugin Library]]" modified="20200520060120762" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200522053623393" creator="Andrew Harrison" list="$:/ControlPanel [[Draft of '$:/plugins/ajh/favorites/readme' by Andrew Harrison]] $:/plugins/ajh/favorites/template [[My Adventure]] [[Plugin Library]]" modified="20200522080231013" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12019,11 +12035,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;740&quot;
+            &quot;text&quot;: &quot;864&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12036,7 +12052,7 @@ color:$(foregroundColor)$;
 <pre>$:/plugins/ajh/randombackground/background0</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:01:29 PM</pre>
+<pre>1:24:39 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -12513,6 +12529,19 @@ Note: I might want to look into optimizing the code again.</pre>
 </div>
 <div color="Red" created="20151031021107763" creator="Andrew Harrison" icon="$:/core/images/delete-button" modified="20160406010817335" modifier="Andrew Harrison" title="Deleted">
 <pre></pre>
+</div>
+<div draft.of="$:/plugins/ajh/favorites/readme" draft.title="$:/plugins/ajh/favorites/readme" modified="20200522081732050" modifier="Andrew Harrison" title="Draft of '$:/plugins/ajh/favorites/readme' by Andrew Harrison">
+<pre>This plugin adds the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Choose/Caption}}&lt;/$list&gt; button to the View Toolbar and also the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab to the Sidebar. The button becomes &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; when selected and then the tiddler appears in the list on the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab. The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; button in the tiddler.
+
+Simply drag $:/plugins/ajh/favorites to the top of your tiddlywiki display, save and reload.
+
+This plugin comprises:
+
+* Icon
+* Template
+* Stylesheet
+* Sidebar tab
+* Caption and hint</pre>
 </div>
 <div modified="20180715221336520" modifier="Andrew Harrison" title="Draft of 'A2'">
 <pre></pre>
