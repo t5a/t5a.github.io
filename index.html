@@ -317,6 +317,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/favorites/image</li>
 
+<li>$:/plugins/ajh/favorites/license</li>
+
 <li>$:/plugins/ajh/favorites/list</li>
 
 <li>$:/plugins/ajh/favorites/readme</li>
@@ -334,6 +336,8 @@ Error message and password prompt
 <li>$:/plugins/ajh/openall</li>
 
 <li>$:/plugins/ajh/plugintools</li>
+
+<li>$:/plugins/ajh/plugintools/license</li>
 
 <li>$:/plugins/ajh/plugintools/readme</li>
 
@@ -393,6 +397,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab--1498284803</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -422,6 +428,8 @@ Error message and password prompt
 <li>$:/tags/PageControls</li>
 
 <li>$:/TagStyleButton</li>
+
+<li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -10578,7 +10586,33 @@ viewBox='-8.5 -6 192 192'&gt;&lt;g fill='#ff0'&gt;{{$:/core/images/star-filled}}
 <pre>&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
 viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image" modified="20200523082933509" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20200523201526139" creator="Andrew Harrison" license-type="Unlicense" modified="20200523201544617" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/favorites/license" type="" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
+<pre>This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to &lt;https://unlicense.org&gt;</pre>
+</div>
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image" modified="20200523201956840" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20200523050559587" creator="Andrew Harrison" modified="20200523080950468" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/readme">
@@ -10595,7 +10629,7 @@ This plugin comprises:
 * Sidebar tab
 * Caption and hint</pre>
 </div>
-<div button-color="#ff0" button-outline-color="#000" caption="Favorites" created="20200520052111807" creator="Andrew Harrison" modified="20200522073537613" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/favorites/stylesheet">
+<div button-color="#ff0" button-outline-color="#000" caption="Favorites" created="20200520052111807" creator="Andrew Harrison" modified="20200523201945684" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/favorites/stylesheet">
 <pre>.tc-tab-buttons + .tc-favorites-hidden {
  display: none;
 }
@@ -10608,7 +10642,7 @@ This plugin comprises:
 }
 html .tc-tiddler-controls .tc-favorites svg {
  fill: {{!!button-color}} !important;
- overflow: visible;
+ overflow:visible;
  stroke: {{!!button-outline-color}};
  stroke-linejoin:round;
  stroke-width:2;
@@ -10618,11 +10652,11 @@ html .tc-tiddler-controls .tc-favorites svg {
  width:1em;
 }</pre>
 </div>
-<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200523082923163" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
+<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200523201909593" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
 <pre>\define add() [[$(currentTiddler)$]]
 \define remove() -[[$(currentTiddler)$]]
 \define mysvg()
-&lt;svg class='tc-image-button tc-favorites-linejoint tc-favorites' height='10pt' width='10pt' viewBox='0 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;
+&lt;svg class='tc-image-button tc-favorites' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;
 \end
 
 &lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
@@ -10861,6 +10895,32 @@ html .tc-tiddler-controls .tc-favorites svg {
     &quot;description&quot;: &quot;{{$:/language/Buttons/Shadow/Hint}}&quot;,
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
+</div>
+<div created="20200523201600410" creator="Andrew Harrison" license-type="Unlicense" modified="20200523201607826" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/plugintools/license" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
+<pre>This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to &lt;https://unlicense.org&gt;</pre>
 </div>
 <div created="20200523061947225" creator="Andrew Harrison" modified="20200523083459786" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
 <pre>\define mypath()
@@ -11149,14 +11209,17 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520023205521" creator="Andrew Harrison" modified="20200520023939649" modifier="Andrew Harrison" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
+<div created="20200523195720556" creator="Andrew Harrison" modified="20200523195724700" modifier="Andrew Harrison" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+</div>
 <div created="20200518201426438" creator="Andrew Harrison" modified="20200523045559562" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200523081114165" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/plugintools/sidebar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200523201322387" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/SideBar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -11164,7 +11227,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200523045556111" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200523083720570" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200523195320991" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200523201552875" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12073,6 +12136,9 @@ color:$(foregroundColor)$;
 
 &lt;$macrocall $name='tag-body' palette={{$:/palette}}/&gt;</pre>
 </div>
+<div created="20200523195707213" creator="Andrew Harrison" modified="20200523195707213" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
+<pre>tc-favorites-linejoint</pre>
+</div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -12118,11 +12184,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1536&quot;
+            &quot;text&quot;: &quot;360&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;864&quot;
+            &quot;text&quot;: &quot;740&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12132,7 +12198,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background2</pre>
+<pre>$:/plugins/ajh/randombackground/background0</pre>
 </div>
 <div created="20200523051007493" creator="Andrew Harrison" description="Copy Button" modified="20200523051007493" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
@@ -12309,7 +12375,7 @@ This plugin comprises:
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:56:07 AM</pre>
+<pre>1:20:14 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
