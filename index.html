@@ -339,6 +339,10 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools/license</li>
 
+<li>$:/plugins/ajh/plugintools/list</li>
+
+<li>$:/plugins/ajh/plugintools/plugin</li>
+
 <li>$:/plugins/ajh/plugintools/readme</li>
 
 <li>$:/plugins/ajh/plugintweaks</li>
@@ -385,6 +389,8 @@ Error message and password prompt
 
 <li>$:/state/addplugins/tab-1342078386</li>
 
+<li>$:/state/plugin-info--1907371462-$:/plugins/ajh/favorites---1696265336</li>
+
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/favorites</li>
 
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475</li>
@@ -392,6 +398,14 @@ Error message and password prompt
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools</li>
 
 <li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks--1637054872</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/reduce</li>
+
+<li>$:/state/plugin-info--896887961-$:/plugins/ajh/reduce---900664340</li>
 
 <li>$:/state/showeditpreview</li>
 
@@ -10578,9 +10592,8 @@ color:$(foregroundColor)$;
 <div author="Andrew" core-version="&gt;=5.1.14" dependents="$:/language/Buttons/Choose/Caption $:/language/Buttons/Choose/Hint $:/language/Buttons/Favorites/Caption $:/language/Buttons/Favorites/Hint $:/language/SideBar/Favorites/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image $:/plugins/ajh/favorites/license $:/plugins/ajh/favorites/readme $:/plugins/ajh/favorites/SideBar $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template" description="Favorites" list="readme license" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.5">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/Choose/Caption&quot;: { &quot;text&quot;: &quot;choose&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Choose/Caption&quot; }, &quot;$:/language/Buttons/Choose/Hint&quot;: { &quot;text&quot;: &quot;Add to favorites list&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Choose/Hint&quot; }, &quot;$:/language/Buttons/Favorites/Caption&quot;: { &quot;text&quot;: &quot;favorite&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Caption&quot; }, &quot;$:/language/Buttons/Favorites/Hint&quot;: { &quot;text&quot;: &quot;Remove from favorites list&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Hint&quot; }, &quot;$:/language/SideBar/Favorites/Caption&quot;: { &quot;text&quot;: &quot;Favorites&quot;, &quot;title&quot;: &quot;$:/language/SideBar/Favorites/Caption&quot; }, &quot;$:/pluginlibrary/ajh/released&quot;: { &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;, &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;, &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;, &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;, &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot; }, &quot;$:/plugins/ajh/favorites/icon&quot;: { &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#ff0' stroke='#f90' stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='96,122' path={{$:/plugins/ajh/favorites/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/icon&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot; }, &quot;$:/plugins/ajh/favorites/image&quot;: { &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='64,96.1' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/image&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot;, &quot;path&quot;: &quot;l32.7,24.2c2.4,1.7 5.6,-0.6 4.6,-3.4l-12.4,-38.6l32.5,-23.8c2.4,-1.7 1.1,-5.5 -1.8,-5.5l-40.2,0l-12.5,-38.5c-0.9,-2.8 -4.8,-2.8 -5.8,0l-12.5,38.5l-40.2,0c-2.9,0 -4.2,3.8 -1.8,5.5l32.5,23.8l-12.4,38.6c-0.9,2.8 2.3,5.1 4.6,3.4l32.7,-24.2z&quot; }, &quot;$:/plugins/ajh/favorites/license&quot;: { &quot;text&quot;: &quot;{{!!url}}\nThis is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;, &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;, &quot;type&quot;: &quot;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/license&quot;, &quot;tags&quot;: &quot;$:/tags/License&quot;, &quot;license-type&quot;: &quot;Unlicense&quot; }, &quot;$:/plugins/ajh/favorites/readme&quot;: { &quot;text&quot;: &quot;This plugin adds the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Choose/Caption}}&lt;/$list&gt; button to the View Toolbar and also the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab to the Sidebar. The button becomes &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; when selected and then the tiddler appears in the list on the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; tab. The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/Buttons/Favorites/Caption}}&lt;/$list&gt; button in the tiddler.\n\nSimply drag $:/plugins/ajh/favorites to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/readme&quot; }, &quot;$:/plugins/ajh/favorites/SideBar&quot;: { &quot;text&quot;: &quot;\\define drop-actions()\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;\n&lt;div style='position: relative;'&gt;\n&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;\n&lt;div class='tc-droppable-placeholder'&gt;\n&amp;nbsp;\n&lt;/div&gt;\n&lt;div&gt;\n &lt;$link to={{!!title}}&gt;\n&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;\n&lt;/div&gt;\n&lt;/$droppable&gt;\n&lt;/div&gt;\n&lt;/$list&gt;\n&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/SideBar&quot;, &quot;tags&quot;: &quot;$:/tags/SideBar&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;caption&quot;: &quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/plugins/ajh/favorites/image}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot; }, &quot;$:/plugins/ajh/favorites/stylesheet&quot;: { &quot;text&quot;: &quot;.tc-tab-buttons + .tc-favorites-hidden {\n display: none;\n}\n.tc-tab-buttons button.tc-tab-selected {\n fill: {{!!tab-icon-selected-color}};\n stroke: {{!!tab-icon-outline-color}}; \n}\n.tc-tab-buttons button:not(.tc-tab-selected) {\n fill: {{!!tab-icon-unselected-color}};\n}\n.tc-favorites {\n stroke: {{!!button-outline-color}};\n stroke-width:5;\n fill: {{!!button-color}};\n}\n.tc-image-star-filled {\n height:1em;\n width:1em;\n}&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/stylesheet&quot;, &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;, &quot;tab-icon-unselected-color&quot;: &quot;#999&quot;, &quot;tab-icon-selected-color&quot;: &quot;#ff0&quot;, &quot;tab-icon-outline-color&quot;: &quot;#000&quot;, &quot;caption&quot;: &quot;Favorites&quot;, &quot;button-outline-color&quot;: &quot;#000&quot;, &quot;button-color&quot;: &quot;#ff0&quot; }, &quot;$:/plugins/ajh/favorites/template&quot;: { &quot;text&quot;: &quot;\\define add() [[$(currentTiddler)$]]\n\\define remove() -[[$(currentTiddler)$]]\n\\define my-svg()\n&lt;svg class='tc-image-favorites tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n&lt;$vars fill={{$:/plugins/ajh/favorites/stylesheet!!button-color}} stroke={{$:/plugins/ajh/favorites/stylesheet!!button-outline-color}} m='64,96.1' path={{$:/plugins/ajh/favorites/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/core/images/star-filled}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/favorites/template&quot;, &quot;tags&quot;: &quot;$:/tags/ViewToolbar&quot;, &quot;list-after&quot;: &quot;$:/core/ui/Buttons/more-tiddler-actions&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Favorites/Hint}}&quot;, &quot;caption&quot;: &quot;{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot; } } }</pre>
 </div>
-<div created="20200519075015745" creator="Andrew Harrison" modified="20200520023631304" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/favorites/icon" type="application/x-tiddler">
-<pre>&lt;svg width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;svg width='600pt' height='600pt'
-viewBox='-8.5 -6 192 192'&gt;&lt;g fill='#ff0'&gt;{{$:/core/images/star-filled}}&lt;/g&gt;&lt;/svg&gt;&lt;/svg&gt;</pre>
+<div created="20200519075015745" creator="Andrew Harrison" modified="20200523223351459" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/favorites/icon" type="application/x-tiddler">
+<pre>&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-6 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l19.8,-11.52l19.8,11.52v20.952l-19.8,11.52l-19.8,-11.52v-20.952z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;</pre>
 </div>
 <div created="20200520024323591" creator="Andrew Harrison" modified="20200520060038871" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/favorites/image">
 <pre>&lt;svg class='tc-image-button tc-favorites' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;svg width='600pt' height='600pt'
@@ -10612,7 +10625,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to &lt;https://unlicense.org&gt;</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/image" modified="20200523201956840" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/image" modified="20200523223410647" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20200523050559587" creator="Andrew Harrison" modified="20200523080950468" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/readme">
@@ -10652,13 +10665,12 @@ html .tc-tiddler-controls .tc-favorites svg {
  width:1em;
 }</pre>
 </div>
-<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200523201909593" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
+<div caption="{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}" created="20200520031210533" creator="Andrew Harrison" description="{{$:/language/Buttons/Favorites/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200523211411639" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/favorites/template">
 <pre>\define add() [[$(currentTiddler)$]]
 \define remove() -[[$(currentTiddler)$]]
 \define mysvg()
 &lt;svg class='tc-image-button tc-favorites' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;
 \end
-
 &lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
 &lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
 &lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
@@ -10921,6 +10933,92 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to &lt;https://unlicense.org&gt;</pre>
+</div>
+<div created="20200523205909788" creator="Andrew Harrison" list="$:/language/Buttons/Choose/Caption $:/language/Buttons/Choose/Hint $:/language/Buttons/Favorites/Caption $:/language/Buttons/Favorites/Hint $:/language/SideBar/Favorites/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/license $:/plugins/ajh/favorites/readme $:/plugins/ajh/favorites/SideBar $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template" modified="20200523210414411" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
+</div>
+<div created="20200523210445453" creator="Andrew Harrison" dependents="$:/language/Buttons/Choose/Caption $:/language/Buttons/Choose/Hint $:/language/Buttons/Favorites/Caption $:/language/Buttons/Favorites/Hint $:/language/SideBar/Favorites/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/favorites/icon $:/plugins/ajh/favorites/license $:/plugins/ajh/favorites/readme $:/plugins/ajh/favorites/SideBar $:/plugins/ajh/favorites/stylesheet $:/plugins/ajh/favorites/template" description="Description of plugin" list="readme license" modified="20200523210445453" modifier="Andrew Harrison" name="Brief name of the plugin" plugin-type="Generally plugin, language or theme" title="$:/plugins/ajh/plugintools/plugin" type="application/json">
+<pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/Choose/Caption&quot;: {
+    &quot;text&quot;: &quot;choose&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/Choose/Caption&quot;
+}, &quot;$:/language/Buttons/Choose/Hint&quot;: {
+    &quot;text&quot;: &quot;Add to favorites list&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/Choose/Hint&quot;
+}, &quot;$:/language/Buttons/Favorites/Caption&quot;: {
+    &quot;text&quot;: &quot;favorite&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Caption&quot;
+}, &quot;$:/language/Buttons/Favorites/Hint&quot;: {
+    &quot;text&quot;: &quot;Remove from favorites list&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/Favorites/Hint&quot;
+}, &quot;$:/language/SideBar/Favorites/Caption&quot;: {
+    &quot;text&quot;: &quot;Favorites&quot;,
+    &quot;title&quot;: &quot;$:/language/SideBar/Favorites/Caption&quot;
+}, &quot;$:/pluginlibrary/ajh/released&quot;: {
+    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
+    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
+    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
+    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/favorites/icon&quot;: {
+    &quot;text&quot;: &quot;&lt;svg width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;svg width='600pt' height='600pt'\nviewBox='-8.5 -6 192 192'&gt;&lt;g fill='#ff0'&gt;{{$:/core/images/star-filled}}&lt;/g&gt;&lt;/svg&gt;&lt;/svg&gt;&quot;,
+    &quot;type&quot;: &quot;application/x-tiddler&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/icon&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200520023631304&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200519075015745&quot;
+}, &quot;$:/plugins/ajh/favorites/license&quot;: {
+    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
+    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/license&quot;,
+    &quot;tags&quot;: &quot;$:/tags/License&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200523201544617&quot;,
+    &quot;license-type&quot;: &quot;Unlicense&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200523201526139&quot;
+}, &quot;$:/plugins/ajh/favorites/readme&quot;: {
+    &quot;text&quot;: &quot;\\define mysvg()\n&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='10pt' width='10pt' viewBox='0 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n\\end\nThis plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;mysvg&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;mysvg&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;mysvg&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;mysvg&gt;&gt; ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/readme&quot;,
+    &quot;tags&quot;: &quot;&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200523080950468&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200523050559587&quot;
+}, &quot;$:/plugins/ajh/favorites/SideBar&quot;: {
+    &quot;text&quot;: &quot;\\define drop-actions()\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;\n&lt;div style='position: relative;'&gt;\n&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;\n&lt;div class='tc-droppable-placeholder'&gt;\n&amp;nbsp;\n&lt;/div&gt;\n&lt;div&gt;\n &lt;$link to={{!!title}}&gt;\n&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;\n&lt;/div&gt;\n&lt;/$droppable&gt;\n&lt;/div&gt;\n&lt;/$list&gt;\n&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/SideBar&quot;,
+    &quot;tags&quot;: &quot;$:/tags/SideBar&quot;,
+    &quot;list-before&quot;: &quot;&quot;,
+    &quot;caption&quot;: &quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/plugins/ajh/favorites/image}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot;
+}, &quot;$:/plugins/ajh/favorites/stylesheet&quot;: {
+    &quot;text&quot;: &quot;.tc-tab-buttons + .tc-favorites-hidden {\n display: none;\n}\n.tc-tab-buttons button.tc-tab-selected {\n fill: {{!!tab-icon-selected-color}};\n stroke: {{!!tab-icon-outline-color}}; \n}\n.tc-tab-buttons button:not(.tc-tab-selected) {\n fill: {{!!tab-icon-unselected-color}};\n}\nhtml .tc-tiddler-controls .tc-favorites svg {\n fill: {{!!button-color}} !important;\n overflow:visible;\n stroke: {{!!button-outline-color}};\n stroke-linejoin:round;\n stroke-width:2;\n}\n.tc-image-star-filled {\n height:1em;\n width:1em;\n}&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/stylesheet&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+    &quot;tab-icon-unselected-color&quot;: &quot;#999&quot;,
+    &quot;tab-icon-selected-color&quot;: &quot;#ff0&quot;,
+    &quot;tab-icon-outline-color&quot;: &quot;#000&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200523201945684&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200520052111807&quot;,
+    &quot;caption&quot;: &quot;Favorites&quot;,
+    &quot;button-outline-color&quot;: &quot;#000&quot;,
+    &quot;button-color&quot;: &quot;#ff0&quot;
+}, &quot;$:/plugins/ajh/favorites/template&quot;: {
+    &quot;text&quot;: &quot;\\define add() [[$(currentTiddler)$]]\n\\define remove() -[[$(currentTiddler)$]]\n\\define mysvg()\n&lt;svg class='tc-image-button tc-favorites' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n\\end\n\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n&lt;&lt;mysvg&gt;&gt;\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/core/images/star-filled}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;\n&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;\n&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&lt;/$list&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/favorites/template&quot;,
+    &quot;tags&quot;: &quot;$:/tags/ViewToolbar&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200523201909593&quot;,
+    &quot;list-after&quot;: &quot;$:/core/ui/Buttons/more-tiddler-actions&quot;,
+    &quot;description&quot;: &quot;{{$:/language/Buttons/Favorites/Hint}}&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200520031210533&quot;,
+    &quot;caption&quot;: &quot;{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;
+} } }</pre>
 </div>
 <div created="20200523061947225" creator="Andrew Harrison" modified="20200523083459786" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
 <pre>\define mypath()
@@ -11191,16 +11289,31 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200523051003758" creator="Andrew Harrison" modified="20200523051003758" modifier="Andrew Harrison" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/pluginlibrary/ajh/released</pre>
 </div>
+<div created="20200523211357554" creator="Andrew Harrison" modified="20200523211357554" modifier="Andrew Harrison" title="$:/state/plugin-info--1907371462-$:/plugins/ajh/favorites---1696265336">
+<pre>contents</pre>
+</div>
 <div created="20200520024203868" creator="Andrew Harrison" modified="20200520024203868" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
 <pre>yes</pre>
 </div>
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200520024205362" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>contents</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200523051346525" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200523210331026" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
 <pre>yes</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200522075747463" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
+<pre>contents</pre>
+</div>
+<div created="20200523212449601" creator="Andrew Harrison" modified="20200523212449601" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks">
+<pre>yes</pre>
+</div>
+<div created="20200523212450948" creator="Andrew Harrison" modified="20200523212450948" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks--1637054872">
+<pre>contents</pre>
+</div>
+<div created="20200523212417788" creator="Andrew Harrison" modified="20200523212417788" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce">
+<pre>yes</pre>
+</div>
+<div created="20200523212419116" creator="Andrew Harrison" modified="20200523212419116" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce---900664340">
 <pre>contents</pre>
 </div>
 <div created="20200520024044968" creator="Andrew Harrison" modified="20200520024044968" modifier="Andrew Harrison" title="$:/state/showeditpreview">
@@ -11218,8 +11331,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200523201322387" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/SideBar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200523210133844" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -11227,7 +11340,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200523195320991" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200523201552875" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200523205900022" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/favorites $:/plugins/ajh/favorites/icon" modified="20200523213354816" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12375,7 +12488,7 @@ This plugin comprises:
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:20:14 PM</pre>
+<pre>3:34:30 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
