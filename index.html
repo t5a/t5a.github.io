@@ -311,6 +311,10 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/copy</li>
 
+<li>$:/plugins/ajh/copy/icon</li>
+
+<li>$:/plugins/ajh/copy/license</li>
+
 <li>$:/plugins/ajh/favorites</li>
 
 <li>$:/plugins/ajh/favorites/image</li>
@@ -554,6 +558,8 @@ Error message and password prompt
 <li>Create color SVG icon from gif</li>
 
 <li>Deleted</li>
+
+<li>Draft of '$:/plugins/ajh/favorites/icon' by Andrew Harrison</li>
 
 <li>Draft of 'A2'</li>
 
@@ -10591,6 +10597,35 @@ color:$(foregroundColor)$;
 <div created="20200504072825917" creator="Andrew Harrison" description="Copy Button" list="readme license" modified="20200524215305996" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/copy&quot;: { &quot;text&quot;: &quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-copy-button'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/copy&quot; }, &quot;$:/language/Buttons/Copy/Caption&quot;: { &quot;text&quot;: &quot;copy&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Copy/Caption&quot; }, &quot;$:/language/Buttons/Copy/Hint&quot;: { &quot;text&quot;: &quot;Copy to the clipboard&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Copy/Hint&quot; }, &quot;$:/language/Buttons/Copy/Notification&quot;: { &quot;text&quot;: &quot;Copied&quot;, &quot;title&quot;: &quot;$:/language/Buttons/Copy/Notification&quot; }, &quot;$:/pluginlibrary/ajh/released&quot;: { &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;, &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;, &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;, &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;, &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot; }, &quot;$:/plugins/ajh/copy/copy.js&quot;: { &quot;text&quot;: &quot;/*\\\n$:/plugins/ajh/copy/copy.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget handler that can be used to copy transcluded tiddler to the Clipboard.\n\n&lt;span id='TiddlerTitle'&gt;&lt;$transclude tiddler='TiddlerTitle'/&gt;&lt;/span&gt;&amp;nbsp;&lt;$button param='TiddlerTitle' message='tm-copy'&gt;COPY&lt;/$button&gt;\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\n// Export name and synchronous status\nexports.name = 'copy';\nexports.platforms = ['browser'];\nexports.after = ['rootwidget'];\nexports.synchronous = true;\n\nexports.startup = function () {\n // Install the tiddler copy message mechanism\n $tw.rootWidget.addEventListener('tm-copy', function (event) {\n if (event) { \n try {\n var copyDiv = document.getElementById(event.param);\n copyDiv.contentEditable = true;\n copyDiv.focus();\n document.execCommand('SelectAll',false,null);\n document.execCommand('Copy', false, null);\n document.execCommand('Unselect');\n copyDiv.blur();\n return;\n } catch(e) {\n // Rethrow exception if it's not a SecurityError. Note that SecurityError\n // exception is specific to Firefox.\n if(e.name !== 'SecurityError')\n throw e;\n alert('Feature not available in older browsers!');\n return;\n }\n }\n });\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/copy/copy.js&quot;, &quot;module-type&quot;: &quot;startup&quot; }, &quot;$:/plugins/ajh/copy/icon&quot;: { &quot;text&quot;: &quot;&lt;svg class='tc-image-copy tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;g fill='#000'&gt;\n &lt;rect rx='4' height='8' width='33' y='64' x='70'/&gt;\n &lt;rect rx='4' height='8' width='17' y='106' x='70'/&gt;\n &lt;rect rx='4' height='8' width='17' y='78' x='70'/&gt;\n &lt;rect rx='4' height='8' width='33' y='120' x='70'/&gt;\n &lt;rect rx='4' height='8' width='12' y='92' x='70'/&gt;\n &lt;path d='m70,40h-16c-4.4,0 -8,3.6 -8,8v96c0,4.4 3.6,8 8,8h80c2.2,0 4.2,-0.9 5.7,-2.3c1.5,-1.4 2.3,-3.4 2.3,-5.7v-16c0,-4.4 -3.6,-8 -8,-8c-4.4,0 -8,3.6 -8,8v8h-64v-80h64v8c0,4.4 3.6,8 8,8c4.4,0 8,-3.6 8,-8v-16c0,-2.2 -0.9,-4.2 -2.3,-5.7c-1.5,-1.4 -3.5,-2.3 -5.7,-2.3h-16c0,-4.4 -3.6,-8 -8,-8h-32c-4.4,0 -8,3.6 -8,8zm4,-1c0,-2.2 1.8,-4 4,-4h32c2.2,0 4,1.8 4,4v0,4c0,2.2 -1.8,4 -4,4h-32c-2.2,0 -4,-1.8 -4,-4v-4z'/&gt;\n &lt;rect rx='8' height='16' width='66' y='88' x='92'/&gt;\n &lt;path transform='rotate(-90 71,72) translate(-71,-72) ' d='m107.7,187.7l16,-16h-11.3l16,16c3.1,3.1 8.2,3.1 11.3,0c3.1,-3.1 3.1,-8.2 0,-11.3l-16,-16c-3.1,-3.1 -8.2,-3.1 -11.3,0l-16,16c-3.1,3.1 -3.1,8.2 0,11.3c3.1,3.1 8.2,3.1 11.3,0z'/&gt;&lt;/g&gt;\n&lt;/svg&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/copy/icon&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot; }, &quot;$:/plugins/ajh/copy/license&quot;: { &quot;text&quot;: &quot;{{!!url}}\nThis is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;, &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;, &quot;type&quot;: &quot;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/copy/license&quot;, &quot;tags&quot;: &quot;$:/tags/License&quot;, &quot;license-type&quot;: &quot;Unlicense&quot; }, &quot;$:/plugins/ajh/copy/readme&quot;: { &quot;text&quot;: &quot;This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nSimply drag $:/plugins/ajh/copy to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/copy/readme&quot; }, &quot;$:/plugins/ajh/copy/stylesheet&quot;: { &quot;text&quot;: &quot;html .tc-copy-button button svg {\n height: {{!!button-size}};\n width: {{!!button-size}};\n}\n\n.tc-copy-button {\n fill: {{!!button-color}};\n}\n\n.tc-copy-button:hover {\n fill: {{!!button-hover-color}} !important;\n}&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/copy/stylesheet&quot;, &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;, &quot;button-color&quot;: &quot;#888&quot;, &quot;button-hover-color&quot;: &quot;#000&quot;, &quot;button-size&quot;: &quot;1.4em&quot;, &quot;caption&quot;: &quot;Copy Button&quot; } } }</pre>
 </div>
+<div created="20200524220749531" creator="Andrew Harrison" modified="20200524221501472" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/copy/icon">
+<pre>&lt;svg height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt;</pre>
+</div>
+<div created="20200524220515026" creator="Andrew Harrison" license-type="Unlicense" modified="20200524220535274" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/copy/license" type="" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
+<pre>This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to &lt;https://unlicense.org&gt;</pre>
+</div>
 <div created="20200523232029662" creator="Andrew Harrison" description="of views frequently accessed" list="readme license" modified="20200524215209227" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/Choose/Caption&quot;: {
     &quot;text&quot;: &quot;choose&quot;,
@@ -10894,7 +10929,7 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
   }
 }</pre>
 </div>
-<div created="20200524214242367" creator="Andrew Harrison" list="$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet $:/pluginlibrary/ajh/released $:/plugins/ajh/copy/license" modified="20200524214533976" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200524214242367" creator="Andrew Harrison" list="$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/pluginlibrary/ajh/released $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/license $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet" modified="20200524220447335" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
@@ -11155,11 +11190,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200524215237270" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>readme</pre>
 </div>
-<div created="20200520024203868" creator="Andrew Harrison" modified="20200524172736977" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
-<pre>no</pre>
+<div created="20200520024203868" creator="Andrew Harrison" modified="20200524220643112" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
+<pre>yes</pre>
 </div>
-<div created="20200520024205362" creator="Andrew Harrison" modified="20200524172734115" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
-<pre>readme</pre>
+<div created="20200520024205362" creator="Andrew Harrison" modified="20200524220644393" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
+<pre>contents</pre>
 </div>
 <div created="20200524032154731" creator="Andrew Harrison" modified="20200524032159432" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
 <pre>no</pre>
@@ -11167,11 +11202,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032151487" creator="Andrew Harrison" modified="20200524032153461" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200524214252736" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>no</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200524215733290" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>yes</pre>
 </div>
-<div created="20200522075747463" creator="Andrew Harrison" modified="20200524214251210" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
-<pre>readme</pre>
+<div created="20200522075747463" creator="Andrew Harrison" modified="20200524215734449" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
+<pre>contents</pre>
 </div>
 <div created="20200523212449601" creator="Andrew Harrison" modified="20200524032145344" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks">
 <pre>no</pre>
@@ -11200,11 +11235,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032121675" creator="Andrew Harrison" modified="20200524032126349" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlyviewer">
 <pre>no</pre>
 </div>
-<div created="20200524215228243" creator="Andrew Harrison" modified="20200524215228243" modifier="Andrew Harrison" title="$:/state/plugin-info-39613148-$:/plugins/ajh/plugintools">
+<div created="20200524215228243" creator="Andrew Harrison" modified="20200524215723876" modifier="Andrew Harrison" title="$:/state/plugin-info-39613148-$:/plugins/ajh/plugintools">
 <pre>no</pre>
 </div>
-<div created="20200524172856723" creator="Andrew Harrison" modified="20200524215027628" modifier="Andrew Harrison" title="$:/state/plugin-info-39613148-$:/plugins/ajh/plugintools--1970750233">
-<pre>readme</pre>
+<div created="20200524172856723" creator="Andrew Harrison" modified="20200524215720822" modifier="Andrew Harrison" title="$:/state/plugin-info-39613148-$:/plugins/ajh/plugintools--1970750233">
+<pre>contents</pre>
 </div>
 <div created="20200520024044968" creator="Andrew Harrison" modified="20200520024044968" modifier="Andrew Harrison" title="$:/state/showeditpreview">
 <pre>yes</pre>
@@ -11224,7 +11259,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200524214303549" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200524221119493" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
 <pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
@@ -11233,7 +11268,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200524214049005" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200524215240701" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200524215421792" creator="Andrew Harrison" list="$:/plugins/ajh/copy/readme $:/ControlPanel [[Draft of '$:/plugins/ajh/favorites/icon' by Andrew Harrison]]" modified="20200524221527497" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12206,14 +12241,14 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background0</pre>
+<div attachment="fixed" size="auto" title="$:/temp/random">
+<pre>$:/plugins/ajh/randombackground/background1</pre>
 </div>
 <div created="20200524180905127" creator="Andrew Harrison" modified="20200524185823941" modifier="Andrew Harrison" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>2:53:13 PM</pre>
+<pre>3:16:31 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -12699,6 +12734,9 @@ Note: I might want to look into optimizing the code again.</pre>
 </div>
 <div color="Red" created="20151031021107763" creator="Andrew Harrison" icon="$:/core/images/delete-button" modified="20160406010817335" modifier="Andrew Harrison" title="Deleted">
 <pre></pre>
+</div>
+<div draft.of="$:/plugins/ajh/favorites/icon" draft.title="$:/plugins/ajh/favorites/icon" modified="20200524220649701" modifier="Andrew Harrison" tags="$:/tags/Image" title="Draft of '$:/plugins/ajh/favorites/icon' by Andrew Harrison" type="application/x-tiddler">
+<pre>&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;</pre>
 </div>
 <div modified="20180715221336520" modifier="Andrew Harrison" title="Draft of 'A2'">
 <pre></pre>
