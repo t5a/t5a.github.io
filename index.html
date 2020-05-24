@@ -317,8 +317,6 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/favorites/list</li>
 
-<li>$:/plugins/ajh/favorites/sidebar</li>
-
 <li>$:/plugins/ajh/flipswitch/button</li>
 
 <li>$:/plugins/ajh/flipswitch/stylesheet</li>
@@ -10657,24 +10655,6 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
 <div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells $:/plugins/ajh/favorites/image" modified="20200523223410647" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
-<div caption="&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;" created="20200524005216061" creator="Andrew Harrison" list-before="" modified="20200524005427096" modifier="Andrew Harrison" tags="$:/tags/SideBar" title="$:/plugins/ajh/favorites/sidebar">
-<pre>\define drop-actions()
-&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;
-\end
-&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;
-&lt;div style='position: relative;'&gt;
-&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
-&lt;div class='tc-droppable-placeholder'&gt;
-&amp;nbsp;
-&lt;/div&gt;
-&lt;div&gt;
- &lt;$link to={{!!title}}&gt;
-&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;
-&lt;/div&gt;
-&lt;/$droppable&gt;
-&lt;/div&gt;
-&lt;/$list&gt;</pre>
-</div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
 <pre>&lt;div class=&quot;onoffswitch&quot;&gt;
     &lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;myonoffswitch&quot; checked&gt;
@@ -11221,7 +11201,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520024044968" creator="Andrew Harrison" modified="20200520024044968" modifier="Andrew Harrison" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200520023205521" creator="Andrew Harrison" modified="20200524005133519" modifier="Andrew Harrison" title="$:/state/sidebar">
+<div created="20200520023205521" creator="Andrew Harrison" modified="20200524010208673" modifier="Andrew Harrison" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200523195720556" creator="Andrew Harrison" modified="20200523195724700" modifier="Andrew Harrison" title="$:/state/tab--1498284803">
@@ -11242,7 +11222,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200524005152805" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/favorites [[My Adventure]] [[Plugin Library]]" modified="20200524005954650" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200524010217195" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200524010217195" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12212,8 +12192,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="auto" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background1</pre>
+<div attachment="fixed" size="cover" title="$:/temp/random">
+<pre>$:/plugins/ajh/randombackground/background3</pre>
 </div>
 <div created="20200523051007493" creator="Andrew Harrison" description="Copy Button" modified="20200523051007493" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
@@ -12390,7 +12370,7 @@ This plugin comprises:
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>6:01:02 PM</pre>
+<pre>6:02:33 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
