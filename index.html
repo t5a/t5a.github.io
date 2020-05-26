@@ -339,8 +339,6 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools/list</li>
 
-<li>$:/plugins/ajh/plugintools/plugin</li>
-
 <li>$:/plugins/ajh/plugintweaks</li>
 
 <li>$:/plugins/ajh/randombackground</li>
@@ -10782,51 +10780,71 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
 }
 ```</pre>
 </div>
-<div author="Andrew" core-version="&gt;=5.1.11" dependents="$:/language/locations/caption $:/language/locations/hint $:/plugins/ajh/locations/icon $:/plugins/ajh/locations/readme $:/plugins/ajh/locations/image $:/plugins/ajh/locations/template" description="Locations Button" list="readme" plugin-type="plugin" source="https://github.com/Infurnoape/infurnoape.github.io/blob/master/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Flocations.json" title="$:/plugins/ajh/locations" type="application/json" version="0.0.2">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;$:/language/locations/caption&quot;: {
-            &quot;text&quot;: &quot;locations&quot;,
-            &quot;title&quot;: &quot;$:/language/locations/caption&quot;
-        },
-        &quot;$:/language/locations/hint&quot;: {
-            &quot;text&quot;: &quot;Navigate to locations&quot;,
-            &quot;title&quot;: &quot;$:/language/locations/hint&quot;
-        },
-        &quot;$:/plugins/ajh/locations/icon&quot;: {
-            &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-locations tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#090' stroke='#000' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;g fill='#fff' stroke='#000' stroke-width='2'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='96,34' path={{$:/plugins/ajh/locations/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/locations/icon&quot;
-        },
-        &quot;$:/plugins/ajh/locations/readme&quot;: {
-            &quot;text&quot;: &quot;This plugin adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/plugins/ajh/locations/image}}&lt;/span&gt;locations button to the Page Toolbar. The button will navigate to the Locations tiddler.\n\nSimply drag $:/plugins/ajh/locations to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Caption and hint&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/locations/readme&quot;
-        },
-        &quot;$:/plugins/ajh/locations/image&quot;: {
-            &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-locations tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='64,2' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/locations/image&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;path&quot;: &quot;c-24,0 -44,20 -44,44c0,33 44,82 44,82s44,-49 44,-82c0,-24 -20,-44 -44,-44zm0,24a20,20 0 0 1 0,40a20,20 0 0 1 0,-40z&quot;
-        },
-        &quot;$:/plugins/ajh/locations/template&quot;: {
-            &quot;text&quot;: &quot;&lt;$button tooltip={{$:/language/locations/hint}} aria-label={{$:/language/locations/caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-navigate $to='Locations'/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/plugins/ajh/locations/image}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/locations/caption}}/&gt;&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/locations/template&quot;,
-            &quot;tags&quot;: &quot;$:/tags/PageControls&quot;,
-            &quot;description&quot;: &quot;{{$:/language/locations/hint}}&quot;,
-            &quot;caption&quot;: &quot;{{$:/plugins/ajh/locations/image}} {{$:/language/locations/caption}}&quot;
-        }
-    }
-}</pre>
+<div created="20200526024627124" creator="Andrew Harrison" description="navigator button" list="readme" modified="20200526025246537" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Flocations.json" title="$:/plugins/ajh/locations" type="application/json" version="0.0.3">
+<pre>{ &quot;tiddlers&quot;: { &quot;$:/language/locations/caption&quot;: {
+    &quot;text&quot;: &quot;locations&quot;,
+    &quot;title&quot;: &quot;$:/language/locations/caption&quot;
+}, &quot;$:/language/locations/hint&quot;: {
+    &quot;text&quot;: &quot;Navigate to locations&quot;,
+    &quot;title&quot;: &quot;$:/language/locations/hint&quot;
+}, &quot;$:/pluginlibrary/ajh/released&quot;: {
+    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
+    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
+    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
+    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/locations/icon&quot;: {
+    &quot;created&quot;: &quot;20200525005041378&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg height='22pt' width='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#090' stroke='#000' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;g fill='#fff' stroke='#000' stroke-width='2'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='53,80' path={{$:/plugins/ajh/locations/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/locations/icon&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200526024425353&quot;
+}, &quot;$:/plugins/ajh/locations/image&quot;: {
+    &quot;created&quot;: &quot;20200526024204390&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-locations tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='21,48' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/locations/image&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+    &quot;path&quot;: &quot;c0,42,42,80,42,80c0,0,42,-42,42,-80c0,-60,-84,-60,-84,0zm42,-32,a30,30 0 0 1 0,63a31,31 0 0 1 0,-63z&quot;,
+    &quot;modified&quot;: &quot;20200526024358747&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/locations/license&quot;: {
+    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
+    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/locations/license&quot;,
+    &quot;tags&quot;: &quot;$:/tags/License&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200525003141246&quot;,
+    &quot;license-type&quot;: &quot;Unlicense&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200525003121328&quot;
+}, &quot;$:/plugins/ajh/locations/readme&quot;: {
+    &quot;text&quot;: &quot;This plugin adds the &lt;svg height='10pt' width='10pt' viewBox='0 0 30 30'&gt;{{$:/plugins/ajh/locations/image}}&lt;/svg&gt; ''locations'' button to the Page Toolbar. The button will navigate to the Locations tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Caption and hint&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/locations/readme&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200525002551959&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200525002307321&quot;
+}, &quot;$:/plugins/ajh/locations/template&quot;: {
+    &quot;text&quot;: &quot;&lt;$button tooltip={{$:/language/locations/hint}} aria-label={{$:/language/locations/caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n&lt;$action-navigate $to='Locations'/&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/plugins/ajh/locations/image}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/locations/caption}}/&gt;&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/locations/template&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PageControls&quot;,
+    &quot;description&quot;: &quot;{{$:/language/locations/hint}}&quot;,
+    &quot;caption&quot;: &quot;{{$:/plugins/ajh/locations/image}} {{$:/language/locations/caption}}&quot;
+} } }</pre>
 </div>
-<div created="20200525005041378" creator="Andrew Harrison" modified="20200525005127803" modifier="Andrew Harrison" title="$:/plugins/ajh/locations/icon">
+<div created="20200525005041378" creator="Andrew Harrison" modified="20200526024425353" modifier="Andrew Harrison" title="$:/plugins/ajh/locations/icon">
 <pre>\define my-svg()
 &lt;svg height='22pt' width='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#090' stroke='#000' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;g fill='#fff' stroke='#000' stroke-width='2'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;
 \end
 
-&lt;$vars m='96,34' path={{$:/plugins/ajh/locations/image!!path}}&gt;
+&lt;$vars m='53,80' path={{$:/plugins/ajh/locations/image!!path}}&gt;
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;</pre>
 </div>
-<div created="20200526023240299" creator="Andrew Harrison" modified="20200526023311054" modifier="Andrew Harrison" path="c0,42,42,80,42,80c0,0,42,-42,42,-80c0,-60,-84,-60,-84,0zm42,-32,a30,30 0 0 1 0,63a31,31 0 0 1 0,-63z" tags="$:/tags/Image" title="$:/plugins/ajh/locations/image">
+<div created="20200526024204390" creator="Andrew Harrison" modified="20200526024358747" modifier="Andrew Harrison" path="c0,42,42,80,42,80c0,0,42,-42,42,-80c0,-60,-84,-60,-84,0zm42,-32,a30,30 0 0 1 0,63a31,31 0 0 1 0,-63z" tags="$:/tags/Image" title="$:/plugins/ajh/locations/image">
 <pre>\define my-svg()
 &lt;svg class='tc-image-locations tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
 \end
@@ -11021,58 +11039,6 @@ This plugin comprises:
 </div>
 <div created="20200524214242367" creator="Andrew Harrison" list="$:/language/locations/caption $:/language/locations/hint $:/pluginlibrary/ajh/released $:/plugins/ajh/locations/icon $:/plugins/ajh/locations/image $:/plugins/ajh/locations/license $:/plugins/ajh/locations/readme $:/plugins/ajh/locations/template" modified="20200525003510803" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
-</div>
-<div created="20200524231843684" creator="Andrew Harrison" dependents="$:/copy $:/language/Buttons/Copy/Caption $:/language/Buttons/Copy/Hint $:/language/Buttons/Copy/Notification $:/pluginlibrary/ajh/released $:/plugins/ajh/copy/copy.js $:/plugins/ajh/copy/icon $:/plugins/ajh/copy/license $:/plugins/ajh/copy/readme $:/plugins/ajh/copy/stylesheet" description="Description of plugin" list="readme license" modified="20200524235850535" modifier="Andrew Harrison" name="Brief name of the plugin" plugin-type="Generally plugin, language or theme" title="$:/plugins/ajh/plugintools/plugin" type="application/json">
-<pre>{ &quot;tiddlers&quot;: { &quot;$:/copy&quot;: {
-    &quot;text&quot;: &quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-copy-button'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;,
-    &quot;title&quot;: &quot;$:/copy&quot;
-}, &quot;$:/language/Buttons/Copy/Caption&quot;: {
-    &quot;text&quot;: &quot;copy&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Caption&quot;
-}, &quot;$:/language/Buttons/Copy/Hint&quot;: {
-    &quot;text&quot;: &quot;Copy to the clipboard&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Hint&quot;
-}, &quot;$:/language/Buttons/Copy/Notification&quot;: {
-    &quot;text&quot;: &quot;Copied&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Notification&quot;
-}, &quot;$:/pluginlibrary/ajh/released&quot;: {
-    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
-    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
-    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
-    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
-    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
-}, &quot;$:/plugins/ajh/copy/copy.js&quot;: {
-    &quot;text&quot;: &quot;/*\\\n$:/plugins/ajh/copy/copy.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget handler that can be used to copy transcluded tiddler to the Clipboard.\n\n&lt;span id='TiddlerTitle'&gt;&lt;$transclude tiddler='TiddlerTitle'/&gt;&lt;/span&gt;&amp;nbsp;&lt;$button param='TiddlerTitle' message='tm-copy'&gt;COPY&lt;/$button&gt;\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\n// Export name and synchronous status\nexports.name = 'copy';\nexports.platforms = ['browser'];\nexports.after = ['rootwidget'];\nexports.synchronous = true;\n\nexports.startup = function () {\n // Install the tiddler copy message mechanism\n $tw.rootWidget.addEventListener('tm-copy', function (event) {\n if (event) { \n try {\n var copyDiv = document.getElementById(event.param);\n copyDiv.contentEditable = true;\n copyDiv.focus();\n document.execCommand('SelectAll',false,null);\n document.execCommand('Copy', false, null);\n document.execCommand('Unselect');\n copyDiv.blur();\n return;\n } catch(e) {\n // Rethrow exception if it's not a SecurityError. Note that SecurityError\n // exception is specific to Firefox.\n if(e.name !== 'SecurityError')\n throw e;\n alert('Feature not available in older browsers!');\n return;\n }\n }\n });\n};\n\n})();&quot;,
-    &quot;type&quot;: &quot;application/javascript&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/copy.js&quot;,
-    &quot;module-type&quot;: &quot;startup&quot;
-}, &quot;$:/plugins/ajh/copy/icon&quot;: {
-    &quot;created&quot;: &quot;20200524235202428&quot;,
-    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
-    &quot;text&quot;: &quot;&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt;&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/icon&quot;,
-    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-    &quot;modified&quot;: &quot;20200524235222063&quot;,
-    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
-}, &quot;$:/plugins/ajh/copy/license&quot;: {
-    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
-    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
-    &quot;type&quot;: &quot;&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/license&quot;,
-    &quot;tags&quot;: &quot;$:/tags/License&quot;,
-    &quot;license-type&quot;: &quot;Unlicense&quot;
-}, &quot;$:/plugins/ajh/copy/readme&quot;: {
-    &quot;text&quot;: &quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a &lt;svg height='10pt' width='10pt' viewBox='0 0 30 30'&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt; button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/readme&quot;
-}, &quot;$:/plugins/ajh/copy/stylesheet&quot;: {
-    &quot;text&quot;: &quot;html .tc-copy-button button svg {\n height: {{!!button-size}};\n width: {{!!button-size}};\n}\n\n.tc-copy-button {\n fill: {{!!button-color}};\n}\n\n.tc-copy-button:hover {\n fill: {{!!button-hover-color}} !important;\n}&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/stylesheet&quot;,
-    &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-    &quot;button-color&quot;: &quot;#888&quot;,
-    &quot;button-hover-color&quot;: &quot;#000&quot;,
-    &quot;button-size&quot;: &quot;1.4em&quot;,
-    &quot;caption&quot;: &quot;Copy Button&quot;
-} } }</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
 <pre>{
@@ -11338,17 +11304,17 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200525005013655" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>readme</pre>
 </div>
-<div created="20200520024203868" creator="Andrew Harrison" modified="20200525080706849" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
+<div created="20200520024203868" creator="Andrew Harrison" modified="20200526024730577" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
 <pre>no</pre>
 </div>
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200525080705518" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>readme</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200525084953678" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
-<pre>yes</pre>
+<div created="20200524032154731" creator="Andrew Harrison" modified="20200526025442865" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<pre>no</pre>
 </div>
-<div created="20200525000801528" creator="Andrew Harrison" modified="20200525084956805" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
-<pre>contents</pre>
+<div created="20200525000801528" creator="Andrew Harrison" modified="20200526025428217" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
+<pre>readme</pre>
 </div>
 <div created="20200524032151487" creator="Andrew Harrison" modified="20200524032153461" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
@@ -11410,16 +11376,16 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200526020557595" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/sidebar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200526024457231" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200525074043705" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200526020626413" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200525074043705" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200526025434057" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12399,7 +12365,7 @@ color:$(foregroundColor)$;
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>7:35:15 PM</pre>
+<pre>7:55:11 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
