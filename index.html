@@ -337,7 +337,11 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools/icon</li>
 
+<li>$:/plugins/ajh/plugintools/image</li>
+
 <li>$:/plugins/ajh/plugintools/list</li>
+
+<li>$:/plugins/ajh/plugintools/stylesheet</li>
 
 <li>$:/plugins/ajh/plugintweaks</li>
 
@@ -11057,8 +11061,33 @@ html .tc-tiddler-controls .tc-image-favorites svg {
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;</pre>
 </div>
+<div created="20200526083628483" creator="Andrew Harrison" modified="20200526083652832" modifier="Andrew Harrison" path="c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z" tags="$:/tags/Image" title="$:/plugins/ajh/plugintools/image">
+<pre>\define my-svg()
+&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+
+&lt;$vars m='30.1 31' path={{!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;</pre>
+</div>
 <div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200526081658037" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
+</div>
+<div button-color="#ff0" button-outline-color="#000" caption="Plugin Tools" created="20200526083802392" creator="Andrew Harrison" modified="20200526083811591" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/plugintools/stylesheet">
+<pre>.tc-tab-buttons button.tc-tab-selected {
+ fill: {{!!tab-icon-selected-color}};
+ stroke: {{!!tab-icon-outline-color}}; 
+}
+.tc-tab-buttons button:not(.tc-tab-selected) {
+ fill: {{!!tab-icon-unselected-color}};
+}
+.tc-image-plugintools {
+ stroke: {{!!button-outline-color}};
+ stroke-width:3;
+ fill: {{!!button-color}};
+ height:1em;
+ width:1em;
+}</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
 <pre>{
@@ -11351,8 +11380,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200526065629838" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>contents</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200526080146938" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>no</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200526083609312" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>yes</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200526054816243" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
 <pre>contents</pre>
@@ -11420,7 +11449,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200526081007967" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200526081052240" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200526082108104" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200526083826890" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12329,8 +12358,8 @@ color:$(foregroundColor)$;
 
 &lt;$macrocall $name='tag-body' palette={{$:/palette}}/&gt;</pre>
 </div>
-<div created="20200523195707213" creator="Andrew Harrison" modified="20200526063946296" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
-<pre>tc-copy</pre>
+<div created="20200523195707213" creator="Andrew Harrison" modified="20200526083837149" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
+<pre>tc-plugintools</pre>
 </div>
 <div created="20200524180944580" creator="Andrew Harrison" modified="20200524180954018" modifier="Andrew Harrison" title="$:/temp/Copy2Text Toggle Tags Example">
 <pre>Type the text for the tiddler '$:/temp/Copy2Text Toggle Tags Example'</pre>
@@ -12394,13 +12423,13 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background0</pre>
+<pre>$:/plugins/ajh/randombackground/background3</pre>
 </div>
 <div created="20200524180905127" creator="Andrew Harrison" modified="20200526063936443" modifier="Andrew Harrison" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:17:41 AM</pre>
+<pre>1:38:59 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
