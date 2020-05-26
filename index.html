@@ -333,6 +333,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/openall</li>
 
+<li>$:/plugins/ajh/openall/license</li>
+
 <li>$:/plugins/ajh/openall/readme</li>
 
 <li>$:/plugins/ajh/plugintools</li>
@@ -10899,49 +10901,86 @@ html .tc-tiddler-controls .tc-image-favorites svg {
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/locations/image}} {{$:/language/locations/caption}}&quot;
 } } }</pre>
 </div>
-<div created="20200526070236244" creator="Andrew Harrison" description="tagged the same" list="readme license" modified="20200526070503097" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fopenall.json" title="$:/plugins/ajh/openall" type="application/json" version="0.0.4">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;$:/language/Buttons/OpenAll/Caption&quot;: {
-            &quot;text&quot;: &quot;Open All&quot;,
-            &quot;title&quot;: &quot;$:/language/Buttons/OpenAll/Caption&quot;
-        },
-        &quot;$:/language/Buttons/OpenAll/Hint&quot;: {
-            &quot;text&quot;: &quot;Open all by tag&quot;,
-            &quot;title&quot;: &quot;$:/language/Buttons/OpenAll/Hint&quot;
-        },
-        &quot;$:/plugins/ajh/openall/icon&quot;: {
-            &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-openall tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#30f' stroke='#f00' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#fff' stroke='#30f' stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='96,14' path={{$:/plugins/ajh/openall/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/openall/icon&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;
-        },
-        &quot;$:/plugins/ajh/openall/image&quot;: {
-            &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-openall tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='64,3' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/openall/image&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;path&quot;: &quot;l64,73h-128l64,-73zm-64,104h128v24h-128v-24z&quot;
-        },
-        &quot;$:/plugins/ajh/openall/readme&quot;: {
-            &quot;text&quot;: &quot;This plugin adds the {{$:/plugins/ajh/openall/template}} button to the tag manager drop down menu using the{{$:/tags/TagDropdown||$:/core/ui/TagTemplate}}system tag. The open all button opens all non system tiddlers tagged with that drop down tag.\n\nSimply drag $:/plugins/ajh/openall to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Caption and hint&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/openall/readme&quot;
-        },
-        &quot;$:/plugins/ajh/openall/stylesheet&quot;: {
-            &quot;text&quot;: &quot;html .tc-drop-down button svg, .tc-drop-down a svg {\n    fill: {{!!button-color}};\n}\nhtml .tc-drop-down button.tc-btn-invisible:hover svg {\n    fill: {{!!button-hover-color}};\n}\n.tc-sidebar-lists .tc-drop-down button svg, .tc-drop-down a svg {\n    fill: {{!!sidebar-button-color}};\n}\n.tc-sidebar-lists .tc-drop-down button.tc-btn-invisible:hover svg {\n    fill: {{!!sidebar-button-hover-color}};\n}&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/openall/stylesheet&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-            &quot;sidebar-button-hover-color&quot;: &quot;#444&quot;,
-            &quot;sidebar-button-color&quot;: &quot;#999&quot;,
-            &quot;caption&quot;: &quot;Open All Button&quot;,
-            &quot;button-hover-color&quot;: &quot;#fff&quot;,
-            &quot;button-color&quot;: &quot;#333&quot;
-        },
-        &quot;$:/plugins/ajh/openall/template&quot;: {
-            &quot;text&quot;: &quot;\\define lingo-base() $:/language/Buttons/\n\n&lt;$button tooltip={{$:/language/Buttons/OpenAll/Hint}} aria-label={{$:/language/Buttons/OpenAll/Caption}} class='tc-btn-invisible openall'&gt;\n&lt;$list filter='[tag{!!title}]'&gt;\n&lt;$action-navigate $to=&lt;&lt;currentTiddler&gt;&gt; /&gt;\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/plugins/ajh/openall/image}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;&lt;lingo OpenAll/Caption&gt;&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/ajh/openall/template&quot;,
-            &quot;tags&quot;: &quot;$:/tags/TagDropdown&quot;
-        }
-    }
-}</pre>
+<div created="20200526070236244" creator="Andrew Harrison" description="tagged the same" list="readme license" modified="20200526080429422" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fopenall.json" title="$:/plugins/ajh/openall" type="application/json" version="0.0.4">
+<pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/OpenAll/Caption&quot;: {
+    &quot;text&quot;: &quot;Open All&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/OpenAll/Caption&quot;
+}, &quot;$:/language/Buttons/OpenAll/Hint&quot;: {
+    &quot;text&quot;: &quot;Open all by tag&quot;,
+    &quot;title&quot;: &quot;$:/language/Buttons/OpenAll/Hint&quot;
+}, &quot;$:/pluginlibrary/ajh/released&quot;: {
+    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
+    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
+    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
+    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/openall/icon&quot;: {
+    &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-openall tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#30f' stroke='#f00' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#fff' stroke='#30f' stroke-width='5' d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='96,14' path={{$:/plugins/ajh/openall/image!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/icon&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;
+}, &quot;$:/plugins/ajh/openall/image&quot;: {
+    &quot;text&quot;: &quot;\\define my-svg()\n&lt;svg class='tc-image-openall tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;\n\\end\n\n&lt;$vars m='64,3' path={{!!path}}&gt;\n&lt;&lt;my-svg&gt;&gt;\n&lt;/$vars&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/image&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+    &quot;path&quot;: &quot;l64,73h-128l64,-73zm-64,104h128v24h-128v-24z&quot;
+}, &quot;$:/plugins/ajh/openall/license&quot;: {
+    &quot;created&quot;: &quot;20200526074908038&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
+    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
+    &quot;type&quot;: &quot;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/license&quot;,
+    &quot;tags&quot;: &quot;$:/tags/License&quot;,
+    &quot;license-type&quot;: &quot;Unlicense&quot;,
+    &quot;modified&quot;: &quot;20200526075152767&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/openall/readme&quot;: {
+    &quot;created&quot;: &quot;20200526052554588&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;This plugin adds the {{$:/plugins/ajh/openall/template}} ''openall'' button to the tag manager drop down menu using the &lt;&lt;tag $:/tags/TagDropdown&gt;&gt;system tag. The open all button opens all non system tiddlers tagged with that drop down tag.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Caption and hint&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/readme&quot;,
+    &quot;modified&quot;: &quot;20200526052946332&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/openall/stylesheet&quot;: {
+    &quot;text&quot;: &quot;html .tc-drop-down button svg, .tc-drop-down a svg {\n    fill: {{!!button-color}};\n}\nhtml .tc-drop-down button.tc-btn-invisible:hover svg {\n    fill: {{!!button-hover-color}};\n}\n.tc-sidebar-lists .tc-drop-down button svg, .tc-drop-down a svg {\n    fill: {{!!sidebar-button-color}};\n}\n.tc-sidebar-lists .tc-drop-down button.tc-btn-invisible:hover svg {\n    fill: {{!!sidebar-button-hover-color}};\n}&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/stylesheet&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+    &quot;sidebar-button-hover-color&quot;: &quot;#444&quot;,
+    &quot;sidebar-button-color&quot;: &quot;#999&quot;,
+    &quot;caption&quot;: &quot;Open All Button&quot;,
+    &quot;button-hover-color&quot;: &quot;#fff&quot;,
+    &quot;button-color&quot;: &quot;#333&quot;
+}, &quot;$:/plugins/ajh/openall/template&quot;: {
+    &quot;text&quot;: &quot;\\define lingo-base() $:/language/Buttons/\n\n&lt;$button tooltip={{$:/language/Buttons/OpenAll/Hint}} aria-label={{$:/language/Buttons/OpenAll/Caption}} class='tc-btn-invisible openall'&gt;\n&lt;$list filter='[tag{!!title}]'&gt;\n&lt;$action-navigate $to=&lt;&lt;currentTiddler&gt;&gt; /&gt;\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;\n{{$:/plugins/ajh/openall/image}}\n&lt;/$list&gt;\n&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;\n&lt;&lt;lingo OpenAll/Caption&gt;&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/openall/template&quot;,
+    &quot;tags&quot;: &quot;$:/tags/TagDropdown&quot;
+} } }</pre>
+</div>
+<div created="20200526074908038" creator="Andrew Harrison" license-type="Unlicense" modified="20200526075152767" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/openall/license" type="" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
+<pre>This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to &lt;https://unlicense.org&gt;</pre>
 </div>
 <div created="20200526052554588" creator="Andrew Harrison" modified="20200526052946332" modifier="Andrew Harrison" title="$:/plugins/ajh/openall/readme">
 <pre>This plugin adds the {{$:/plugins/ajh/openall/template}} ''openall'' button to the tag manager drop down menu using the &lt;&lt;tag $:/tags/TagDropdown&gt;&gt;system tag. The open all button opens all non system tiddlers tagged with that drop down tag.
@@ -11058,7 +11097,7 @@ This plugin comprises:
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;</pre>
 </div>
-<div created="20200524214242367" creator="Andrew Harrison" list="$:/language/Buttons/OpenAll/Caption $:/language/Buttons/OpenAll/Hint $:/plugins/ajh/openall/icon $:/plugins/ajh/openall/image $:/plugins/ajh/openall/readme $:/plugins/ajh/openall/stylesheet $:/plugins/ajh/openall/template" modified="20200526070551052" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200524214242367" creator="Andrew Harrison" list="$:/language/Buttons/OpenAll/Caption $:/language/Buttons/OpenAll/Hint $:/pluginlibrary/ajh/released $:/plugins/ajh/openall/icon $:/plugins/ajh/openall/image $:/plugins/ajh/openall/license $:/plugins/ajh/openall/readme $:/plugins/ajh/openall/stylesheet $:/plugins/ajh/openall/template" modified="20200526080018686" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
 <div core-version="&gt;=5.1.14" created="20170802002526766" dependents="$:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Plugin Tweaks" list="readme" modified="20170805010124670" plugin-type="plugin" source="http://plugintweaks.tiddlyspot.com" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.1">
@@ -11304,11 +11343,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200523231427312" creator="Andrew Harrison" modified="20200523231435609" modifier="Andrew Harrison" title="$:/state/importpreviewtype">
 <pre>$:/core/ui/ImportPreviews/Fields</pre>
 </div>
-<div created="20200526061354587" creator="Andrew Harrison" modified="20200526061354587" modifier="Andrew Harrison" title="$:/state/plugin-info--1066761030-$:/plugins/ajh/openall">
-<pre>no</pre>
+<div created="20200526061354587" creator="Andrew Harrison" modified="20200526075613777" modifier="Andrew Harrison" title="$:/state/plugin-info--1066761030-$:/plugins/ajh/openall">
+<pre>yes</pre>
 </div>
-<div created="20200526051835797" creator="Andrew Harrison" modified="20200526052005260" modifier="Andrew Harrison" title="$:/state/plugin-info--1066761030-$:/plugins/ajh/openall---2061747320">
-<pre>readme</pre>
+<div created="20200526051835797" creator="Andrew Harrison" modified="20200526075626425" modifier="Andrew Harrison" title="$:/state/plugin-info--1066761030-$:/plugins/ajh/openall---2061747320">
+<pre>contents</pre>
 </div>
 <div created="20200524032115101" creator="Andrew Harrison" modified="20200524215213621" modifier="Andrew Harrison" title="$:/state/plugin-info--1907371462-$:/plugins/ajh/favorites">
 <pre>no</pre>
@@ -11328,7 +11367,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032210573" creator="Andrew Harrison" modified="20200524032224952" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20200524032206810" creator="Andrew Harrison" modified="20200526064146678" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
+<div created="20200524032206810" creator="Andrew Harrison" modified="20200526075247210" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
 <pre>no</pre>
 </div>
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200526054301694" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
@@ -11340,7 +11379,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200526054137441" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>contents</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200526063600129" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<div created="20200524032154731" creator="Andrew Harrison" modified="20200526080143787" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
 <pre>no</pre>
 </div>
 <div created="20200525000801528" creator="Andrew Harrison" modified="20200526054217916" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
@@ -11352,7 +11391,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200526065629838" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>contents</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200526070556799" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200526080146938" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
 <pre>no</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200526054816243" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
@@ -11421,7 +11460,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200526050702940" creator="Andrew Harrison" list="$:/ControlPanel" modified="20200526070539519" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200526050702940" creator="Andrew Harrison" list="$:/ControlPanel" modified="20200526080256136" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12401,7 +12440,7 @@ color:$(foregroundColor)$;
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>12:06:03 AM</pre>
+<pre>1:06:43 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
