@@ -325,6 +325,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/locations/icon</li>
 
+<li>$:/plugins/ajh/locations/image</li>
+
 <li>$:/plugins/ajh/locations/license</li>
 
 <li>$:/plugins/ajh/locations/readme</li>
@@ -10824,6 +10826,15 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;</pre>
 </div>
+<div created="20200526023240299" creator="Andrew Harrison" modified="20200526023311054" modifier="Andrew Harrison" path="c0,42,42,80,42,80c0,0,42,-42,42,-80c0,-60,-84,-60,-84,0zm42,-32,a30,30 0 0 1 0,63a31,31 0 0 1 0,-63z" tags="$:/tags/Image" title="$:/plugins/ajh/locations/image">
+<pre>\define my-svg()
+&lt;svg class='tc-image-locations tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+
+&lt;$vars m='21,48' path={{!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;</pre>
+</div>
 <div created="20200525003121328" creator="Andrew Harrison" license-type="Unlicense" modified="20200525003141246" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/locations/license" type="" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
 <pre>This is free and unencumbered software released into the public domain.
 
@@ -11300,8 +11311,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200525080628326" creator="Andrew Harrison" modified="20200525080632997" modifier="Andrew Harrison" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
 </div>
-<div created="20200525080629068" creator="Andrew Harrison" modified="20200525080629068" modifier="Andrew Harrison" title="$:/state/folded/Plugin Library">
-<pre>hide</pre>
+<div created="20200525080629068" creator="Andrew Harrison" modified="20200526023459971" modifier="Andrew Harrison" title="$:/state/folded/Plugin Library">
+<pre>show</pre>
 </div>
 <div created="20200523231427312" creator="Andrew Harrison" modified="20200523231435609" modifier="Andrew Harrison" title="$:/state/importpreviewtype">
 <pre>$:/core/ui/ImportPreviews/Fields</pre>
@@ -11321,7 +11332,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032210573" creator="Andrew Harrison" modified="20200524032224952" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20200524032206810" creator="Andrew Harrison" modified="20200525080811214" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
+<div created="20200524032206810" creator="Andrew Harrison" modified="20200525084952021" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
 <pre>no</pre>
 </div>
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200525005013655" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
@@ -11333,11 +11344,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200525080705518" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>readme</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200525080703257" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
-<pre>no</pre>
+<div created="20200524032154731" creator="Andrew Harrison" modified="20200525084953678" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<pre>yes</pre>
 </div>
-<div created="20200525000801528" creator="Andrew Harrison" modified="20200525080626930" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
-<pre>readme</pre>
+<div created="20200525000801528" creator="Andrew Harrison" modified="20200525084956805" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
+<pre>contents</pre>
 </div>
 <div created="20200524032151487" creator="Andrew Harrison" modified="20200524032153461" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
@@ -11399,8 +11410,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200518201427813" creator="Andrew Harrison" modified="20200522082429704" modifier="Andrew Harrison" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200525080816287" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200526020557595" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -11408,7 +11419,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200525074043705" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200525074825258" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200525074043705" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200526020626413" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12317,8 +12328,8 @@ color:$(foregroundColor)$;
 
 &lt;$macrocall $name='tag-body' palette={{$:/palette}}/&gt;</pre>
 </div>
-<div created="20200523195707213" creator="Andrew Harrison" modified="20200525005138526" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20200523195707213" creator="Andrew Harrison" modified="20200526020622674" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
+<pre>$:/plugins/ajh/favorites/image</pre>
 </div>
 <div created="20200524180944580" creator="Andrew Harrison" modified="20200524180954018" modifier="Andrew Harrison" title="$:/temp/Copy2Text Toggle Tags Example">
 <pre>Type the text for the tiddler '$:/temp/Copy2Text Toggle Tags Example'</pre>
@@ -12388,7 +12399,7 @@ color:$(foregroundColor)$;
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:08:19 AM</pre>
+<pre>7:35:15 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
