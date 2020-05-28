@@ -351,6 +351,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintweaks/icon</li>
 
+<li>$:/plugins/ajh/plugintweaks/license</li>
+
 <li>$:/plugins/ajh/plugintweaks/readme</li>
 
 <li>$:/plugins/ajh/plugintweaks/template</li>
@@ -11086,7 +11088,7 @@ html .tc-tiddler-controls .tc-image-favorites svg {
 &lt;&lt;my-svg&gt;&gt;
 &lt;/$vars&gt;</pre>
 </div>
-<div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200527080444496" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200524214242367" creator="Andrew Harrison" list="$:/plugins/ajh/plugintweaks/license $:/pluginlibrary/ajh/released $:/plugins/ajh/plugintweaks/template $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/controls" modified="20200528054659611" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
 <div button-color="#ff0" button-outline-color="#000" caption="Plugin Tools" created="20200526083802392" creator="Andrew Harrison" modified="20200527073144522" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/plugintools/stylesheet">
@@ -11134,7 +11136,7 @@ html .tc-tiddler-controls .tc-image-plugintools svg {
 &lt;/$list&gt;
 &lt;/$button&gt;&lt;/$list&gt;</pre>
 </div>
-<div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200528044341322" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
+<div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200528054433372" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
 <pre>{
  &quot;tiddlers&quot;: {
  &quot;$:/plugins/ajh/plugintweaks/controls&quot;: { &quot;text&quot;: &quot;&lt;$list filter='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]limit[1]]'&gt;\n&lt;$macrocall\n$name='tabs'\ntabsList='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]]'\ndefault={{!!title}}\nclass='tc-vertical'\ntemplate='$:/plugins/ajh/plugintweaks/template'/&gt;\n&lt;/$list&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/controls&quot;, &quot;tags&quot;: &quot;plugin $:/tags/ControlPanel/Appearance&quot;, &quot;modified&quot;: &quot;20170803124802276&quot;, &quot;created&quot;: &quot;20170803124800263&quot;, &quot;caption&quot;: &quot;Plugin Tweaks&quot; },
@@ -11157,7 +11159,33 @@ template='$:/plugins/ajh/plugintweaks/template'/&gt;
 <div created="20170803124744254" creator="Andrew Harrison" modified="20200528034147975" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/plugintweaks/icon">
 <pre>&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m72.4,108.4v18.9h14.1c3.8,0 6.9,-3.1 6.9,-6.9c0,-1.8 -0.7,-3.5 -1.8,-4.7c-1,-1.2 -1.7,-2.8 -1.7,-4.5c0,-3.8 3.1,-6.9 6.9,-6.9c3.8,0 6.9,3.1 6.9,6.9c0,2 -0.8,3.8 -2.2,5c-0.9,1.2 -1.4,2.6 -1.4,4.1c0,3.4 2.5,6.3 5.8,6.8h21.3v-19.8c0,-3.8 -3.1,-6.9 -6.9,-6.9c-1.8,0 -3.5,0.7 -4.7,1.8c-1.2,1 -2.8,1.7 -4.5,1.7c-3.8,0 -6.9,-3.1 -6.9,-6.9c0,-3.8 3.1,-6.9 6.9,-6.9c2,0 3.8,0.8 5,2.2c1.2,0.9 2.6,1.4 4.1,1.4c3.4,0 6.3,-2.5 6.8,-5.8v-15.7h-21.3c-3.3,-0.5 -5.8,-3.4 -5.8,-6.8c0,-1.5 0.5,-3 1.4,-4.1c1.3,-1.3 2.2,-3 2.2,-5c0,-3.8 -3.1,-6.9 -6.9,-6.9c-3.8,0 -6.9,3.1 -6.9,6.9c0,1.7 0.6,3.3 1.7,4.5c1.1,1.2 1.8,2.9 1.8,4.7c0,3.8 -3.1,6.9 -6.9,6.9h-14.1v12.8c0.1,0.5 0.1,0.9 0.1,1.4c0,3.8 -3.1,6.9 -6.9,6.9c-1.5,0 -3,-0.5 -4.1,-1.4c-1.3,-1.3 -3,-2.2 -5,-2.2c-3.8,0 -6.9,3.1 -6.9,6.9c0,3.8 3.1,6.9 6.9,6.9c1.7,0 3.3,-0.6 4.5,-1.7c1.2,-1.1 2.9,-1.8 4.7,-1.8c3.8,0 6.9,3.1 6.9,6.9c0,0.5 0,1 -0.1,1.4zm70.1,-0.4c-1.1,4.4 -2.9,8.6 -5.1,12.4l6.7,6.7c3.1,3.1 3.1,8.2 0,11.3l-5.7,5.7c-3.1,3.1 -8.2,3.1 -11.3,0l-6.7,-6.7c-3.8,2.3 -8,4 -12.4,5.1v9.5c0,4.4 -3.6,8 -8,8h-8c-4.4,0 -8,-3.6 -8,-8v-9.5c-4.4,-1.1 -8.6,-2.9 -12.4,-5.1l-6.7,6.7c-3.1,3.1 -8.2,3.1 -11.3,0l-5.7,-5.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l6.7,-6.7c-2.3,-3.8 -4,-8 -5.1,-12.4h-9.5c-4.4,0 -8,-3.6 -8,-8v-8c0,-4.4 3.6,-8 8,-8h9.5c1.1,-4.4 2.9,-8.6 5.1,-12.4l-6.7,-6.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l5.7,-5.7c3.1,-3.1 8.2,-3.1 11.3,0l6.7,6.7c3.8,-2.3 8,-4 12.4,-5.1v-9.5c0,-4.4 3.6,-8 8,-8h8c4.4,0 8,3.6 8,8v9.5c4.4,1.1 8.6,2.9 12.4,5.1l6.7,-6.7c3.1,-3.1 8.2,-3.1 11.3,0l5.7,5.7c3.1,3.1 3.1,8.2 0,11.3l-6.7,6.7c2.3,3.8 4,8 5.1,12.4h9.5c4.4,0 8,3.6 8,8v8c0,4.4 -3.6,8 -8,8h-9.5z'&gt;&lt;/path&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20170803124716084" creator="Andrew Harrison" modified="20200528042506618" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintweaks/readme">
+<div created="20200528054546117" creator="Andrew Harrison" license-type="Unlicense" modified="20200528054601877" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/plugintweaks/license" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
+<pre>This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to &lt;https://unlicense.org&gt;</pre>
+</div>
+<div created="20170803124716084" creator="Andrew Harrison" modified="20200528054504472" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintweaks/readme">
 <pre>This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the {{$:/core/ui/Buttons/control-panel}} 
  ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.
 
@@ -11442,26 +11470,26 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200526054301694" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>contents</pre>
 </div>
-<div created="20200520024203868" creator="Andrew Harrison" modified="20200528044906717" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
+<div created="20200520024203868" creator="Andrew Harrison" modified="20200527080434382" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
 <pre>no</pre>
 </div>
 <div created="20200520024205362" creator="Andrew Harrison" modified="20200526054137441" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>contents</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200528044846937" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<div created="20200524032154731" creator="Andrew Harrison" modified="20200527080431581" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
 <pre>no</pre>
 </div>
 <div created="20200525000801528" creator="Andrew Harrison" modified="20200526054217916" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
 <pre>contents</pre>
 </div>
-<div created="20200524032151487" creator="Andrew Harrison" modified="20200528044828511" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
+<div created="20200524032151487" creator="Andrew Harrison" modified="20200528032758140" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
 </div>
-<div created="20200526052535764" creator="Andrew Harrison" modified="20200528044824564" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
-<pre>contents</pre>
+<div created="20200526052535764" creator="Andrew Harrison" modified="20200528022132956" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
+<pre>readme</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200528044838481" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>no</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200528054537271" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>yes</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200526054816243" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
 <pre>contents</pre>
@@ -11499,7 +11527,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524172856723" creator="Andrew Harrison" modified="20200524215720822" modifier="Andrew Harrison" title="$:/state/plugin-info-39613148-$:/plugins/ajh/plugintools--1970750233">
 <pre>contents</pre>
 </div>
-<div created="20200528044354816" creator="Andrew Harrison" modified="20200528044354816" modifier="Andrew Harrison" title="$:/state/plugin-info-463856414-$:/plugins/ajh/plugintweaks--585504527">
+<div created="20200528054439613" creator="Andrew Harrison" modified="20200528054439613" modifier="Andrew Harrison" title="$:/state/plugin-info-463856414-$:/plugins/ajh/plugintweaks--585504527">
 <pre>contents</pre>
 </div>
 <div created="20200526034652160" creator="Andrew Harrison" modified="20200526065559659" modifier="Andrew Harrison" title="$:/state/plugin-info-957308616-$:/plugins/ajh/locations--1664621359">
@@ -11517,7 +11545,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200528033414053" creator="Andrew Harrison" modified="20200528033422222" modifier="Andrew Harrison" title="$:/state/tab--1963855381">
 <pre>$:/plugins/ajh/plugintweaks/controls</pre>
 </div>
-<div created="20200518201426438" creator="Andrew Harrison" modified="20200528042330671" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
+<div created="20200518201426438" creator="Andrew Harrison" modified="20200528054311799" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200524183251949" creator="Andrew Harrison" modified="20200524183251949" modifier="Andrew Harrison" title="$:/state/tab-1803318191">
@@ -11529,8 +11557,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200528033431776" creator="Andrew Harrison" modified="20200528034346700" modifier="Andrew Harrison" title="$:/state/tab-2073366462">
 <pre>$:/plugins/ajh/plugintools/stylesheet</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200528045629044" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200528054706727" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -11538,7 +11566,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200528042328364" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200528044921712" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200528054309756" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/plugintweaks [[My Adventure]] [[Plugin Library]]" modified="20200528054657532" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12511,14 +12539,14 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background3</pre>
+<div attachment="fixed" size="auto" title="$:/temp/random">
+<pre>$:/plugins/ajh/randombackground/background1</pre>
 </div>
 <div created="20200524180905127" creator="Andrew Harrison" modified="20200526063936443" modifier="Andrew Harrison" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>9:56:31 PM</pre>
+<pre>10:47:43 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
