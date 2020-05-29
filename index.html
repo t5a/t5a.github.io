@@ -341,6 +341,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools/list</li>
 
+<li>$:/plugins/ajh/plugintools/plugin</li>
+
 <li>$:/plugins/ajh/plugintools/stylesheet</li>
 
 <li>$:/plugins/ajh/plugintools/template</li>
@@ -11091,6 +11093,56 @@ html .tc-tiddler-controls .tc-image-favorites svg {
 <div created="20200524214242367" creator="Andrew Harrison" list="$:/pluginlibrary/ajh/released $:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/license $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" modified="20200528055014830" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
+<div created="20200529094213544" creator="Andrew Harrison" dependents="$:/pluginlibrary/ajh/released $:/plugins/ajh/plugintweaks/controls $:/plugins/ajh/plugintweaks/icon $:/plugins/ajh/plugintweaks/license $:/plugins/ajh/plugintweaks/readme $:/plugins/ajh/plugintweaks/template" description="Description of plugin" list="readme license" modified="20200529094213544" modifier="Andrew Harrison" name="Brief name of the plugin" plugin-type="Generally plugin, language or theme" title="$:/plugins/ajh/plugintools/plugin" type="application/json">
+<pre>{ &quot;tiddlers&quot;: { &quot;$:/pluginlibrary/ajh/released&quot;: {
+    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
+    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
+    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
+    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/controls&quot;: {
+    &quot;text&quot;: &quot;&lt;$list filter='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]limit[1]]'&gt;\n&lt;$macrocall\n$name='tabs'\ntabsList='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]]'\ndefault={{!!title}}\nclass='tc-vertical'\ntemplate='$:/plugins/ajh/plugintweaks/template'/&gt;\n&lt;/$list&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/controls&quot;,
+    &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528034203533&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170803124800263&quot;,
+    &quot;caption&quot;: &quot;Plugin Tweaks&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/icon&quot;: {
+    &quot;created&quot;: &quot;20170803124744254&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m96.2,31.4c-11.8,0,-11.8,0,-11.8,18.3c-4.6,1.3,-8.5,2.6,-12.4,5.2c-11.8,-11.8,-12.4,-11.8,-20.9,-3.9c-7.9,7.9,-7.9,7.9,3.9,20.9c-2,3.9,-3.9,7.9,-5.2,12.4c-17,0,-17.7,0.7,-17.7,11.8c0,11.8,0,11.1,17.7,11.8c1.3,4.6,2.6,8.5,5.2,12.4c-11.8,12.4,-11.8,12.4,-3.9,20.9c7.9,8.5,7.9,7.9,20.9,-3.9c3.9,2,7.9,3.9,12.4,5.2c0,17,0,17,11.8,17.7c11.8,0,11.8,0,11.8,-17.7c4.6,-1.3,8.5,-2.6,12.4,-5.2c11.8,11.8,11.8,11.8,20.9,3.9c7.9,-9.2,7.9,-9.8,-3.9,-20.9c2,-3.9,3.9,-7.9,5.2,-12.4c17.7,0,17.7,0.7,17.7,-13.1c0,-10.5,-0.7,-10.5,-17.7,-11.1c-1.3,-4.6,-2.6,-8.5,-5.2,-12.4c12.4,-11.1,12.4,-11.1,3.9,-20.9c-9.2,-8.5,-9.2,-8.5,-20.9,3.9c-3.9,-2,-7.9,-3.9,-12.4,-5.2c0,-17.7,0,-17.7,-11.8,-17.7zm2,18.3c3.3,0,5.9,2,5.9,6.5c-2.6,5.2,-6.5,14.4,2,15.7h21.6v13.7c1.3,7.2,-9.2,9.8,-13.1,4.6c-9.8,-4.6,-13.7,13.1,-2.6,13.1c5.2,-2.6,13.7,-6.5,15.7,2v20.9h-18.3c-5.2,1.3,-10.5,-3.3,-8.5,-9.2c7.2,-5.2,0.7,-17.7,-7.2,-12.4c-9.2,5.9,7.2,16.4,-3.9,21.6c-5.2,1.3,-11.1,0,-17,0.7v-19c1.3,-6.5,-7.9,-11.1,-12.4,-5.9c-9.8,5.9,-15.1,-13.1,-3.3,-13.1c4.6,2,12.4,7.2,15.7,-0.7c0.7,-5.2,0,-11.1,0.7,-17h11.8c7.2,2,12.4,-7.9,6.5,-12.4c-3.9,-5.9,1.3,-9.8,6.5,-9.2z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/icon&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200529093919890&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/license&quot;: {
+    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
+    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/license&quot;,
+    &quot;tags&quot;: &quot;$:/tags/License&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528054601877&quot;,
+    &quot;license-type&quot;: &quot;Unlicense&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200528054546117&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/readme&quot;: {
+    &quot;text&quot;: &quot;This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the {{$:/core/ui/Buttons/control-panel}} \n ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.\n\nThis plugin comprises:\n\n* Control settings\n* Template&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/readme&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528054504472&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170803124716084&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/template&quot;: {
+    &quot;text&quot;: &quot;&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;\n&lt;$list filter='[all[current]fields[]sort[title]] -caption -created -creator -modified -modifier -tags -text -title' variable='currentField'&gt;\n&lt;tr class='tc-edit-field'&gt;\n&lt;td class='tc-edit-field-name'&gt;\n&lt;$text text=&lt;&lt;currentField&gt;&gt;/&gt;:&lt;/td&gt;\n&lt;td class='tc-edit-field-value'&gt;\n&lt;$edit-text tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&lt;&lt;currentField&gt;&gt; placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}}/&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/$tiddler&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/template&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528034311043&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170804131413111&quot;
+} } }</pre>
+</div>
 <div button-color="#ff0" button-outline-color="#000" caption="Plugin Tools" created="20200526083802392" creator="Andrew Harrison" modified="20200527073144522" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/plugintools/stylesheet">
 <pre>.tc-tab-buttons button.tc-tab-selected {
  fill: {{!!tab-icon-selected-color}};
@@ -11136,15 +11188,55 @@ html .tc-tiddler-controls .tc-image-plugintools svg {
 &lt;/$list&gt;
 &lt;/$button&gt;&lt;/$list&gt;</pre>
 </div>
-<div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200528054433372" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
-<pre>{
- &quot;tiddlers&quot;: {
- &quot;$:/plugins/ajh/plugintweaks/controls&quot;: { &quot;text&quot;: &quot;&lt;$list filter='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]limit[1]]'&gt;\n&lt;$macrocall\n$name='tabs'\ntabsList='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]]'\ndefault={{!!title}}\nclass='tc-vertical'\ntemplate='$:/plugins/ajh/plugintweaks/template'/&gt;\n&lt;/$list&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/controls&quot;, &quot;tags&quot;: &quot;plugin $:/tags/ControlPanel/Appearance&quot;, &quot;modified&quot;: &quot;20170803124802276&quot;, &quot;created&quot;: &quot;20170803124800263&quot;, &quot;caption&quot;: &quot;Plugin Tweaks&quot; },
- &quot;$:/plugins/ajh/plugintweaks/icon&quot;: { &quot;text&quot;: &quot;&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m72.4,108.4v18.9h14.1c3.8,0 6.9,-3.1 6.9,-6.9c0,-1.8 -0.7,-3.5 -1.8,-4.7c-1,-1.2 -1.7,-2.8 -1.7,-4.5c0,-3.8 3.1,-6.9 6.9,-6.9c3.8,0 6.9,3.1 6.9,6.9c0,2 -0.8,3.8 -2.2,5c-0.9,1.2 -1.4,2.6 -1.4,4.1c0,3.4 2.5,6.3 5.8,6.8h21.3v-19.8c0,-3.8 -3.1,-6.9 -6.9,-6.9c-1.8,0 -3.5,0.7 -4.7,1.8c-1.2,1 -2.8,1.7 -4.5,1.7c-3.8,0 -6.9,-3.1 -6.9,-6.9c0,-3.8 3.1,-6.9 6.9,-6.9c2,0 3.8,0.8 5,2.2c1.2,0.9 2.6,1.4 4.1,1.4c3.4,0 6.3,-2.5 6.8,-5.8v-15.7h-21.3c-3.3,-0.5 -5.8,-3.4 -5.8,-6.8c0,-1.5 0.5,-3 1.4,-4.1c1.3,-1.3 2.2,-3 2.2,-5c0,-3.8 -3.1,-6.9 -6.9,-6.9c-3.8,0 -6.9,3.1 -6.9,6.9c0,1.7 0.6,3.3 1.7,4.5c1.1,1.2 1.8,2.9 1.8,4.7c0,3.8 -3.1,6.9 -6.9,6.9h-14.1v12.8c0.1,0.5 0.1,0.9 0.1,1.4c0,3.8 -3.1,6.9 -6.9,6.9c-1.5,0 -3,-0.5 -4.1,-1.4c-1.3,-1.3 -3,-2.2 -5,-2.2c-3.8,0 -6.9,3.1 -6.9,6.9c0,3.8 3.1,6.9 6.9,6.9c1.7,0 3.3,-0.6 4.5,-1.7c1.2,-1.1 2.9,-1.8 4.7,-1.8c3.8,0 6.9,3.1 6.9,6.9c0,0.5 0,1 -0.1,1.4zm70.1,-0.4c-1.1,4.4 -2.9,8.6 -5.1,12.4l6.7,6.7c3.1,3.1 3.1,8.2 0,11.3l-5.7,5.7c-3.1,3.1 -8.2,3.1 -11.3,0l-6.7,-6.7c-3.8,2.3 -8,4 -12.4,5.1v9.5c0,4.4 -3.6,8 -8,8h-8c-4.4,0 -8,-3.6 -8,-8v-9.5c-4.4,-1.1 -8.6,-2.9 -12.4,-5.1l-6.7,6.7c-3.1,3.1 -8.2,3.1 -11.3,0l-5.7,-5.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l6.7,-6.7c-2.3,-3.8 -4,-8 -5.1,-12.4h-9.5c-4.4,0 -8,-3.6 -8,-8v-8c0,-4.4 3.6,-8 8,-8h9.5c1.1,-4.4 2.9,-8.6 5.1,-12.4l-6.7,-6.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l5.7,-5.7c3.1,-3.1 8.2,-3.1 11.3,0l6.7,6.7c3.8,-2.3 8,-4 12.4,-5.1v-9.5c0,-4.4 3.6,-8 8,-8h8c4.4,0 8,3.6 8,8v9.5c4.4,1.1 8.6,2.9 12.4,5.1l6.7,-6.7c3.1,-3.1 8.2,-3.1 11.3,0l5.7,5.7c3.1,3.1 3.1,8.2 0,11.3l-6.7,6.7c2.3,3.8 4,8 5.1,12.4h9.5c4.4,0 8,3.6 8,8v8c0,4.4 -3.6,8 -8,8h-9.5z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/icon&quot;, &quot;tags&quot;: &quot;plugin $:/tags/Image&quot;, &quot;modified&quot;: &quot;20170803124746115&quot;, &quot;created&quot;: &quot;20170803124744254&quot; },
- &quot;$:/plugins/ajh/plugintweaks/readme&quot;: { &quot;text&quot;: &quot;This plugin adds to the appearance tab in the control panel. It provides edit fields for changing plugin stylesheet values that are stored in fields.\n\nSimply drag $:/plugins/ajh/plugintweaks to the top of your tiddlywiki display, save and reload.\n\nThis plugin comprises:\n\n* Control settings\n* Template&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/readme&quot;, &quot;tags&quot;: &quot;plugin&quot;, &quot;modified&quot;: &quot;20170803124719165&quot;, &quot;created&quot;: &quot;20170803124716084&quot; },
-&quot;$:/plugins/ajh/plugintweaks/template&quot;: { &quot;text&quot;: &quot;&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;\n&lt;$list filter='[all[current]fields[]sort[title]] -caption -created -creator -modified -modifier -tags -text -title' variable='currentField'&gt;\n&lt;tr class='tc-edit-field'&gt;\n&lt;td class='tc-edit-field-name'&gt;\n&lt;$text text=&lt;&lt;currentField&gt;&gt;/&gt;:&lt;/td&gt;\n&lt;td class='tc-edit-field-value'&gt;\n&lt;$edit-text tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&lt;&lt;currentField&gt;&gt; placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}}/&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/$tiddler&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/template&quot;, &quot;tags&quot;: &quot;plugin&quot;, &quot;modified&quot;: &quot;20170804131415194&quot;, &quot;created&quot;: &quot;20170804131413111&quot; }
- }
-}</pre>
+<div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200529094307527" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
+<pre>{ &quot;tiddlers&quot;: { &quot;$:/pluginlibrary/ajh/released&quot;: {
+    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
+    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
+    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
+    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
+    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/controls&quot;: {
+    &quot;text&quot;: &quot;&lt;$list filter='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]limit[1]]'&gt;\n&lt;$macrocall\n$name='tabs'\ntabsList='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]]'\ndefault={{!!title}}\nclass='tc-vertical'\ntemplate='$:/plugins/ajh/plugintweaks/template'/&gt;\n&lt;/$list&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/controls&quot;,
+    &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528034203533&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170803124800263&quot;,
+    &quot;caption&quot;: &quot;Plugin Tweaks&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/icon&quot;: {
+    &quot;created&quot;: &quot;20170803124744254&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m96.2,31.4c-11.8,0,-11.8,0,-11.8,18.3c-4.6,1.3,-8.5,2.6,-12.4,5.2c-11.8,-11.8,-12.4,-11.8,-20.9,-3.9c-7.9,7.9,-7.9,7.9,3.9,20.9c-2,3.9,-3.9,7.9,-5.2,12.4c-17,0,-17.7,0.7,-17.7,11.8c0,11.8,0,11.1,17.7,11.8c1.3,4.6,2.6,8.5,5.2,12.4c-11.8,12.4,-11.8,12.4,-3.9,20.9c7.9,8.5,7.9,7.9,20.9,-3.9c3.9,2,7.9,3.9,12.4,5.2c0,17,0,17,11.8,17.7c11.8,0,11.8,0,11.8,-17.7c4.6,-1.3,8.5,-2.6,12.4,-5.2c11.8,11.8,11.8,11.8,20.9,3.9c7.9,-9.2,7.9,-9.8,-3.9,-20.9c2,-3.9,3.9,-7.9,5.2,-12.4c17.7,0,17.7,0.7,17.7,-13.1c0,-10.5,-0.7,-10.5,-17.7,-11.1c-1.3,-4.6,-2.6,-8.5,-5.2,-12.4c12.4,-11.1,12.4,-11.1,3.9,-20.9c-9.2,-8.5,-9.2,-8.5,-20.9,3.9c-3.9,-2,-7.9,-3.9,-12.4,-5.2c0,-17.7,0,-17.7,-11.8,-17.7zm2,18.3c3.3,0,5.9,2,5.9,6.5c-2.6,5.2,-6.5,14.4,2,15.7h21.6v13.7c1.3,7.2,-9.2,9.8,-13.1,4.6c-9.8,-4.6,-13.7,13.1,-2.6,13.1c5.2,-2.6,13.7,-6.5,15.7,2v20.9h-18.3c-5.2,1.3,-10.5,-3.3,-8.5,-9.2c7.2,-5.2,0.7,-17.7,-7.2,-12.4c-9.2,5.9,7.2,16.4,-3.9,21.6c-5.2,1.3,-11.1,0,-17,0.7v-19c1.3,-6.5,-7.9,-11.1,-12.4,-5.9c-9.8,5.9,-15.1,-13.1,-3.3,-13.1c4.6,2,12.4,7.2,15.7,-0.7c0.7,-5.2,0,-11.1,0.7,-17h11.8c7.2,2,12.4,-7.9,6.5,-12.4c-3.9,-5.9,1.3,-9.8,6.5,-9.2z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/icon&quot;,
+    &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200529093919890&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/license&quot;: {
+    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
+    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/license&quot;,
+    &quot;tags&quot;: &quot;$:/tags/License&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528054601877&quot;,
+    &quot;license-type&quot;: &quot;Unlicense&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20200528054546117&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/readme&quot;: {
+    &quot;text&quot;: &quot;This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the {{$:/core/ui/Buttons/control-panel}} \n ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.\n\nThis plugin comprises:\n\n* Control settings\n* Template&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/readme&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528054504472&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170803124716084&quot;
+}, &quot;$:/plugins/ajh/plugintweaks/template&quot;: {
+    &quot;text&quot;: &quot;&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;\n&lt;$list filter='[all[current]fields[]sort[title]] -caption -created -creator -modified -modifier -tags -text -title' variable='currentField'&gt;\n&lt;tr class='tc-edit-field'&gt;\n&lt;td class='tc-edit-field-name'&gt;\n&lt;$text text=&lt;&lt;currentField&gt;&gt;/&gt;:&lt;/td&gt;\n&lt;td class='tc-edit-field-value'&gt;\n&lt;$edit-text tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&lt;&lt;currentField&gt;&gt; placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}}/&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/$tiddler&gt;&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/plugintweaks/template&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
+    &quot;modified&quot;: &quot;20200528034311043&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;created&quot;: &quot;20170804131413111&quot;
+} } }</pre>
 </div>
 <div caption="Plugin Tweaks" created="20170803124800263" creator="Andrew Harrison" modified="20200528034203533" modifier="Andrew Harrison" tags="$:/tags/ControlPanel/Appearance" title="$:/plugins/ajh/plugintweaks/controls">
 <pre>&lt;$list filter='[all[shadows]tag[$:/tags/Stylesheet]prefix[$:/plugins/]limit[1]]'&gt;
@@ -11156,8 +11248,8 @@ class='tc-vertical'
 template='$:/plugins/ajh/plugintweaks/template'/&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20170803124744254" creator="Andrew Harrison" modified="20200528034147975" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/plugintweaks/icon">
-<pre>&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m72.4,108.4v18.9h14.1c3.8,0 6.9,-3.1 6.9,-6.9c0,-1.8 -0.7,-3.5 -1.8,-4.7c-1,-1.2 -1.7,-2.8 -1.7,-4.5c0,-3.8 3.1,-6.9 6.9,-6.9c3.8,0 6.9,3.1 6.9,6.9c0,2 -0.8,3.8 -2.2,5c-0.9,1.2 -1.4,2.6 -1.4,4.1c0,3.4 2.5,6.3 5.8,6.8h21.3v-19.8c0,-3.8 -3.1,-6.9 -6.9,-6.9c-1.8,0 -3.5,0.7 -4.7,1.8c-1.2,1 -2.8,1.7 -4.5,1.7c-3.8,0 -6.9,-3.1 -6.9,-6.9c0,-3.8 3.1,-6.9 6.9,-6.9c2,0 3.8,0.8 5,2.2c1.2,0.9 2.6,1.4 4.1,1.4c3.4,0 6.3,-2.5 6.8,-5.8v-15.7h-21.3c-3.3,-0.5 -5.8,-3.4 -5.8,-6.8c0,-1.5 0.5,-3 1.4,-4.1c1.3,-1.3 2.2,-3 2.2,-5c0,-3.8 -3.1,-6.9 -6.9,-6.9c-3.8,0 -6.9,3.1 -6.9,6.9c0,1.7 0.6,3.3 1.7,4.5c1.1,1.2 1.8,2.9 1.8,4.7c0,3.8 -3.1,6.9 -6.9,6.9h-14.1v12.8c0.1,0.5 0.1,0.9 0.1,1.4c0,3.8 -3.1,6.9 -6.9,6.9c-1.5,0 -3,-0.5 -4.1,-1.4c-1.3,-1.3 -3,-2.2 -5,-2.2c-3.8,0 -6.9,3.1 -6.9,6.9c0,3.8 3.1,6.9 6.9,6.9c1.7,0 3.3,-0.6 4.5,-1.7c1.2,-1.1 2.9,-1.8 4.7,-1.8c3.8,0 6.9,3.1 6.9,6.9c0,0.5 0,1 -0.1,1.4zm70.1,-0.4c-1.1,4.4 -2.9,8.6 -5.1,12.4l6.7,6.7c3.1,3.1 3.1,8.2 0,11.3l-5.7,5.7c-3.1,3.1 -8.2,3.1 -11.3,0l-6.7,-6.7c-3.8,2.3 -8,4 -12.4,5.1v9.5c0,4.4 -3.6,8 -8,8h-8c-4.4,0 -8,-3.6 -8,-8v-9.5c-4.4,-1.1 -8.6,-2.9 -12.4,-5.1l-6.7,6.7c-3.1,3.1 -8.2,3.1 -11.3,0l-5.7,-5.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l6.7,-6.7c-2.3,-3.8 -4,-8 -5.1,-12.4h-9.5c-4.4,0 -8,-3.6 -8,-8v-8c0,-4.4 3.6,-8 8,-8h9.5c1.1,-4.4 2.9,-8.6 5.1,-12.4l-6.7,-6.7c-3.1,-3.1 -3.1,-8.2 0,-11.3l5.7,-5.7c3.1,-3.1 8.2,-3.1 11.3,0l6.7,6.7c3.8,-2.3 8,-4 12.4,-5.1v-9.5c0,-4.4 3.6,-8 8,-8h8c4.4,0 8,3.6 8,8v9.5c4.4,1.1 8.6,2.9 12.4,5.1l6.7,-6.7c3.1,-3.1 8.2,-3.1 11.3,0l5.7,5.7c3.1,3.1 3.1,8.2 0,11.3l-6.7,6.7c2.3,3.8 4,8 5.1,12.4h9.5c4.4,0 8,3.6 8,8v8c0,4.4 -3.6,8 -8,8h-9.5z'&gt;&lt;/path&gt;&lt;/svg&gt;</pre>
+<div created="20170803124744254" creator="Andrew Harrison" modified="20200529093919890" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/plugintweaks/icon">
+<pre>&lt;svg class='tc-image-plugintweaks tc-image-button' width='22pt' height='22pt' viewBox='0 0 192 192'&gt;&lt;path fill='#000' stroke='#0f3' stroke-width='7.5' d='m13.5,52.2l82.5,-48l82.5,48v87.3l-82.5,48l-82.5,-48v-87.3z'/&gt;&lt;path fill='#0f3' d='m96.2,31.4c-11.8,0,-11.8,0,-11.8,18.3c-4.6,1.3,-8.5,2.6,-12.4,5.2c-11.8,-11.8,-12.4,-11.8,-20.9,-3.9c-7.9,7.9,-7.9,7.9,3.9,20.9c-2,3.9,-3.9,7.9,-5.2,12.4c-17,0,-17.7,0.7,-17.7,11.8c0,11.8,0,11.1,17.7,11.8c1.3,4.6,2.6,8.5,5.2,12.4c-11.8,12.4,-11.8,12.4,-3.9,20.9c7.9,8.5,7.9,7.9,20.9,-3.9c3.9,2,7.9,3.9,12.4,5.2c0,17,0,17,11.8,17.7c11.8,0,11.8,0,11.8,-17.7c4.6,-1.3,8.5,-2.6,12.4,-5.2c11.8,11.8,11.8,11.8,20.9,3.9c7.9,-9.2,7.9,-9.8,-3.9,-20.9c2,-3.9,3.9,-7.9,5.2,-12.4c17.7,0,17.7,0.7,17.7,-13.1c0,-10.5,-0.7,-10.5,-17.7,-11.1c-1.3,-4.6,-2.6,-8.5,-5.2,-12.4c12.4,-11.1,12.4,-11.1,3.9,-20.9c-9.2,-8.5,-9.2,-8.5,-20.9,3.9c-3.9,-2,-7.9,-3.9,-12.4,-5.2c0,-17.7,0,-17.7,-11.8,-17.7zm2,18.3c3.3,0,5.9,2,5.9,6.5c-2.6,5.2,-6.5,14.4,2,15.7h21.6v13.7c1.3,7.2,-9.2,9.8,-13.1,4.6c-9.8,-4.6,-13.7,13.1,-2.6,13.1c5.2,-2.6,13.7,-6.5,15.7,2v20.9h-18.3c-5.2,1.3,-10.5,-3.3,-8.5,-9.2c7.2,-5.2,0.7,-17.7,-7.2,-12.4c-9.2,5.9,7.2,16.4,-3.9,21.6c-5.2,1.3,-11.1,0,-17,0.7v-19c1.3,-6.5,-7.9,-11.1,-12.4,-5.9c-9.8,5.9,-15.1,-13.1,-3.3,-13.1c4.6,2,12.4,7.2,15.7,-0.7c0.7,-5.2,0,-11.1,0.7,-17h11.8c7.2,2,12.4,-7.9,6.5,-12.4c-3.9,-5.9,1.3,-9.8,6.5,-9.2z'&gt;&lt;/path&gt;&lt;/svg&gt;</pre>
 </div>
 <div created="20200528054546117" creator="Andrew Harrison" license-type="Unlicense" modified="20200528054601877" modifier="Andrew Harrison" tags="$:/tags/License" title="$:/plugins/ajh/plugintweaks/license" url="https://github.com/t5a/t5a.github.io/blob/master/LICENSE">
 <pre>This is free and unencumbered software released into the public domain.
@@ -11488,8 +11580,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200528022132956" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>readme</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200528054537271" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>yes</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200529094229874" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>no</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200526054816243" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
 <pre>contents</pre>
@@ -11566,7 +11658,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200528054309756" creator="Andrew Harrison" list="$:/plugins/ajh/plugintweaks/icon $:/ControlPanel $:/plugins/ajh/plugintweaks [[My Adventure]] [[Plugin Library]]" modified="20200528055032468" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200529064657395" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200529094231817" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12526,11 +12618,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;740&quot;
+            &quot;text&quot;: &quot;864&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12542,11 +12634,11 @@ color:$(foregroundColor)$;
 <div attachment="fixed" size="auto" title="$:/temp/random">
 <pre>$:/plugins/ajh/randombackground/background1</pre>
 </div>
-<div created="20200524180905127" creator="Andrew Harrison" modified="20200526063936443" modifier="Andrew Harrison" title="$:/temp/search">
-<pre></pre>
+<div created="20200524180905127" creator="Andrew Harrison" modified="20200529064655668" modifier="Andrew Harrison" title="$:/temp/search">
+<pre>svg</pre>
 </div>
 <div title="$:/temp/time">
-<pre>10:50:36 PM</pre>
+<pre>2:43:23 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
