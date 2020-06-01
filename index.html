@@ -327,17 +327,7 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools</li>
 
-<li>$:/plugins/ajh/plugintools/icon</li>
-
-<li>$:/plugins/ajh/plugintools/image</li>
-
 <li>$:/plugins/ajh/plugintools/list</li>
-
-<li>$:/plugins/ajh/plugintools/sidebar</li>
-
-<li>$:/plugins/ajh/plugintools/stylesheet</li>
-
-<li>$:/plugins/ajh/plugintools/template</li>
 
 <li>$:/plugins/ajh/plugintweaks</li>
 
@@ -11037,115 +11027,8 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
 </div>
-<div created="20200525004635995" creator="Andrew Harrison" modified="20200525004902891" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/plugintools/icon">
-<pre>\define my-svg()
-&lt;svg height='22pt' width='22pt' viewBox='0 0 224 224'&gt;&lt;path fill='#000' stroke='#c09' stroke-width='8.8' d='m15.8 61l96.3-56 96.3 56v102l-96.3 56-96.3-56v-102z'/&gt;&lt;path fill='#fff' stroke='#000' d='m$(m)$$(path)$'/&gt;&lt;/g&gt;&lt;/svg&gt;
-\end
-
-&lt;$vars m='75.3,77.1' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
-&lt;&lt;my-svg&gt;&gt;
-&lt;/$vars&gt;</pre>
-</div>
-<div created="20200526083628483" creator="Andrew Harrison" modified="20200527055418569" modifier="Andrew Harrison" path="c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z" tags="$:/tags/Image" title="$:/plugins/ajh/plugintools/image">
-<pre>\define my-svg()
-&lt;svg class='tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
-\end
-
-&lt;$vars m='30.1 31' path={{!!path}}&gt;
-&lt;&lt;my-svg&gt;&gt;
-&lt;/$vars&gt;</pre>
-</div>
-<div created="20200524214242367" creator="Andrew Harrison" list="$:/language/Buttons/Plugged/Caption $:/language/Buttons/Plugged/Hint $:/language/Buttons/Shadow/Caption $:/language/Buttons/Shadow/Hint $:/language/SideBar/Plugintools/Caption $:/pluginlibrary/ajh/released $:/plugins/ajh/plugintools/icon $:/plugins/ajh/plugintools/image $:/plugins/ajh/plugintools/license $:/plugins/ajh/plugintools/list $:/plugins/ajh/plugintools/plugin $:/plugins/ajh/plugintools/readme $:/plugins/ajh/plugintools/sidebar $:/plugins/ajh/plugintools/stylesheet $:/plugins/ajh/plugintools/template" modified="20200601054521652" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200601064121774" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
-</div>
-<div caption="&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-tab-buttons'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/SideBar/Plugintools/Caption}}&lt;/$list&gt;" created="20200601050509476" creator="Andrew Harrison" list-before="" modified="20200601055106106" modifier="Andrew Harrison" name="$:/plugins/ajh/plugintools" tags="$:/tags/SideBar" title="$:/plugins/ajh/plugintools/sidebar">
-<pre>\define remove() -[[$(currentTiddler)$]]
-\define my-svg()
-&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
-\end
-\define drop-actions()
-&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;
-\end
-&lt;td class='tc-edit-field-value'&gt;Plugin title:&lt;$edit-text tiddler='$:/plugins/ajh/plugintools/sidebar' field='name' placeholder='Plugin tiddler title'/&gt;&lt;/td&gt;
-&lt;$list filter='[list[$:/plugins/ajh/plugintools/list]]'&gt;
-&lt;div style='position: relative;'&gt;
-&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
-&lt;div class='tc-droppable-placeholder'&gt;
-&amp;nbsp;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;$link to={{!!title}}&gt;
-&lt;$view field='title'/&gt;&lt;/$link&gt;
-&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
-&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='30.1 31' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
-&lt;&lt;my-svg&gt;&gt;
-&lt;/$vars&gt;
-&lt;/$list&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
-&lt;span class='tc-btn-text'&gt;
-&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
-&lt;/span&gt;
-&lt;/$list&gt;
-&lt;/$button&gt;
-&lt;/div&gt;
-&lt;/$droppable&gt;
-&lt;/div&gt;
-&lt;/$list&gt;
-
-&lt;$wikify name='a' text={{$:/plugins/ajh/plugintools/list}}&gt;
-&lt;$button&gt;
-&lt;$action-setfield $tiddler='$:/plugins/ajh/plugintools/plugin' text=&lt;&lt;a&gt;&gt; dependents={{$:/plugins/ajh/plugintools/list!!list}}/&gt;
-&lt;$action-sendmessage $message='tm-edit-tiddler' $param='$:/plugins/ajh/plugintools/plugin'/&gt;
-Pack Plugin
-&lt;/$button&gt;
-&lt;/$wikify&gt;</pre>
-</div>
-<div button-color="#ff0" button-outline-color="#000" caption="Plugin Tools" created="20200526083802392" creator="Andrew Harrison" modified="20200527073144522" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/plugintools/stylesheet">
-<pre>.tc-tab-buttons button.tc-tab-selected {
- fill: {{!!tab-icon-selected-color}};
- stroke: {{!!tab-icon-outline-color}}; 
-}
-.tc-tab-buttons button:not(.tc-tab-selected) {
- fill: {{!!tab-icon-unselected-color}};
-}
-html .tc-tiddler-controls .tc-image-plugintools svg {
- fill: {{!!button-color}} !important;
- stroke: {{!!button-outline-color}};
- stroke-width:2;
- height:1em;
- width:1em;
-}</pre>
-</div>
-<div caption="{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}" created="20200527073514834" creator="Andrew Harrison" description="{{$:/language/Buttons/Shadow/Hint}}" list-after="$:/core/ui/Buttons/more-tiddler-actions" modified="20200527080249991" modifier="Andrew Harrison" tags="$:/tags/ViewToolbar" title="$:/plugins/ajh/plugintools/template">
-<pre>\define add() [[$(currentTiddler)$]]
-\define remove() -[[$(currentTiddler)$]]
-\define mysvg()
-&lt;svg class='tc-image-plugintools tc-image-button' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/svg&gt;
-\end
-
-&lt;$list filter='[list[$:/plugins/ajh/plugintools/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
-&lt;&lt;mysvg&gt;&gt;
-&lt;/$list&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
-&lt;span class='tc-btn-text'&gt;
-&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
-&lt;/span&gt;
-&lt;/$list&gt;
-&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/plugintools/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Shadow/Hint}} aria-label={{$:/language/Buttons/Shadow/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
-{{$:/plugins/ajh/plugintools/image}}
-&lt;/$list&gt;
-&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
-&lt;span class='tc-btn-text'&gt;
-&lt;$text text={{$:/language/Buttons/Shadow/Caption}}/&gt;
-&lt;/span&gt;
-&lt;/$list&gt;
-&lt;/$button&gt;&lt;/$list&gt;</pre>
 </div>
 <div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200529094307527" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/pluginlibrary/ajh/released&quot;: {
@@ -11559,7 +11442,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200601053515077" creator="Andrew Harrison" list="$:/ControlPanel" modified="20200601055141968" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200601063318383" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200601064107704" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12539,7 +12422,7 @@ color:$(foregroundColor)$;
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>10:53:42 PM</pre>
+<pre>11:41:45 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
