@@ -333,6 +333,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools/list</li>
 
+<li>$:/plugins/ajh/plugintools/sidebar</li>
+
 <li>$:/plugins/ajh/plugintools/stylesheet</li>
 
 <li>$:/plugins/ajh/plugintools/template</li>
@@ -11047,6 +11049,50 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
 <div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200601035443384" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
+<div caption="&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-tab-buttons'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/SideBar/Plugintools/Caption}}&lt;/$list&gt;" created="20200601050509476" creator="Andrew Harrison" list-before="" modified="20200601050745663" modifier="Andrew Harrison" name="$:/plugins/ajh/plugintools/plugin" tags="$:/tags/SideBar" title="$:/plugins/ajh/plugintools/sidebar">
+<pre>\define remove() -[[$(currentTiddler)$]]
+\define my-svg()
+&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+\define drop-actions()
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;
+\end
+&lt;td class='tc-edit-field-value'&gt;Plugin title:&lt;$edit-text tiddler='$:/plugins/ajh/plugintools/sidebar' field='name' placeholder='Plugin tiddler title'/&gt;&lt;/td&gt;
+&lt;$list filter='[list[$:/plugins/ajh/plugintools/list]]'&gt;
+&lt;div style='position: relative;'&gt;
+&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
+&lt;div class='tc-droppable-placeholder'&gt;
+&amp;nbsp;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$view field='title'/&gt;&lt;/$link&gt;
+&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
+&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='30.1 31' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;
+&lt;/$list&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
+&lt;span class='tc-btn-text'&gt;
+&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;/div&gt;
+&lt;/$droppable&gt;
+&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;$wikify name='a' text={{$:/plugins/ajh/plugintools/list}}&gt;
+&lt;$button&gt;
+&lt;$action-setfield $tiddler={{!!name}} text=&lt;&lt;a&gt;&gt; dependents={{$:/plugins/ajh/plugintools/list!!list}}/&gt;
+&lt;$action-sendmessage $message='tm-edit-tiddler' $param='$:/plugins/ajh/plugintools/plugin'/&gt;
+Pack Plugin
+&lt;/$button&gt;
+&lt;/$wikify&gt;</pre>
+</div>
 <div button-color="#ff0" button-outline-color="#000" caption="Plugin Tools" created="20200526083802392" creator="Andrew Harrison" modified="20200527073144522" modifier="Andrew Harrison" tab-icon-outline-color="#000" tab-icon-selected-color="#ff0" tab-icon-unselected-color="#999" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/plugintools/stylesheet">
 <pre>.tc-tab-buttons button.tc-tab-selected {
  fill: {{!!tab-icon-selected-color}};
@@ -11408,23 +11454,23 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524214432901" creator="Andrew Harrison" modified="20200601035426260" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>readme</pre>
 </div>
-<div created="20200520024203868" creator="Andrew Harrison" modified="20200601035434623" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
+<div created="20200520024203868" creator="Andrew Harrison" modified="20200601035746902" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
 <pre>no</pre>
 </div>
-<div created="20200520024205362" creator="Andrew Harrison" modified="20200601035432322" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
+<div created="20200520024205362" creator="Andrew Harrison" modified="20200601035745360" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>readme</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200531204428949" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<div created="20200524032154731" creator="Andrew Harrison" modified="20200601035754568" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
 <pre>no</pre>
 </div>
-<div created="20200525000801528" creator="Andrew Harrison" modified="20200531204426564" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
+<div created="20200525000801528" creator="Andrew Harrison" modified="20200601035753663" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
 <pre>readme</pre>
 </div>
-<div created="20200524032151487" creator="Andrew Harrison" modified="20200531204421489" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
+<div created="20200524032151487" creator="Andrew Harrison" modified="20200601050804885" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
 </div>
-<div created="20200526052535764" creator="Andrew Harrison" modified="20200531204327356" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
-<pre>readme</pre>
+<div created="20200526052535764" creator="Andrew Harrison" modified="20200601050801896" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
+<pre>contents</pre>
 </div>
 <div created="20200522075743996" creator="Andrew Harrison" modified="20200601033931125" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
 <pre>yes</pre>
@@ -11504,7 +11550,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200601035332369" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200601035409736" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200601035738689" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200601050454646" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12478,13 +12524,13 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background3</pre>
+<pre>$:/plugins/ajh/randombackground/background0</pre>
 </div>
 <div created="20200524180905127" creator="Andrew Harrison" modified="20200529094721106" modifier="Andrew Harrison" title="$:/temp/search">
 <pre></pre>
 </div>
 <div title="$:/temp/time">
-<pre>8:54:44 PM</pre>
+<pre>10:08:44 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
