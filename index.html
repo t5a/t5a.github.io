@@ -807,6 +807,12 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/plugintools</li>
 
+<li>$:/plugins/ajh/plugintools/list</li>
+
+<li>$:/plugins/ajh/plugintools/readme</li>
+
+<li>$:/plugins/ajh/plugintools/sidebar</li>
+
 <li>$:/plugins/ajh/plugintweaks</li>
 
 <li>$:/plugins/ajh/randombackground</li>
@@ -11736,6 +11742,102 @@ viewBox='-0.5 -1 192 192'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&lt;/svg&
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
 </div>
+<div created="20200524214242367" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200606234043527" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
+</div>
+<div created="20200606234228887" creator="Andrew Harrison" modified="20200606234427556" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
+<pre>\define mypath()
+&lt;path d='m30.1 31c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z'/&gt;
+\end
+\define mysvg1()
+&lt;svg stroke='#000' stroke-width='2' height='10pt' width='10pt' viewBox='0 0 128 128'&gt;&lt;g fill='#000'&gt;&lt;&lt;mypath&gt;&gt;&lt;/g&gt;&lt;/svg&gt;
+\end
+\define mysvg2()
+&lt;svg stroke='#000' stroke-width='2' height='10pt' width='10pt' viewBox='0 0 128 128'&gt;&lt;g fill='#ff0'&gt;&lt;&lt;mypath&gt;&gt;&lt;/g&gt;&lt;/svg&gt;
+\end
+This plugin is an alternative to packaging a plugin using [[Node.js|http://tiddlywiki.com/#TiddlyWiki%20on%20Node.js]] or the [[browser developer console|http://tiddlywiki.com/dev/#How%20to%20create%20plugins%20in%20the%20browser]].
+
+This plugin adds the &lt;&lt;mysvg1&gt;&gt; ''shadow'' button to the View Toolbar and also the &lt;&lt;mysvg2&gt;&gt; plugintools tab to the Sidebar. The View Toolbar button becomes &lt;&lt;mysvg2&gt;&gt; ''plugged'' when selected and then the tiddler title appears in the list of tiddlers to be packed on the &lt;&lt;mysvg2&gt;&gt; Sidebar tab. The list can be sorted using {{$:/core/images/up-arrow}} ''up-arrow'' to move up the item in the list or by drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded plugin tiddlers can be removed from the list by using the &lt;&lt;mysvg2&gt;&gt; ''plugged'' button in the tiddler or on the plugintools tab on the Sidebar.
+
+The ''Pack Plugin'' button on the sidebar tab opens the plugin template in edit view and fills in the dependents field. Set the plugin title, e.g. $:/plugins/yourname/pluginname, and also the following fields on the tiddler:
+
+|!Field |!Value |
+|''description'' |Plugin description |
+|''list'' |Names of exposed plugin information tiddlers, for example: readme license |
+|''name'' |Plugin name (only needed for themes) |
+|''plugin-type'' |Either &quot;plugin&quot; for a regular plugin, &quot;theme&quot; for a theme, or &quot;language&quot; for a language pack |
+|[[additional|https://tiddlywiki.com/#Plugin%20Fields]] |Add as needed |
+
+Remove tiddlers by only selecting tiddlers you want in the plugin and hit ''Pack Plugin'' again.
+
+[[Export|https://tiddlywiki.com/#How%20to%20export%20tiddlers]] the plugin using JSON format for library format.
+
+This plugin comprises:
+
+* Icon
+* Template
+* Stylesheet
+* Sidebar tab
+* Caption and hint</pre>
+</div>
+<div caption="&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;span class='tc-tab-buttons'&gt;{{$:/plugins/ajh/plugintools/image}}&lt;/span&gt;&lt;/$list&gt; &lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;{{$:/language/SideBar/Plugintools/Caption}}&lt;/$list&gt;" created="20200601050509476" creator="Andrew Harrison" list-before="" modified="20200606233920664" modifier="Andrew Harrison" tags="$:/tags/SideBar" title="$:/plugins/ajh/plugintools/sidebar">
+<pre>\define move() +[move:-1[$(currentTiddler)$]]
+\define remove() -[[$(currentTiddler)$]]
+\define my-svg()
+&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='$(fill)$' stroke='$(stroke)$' stroke-width='2' d='m$(m)$$(path)$'/&gt;&lt;/svg&gt;
+\end
+\define drop-actions()
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;
+\end
+&lt;td class='tc-edit-field-value'&gt;Plugin title:&lt;$edit-text tiddler='$:/plugins/ajh/plugintools/list' field='name' placeholder='$:/plugins/ajh/plugintools/plugin'/&gt;&lt;/td&gt;
+&lt;$list filter='[list[$:/plugins/ajh/plugintools/list]]'&gt;
+&lt;div style='position: relative;'&gt;
+&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
+&lt;div class='tc-droppable-placeholder'&gt;
+&amp;nbsp;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;move&gt;&gt;/&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
+{{$:/core/images/up-arrow}}
+&lt;/$list&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
+&lt;span class='tc-btn-text'&gt;
+&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;$link to={{!!title}}&gt;
+&lt;$view field='title'/&gt;&lt;/$link&gt;
+&lt;$button tooltip={{$:/language/Buttons/Plugged/Hint}} aria-label={{$:/language/Buttons/Plugged/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/plugintools/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;
+&lt;$vars fill={{$:/plugins/ajh/plugintools/stylesheet!!button-color}} stroke={{$:/plugins/ajh/plugintools/stylesheet!!button-outline-color}} m='30.1 31' path={{$:/plugins/ajh/plugintools/image!!path}}&gt;
+&lt;&lt;my-svg&gt;&gt;
+&lt;/$vars&gt;
+&lt;/$list&gt;
+&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;
+&lt;span class='tc-btn-text'&gt;
+&lt;$text text={{$:/language/Buttons/Plugged/Caption}}/&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;/div&gt;
+&lt;/$droppable&gt;
+&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;$wikify name='a' text={{$:/plugins/ajh/plugintools/list}}&gt;
+&lt;$vars b={{$:/plugins/ajh/plugintools/list!!name}}&gt;
+&lt;$button&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;b&gt;&gt; text=&lt;&lt;a&gt;&gt; dependents={{$:/plugins/ajh/plugintools/list!!list}}/&gt;
+&lt;$action-sendmessage $message='tm-edit-tiddler' $param=&lt;&lt;b&gt;&gt;/&gt;
+Pack Plugin
+&lt;/$button&gt;
+&lt;/$vars&gt;
+&lt;/$wikify&gt;</pre>
+</div>
 <div created="20170802002526766" creator="Andrew Harrison" description="for changing CSS values" list="readme license" modified="20200529094307527" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fplugintweaks.json" title="$:/plugins/ajh/plugintweaks" type="application/json" version="0.0.2">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/pluginlibrary/ajh/released&quot;: {
     &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
@@ -12101,8 +12203,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200601050801896" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>contents</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200602034351527" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>no</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200606232156789" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>yes</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200602034339008" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
 <pre>contents</pre>
@@ -12176,11 +12278,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200528033431776" creator="Andrew Harrison" modified="20200528034346700" modifier="Andrew Harrison" title="$:/state/tab-2073366462">
 <pre>$:/plugins/ajh/plugintools/stylesheet</pre>
 </div>
-<div created="20200604031011552" creator="Andrew Harrison" modified="20200604031024549" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Plugins</pre>
+<div created="20200604031011552" creator="Andrew Harrison" modified="20200606232639970" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200604045842690" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/sidebar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200606234014097" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -12188,7 +12290,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200604045843680" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20200604045932074" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200606231729927" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/plugintools/readme [[My Adventure]] [[Plugin Library]]" modified="20200606234128835" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -13162,7 +13264,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background3</pre>
+<pre>$:/plugins/ajh/randombackground/background2</pre>
 </div>
 <div created="20200604045553990" creator="Andrew Harrison" description="Copy Button" modified="20200604045553990" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
@@ -14292,7 +14394,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>9:59:57 PM</pre>
+<pre>4:45:56 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -14704,7 +14806,7 @@ Sources: [[Color highlighting in a snippet of code|https://groups.google.com/for
 <div created="20151120001320403" creator="Andrew Harrison" list="" modified="20170630033741710" modifier="Andrew Harrison" tags="Examples" tiddly="http://erwanm.github.io/tw-community-search/#" title="Community Search">
 <pre></pre>
 </div>
-<div color="#090" created="20151111184216912" creator="Andrew Harrison" icon="$:/core/images/menu-button" modified="20200526053558420" modifier="Andrew Harrison" show-field="-icon" title="Contents">
+<div color="#090" created="20151111184216912" creator="Andrew Harrison" icon="$:/core/images/menu-button" modified="20200606232856671" modifier="Andrew Harrison" show-field="-icon" title="Contents">
 <pre></pre>
 </div>
 <div created="20160127131717531" creator="Andrew Harrison" list="" modified="20170630033741710" modifier="Andrew Harrison" tags="Examples" title="Copy and Paste Emoji">
