@@ -11345,7 +11345,7 @@ color:$(foregroundColor)$;
 <div created="20170918022607560" creator="Andrew Harrison" modified="20170919025940459" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/titles">
 <pre>Only Titles Starting With: &lt;$edit-text tiddler='$:/temp/batchtools/delete' field='prefix' class='tc-edit-texteditor'/&gt;</pre>
 </div>
-<div created="20200504072825917" creator="Andrew Harrison" description="specified text to the clipboard" list="readme license" modified="20200601021856491" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
+<div created="20200504072825917" creator="Andrew Harrison" description="Copy specified text to the clipboard" list="readme license" modified="20200607230040053" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/copy&quot;: {
     &quot;text&quot;: &quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-image-copy'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;,
     &quot;title&quot;: &quot;$:/copy&quot;,
@@ -11385,8 +11385,12 @@ color:$(foregroundColor)$;
     &quot;tags&quot;: &quot;$:/tags/License&quot;,
     &quot;license-type&quot;: &quot;Unlicense&quot;
 }, &quot;$:/plugins/ajh/copy/readme&quot;: {
-    &quot;text&quot;: &quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a &lt;svg height='10pt' width='10pt' viewBox='0 0 30 30'&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt; button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/readme&quot;
+    &quot;created&quot;: &quot;20200607215807932&quot;,
+    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
+    &quot;text&quot;: &quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,
+    &quot;title&quot;: &quot;$:/plugins/ajh/copy/readme&quot;,
+    &quot;modified&quot;: &quot;20200607215916828&quot;,
+    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
 }, &quot;$:/plugins/ajh/copy/stylesheet&quot;: {
     &quot;text&quot;: &quot;html .tc-image-copy button svg {\n height: {{!!button-size}};\n width: {{!!button-size}};\n}\n\n.tc-image-copy {\n fill: {{!!button-color}};\n}\n\n.tc-image-copy:hover {\n fill: {{!!button-hover-color}} !important;\n}&quot;,
     &quot;title&quot;: &quot;$:/plugins/ajh/copy/stylesheet&quot;,
@@ -11811,7 +11815,7 @@ This plugin comprises:
     &quot;caption&quot;: &quot;{{$:/plugins/ajh/plugintools/image}} {{$:/language/Buttons/Shadow/Caption}}&quot;
 } } }</pre>
 </div>
-<div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200607003934207" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/list">
+<div created="20200524214242367" creator="Andrew Harrison" list="" modified="20200607230109234" modifier="Andrew Harrison" name="$:/plugins/ajh/copy" title="$:/plugins/ajh/plugintools/list">
 <pre>{ &quot;tiddlers&quot;: { &lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]butlast[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;, &lt;/$list&gt;&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/plugintools/list]last[]]&quot;&quot;&quot;&gt;&quot;&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;&quot;: &lt;$text text=&lt;&lt;jsontiddler&gt;&gt;/&gt;&lt;/$list&gt; } }</pre>
 </div>
 <div created="20200606234228887" creator="Andrew Harrison" modified="20200607224826857" modifier="Andrew Harrison" title="$:/plugins/ajh/plugintools/readme">
@@ -12255,10 +12259,10 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032210573" creator="Andrew Harrison" modified="20200524032224952" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20200524032206810" creator="Andrew Harrison" modified="20200607221923551" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
+<div created="20200524032206810" creator="Andrew Harrison" modified="20200607230053053" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
 <pre>no</pre>
 </div>
-<div created="20200524214432901" creator="Andrew Harrison" modified="20200607221922478" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
+<div created="20200524214432901" creator="Andrew Harrison" modified="20200607230050399" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>readme</pre>
 </div>
 <div created="20200520024203868" creator="Andrew Harrison" modified="20200607224936494" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
@@ -12361,12 +12365,12 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200607213140399" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200607224959227" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200607213140399" creator="Andrew Harrison" list="$:/ControlPanel" modified="20200607225350660" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -14470,7 +14474,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>3:50:42 PM</pre>
+<pre>4:01:10 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
