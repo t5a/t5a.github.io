@@ -291,7 +291,15 @@ Error message and password prompt
 
 <li>$:/Phoenix</li>
 
+<li>$:/Plugin/copy-index</li>
+
 <li>$:/Plugin/index</li>
+
+<li>$:/Plugin/index1</li>
+
+<li>$:/Plugin/index2</li>
+
+<li>$:/Plugin/index3</li>
 
 <li>$:/pluginlibrary/inmysocks/TestingPluginLibrary</li>
 
@@ -882,10 +890,6 @@ Error message and password prompt
 <li>Open All</li>
 
 <li>Parameter currentTiddler</li>
-
-<li>Plugin index part 1</li>
-
-<li>Plugin index part 2</li>
 
 <li>Plugin Library</li>
 
@@ -10712,12 +10716,34 @@ exports.startup = function () {
 <div created="20150410132522057" creator="Andrew Harrison" modified="20150410134504231" modifier="Andrew Harrison" tags="" title="$:/Phoenix">
 <pre>&lt;$image source=&quot;http://ronaldsaperpc.com/wp-content/uploads/2013/10/Phoenix-downtown-Arizona-United-States.jpg&quot; /&gt;</pre>
 </div>
-<div created="20200609062427869" creator="Andrew Harrison" list="$:/plugins/ajh/copy $:/plugins/ajh/favorites" modified="20200611065700650" modifier="Andrew Harrison" tags="" title="$:/Plugin/index">
+<div created="20200612004503274" creator="Andrew Harrison" modified="20200612004554641" modifier="Andrew Harrison" tags="" title="$:/Plugin/copy-index">
+<pre>{{$:/Plugin/index||$:/copy}}</pre>
+</div>
+<div created="20200612002520806" creator="Andrew Harrison" modified="20200612004433084" modifier="Andrew Harrison" tags="" title="$:/Plugin/index">
+<pre>&lt;$text text={{$:/Plugin/index1}}/&gt;
+{{$:/Plugin/index2}}
+&lt;$text text={{$:/Plugin/index3}}/&gt;</pre>
+</div>
+<div created="20200608065252738" creator="Andrew Harrison" modified="20200612003445425" modifier="Andrew Harrison" tags="" title="$:/Plugin/index1">
+<pre>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;meta name=&quot;application-name&quot; content=&quot;TiddlyWiki Plugin Library&quot; /&gt;
+&lt;meta name=&quot;application-version&quot; content=&quot;v5.1.14&quot; /&gt;
+&lt;meta name=&quot;copyright&quot; content=&quot;Copyright 2017 Andrew Harrison&quot; /&gt;
+&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;title&gt;TiddlyWiki Library for Plugins by Andrew Harrison&lt;/title&gt;
+&lt;script&gt;
+var assetList = [</pre>
+</div>
+<div created="20200609062427869" creator="Andrew Harrison" list="$:/plugins/ajh/copy $:/plugins/ajh/favorites" modified="20200612004357064" modifier="Andrew Harrison" tags="" title="$:/Plugin/index2">
 <pre>\define plugin-readme-title()
 $(currentTiddler)$/readme
 \end
 
-&lt;$list filter=&quot;[list[]]&quot; variable=&quot;a&quot;&gt;{&lt;br&gt;
+&lt;br&gt;
+&lt;$list filter=&quot;[list[]butlast[]]&quot; variable=&quot;a&quot;&gt;{&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;title&quot;:&amp;nbsp;&quot;&lt;$text text=&lt;&lt;a&gt;&gt;/&gt;&quot;,&lt;br&gt;
 &lt;$tiddler tiddler=&lt;&lt;a&gt;&gt;&gt;
 &lt;$list filter=&quot;[&lt;currentTiddler&gt;fields[]sort[]] -text -title -type -source -modifier -modified -list -creator -created&quot; variable=&quot;b&quot;&gt;
@@ -10729,7 +10755,119 @@ $(currentTiddler)$/readme
 &lt;br&gt;
 },&lt;br&gt;
 &lt;/$tiddler&gt;
-&lt;/$list&gt;</pre>
+&lt;/$list&gt;
+&lt;$list filter=&quot;[list[]last[]]&quot; variable=&quot;a&quot;&gt;{&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;title&quot;:&amp;nbsp;&quot;&lt;$text text=&lt;&lt;a&gt;&gt;/&gt;&quot;,&lt;br&gt;
+&lt;$tiddler tiddler=&lt;&lt;a&gt;&gt;&gt;
+&lt;$list filter=&quot;[&lt;currentTiddler&gt;fields[]sort[]] -text -title -type -source -modifier -modified -list -creator -created&quot; variable=&quot;b&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;&lt;&lt;b&gt;&gt;&quot;:&amp;nbsp;&quot;&lt;$view field=&lt;&lt;b&gt;&gt;/&gt;&quot;,
+&lt;/$list&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;readme&quot;:&amp;nbsp;&quot;
+&lt;$view tiddler=&lt;&lt;a&gt;&gt; subtiddler=&lt;&lt;plugin-readme-title&gt;&gt;/&gt;&quot;
+&lt;br&gt;
+}
+&lt;br&gt;
+&lt;/$tiddler&gt;
+&lt;/$list&gt;
+];
+&lt;br&gt;
+&lt;br&gt;</pre>
+</div>
+<div created="20200609062337270" creator="Andrew Harrison" modified="20200612004148258" modifier="Andrew Harrison" tags="" title="$:/Plugin/index3">
+<pre>/*\
+title: $:/plugins/tiddlywiki/pluginlibrary/libraryserver.js
+type: application/javascript
+module-type: library
+A simple HTTP-over-window.postMessage implementation of a standard TiddlyWeb-compatible server. It uses real HTTP to load the individual tiddler JSON files.
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+&quot;use strict&quot;;
+
+// Listen for window messages
+window.addEventListener(&quot;message&quot;,function listener(event){
+	console.log(&quot;plugin library: Received message from&quot;,event.origin);
+	console.log(&quot;plugin library: Message content&quot;,event.data);
+	switch(event.data.verb) {
+		case &quot;GET&quot;:
+			if(event.data.url === &quot;recipes/library/tiddlers.json&quot;) {
+				// Route for recipes/library/tiddlers.json
+				event.source.postMessage({
+					verb: &quot;GET-RESPONSE&quot;,
+					status: &quot;200&quot;,
+					cookies: event.data.cookies,
+					url: event.data.url,
+					type: &quot;application/json&quot;,
+					body: JSON.stringify(assetList,null,4)
+				},&quot;*&quot;);
+			} else if(event.data.url.indexOf(&quot;recipes/library/tiddlers/&quot;) === 0) {
+				var url = &quot;recipes/library/tiddlers/&quot; + encodeURIComponent(removePrefix(event.data.url,&quot;recipes/library/tiddlers/&quot;));
+				// Route for recipes/library/tiddlers/&lt;uri-encoded-tiddler-title&gt;.json
+				httpGet(url,function(err,responseText) {
+					if(err) {
+						event.source.postMessage({
+							verb: &quot;GET-RESPONSE&quot;,
+							status: &quot;404&quot;,
+							cookies: event.data.cookies,
+							url: event.data.url,
+							type: &quot;text/plain&quot;,
+							body: &quot;Not found&quot;
+						},&quot;*&quot;);
+					} else {
+						event.source.postMessage({
+							verb: &quot;GET-RESPONSE&quot;,
+							status: &quot;200&quot;,
+							cookies: event.data.cookies,
+							url: event.data.url,
+							type: &quot;application/json&quot;,
+							body: responseText
+						},&quot;*&quot;);
+					}
+				});
+			} else {
+				event.source.postMessage({
+					verb: &quot;GET-RESPONSE&quot;,
+					status: &quot;404&quot;,
+					cookies: event.data.cookies,
+					url: event.data.url,
+					type: &quot;text/plain&quot;,
+					body: &quot;Not found&quot;
+				},&quot;*&quot;);
+			}
+			break;
+	}
+},false);
+
+// Helper to remove string prefixes
+function removePrefix(string,prefix) {
+	if(string.indexOf(prefix) === 0) {
+		return string.substr(prefix.length);
+	} else {
+		return string;
+	}
+}
+
+// Helper for HTTP GET
+function httpGet(url,callback) {
+	var http = new XMLHttpRequest();
+	http.open(&quot;GET&quot;,url,true);
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 &amp;&amp; http.status == 200) {
+			callback(null,http.responseText);
+		}
+	};
+	http.send();
+}
+
+})();
+
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Hello Visitor&lt;/h1&gt;&lt;p&gt;This is the library for &lt;a href=&quot;https://github.com/t5a/t5a.github.io.git&quot; target=&quot;_blank&quot;&gt;plugins/ajh&lt;/a&gt;. It is not intended to be opened directly in the browser.&lt;/p&gt;&lt;p&gt;See &lt;a href=&quot;http://t5a.github.io/#Plugin%20Library&quot; target=&quot;_blank&quot;&gt;t5a.github.io/Plugin Library&lt;/a&gt; for details of how to install plugins.&lt;/p&gt;&lt;/body&gt;
+&lt;/html&gt;</pre>
 </div>
 <div caption="inmysocks - Testing Library" created="20150427044810703" creator="Andrew Harrison" list="" modified="20170702015813534" modifier="Andrew Harrison" tags="Examples New $:/tags/PluginLibrary" title="$:/pluginlibrary/inmysocks/TestingPluginLibrary" url="http://ooktech.com/jed/pluginlibrary/testing/index.html">
 <pre>The plugin library for the plugins made by inmysocks. This library contains all of my plugins, even the ones that are not ready for general use, so be very careful importing them.
@@ -11013,7 +11151,7 @@ color:$(foregroundColor)$;
     &quot;caption&quot;: &quot;{{ $:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;
 } } }</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[Plugin index part 1]] [[Plugin index part 2]] $:/Plugin/index" modified="20200609083404459" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/showfields/controls $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] $:/Plugin/index1 $:/Plugin/index3 $:/Plugin/index2 $:/Plugin/index $:/Plugin/copy-index" modified="20200612004614524" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -11552,7 +11690,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20200606232639970" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200609040959791" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200612001536073" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
 <pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
@@ -11561,7 +11699,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200611032706152" creator="Andrew Harrison" list="$:/Plugin/index" modified="20200611044054734" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200612001537436" creator="Andrew Harrison" list="" modified="20200612004438138" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12534,8 +12672,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="auto" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background1</pre>
+<div attachment="fixed" size="cover" title="$:/temp/random">
+<pre>$:/plugins/ajh/randombackground/background3</pre>
 </div>
 <div created="20200608054908140" creator="Andrew Harrison" description="Copy Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
@@ -13665,7 +13803,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:57:09 PM</pre>
+<pre>5:46:59 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -14397,116 +14535,6 @@ Instead you have to do:
 ```
 &lt;&lt;x y:'[[My Tiddler]]'&gt;&gt;
 ```</pre>
-</div>
-<div created="20200608065252738" creator="Andrew Harrison" modified="20200609062629697" modifier="Andrew Harrison" tags="" title="Plugin index part 1">
-<pre>```
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
-&lt;meta name=&quot;application-name&quot; content=&quot;TiddlyWiki Plugin Library&quot; /&gt;
-&lt;meta name=&quot;application-version&quot; content=&quot;v5.1.14&quot; /&gt;
-&lt;meta name=&quot;copyright&quot; content=&quot;Copyright 2017 Andrew Harrison&quot; /&gt;
-&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
-&lt;title&gt;TiddlyWiki Library for Plugins by Andrew Harrison&lt;/title&gt;
-&lt;script&gt;
-var assetList = 
-```</pre>
-</div>
-<div created="20200609062337270" creator="Andrew Harrison" modified="20200609062406282" modifier="Andrew Harrison" tags="" title="Plugin index part 2">
-<pre>/*\
-title: $:/plugins/tiddlywiki/pluginlibrary/libraryserver.js
-type: application/javascript
-module-type: library
-A simple HTTP-over-window.postMessage implementation of a standard TiddlyWeb-compatible server. It uses real HTTP to load the individual tiddler JSON files.
-\*/
-(function(){
-
-/*jslint node: true, browser: true */
-/*global $tw: false */
-&quot;use strict&quot;;
-
-// Listen for window messages
-window.addEventListener(&quot;message&quot;,function listener(event){
-	console.log(&quot;plugin library: Received message from&quot;,event.origin);
-	console.log(&quot;plugin library: Message content&quot;,event.data);
-	switch(event.data.verb) {
-		case &quot;GET&quot;:
-			if(event.data.url === &quot;recipes/library/tiddlers.json&quot;) {
-				// Route for recipes/library/tiddlers.json
-				event.source.postMessage({
-					verb: &quot;GET-RESPONSE&quot;,
-					status: &quot;200&quot;,
-					cookies: event.data.cookies,
-					url: event.data.url,
-					type: &quot;application/json&quot;,
-					body: JSON.stringify(assetList,null,4)
-				},&quot;*&quot;);
-			} else if(event.data.url.indexOf(&quot;recipes/library/tiddlers/&quot;) === 0) {
-				var url = &quot;recipes/library/tiddlers/&quot; + encodeURIComponent(removePrefix(event.data.url,&quot;recipes/library/tiddlers/&quot;));
-				// Route for recipes/library/tiddlers/&lt;uri-encoded-tiddler-title&gt;.json
-				httpGet(url,function(err,responseText) {
-					if(err) {
-						event.source.postMessage({
-							verb: &quot;GET-RESPONSE&quot;,
-							status: &quot;404&quot;,
-							cookies: event.data.cookies,
-							url: event.data.url,
-							type: &quot;text/plain&quot;,
-							body: &quot;Not found&quot;
-						},&quot;*&quot;);
-					} else {
-						event.source.postMessage({
-							verb: &quot;GET-RESPONSE&quot;,
-							status: &quot;200&quot;,
-							cookies: event.data.cookies,
-							url: event.data.url,
-							type: &quot;application/json&quot;,
-							body: responseText
-						},&quot;*&quot;);
-					}
-				});
-			} else {
-				event.source.postMessage({
-					verb: &quot;GET-RESPONSE&quot;,
-					status: &quot;404&quot;,
-					cookies: event.data.cookies,
-					url: event.data.url,
-					type: &quot;text/plain&quot;,
-					body: &quot;Not found&quot;
-				},&quot;*&quot;);
-			}
-			break;
-	}
-},false);
-
-// Helper to remove string prefixes
-function removePrefix(string,prefix) {
-	if(string.indexOf(prefix) === 0) {
-		return string.substr(prefix.length);
-	} else {
-		return string;
-	}
-}
-
-// Helper for HTTP GET
-function httpGet(url,callback) {
-	var http = new XMLHttpRequest();
-	http.open(&quot;GET&quot;,url,true);
-	http.onreadystatechange = function() {
-		if(http.readyState == 4 &amp;&amp; http.status == 200) {
-			callback(null,http.responseText);
-		}
-	};
-	http.send();
-}
-
-})();
-
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;h1&gt;Hello Visitor&lt;/h1&gt;&lt;p&gt;This is the library for &lt;a href=&quot;https://github.com/t5a/t5a.github.io.git&quot; target=&quot;_blank&quot;&gt;plugins/ajh&lt;/a&gt;. It is not intended to be opened directly in the browser.&lt;/p&gt;&lt;p&gt;See &lt;a href=&quot;http://t5a.github.io/#Plugin%20Library&quot; target=&quot;_blank&quot;&gt;t5a.github.io/Plugin Library&lt;/a&gt; for details of how to install plugins.&lt;/p&gt;&lt;/body&gt;
-&lt;/html&gt;</pre>
 </div>
 <div bag="default" created="20160120130410512" creator="Tobias Beer" modified="20200526061406262" modifier="Andrew Harrison" resource="http://tiddlywiki.com/dev/#Developing%20plugins%20using%20Node.js%20and%20GitHub&lt;br&gt;&lt;br&gt;http://inmysocks.tiddlyspot.com/#Making%20a%20Plugin%20Library&lt;br&gt;&lt;br&gt;http://tiddlywiki.com/#%24%3A%2Fconfig%2FOfficialPluginLibrary&lt;br&gt;http://tiddlywiki.com/library/v5.1.14/index.html&lt;br&gt;&lt;br&gt;https://github.com/tobibeer/tw5-plugins&lt;br&gt;http://tobibeer.github.io/tb5/#Library&lt;br&gt;http://tobibeer.github.io/tw5-plugins/library/index.html&lt;br&gt;&lt;br&gt;http://inmysocks.tiddlyspot.com/#%24%3A%2Fpluginlibrary%2Finmysocks%2FTestingPluginLibrary&lt;br&gt;http://ooktech.com/jed/pluginlibrary/testing/index.html" revision="0" show-field="-title" summary="keeping up to date and fetching the latest and greatest from [ext[infurnoape|https://github.com/Infurnoape/infurnoape.github.io.git]]" tags="Contents New" title="Plugin Library" type="text/vnd.tiddlywiki">
 <pre>@@color:purple;''Important'': Adding my library does not pre-install any of my plugins in your wiki but just adds a reference to it, i.e. you need internet access to actually install plugins from it.@@
