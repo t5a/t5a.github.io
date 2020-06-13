@@ -461,6 +461,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab--1143784597</li>
+
 <li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
@@ -10895,65 +10897,8 @@ color:$(foregroundColor)$;
 <div created="20170918022607560" creator="Andrew Harrison" modified="20170919025940459" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/titles">
 <pre>Only Titles Starting With: &lt;$edit-text tiddler='$:/temp/batchtools/delete' field='prefix' class='tc-edit-texteditor'/&gt;</pre>
 </div>
-<div created="20200504072825917" creator="Andrew Harrison" description="Copy specified text to the clipboard" list="readme license" modified="20200607230040053" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
-<pre>{ &quot;tiddlers&quot;: { &quot;$:/copy&quot;: {
-    &quot;text&quot;: &quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-image-copy'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;,
-    &quot;title&quot;: &quot;$:/copy&quot;,
-    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
-    &quot;modified&quot;: &quot;20200528033020159&quot;,
-    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
-    &quot;created&quot;: &quot;20200528032923523&quot;
-}, &quot;$:/language/Buttons/Copy/Caption&quot;: {
-    &quot;text&quot;: &quot;copy&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Caption&quot;
-}, &quot;$:/language/Buttons/Copy/Hint&quot;: {
-    &quot;text&quot;: &quot;Copy to the clipboard&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Hint&quot;
-}, &quot;$:/language/Buttons/Copy/Notification&quot;: {
-    &quot;text&quot;: &quot;Copied&quot;,
-    &quot;title&quot;: &quot;$:/language/Buttons/Copy/Notification&quot;
-}, &quot;$:/pluginlibrary/ajh/released&quot;: {
-    &quot;text&quot;: &quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,
-    &quot;url&quot;: &quot;https://t5a.github.io/plugins&quot;,
-    &quot;title&quot;: &quot;$:/pluginlibrary/ajh/released&quot;,
-    &quot;tags&quot;: &quot;$:/tags/PluginLibrary&quot;,
-    &quot;caption&quot;: &quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;
-}, &quot;$:/plugins/ajh/copy/copy.js&quot;: {
-    &quot;text&quot;: &quot;/*\\\n$:/plugins/ajh/copy/copy.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget handler that can be used to copy transcluded tiddler to the Clipboard.\n\n&lt;span id='TiddlerTitle'&gt;&lt;$transclude tiddler='TiddlerTitle'/&gt;&lt;/span&gt;&amp;nbsp;&lt;$button param='TiddlerTitle' message='tm-copy'&gt;COPY&lt;/$button&gt;\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\n// Export name and synchronous status\nexports.name = 'copy';\nexports.platforms = ['browser'];\nexports.after = ['rootwidget'];\nexports.synchronous = true;\n\nexports.startup = function () {\n // Install the tiddler copy message mechanism\n $tw.rootWidget.addEventListener('tm-copy', function (event) {\n if (event) { \n try {\n var copyDiv = document.getElementById(event.param);\n copyDiv.contentEditable = true;\n copyDiv.focus();\n document.execCommand('SelectAll',false,null);\n document.execCommand('Copy', false, null);\n document.execCommand('Unselect');\n copyDiv.blur();\n return;\n } catch(e) {\n // Rethrow exception if it's not a SecurityError. Note that SecurityError\n // exception is specific to Firefox.\n if(e.name !== 'SecurityError')\n throw e;\n alert('Feature not available in older browsers!');\n return;\n }\n }\n });\n};\n\n})();&quot;,
-    &quot;type&quot;: &quot;application/javascript&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/copy.js&quot;,
-    &quot;module-type&quot;: &quot;startup&quot;
-}, &quot;$:/plugins/ajh/copy/icon&quot;: {
-    &quot;text&quot;: &quot;&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt;&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/icon&quot;,
-    &quot;tags&quot;: &quot;$:/tags/Image&quot;
-}, &quot;$:/plugins/ajh/copy/license&quot;: {
-    &quot;text&quot;: &quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or\ndistribute this software, either in source code form or as a compiled\nbinary, for any purpose, commercial or non-commercial, and by any\nmeans.\n\nIn jurisdictions that recognize copyright laws, the author or authors\nof this software dedicate any and all copyright interest in the\nsoftware to the public domain. We make this dedication for the benefit\nof the public at large and to the detriment of our heirs and\nsuccessors. We intend this dedication to be an overt act of\nrelinquishment in perpetuity of all present and future rights to this\nsoftware under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR\nOTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,\nARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,
-    &quot;url&quot;: &quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,
-    &quot;type&quot;: &quot;&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/license&quot;,
-    &quot;tags&quot;: &quot;$:/tags/License&quot;,
-    &quot;license-type&quot;: &quot;Unlicense&quot;
-}, &quot;$:/plugins/ajh/copy/readme&quot;: {
-    &quot;created&quot;: &quot;20200607215807932&quot;,
-    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
-    &quot;text&quot;: &quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/readme&quot;,
-    &quot;modified&quot;: &quot;20200607215916828&quot;,
-    &quot;modifier&quot;: &quot;Andrew Harrison&quot;
-}, &quot;$:/plugins/ajh/copy/stylesheet&quot;: {
-    &quot;text&quot;: &quot;html .tc-image-copy button svg {\n height: {{!!button-size}};\n width: {{!!button-size}};\n}\n\n.tc-image-copy {\n fill: {{!!button-color}};\n}\n\n.tc-image-copy:hover {\n fill: {{!!button-hover-color}} !important;\n}&quot;,
-    &quot;title&quot;: &quot;$:/plugins/ajh/copy/stylesheet&quot;,
-    &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-    &quot;modifier&quot;: &quot;Andrew Harrison&quot;,
-    &quot;modified&quot;: &quot;20200526063822927&quot;,
-    &quot;creator&quot;: &quot;Andrew Harrison&quot;,
-    &quot;created&quot;: &quot;20200526063714913&quot;,
-    &quot;caption&quot;: &quot;Copy Button&quot;,
-    &quot;button-size&quot;: &quot;1.4em&quot;,
-    &quot;button-hover-color&quot;: &quot;#000&quot;,
-    &quot;button-color&quot;: &quot;#888&quot;
-} } }</pre>
+<div created="20200504072825917" creator="Andrew Harrison" description="Copy specified text to the clipboard" list="readme license" modified="20200613022131214" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
+<pre>{&quot;tiddlers&quot;:{&quot;$:/copy&quot;:{&quot;text&quot;:&quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-image-copy'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;,&quot;title&quot;:&quot;$:/copy&quot;},&quot;$:/language/Buttons/Copy/Caption&quot;:{&quot;text&quot;:&quot;copy&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Caption&quot;},&quot;$:/language/Buttons/Copy/Hint&quot;:{&quot;text&quot;:&quot;Copy to the clipboard&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Hint&quot;},&quot;$:/language/Buttons/Copy/Notification&quot;:{&quot;text&quot;:&quot;Copied&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Notification&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/copy/copy.js&quot;:{&quot;text&quot;:&quot;/*\\\n$:/plugins/ajh/copy/copy.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget handler that can be used to copy transcluded tiddler to the Clipboard.\n\n&lt;span id='TiddlerTitle'&gt;&lt;$transclude tiddler='TiddlerTitle'/&gt;&lt;/span&gt;&amp;nbsp;&lt;$button param='TiddlerTitle' message='tm-copy'&gt;COPY&lt;/$button&gt;\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\n// Export name and synchronous status\nexports.name = 'copy';\nexports.platforms = ['browser'];\nexports.after = ['rootwidget'];\nexports.synchronous = true;\n\nexports.startup = function () {\n // Install the tiddler copy message mechanism\n $tw.rootWidget.addEventListener('tm-copy', function (event) {\n if (event) { \n try {\n var copyDiv = document.getElementById(event.param);\n copyDiv.contentEditable = true;\n copyDiv.focus();\n document.execCommand('SelectAll',false,null);\n document.execCommand('Copy', false, null);\n document.execCommand('Unselect');\n copyDiv.blur();\n return;\n } catch(e) {\n // Rethrow exception if it's not a SecurityError. Note that SecurityError\n // exception is specific to Firefox.\n if(e.name !== 'SecurityError')\n throw e;\n alert('Feature not available in older browsers!');\n return;\n }\n }\n });\n};\n\n})();&quot;,&quot;type&quot;:&quot;application/javascript&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/copy.js&quot;,&quot;module-type&quot;:&quot;startup&quot;},&quot;$:/plugins/ajh/copy/icon&quot;:{&quot;text&quot;:&quot;&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/copy/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/copy/readme&quot;:{&quot;text&quot;:&quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/readme&quot;},&quot;$:/plugins/ajh/copy/stylesheet&quot;:{&quot;text&quot;:&quot;html .tc-image-copy button svg {\n height: {{!!button-size}};\n width: {{!!button-size}};\n}\n\n.tc-image-copy {\n fill: {{!!button-color}};\n}\n\n.tc-image-copy:hover {\n fill: {{!!button-hover-color}} !important;\n}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;caption&quot;:&quot;Copy Button&quot;,&quot;button-size&quot;:&quot;1.4em&quot;,&quot;button-hover-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#888&quot;}}}</pre>
 </div>
 <div created="20200523232029662" creator="Andrew Harrison" description="Favorites of views frequently accessed" list="readme license" modified="20200607230633387" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/language/Buttons/Choose/Caption&quot;: {
@@ -11419,10 +11364,10 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141118180825128" modified="20141129081713074" title="$:/SiteTitle">
 <pre>t5a</pre>
 </div>
-<div created="20200608061911855" creator="Andrew Harrison" modified="20200611044101913" modifier="Andrew Harrison" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://t5a.github.io/plugins/$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/copy">
-<pre>yes</pre>
+<div created="20200608061911855" creator="Andrew Harrison" modified="20200613020254422" modifier="Andrew Harrison" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://t5a.github.io/plugins/$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/copy">
+<pre>no</pre>
 </div>
-<div created="20200523051015368" creator="Andrew Harrison" modified="20200609031808889" modifier="Andrew Harrison" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://t5a.github.io/plugins/$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/favorites">
+<div created="20200523051015368" creator="Andrew Harrison" modified="20200613020303979" modifier="Andrew Harrison" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://t5a.github.io/plugins/$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/favorites">
 <pre>no</pre>
 </div>
 <div created="20200608054914254" creator="Andrew Harrison" modified="20200608054914254" modifier="Andrew Harrison" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://t5a.github.io/plugins/$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/plugintweaks">
@@ -11491,8 +11436,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200607233124376" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>readme</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20200609071802847" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
-<pre>yes</pre>
+<div created="20200522075743996" creator="Andrew Harrison" modified="20200613022153572" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<pre>no</pre>
 </div>
 <div created="20200522075747463" creator="Andrew Harrison" modified="20200609071804251" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
 <pre>contents</pre>
@@ -11548,6 +11493,9 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200520023205521" creator="Andrew Harrison" modified="20200524172708328" modifier="Andrew Harrison" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
+<div created="20200613020309199" creator="Andrew Harrison" modified="20200613020334362" modifier="Andrew Harrison" title="$:/state/tab--1143784597">
+<pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
+</div>
 <div created="20200523195720556" creator="Andrew Harrison" modified="20200612082314837" modifier="Andrew Harrison" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
@@ -11573,12 +11521,12 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div list="[[My Adventure]] [[Plugin Library]]" title="$:/StoryList">
+<div created="20200613020240983" creator="Andrew Harrison" list="[[JSON Editor Online]] $:/ControlPanel $:/plugins/ajh/copy [[My Adventure]] [[Plugin Library]]" modified="20200613020817088" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12552,9 +12500,9 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/random">
-<pre>$:/plugins/ajh/randombackground/background0</pre>
+<pre>$:/plugins/ajh/randombackground/background2</pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Copy Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button can copy the transcluded contents of a tiddler to the Clipboard. It can be called by transcluding a tiddler and using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
+<div created="20200613020244974" creator="Andrew Harrison" description="Copy specified text to the clipboard" modified="20200613020244974" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
 This plugin comprises:
 
@@ -12565,7 +12513,19 @@ This plugin comprises:
 * Caption, hint, and notification" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/copy" type="text/vnd.tiddlywiki" version="0.0.26">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Favorites" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/favorites" readme="&lt;style&gt;.tc-favorites {stroke:#000;stroke-width:5;fill:#ff0;} .tc-image-star-filled {height:1em;width:1em;}&lt;/style&gt;This plugin adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; ''choose'' button to the View Toolbar and also the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt; ''favorite'' button in the tiddler.
+<div created="20200613020244974" creator="Andrew Harrison" description="Favorites of views frequently accessed" modified="20200613020244974" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/favorites" readme="\define a()
+&lt;span class='tc-image-favorites'&gt;
+{{$:/core/images/star-filled}}
+&lt;/span&gt;
+\end
+&lt;style&gt;
+.tc-image-favorites svg {
+ stroke: #000;
+ stroke-width: 2;
+ fill: #ff0;
+}
+&lt;/style&gt; 
+This plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;a&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;a&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;a&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;a&gt;&gt; ''favorite'' button in the tiddler.
 
 This plugin comprises:
 
@@ -12573,10 +12533,10 @@ This plugin comprises:
 * Template
 * Stylesheet
 * Sidebar tab
-* Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/favorites" type="text/vnd.tiddlywiki" version="3.0.5">
+* Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/favorites" type="text/vnd.tiddlywiki" version="3.0.6">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Locations Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/locations" readme="This plugin adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/plugins/ajh/locations/image}}&lt;/span&gt;locations button to the Page Toolbar. The button will navigate to the Locations tiddler.
+<div created="20200613020244974" creator="Andrew Harrison" description="Locations Button" modified="20200613020244974" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/locations" readme="This plugin adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/plugins/ajh/locations/image}}&lt;/span&gt;locations button to the Page Toolbar. The button will navigate to the Locations tiddler.
 
 This plugin comprises:
 
@@ -12585,7 +12545,7 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/locations" type="text/vnd.tiddlywiki" version="0.0.2">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Open All Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/openall" readme="\define my-svg()
+<div created="20200613020244975" creator="Andrew Harrison" description="Open All Button" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/openall" readme="\define my-svg()
 &lt;svg class='tc-image-openall tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m64,3l64,73h-128l64,-73zm-64,104h128v24h-128v-24z'/&gt;&lt;/svg&gt;
 \end
 
@@ -12599,21 +12559,27 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/openall" type="text/vnd.tiddlywiki" version="0.0.3">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Plugin Tools" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/plugintools" readme="\define my-path()
-&lt;path d='m30.1 31c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z'/&gt;
+<div created="20200613020244975" creator="Andrew Harrison" description="Plugin Tools" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/plugintools" readme="\define p()
+&lt;svg height='22pt' width='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m30.1 31c1 0.5 1.4 1.5 0.7 2.2-1.8 0-2.3 0.3-2.7 0.8-0.7 1.7 3.1 1.2 1 3.1-0.8 0.5-1.6-0.2-2.3 0.4-1.6 1.9 1.7 2.2 0.9 3.3-0.9 1.4-2 0-2.9 1.2-1 1.4 2.2 0.9 1 2.9-0.2 0-0.7-0.2-1.4-0.3-1.1-0.4-1.3-0.8-1.7-1.7 1.5-4 3-8.1 4.6-12 1-0.3 1.8-0.2 2.7 0.1zm11.6 6.3c-0.3 1.2-3.1 8.7-3.6 9.6-0.3 0.7-1.4 1.7-1.9 1.7-1.7-0.7-2.5-2.1-2-3.1 1.1-0.4 1.9-0.1 2.6-0.5 0.7-0.2 1.2-0.9-0.4-1.8-0.8-0.8-0.8-1.4-0.5-1.9 1-0.6 1.7-0.1 2.6-0.5 2.1-1.4-1.8-2-0.9-3.6 0.9-0.6 2.2 0.2 2.9-0.4 1.1-2-2.2-1.7-1.4-2.4 2-0.3 3.3 0.8 2.7 2.9zm76.6 72.1c3.2 1.4 4.5 4 4.5 6.5-0.1 3.4-2.6 6.6-6.1 6.7-4 0.3-7.3-2.5-7.7-6.5 0-2.7 1.6-5.1 3.6-6.3s3.3-1.2 5.6-0.3zm-117.1-82.7c-0.3 6 3.1 9.9 6 13.6 1 1.4 2.1 2.9 3.1 4 0.8 1 1.5 2 3 4 1 1.4 1 1.7 0.7 2.9-0.5 1.5-0.3 1.9 0.8 2.5 1.9 0.9 3.8 3 5.4 2.4 0.5-0.7 2.4-5.8 2.4-6.2 0-0.3-0.2-0.5-1.4-0.7-1.2-0.3-2.6-0.4-3.6-0.6-1.8-0.3-3-0.6-3.6-2.2l2-5.5c2.5-6.9 3.8-10.7 3.8-11-1.9 0-2.6 0.6-4.8 1.5-4.8-1.6-10-3.8-13.8-4.7zm50.5 45.8s-5.8-5.3-5.9-5.3c-4.4-0.8-5 3.2-4.3 5.6l-19 18.7c-8 7.8-23.7 16.7-21.1 27.8 0.7 3.1 3 5.7 6.3 6.7 10.3 1.6 20.5-13 28.7-20.7 17.9-17.7 19.1-18.7 19.5-18.4 3.2 1.1 6.9-1.7 5.3-4.7-0.1-0.1-5.1-4.9-5.1-4.9l4.2-3.9c16.1 15.7 30.8 33.4 46.5 48 3.4 3.5 5.5 4.7 8.7 4.7 2.9 0.1 5.7-1.2 7.6-3.3 1.1-1.2 2.2-2.3 2.9-3.6 1-2.5 0.8-4.8-0.3-7.2-1.9-2.9-3.8-4.2-6.5-6.9-12.8-12.1-35.1-32.6-47.4-43.6l39.6-39.2 7.7-3 8.1-12.4c-1.6-1.6-3.1-3.2-4.8-4.7-4.4 2.4-8.6 5-12.7 7.7l-3 7.7-39.5 39.5s-10.2-9.8-11.2-11c-1.7-2.2-3.2-4.1-4.6-6.2-3.5-5.2-6.9-11.8-8.2-17.4-1.6-9.5-2.1-15.3-11.7-18.4-9.9-2.1-17.3-1.4-22.9 3.5 4.6 2 9.3 3.6 14.2 5.6 0.3 0.3 2.9 4.8 3.1 5.8 0.2 0.7 0.2 1-4.8 14.1-2.9 7.4-5 13.6-5 13.6 2 0.7 3.9 0.8 5.9 1.2 3.6 0.8 6.9 1.7 10.4 3 3.1 1.4 7.2 3.3 8 3.8 0.5 0.3 1.2 0.8 1.7 1 2.2 1.4 3.4 2.4 5.6 4.5l8.2 8.3z'/&gt;&lt;/svg&gt;
 \end
-
-\define my-svg1()
-&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g fill='#000'&gt;&lt;&lt;my-path&gt;&gt;&lt;/g&gt;&lt;/svg&gt;
+\define a()
+&lt;&lt;p&gt;&gt;
 \end
-
-\define my-svg2()
-&lt;svg class='tc-image-plugintools tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g fill='#ff0'&gt;&lt;&lt;my-path&gt;&gt;&lt;/g&gt;&lt;/svg&gt;
+\define b()
+&lt;span class='tc-image-plugintools'&gt;&lt;&lt;p&gt;&gt;&lt;/span&gt;
 \end
+&lt;style&gt;
+.tc-image-plugintools svg {
+ stroke: #000;
+ stroke-width: 2;
+ fill: #ff0;
+}
+&lt;/style&gt;
+This plugin is an alternative to packaging a plugin using [[Node.js|http://tiddlywiki.com/#TiddlyWiki%20on%20Node.js]] or the [[browser developer console|http://tiddlywiki.com/dev/#How%20to%20create%20plugins%20in%20the%20browser]].
 
-&lt;style&gt;.tc-plugintools {stroke:#000;stroke-width:1;height:1em;width:1em;}&lt;/style&gt;This plugin adds the &lt;span class='tc-btn-dropdown tc-plugintools'&gt;&lt;&lt;my-svg1&gt;&gt;&lt;/span&gt; ''shadow'' plugintools button to the View Toolbar and also the &lt;span class='tc-btn-dropdown tc-plugintools'&gt;&lt;&lt;my-svg2&gt;&gt;&lt;/span&gt; plugintools tab to the Sidebar. The button becomes &lt;span class='tc-btn-dropdown tc-plugintools'&gt;&lt;&lt;my-svg2&gt;&gt;&lt;/span&gt; ''plugged'' when selected and then the tiddler title appears in the list of tiddlers to be packed on the &lt;span class='tc-btn-dropdown tc-plugintools'&gt;&lt;&lt;my-svg2&gt;&gt;&lt;/span&gt; Sidebar tab. The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded plugin tiddlers can be removed from the list by using the &lt;span class='tc-btn-dropdown tc-plugintools'&gt;&lt;&lt;my-svg2&gt;&gt;&lt;/span&gt; ''plugged'' plugintools button in the tiddler or on the plugintools tab on the Sidebar.
+This plugin adds the &lt;&lt;a&gt;&gt; ''shadow'' button to the View Toolbar and also the &lt;&lt;b&gt;&gt; plugintools tab to the Sidebar. The View Toolbar button becomes &lt;&lt;b&gt;&gt; ''plugged'' when selected and then the tiddler title appears in the list of tiddlers to be packed on the &lt;&lt;b&gt;&gt; Sidebar tab. The list can be sorted using {{$:/core/images/up-arrow}} ''up-arrow'' to move up the item in the list or by drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded plugin tiddlers can be removed from the list by using the &lt;&lt;b&gt;&gt; ''plugged'' button in the tiddler or on the plugintools tab on the Sidebar.
 
-The ''Pack Plugin'' button on the sidebar tab opens the plugin template in edit view and fills in the dependents field. Set the plugin title, for example $:/plugins/yourname/pluginname, and also the following fields on the tiddler:
+The ''Pack Plugin'' button on the sidebar tab opens the plugin template in edit view and fills in the dependents field. Set the plugin title, e.g. $:/plugins/yourname/pluginname, and also the following fields on the tiddler:
 
 |!Field |!Value |
 |''description'' |Plugin description |
@@ -12626,8 +12592,6 @@ Remove tiddlers by only selecting tiddlers you want in the plugin and hit ''Pack
 
 [[Export|https://tiddlywiki.com/#How%20to%20export%20tiddlers]] the plugin using JSON format for library format.
 
-Simply drag $:/plugins/ajh/plugintools to the top of your tiddlywiki display, save and reload or drag $:/pluginlibrary/ajh/released to the top of your display, save and reload and then install the plugin or any of the other plugins from my library using the Get more plugins button on the Plugins tab in the ControlPanel.
-
 This plugin comprises:
 
 * Icon
@@ -12637,7 +12601,8 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/plugintools" type="text/vnd.tiddlywiki" version="0.0.3">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Plugin Tweaks" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/plugintweaks" readme="This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the {{$:/core/ui/Buttons/control-panel}} ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.
+<div created="20200613020244975" creator="Andrew Harrison" description="Plugin Tweaks" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/plugintweaks" readme="This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the {{$:/core/images/options-button}} 
+ ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.
 
 This plugin comprises:
 
@@ -12645,7 +12610,7 @@ This plugin comprises:
 * Template" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/plugintweaks" type="text/vnd.tiddlywiki" version="0.0.2">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Random Background" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/randombackground" readme="This plugin replaces the page background image with a random one upon each refresh. Name the background tiddlers ~$:/plugins/ajh/randombackground/background# where # is a whole number between 0 and what is in ~$:/info/max-random. For example: ~$:/plugins/ajh/randombackground/background0, ~$:/plugins/ajh/randombackground/background1, ~$:/plugins/ajh/randombackground/background2, etc.
+<div created="20200613020244975" creator="Andrew Harrison" description="Random Background" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/randombackground" readme="This plugin replaces the page background image with a random one upon each refresh. Name the background tiddlers ~$:/plugins/ajh/randombackground/background# where # is a whole number between 0 and what is in ~$:/info/max-random. For example: ~$:/plugins/ajh/randombackground/background0, ~$:/plugins/ajh/randombackground/background1, ~$:/plugins/ajh/randombackground/background2, etc.
 
 Add the ''attachment'' field with value of ''fixed'' or ''scroll'' and/or the ''size'' field with value of ''auto'', ''cover'', or ''contain'' for each background individually and it will supersede the global setting for that background.
 
@@ -12656,7 +12621,7 @@ This plugin comprises:
 * Default background" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/randombackground" type="text/vnd.tiddlywiki" version="0.1.2">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Reduce Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/reduce" readme="This plugin adds the &lt;span class=&quot;tc-btn-dropdown&quot;&gt;{{$:/plugins/ajh/reduce/image}}&lt;/span&gt;reduce button to the Editor Toolbar. The button will reduce text in the text field into a blob with duplicate words and spaces removed. When used with an external image or page like with ''_canonical_uri'' field, the text from the external page can be made to seem fully searchable within the wiki while conserving file size.
+<div created="20200613020244975" creator="Andrew Harrison" description="Reduce Button" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/reduce" readme="This plugin adds the &lt;span class=&quot;tc-btn-dropdown&quot;&gt;{{$:/plugins/ajh/reduce/image}}&lt;/span&gt;reduce button to the Editor Toolbar. The button will reduce text in the text field into a blob with duplicate words and spaces removed. When used with an external image or page like with ''_canonical_uri'' field, the text from the external page can be made to seem fully searchable within the wiki while conserving file size.
 
 This plugin comprises:
 
@@ -12667,7 +12632,7 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/reduce" type="text/vnd.tiddlywiki" version="0.0.3">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Show Fields" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/showfields" readme="This plugin adds to the settings tab in the control panel. It provides a field selector to add or remove fields to be viewed if any tiddler has them. Drag and drop selected to change the ordering.
+<div created="20200613020244975" creator="Andrew Harrison" description="Show Fields" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/showfields" readme="This plugin adds to the settings tab in the control panel. It provides a field selector to add or remove fields to be viewed if any tiddler has them. Drag and drop selected to change the ordering.
 
 Also, optionally add to a tiddler the field named ''show-field'' and in its contents add field names with or without a minus in front to show or hide them in that tiddler only.
 
@@ -12678,7 +12643,7 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/showfields" type="text/vnd.tiddlywiki" version="0.0.1">
 <pre></pre>
 </div>
-<div created="20200608054908140" creator="Andrew Harrison" description="Tiddly Link Copy Button" modified="20200608054908140" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlycopy" readme="This plugins adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/copy-clipboard}}&lt;/span&gt; ''copy'' button to the ''View Toolbar'' tab in the control panel. The copy button copies to the clipboard the title as a link if the path is defined in a ''tiddly'' field. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame and the copy button displays beside the title or gets listed on the more actions menu if it isn't selected on the View Toolbar.
+<div created="20200613020244975" creator="Andrew Harrison" description="Tiddly Link Copy Button" modified="20200613020244975" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlycopy" readme="This plugins adds the &lt;span class='tc-btn-dropdown'&gt;{{$:/core/images/copy-clipboard}}&lt;/span&gt; ''copy'' button to the ''View Toolbar'' tab in the control panel. The copy button copies to the clipboard the title as a link if the path is defined in a ''tiddly'' field. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame and the copy button displays beside the title or gets listed on the more actions menu if it isn't selected on the View Toolbar.
 
 &lt;mark&gt;@@color:red; ''WARNING'' @@&lt;/mark&gt;: Use of Tiddly Viewer to display untrusted web sites could be a security risk.
 
@@ -12692,7 +12657,7 @@ This plugin comprises:
 * Stylesheet" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/tiddlycopy" type="text/vnd.tiddlywiki" version="0.0.32">
 <pre></pre>
 </div>
-<div created="20200608054908141" creator="Andrew Harrison" description="Tiddlytime Button" modified="20200608054908141" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlytime" readme="This plugin button displays time with seconds and several time spans when clicked. The tool tip displays todays date minus 78 days. Clicking the time reveals time, time + 15 minutes, time + 30 minutes, and time + 45 minutes.
+<div created="20200613020244976" creator="Andrew Harrison" description="Tiddlytime Button" modified="20200613020244976" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlytime" readme="This plugin button displays time with seconds and several time spans when clicked. The tool tip displays todays date minus 78 days. Clicking the time reveals time, time + 15 minutes, time + 30 minutes, and time + 45 minutes.
 
 This plugin comprises:
 
@@ -12704,7 +12669,7 @@ This plugin comprises:
 * Caption and hint" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/tiddlytime" type="text/vnd.tiddlywiki" version="0.0.11">
 <pre></pre>
 </div>
-<div created="20200608054908141" creator="Andrew Harrison" description="Tiddly Viewer" modified="20200608054908141" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlyviewer" readme="This plugin displays external pages fully formatted instead of as just plain text. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame.
+<div created="20200613020244976" creator="Andrew Harrison" description="Tiddly Viewer" modified="20200613020244976" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/tiddlyviewer" readme="This plugin displays external pages fully formatted instead of as just plain text. By adding a ''tiddly'' field and path to an external page, it recognizes to display the page in an object frame.
 
 &lt;mark&gt;@@color:red; ''WARNING'' @@&lt;/mark&gt;: Use of Tiddly Viewer to display untrusted web sites could be a security risk.
 
@@ -12714,7 +12679,7 @@ This plugin comprises:
 * Stylesheet" server-url="https://t5a.github.io/plugins" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://t5a.github.io/plugins/$:/plugins/ajh/tiddlyviewer" type="text/vnd.tiddlywiki" version="0.0.15">
 <pre></pre>
 </div>
-<div created="20200608054908141" creator="Andrew Harrison" description="Top Left Toolbar" modified="20200608054908141" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/toplefttoolbar" readme="This plugin adds the Top Left Toolbar to the Toolbars tab in the control panel. Drag and drop selected to change the ordering. It provides a list of buttons that have the $:/tags/PageControls tag and can be selected to appear in the Top left toolbar.&lt;br&gt;
+<div created="20200613020244976" creator="Andrew Harrison" description="Top Left Toolbar" modified="20200613020244976" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/toplefttoolbar" readme="This plugin adds the Top Left Toolbar to the Toolbars tab in the control panel. Drag and drop selected to change the ordering. It provides a list of buttons that have the $:/tags/PageControls tag and can be selected to appear in the Top left toolbar.&lt;br&gt;
 
 This plugin comprises:
 
@@ -13675,14 +13640,14 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200524180905127" creator="Andrew Harrison" modified="20200612082301755" modifier="Andrew Harrison" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20200608054908137" creator="Andrew Harrison" modified="20200608054908137" modifier="Andrew Harrison" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://t5a.github.io/plugins" url="https://t5a.github.io/plugins">
+<div created="20200613020244968" creator="Andrew Harrison" modified="20200613020244968" modifier="Andrew Harrison" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://t5a.github.io/plugins" url="https://t5a.github.io/plugins">
 <pre>loaded</pre>
 </div>
 <div created="20200604045643760" creator="Andrew Harrison" modified="20200604045643760" modifier="Andrew Harrison" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>6:52:16 PM</pre>
+<pre>7:22:03 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
