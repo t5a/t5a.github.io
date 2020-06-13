@@ -18,10 +18,10 @@ var assetList = [
     },
     {
         "title": "$:/plugins/ajh/favorites",
-        "description": "Favorites",
-        "version": "3.0.5",
+        "description": "Favorites of views frequently accessed",
+        "version": "3.0.6",
 	"plugin-type": "plugin",
-	"readme": "<style>.tc-favorites {stroke:#000;stroke-width:5;fill:#ff0;} .tc-image-star-filled {height:1em;width:1em;}</style>This plugin adds the <span class='tc-btn-dropdown'>{{$:/core/images/star-filled}}</span> ''choose'' button to the View Toolbar and also the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> ''Favorites'' tab to the Sidebar. The button becomes <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> ''favorite'' when selected and then the tiddler appears in the list on the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the <span class='tc-favorites'>{{$:/core/images/star-filled}}</span> ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint"
+	"readme": "\\define a()\n<span class='tc-image-favorites'>\n{{$:/core/images/star-filled}}\n</span>\n\\end\n<style>\n.tc-image-favorites svg {\n stroke: #000;\n stroke-width: 2;\n fill: #ff0;\n}\n</style> \nThis plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the <<a>> ''Favorites'' tab to the Sidebar. The button becomes <<a>> ''favorite'' when selected and then the tiddler appears in the list on the <<a>> ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the <<a>> ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint"
     },
     {
         "title": "$:/plugins/ajh/locations",
