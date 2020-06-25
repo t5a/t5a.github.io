@@ -31,6 +31,13 @@ var assetList = [
         "readme": "This plugin adds the <svg height='22pt' width='22pt' viewBox='0 0 128 128'><path d='m21,48c0,42,42,80,42,80c0,0,42,-42,42,-80c0,-60,-84,-60,-84,0zm42,-32,a30,30 0 0 1 0,63a31,31 0 0 1 0,-63z'/></svg> ''locations'' button to the Page Toolbar. The button will navigate to the Locations tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Caption and hint"
     },
     {
+        "title": "$:/plugins/ajh/luckypic",
+        "description": "Changing background pics",
+        "version": "0.2.0",
+	"plugin-type": "plugin",
+	"readme": "This plugin replaces the page background image with a random one upon each refresh. Name the background tiddlers ~$:/plugins/ajh/luckypic/pic# where # is a whole number between 0 and what is in ~$:/info/max-lucky. For example: ~$:/plugins/ajh/luckypic/pic0, ~$:/plugins/ajh/luckypic/pic1, ~$:/plugins/ajh/luckypic/pic2, etc.\n\nAdd the ''attachment'' field with value of ''fixed'' or ''scroll'' and/or the ''size'' field with value of ''auto'', ''cover'', or ''contain'' for each background individually and it will supersede the global setting for that background.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Stylesheet\n* Default background"
+    },
+    {
         "title": "$:/plugins/ajh/openall",
         "description": "Open all tagged the same",
         "version": "0.0.4",
@@ -50,13 +57,6 @@ var assetList = [
         "version": "0.0.2",
         "plugin-type": "plugin",
         "readme": "This plugin adds the ''Plugin Tweaks'' tab to the Appearance tab in the{{$:/core/images/options-button}}ControlPanel. It provides edit fields for changing plugin stylesheet values that are stored in fields.\n\nThis plugin comprises:\n\n* Control settings\n* Template"
-    },
-    {
-        "title": "$:/plugins/ajh/randombackground",
-        "description": "Random Background",
-        "version": "0.1.2",
-	"plugin-type": "plugin",
-	"readme": "This plugin replaces the page background image with a random one upon each refresh. Name the background tiddlers ~$:/plugins/ajh/randombackground/background# where # is a whole number between 0 and what is in ~$:/info/max-random. For example: ~$:/plugins/ajh/randombackground/background0, ~$:/plugins/ajh/randombackground/background1, ~$:/plugins/ajh/randombackground/background2, etc.\n\nAdd the ''attachment'' field with value of ''fixed'' or ''scroll'' and/or the ''size'' field with value of ''auto'', ''cover'', or ''contain'' for each background individually and it will supersede the global setting for that background.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Stylesheet\n* Default background"
     },
     {
         "title": "$:/plugins/ajh/reduce",
