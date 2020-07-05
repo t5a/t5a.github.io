@@ -349,6 +349,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/reduce</li>
 
+<li>$:/plugins/ajh/reduce/icon</li>
+
 <li>$:/plugins/ajh/reduce/image</li>
 
 <li>$:/plugins/ajh/reduce/image2</li>
@@ -10564,10 +10566,15 @@ Hello, my name is [[Andrew|http://t5a.tiddlyspot.com/#Andrew%20Harrison]] and th
 <div created="20150723050934013" creator="Andrew Harrison" modified="20151024172102471" modifier="Andrew Harrison" tags="New Template" title="$:/Here">
 <pre>&amp;emsp;&amp;emsp;Here is what makes up my {{!!title}}:&lt;&lt;list-links filter:&quot;[tag{!!title}]&quot; type:&quot;ol&quot;&gt;&gt;</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[DragDropTouch.js]]</pre>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;Untitled&quot;: {
+            &quot;title&quot;: &quot;Untitled&quot;,
+            &quot;text&quot;: &quot;$:/plugins/ajh/reduce/icon&quot;
+        }
+    }
+}</pre>
 </div>
 <div created="20200518071521008" modified="20200518071521008" title="$:/Import!!popup-$:/config/PageControlButtons/Visibility/$:/Search">
 <pre>yes</pre>
@@ -11058,8 +11065,11 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div created="20200628030420731" creator="Andrew Harrison" modified="20200704034158244" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image">
-<pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m40 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;</pre>
+<div created="20200705071731051" creator="Andrew Harrison" modified="20200705073001897" modifier="Andrew Harrison" title="$:/plugins/ajh/reduce/icon">
+<pre>&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-9 -9 50 50'&gt;&lt;path fill='#f00' stroke='#090' stroke-width='2' d='m-3,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;&lt;g fill='#fff' stroke='#000' stroke-width='2'&gt;{{$:/plugins/ajh/reduce/image}}&lt;/g&gt;&lt;/svg&gt;</pre>
+</div>
+<div created="20200628030420731" creator="Andrew Harrison" modified="20200705072942798" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image">
+<pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m38 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;</pre>
 </div>
 <div created="20200628185305181" creator="Andrew Harrison" modified="20200703070049271" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image2">
 <pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m40 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;</pre>
@@ -11413,7 +11423,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200704033904102" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/reduce [[My Adventure]] [[Plugin Library]]" modified="20200704034248714" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200705071635868" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/reduce [[My Adventure]] [[Plugin Library]]" modified="20200705071721603" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12373,11 +12383,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;740&quot;
+            &quot;text&quot;: &quot;864&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12386,8 +12396,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="auto" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic4</pre>
+<div attachment="fixed" size="cover" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic0</pre>
 </div>
 <div created="20200619043711634" creator="Andrew Harrison" description="Copy specified text to the clipboard" modified="20200619043711634" modifier="Andrew Harrison" original-plugin-type="plugin" original-tags="" original-title="$:/plugins/ajh/copy" readme="This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.
 
@@ -13495,7 +13505,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>8:43:27 PM</pre>
+<pre>12:33:41 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
