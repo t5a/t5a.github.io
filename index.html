@@ -349,7 +349,11 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/reduce</li>
 
+<li>$:/plugins/ajh/reduce/image</li>
+
 <li>$:/plugins/ajh/reduce/image2</li>
+
+<li>$:/plugins/ajh/reduce/readme</li>
 
 <li>$:/plugins/ajh/showfields</li>
 
@@ -11016,8 +11020,22 @@ color:$(foregroundColor)$;
 <div description="Reduce text into a searchable blob" list="readme license" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/reduce" type="application/json" version="0.0.4">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/config/ShortcutInfo/reduce&quot;:{&quot;text&quot;:&quot;{{$:/language/reduce/hint}}&quot;,&quot;title&quot;:&quot;$:/config/ShortcutInfo/reduce&quot;},&quot;$:/config/shortcuts/reduce&quot;:{&quot;text&quot;:&quot;ctrl-shift-R&quot;,&quot;title&quot;:&quot;$:/config/shortcuts/reduce&quot;},&quot;$:/language/reduce/caption&quot;:{&quot;text&quot;:&quot;reduce&quot;,&quot;title&quot;:&quot;$:/language/reduce/caption&quot;},&quot;$:/language/reduce/hint&quot;:{&quot;text&quot;:&quot;Reduce text into a blob&quot;,&quot;title&quot;:&quot;$:/language/reduce/hint&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/reduce/icon&quot;:{&quot;text&quot;:&quot;&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-9 -9 50 50'&gt;&lt;path fill='#f00' stroke='#090' stroke-width='2' d='m-3,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;&lt;g fill='#fff' stroke='#000' stroke-width='2'&gt;{{$:/plugins/ajh/reduce/image}}&lt;/g&gt;&lt;/svg&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/icon&quot;},&quot;$:/plugins/ajh/reduce/image&quot;:{&quot;text&quot;:&quot;&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m38 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/image&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/reduce/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/reduce/macro.js&quot;:{&quot;text&quot;:&quot;/*\\\ntitle: $:/plugins/ajh/reduce/macro.js\ntype: application/javascript\nmodule-type: texteditoroperation\n\nText editor operation to replace the entire text\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\nexports['reduce-all'] = function(event,operation) {\n    operation.cutStart = 0;\n    operation.cutEnd = operation.text.length;\n    var zwrds = operation.text.toLowerCase().replace(\t/\\W/g,' ');\n    var ztrc = zwrds.split(' ').sort().reverse();\n    var zntrc = ' ';\n    var add = '';\n    for (var i = 0; i &lt; ztrc.length; i++) {\n        if (zntrc.indexOf(ztrc[i]) &lt; 1) {\n            add = ztrc[i].toString();\n            zntrc += add;\n        }\n    }\n    var t= zntrc.slice(1);\n    operation.replacement = zntrc.slice(1);\n    operation.newSelStart = 0;\n    operation.newSelEnd = operation.replacement.length;\n};\n\n})();&quot;,&quot;type&quot;:&quot;application/javascript&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/macro.js&quot;,&quot;module-type&quot;:&quot;texteditoroperation&quot;},&quot;$:/plugins/ajh/reduce/readme&quot;:{&quot;text&quot;:&quot;This plugin adds the&lt;svg width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m38 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;reduce button to the Editor Toolbar. The button will reduce text in the text field into a blob with duplicate words and spaces removed. When used with an external image or page like with ''_canonical_uri'' field, the text from the external page can be made to seem fully searchable within the wiki while conserving file size.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Keyboard shortcut\n* Icon\n* Template\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/readme&quot;},&quot;$:/plugins/ajh/reduce/template&quot;:{&quot;text&quot;:&quot;&lt;$action-sendmessage\n\t$message='tm-edit-text-operation'\n\t$param='reduce-all'\n/&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/reduce/template&quot;,&quot;tags&quot;:&quot;$:/tags/EditorToolbar&quot;,&quot;shortcuts&quot;:&quot;((reduce))&quot;,&quot;list-before&quot;:&quot;$:/core/ui/EditorToolbar/more&quot;,&quot;icon&quot;:&quot;$:/plugins/ajh/reduce/image&quot;,&quot;description&quot;:&quot;{{$:/language/reduce/hint}}&quot;,&quot;condition&quot;:&quot;[&lt;targetTiddler&gt;!is[image]]&quot;,&quot;caption&quot;:&quot;{{$:/language/reduce/caption}}&quot;}}}</pre>
 </div>
+<div created="20200707053942907" creator="Andrew Harrison" modified="20200707053951323" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image">
+<pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m27 114c-3-16-10-75 26-68 0 0 14 2 19-2 0 0 1-25-2-25h-24v-8h24c0-4 10-4 10 0h24v8h-24c-3 0-2 26-2 26 7-1 7 18 0 17 0 0-2 26 3 27 2 0 2 3 1 3h-14c-1 0-1-3 1-3 5-1 3-26 3-26-8-3-27-3-31 3-2 2-2 44 0 46 5 6 24 3 23-1h21c0 4-2 5-4 5-7 1-10 11-17 12-10 0-32 4-37-14z'/&gt;&lt;/svg&gt;</pre>
+</div>
 <div created="20200628185305181" creator="Andrew Harrison" modified="20200703070049271" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image2">
 <pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m40 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;</pre>
+</div>
+<div created="20200707054059102" creator="Andrew Harrison" modified="20200707054116444" modifier="Andrew Harrison" title="$:/plugins/ajh/reduce/readme">
+<pre>This plugin adds the&lt;svg width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m27 114c-3-16-10-75 26-68 0 0 14 2 19-2 0 0 1-25-2-25h-24v-8h24c0-4 10-4 10 0h24v8h-24c-3 0-2 26-2 26 7-1 7 18 0 17 0 0-2 26 3 27 2 0 2 3 1 3h-14c-1 0-1-3 1-3 5-1 3-26 3-26-8-3-27-3-31 3-2 2-2 44 0 46 5 6 24 3 23-1h21c0 4-2 5-4 5-7 1-10 11-17 12-10 0-32 4-37-14z'/&gt;&lt;/svg&gt;reduce button to the Editor Toolbar. The button will reduce text in the text field into a blob with duplicate words and spaces removed. When used with an external image or page like with ''_canonical_uri'' field, the text from the external page can be made to seem fully searchable within the wiki while conserving file size.
+
+This plugin comprises:
+
+* JavaScript code module
+* Keyboard shortcut
+* Icon
+* Template
+* Caption and hint</pre>
 </div>
 <div author="Andrew" core-version="&gt;=5.1.14" dependents="$:/language/showfields/caption $:/language/showfields/hint $:/plugins/ajh/showfields/controls $:/plugins/ajh/showfields/readme $:/plugins/ajh/showfields/icon $:/plugins/ajh/showfields/template" description="Show Fields" list="readme" plugin-type="plugin" source="https://github.com/Infurnoape/infurnoape.github.io/blob/master/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fshowfields.json" title="$:/plugins/ajh/showfields" type="application/json" version="0.0.1">
 <pre>{
@@ -11362,16 +11380,16 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20200606232639970" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20200706014722610" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20200707043518917" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200706021139935" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200706021139935" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200707043522400" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/reduce $:/plugins/ajh/reduce/icon $:/plugins/ajh/reduce/image [[My Adventure]] [[Plugin Library]]" modified="20200707054040142" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12331,11 +12349,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;740&quot;
+            &quot;text&quot;: &quot;864&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -13463,7 +13481,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>7:12:19 PM</pre>
+<pre>10:43:33 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
