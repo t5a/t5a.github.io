@@ -11136,11 +11136,13 @@ This plugin comprises:
 * Template
 * Caption and hint</pre>
 </div>
-<div created="20200714033405666" creator="Andrew Harrison" modified="20200714051600422" modifier="Andrew Harrison" tags="$:/tags/ViewTemplate" title="$:/plugins/ajh/showfields/template">
+<div created="20200714082005087" creator="Andrew Harrison" modified="20200714082514228" modifier="Andrew Harrison" tags="$:/tags/ViewTemplate" title="$:/plugins/ajh/showfields/template">
 <pre>\define body()
 &lt;table class='tc-view-field-table'&gt;
 &lt;tbody&gt;
-&lt;$list filter='[list[$:/plugins/ajh/showfields/list]] $(showfield)$' template='$:/core/ui/TiddlerFieldTemplate' variable='listItem'/&gt;
+&lt;$list filter='[list[$:/plugins/ajh/showfields/list]] $(showfield)$' variable='listItem'&gt;
+&lt;$list filter='[all[current]has&lt;listItem&gt;]' template='$:/core/ui/TiddlerFieldTemplate'/&gt;
+&lt;/$list&gt;
 &lt;/tbody&gt;
 \end
 &lt;$reveal type='nomatch' state=&lt;&lt;folded-state&gt;&gt; text='hide' retain='yes' animate='yes'&gt;
@@ -11485,7 +11487,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200714030205491" creator="Andrew Harrison" list="$:/AdvancedSearch $:/ControlPanel $:/plugins/ajh/showfields $:/plugins/ajh/showfields/controls [[Plugin Library]]" modified="20200714064237568" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200714072159479" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/showfields $:/plugins/ajh/showfields/template $:/plugins/ajh/showfields/controls [[My Adventure]] [[Plugin Library]]" modified="20200714081953248" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12459,7 +12461,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic0</pre>
+<pre>$:/plugins/ajh/luckypic/pic3</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13580,7 +13582,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:50:21 PM</pre>
+<pre>1:26:03 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
