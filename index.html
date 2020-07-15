@@ -351,8 +351,6 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/reduce/image2</li>
 
-<li>$:/plugins/ajh/showfields</li>
-
 <li>$:/plugins/ajh/showfields/list</li>
 
 <li>$:/plugins/ajh/tiddlycopy</li>
@@ -11039,9 +11037,6 @@ color:$(foregroundColor)$;
 <div created="20200628185305181" creator="Andrew Harrison" modified="20200703070049271" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/reduce/image2">
 <pre>&lt;svg class='tc-image-reduce tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m40 126c-9-3-11-13-11-13-4-17-4-37 0-55 6-18 26-13 26-13 13 2 14 1 14 0 1-1 2 0 3-1 0 0 0-1 2-1v-22c-1-1-2-2-2-3-2 0-24 0-24-1v-6c1-1 22-1 24-1 0-4 10-4 10 0 2 0 24 0 24 1v6c-1 1-22 1-24 1 0 1-1 2-2 3v23c4 0 4 0 5 1v15c0 1-1 1-5 1 0 7 0 13-1 16-1 0-1 3 0 3s2 3 2 5 0 3 2 3c1 0 2 3 1 3h-14c-1-1 0-3 1-3 2 0 2-1 2-3s1-5 2-5 1-3 0-3c-1-3-1-15-1-15-2 0-2-1-2-1-1-1-2 0-3-1s-24-1-26 5c-2 2-2 44 0 46 5 6 23 2 23 0 0-3 3-1 3-1 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 4 0 4 0 2-2 2 0 2 2 0 1 0 3-4 3-3 0-3 1-6 5-2 4-6 6-11 7-11 2-26-1-26-1z'/&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20200715021039621" creator="Andrew Harrison" description="Show field contents in tiddlers" list="readme license" modified="20200715051800492" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fshowfields.json" title="$:/plugins/ajh/showfields" type="application/json" version="0.0.2">
-<pre>{&quot;tiddlers&quot;:{&quot;$:/language/showfields/caption&quot;:{&quot;text&quot;:&quot;Show Fields&quot;,&quot;title&quot;:&quot;$:/language/showfields/caption&quot;},&quot;$:/language/showfields/hint&quot;:{&quot;text&quot;:&quot;Add field to list:&quot;,&quot;title&quot;:&quot;$:/language/showfields/hint&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/showfields/controls&quot;:{&quot;text&quot;:&quot;\\define remove() -[[$(currentTiddler)$]]\n\\define lingo-base() $:/language/EditTemplate/\n\\define drop-actions() &lt;$action-listops $tiddler='$:/plugins/ajh/showfields/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n&lt;$list filter='[list[$:/plugins/ajh/showfields/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt; &lt;/div&gt;&lt;div&gt;&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/showfields/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;input type='checkbox' checked='checked'&gt;&lt;/$button&gt; &lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;\n\n&lt;div class='tc-edit-field-add'&gt;&lt;em class='tc-edit'&gt;{{$:/language/showfields/hint}}&lt;/em&gt;&lt;span class='tc-edit-field-add-name'&gt;&lt;$edit-text tiddler='$:/temp/newfieldname' tag='input' default='' placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-edit-texteditor tc-popup-handle'/&gt;&lt;/span&gt;&lt;$button popup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-btn-invisible tc-btn-dropdown' tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;&lt;$reveal state=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; type='nomatch' text='' default=''&gt;&lt;div class='tc-block-dropdown tc-edit-type-dropdown'&gt;&lt;$linkcatcher to='$:/temp/newfieldname'&gt;&lt;div class='tc-dropdown-item'&gt;&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;&lt;/div&gt;&lt;$list filter='[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]]'  variable='currentField'&gt;&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;&lt;&lt;currentField&gt;&gt;&lt;/$link&gt;&lt;/$list&gt;&lt;div class='tc-dropdown-item'&gt;&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;&lt;/div&gt;&lt;$list filter='[fields[]search:title{$:/temp/newfieldname}sort[]] -[!is[shadow]!is[system]fields[]]' variable='currentField'&gt;&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;&lt;&lt;currentField&gt;&gt;&lt;/$link&gt;&lt;/$list&gt;&lt;/$linkcatcher&gt;&lt;/div&gt;&lt;/$reveal&gt;&lt;$button&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/showfields/list' $field='list' $subfilter={{$:/temp/newfieldname}}/&gt;&lt;&lt;lingo Fields/Add/Button&gt;&gt;&lt;/$button&gt;&lt;/div&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/showfields/controls&quot;,&quot;tags&quot;:&quot;$:/tags/ControlPanel/Settings&quot;,&quot;caption&quot;:&quot;{{$:/language/showfields/caption}}&quot;},&quot;$:/plugins/ajh/showfields/icon&quot;:{&quot;text&quot;:&quot;&lt;svg class='tc-image-showfields tc-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='#000' stroke='#f00' stroke-width='5' d='m7,36.7l55,-32l55,32l0,58.2l-55,32l-55,-32l0,-58.2z'/&gt;&lt;path fill='#ccc' stroke='#000' d='m52,46h55v13h-55v-13zm0,28.5h55v13h-55v-13zm-8,-6h-25v25h25v-25zm-4,9l-10,11l-7,-7l2.5,-2.5l4.5,4.5l8,-9l2.5,2.5zm4,-38h-25v25h25v-25l0,0zm-4,9l-10,11l-7,-7l2.5,-2.5l4.5,4.5l8,-9l2.5,2.5z'/&gt;&lt;/svg&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/showfields/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/showfield/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/showfield/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/showfields/readme&quot;:{&quot;text&quot;:&quot;This plugin adds the ''Show Fields'' selector to the Settings tab in the{{$:/core/images/options-button}}ControlPanel. Fields added to the list will be viewed in any tiddler that has them. Drag and drop selected to change the ordering.\n\nAlso, optionally add to a tiddler the field named ''show-field'' and in its contents add field names with or without a minus in front to show or hide them in that tiddler only.\n\nThis plugin comprises:\n\n* Control settings\n* Template\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/showfields/readme&quot;},&quot;$:/plugins/ajh/showfields/template&quot;:{&quot;text&quot;:&quot;\\define body() &lt;table class='tc-view-field-table'&gt;&lt;tbody&gt;&lt;$list filter='[list[$:/plugins/ajh/showfields/list]] $(showfield)$' variable='listItem'&gt;&lt;$list filter='[all[current]has&lt;listItem&gt;]' template='$:/core/ui/TiddlerFieldTemplate'/&gt;&lt;/$list&gt;&lt;/tbody&gt;\n&lt;$reveal type='nomatch' state=&lt;&lt;folded-state&gt;&gt; text='hide' retain='yes' animate='yes'&gt;&lt;$vars showfield={{!!show-field}}&gt;&lt;&lt;body&gt;&gt;&lt;/$vars&gt;&lt;/$reveal&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/showfields/template&quot;,&quot;tags&quot;:&quot;$:/tags/ViewTemplate&quot;}}}</pre>
-</div>
 <div created="20170603175400883" creator="Andrew Harrison" list="caption" modified="20200714064855383" modifier="Andrew Harrison" title="$:/plugins/ajh/showfields/list">
 <pre></pre>
 </div>
@@ -11315,11 +11310,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200528054439613" creator="Andrew Harrison" modified="20200608064623770" modifier="Andrew Harrison" title="$:/state/plugin-info-463856414-$:/plugins/ajh/plugintweaks--585504527">
 <pre>contents</pre>
 </div>
-<div created="20200715023034928" creator="Andrew Harrison" modified="20200715023034928" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields">
-<pre>no</pre>
+<div created="20200715023034928" creator="Andrew Harrison" modified="20200715062827737" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields">
+<pre>yes</pre>
 </div>
-<div created="20200712063204864" creator="Andrew Harrison" modified="20200715022832934" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields---75215981">
-<pre>readme</pre>
+<div created="20200712063204864" creator="Andrew Harrison" modified="20200715062829039" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields---75215981">
+<pre>license</pre>
 </div>
 <div created="20200715022515230" creator="Andrew Harrison" modified="20200715022515230" modifier="Andrew Harrison" title="$:/state/plugin-info-698995806-$:/plugins/ajh/reduce">
 <pre>no</pre>
@@ -11387,7 +11382,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200715050814267" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200715050840538" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200715062821530" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20200715062825473" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12361,7 +12356,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic2</pre>
+<pre>$:/plugins/ajh/luckypic/pic3</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13482,7 +13477,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>10:18:16 PM</pre>
+<pre>11:28:44 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
