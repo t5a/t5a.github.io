@@ -11077,34 +11077,13 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div caption="{{$:/language/showfields/caption}}" created="20200714064555824" creator="Andrew Harrison" modified="20200714064849195" modifier="Andrew Harrison" tags="$:/tags/ControlPanel/Settings" title="$:/plugins/ajh/showfields/controls">
+<div caption="{{$:/language/showfields/caption}}" created="20200714064555824" creator="Andrew Harrison" modified="20200715005018752" modifier="Andrew Harrison" tags="$:/tags/ControlPanel/Settings" title="$:/plugins/ajh/showfields/controls">
 <pre>\define remove() -[[$(currentTiddler)$]]
 \define lingo-base() $:/language/EditTemplate/
 \define drop-actions() &lt;$action-listops $tiddler='$:/plugins/ajh/showfields/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;
 &lt;$list filter='[list[$:/plugins/ajh/showfields/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/showfields/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;input type='checkbox' checked='checked'&gt;&lt;/$button&gt; &lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;
 
-&lt;div class='tc-edit-field-add'&gt;
-&lt;em class='tc-edit'&gt;
-{{$:/language/showfields/hint}}
-&lt;/em&gt;
-&lt;span class='tc-edit-field-add-name'&gt;
-&lt;$edit-text tiddler='$:/temp/newfieldname' tag='input' default='' placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-edit-texteditor tc-popup-handle'/&gt;
-&lt;/span&gt;
-&lt;$button popup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-btn-invisible tc-btn-dropdown' tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;
-&lt;$reveal state=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; type='nomatch' text='' default=''&gt;
-&lt;div class='tc-block-dropdown tc-edit-type-dropdown'&gt;
-&lt;$linkcatcher to='$:/temp/newfieldname'&gt;
-&lt;div class='tc-dropdown-item'&gt;
-&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;
-&lt;/div&gt;
-&lt;$list filter='[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]]'  variable='currentField'&gt;
-&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
-&lt;&lt;currentField&gt;&gt;
-&lt;/$link&gt;
-&lt;/$list&gt;
-&lt;div class='tc-dropdown-item'&gt;
-&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;
-&lt;/div&gt;
+&lt;div class='tc-edit-field-add'&gt;&lt;em class='tc-edit'&gt;{{$:/language/showfields/hint}}&lt;/em&gt;&lt;span class='tc-edit-field-add-name'&gt;&lt;$edit-text tiddler='$:/temp/newfieldname' tag='input' default='' placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-edit-texteditor tc-popup-handle'/&gt;&lt;/span&gt;&lt;$button popup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-btn-invisible tc-btn-dropdown' tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;&lt;$reveal state=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; type='nomatch' text='' default=''&gt;&lt;div class='tc-block-dropdown tc-edit-type-dropdown'&gt;&lt;$linkcatcher to='$:/temp/newfieldname'&gt;&lt;div class='tc-dropdown-item'&gt;&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;&lt;/div&gt;&lt;$list filter='[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]]'  variable='currentField'&gt;&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;&lt;&lt;currentField&gt;&gt;&lt;/$link&gt;&lt;/$list&gt;&lt;div class='tc-dropdown-item'&gt;&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;&lt;/div&gt;
 &lt;$list filter='[fields[]search:title{$:/temp/newfieldname}sort[]] -[!is[shadow]!is[system]fields[]]' variable='currentField'&gt;
 &lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
 &lt;&lt;currentField&gt;&gt;
@@ -11476,7 +11455,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20200714072159479" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/showfields [[My Adventure]] [[Plugin Library]]" modified="20200714083247017" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20200715004642536" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/showfields $:/plugins/ajh/showfields/controls $:/plugins/ajh/showfields/icon [[My Adventure]] [[Plugin Library]]" modified="20200715004731475" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12450,7 +12429,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic3</pre>
+<pre>$:/plugins/ajh/luckypic/pic0</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13571,7 +13550,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:33:12 AM</pre>
+<pre>5:50:33 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
