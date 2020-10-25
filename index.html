@@ -11086,25 +11086,32 @@ This plugin comprises:
     &quot;list-before&quot;: &quot;&quot;
 } } }</pre>
 </div>
-<div created="20201020061102659" creator="Andrew Harrison" modified="20201025075903692" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlycopy/icon">
+<div created="20201020061102659" creator="Andrew Harrison" modified="20201025092633543" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlycopy/icon">
 <pre> &lt;svg class='tc-image-tiddlycopy tc-image-button' fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0f3' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;
 {{$:/core/images/copy-clipboard}}
 &lt;g fill=&quot;#0f3&quot;&gt;
 &lt;rect width=&quot;11&quot; height=&quot;16&quot; x=&quot;9&quot; y=&quot;9&quot; rx=&quot;0&quot;/&gt;&lt;rect width=&quot;11&quot; height=&quot;4&quot; x=&quot;19&quot; y=&quot;14.5&quot; rx=&quot;0&quot;/&gt;&lt;/g&gt;
-
 &lt;g fill='#30f'&gt;
-    &lt;animate attributeName=&quot;opacity&quot;
-             values=&quot;0;1;0&quot; dur=&quot;1s&quot;
-             repeatCount=&quot;indefinite&quot;&gt;
+{{$:/core/images/preview-closed}}
+    &lt;animate id=&quot;animation1&quot;
+             attributeName=&quot;opacity&quot;
+             from=&quot;0&quot; to=&quot;1&quot; dur=&quot;3s&quot;
+             begin=&quot;0s;animation2.end&quot; /&gt;
+    &lt;animate id=&quot;animation2&quot;
+             attributeName=&quot;opacity&quot;
+             from=&quot;1&quot; to=&quot;0&quot; dur=&quot;3s&quot; 
+             begin=&quot;animation1.end&quot; /&gt;
+&lt;/g&gt;
+&lt;g fill='#30f'&gt;
 {{$:/core/images/preview-open}}
-&lt;/animate&gt;
-            &lt;animate
-          attributeName=&quot;d&quot;
-          dur=&quot;1s&quot;
-          repeatCount=&quot;indefinite&quot;
-                values={{$:/core/images/preview-open}};{{$:/core/images/preview-closed}};
-            /&gt;
-        &lt;/path&gt;
+    &lt;animate id=&quot;animation3&quot;
+             attributeName=&quot;opacity&quot;
+             from=&quot;1&quot; to=&quot;0&quot; dur=&quot;3s&quot;
+             begin=&quot;0s;animation2.end&quot; /&gt;
+    &lt;animate id=&quot;animation4&quot;
+             attributeName=&quot;opacity&quot;
+             from=&quot;0&quot; to=&quot;1&quot; dur=&quot;3s&quot; 
+             begin=&quot;animation1.end&quot; /&gt;
 &lt;/g&gt;
 &lt;animateTransform
    attributeName=&quot;transform&quot;
@@ -11438,7 +11445,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200526034652160" creator="Andrew Harrison" modified="20200615001601370" modifier="Andrew Harrison" title="$:/state/plugin-info-957308616-$:/plugins/ajh/locations--1664621359">
 <pre>contents</pre>
 </div>
-<div created="20200520024044968" creator="Andrew Harrison" modified="20201025030615110" modifier="Andrew Harrison" title="$:/state/showeditpreview">
+<div created="20200520024044968" creator="Andrew Harrison" modified="20201025092207007" modifier="Andrew Harrison" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200520023205521" creator="Andrew Harrison" modified="20200927091817763" modifier="Andrew Harrison" title="$:/state/sidebar">
@@ -11486,8 +11493,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201025065144345" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201025091636342" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/plugintools/sidebar</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -11501,7 +11508,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201025063635009" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlycopy/icon $:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20201025071944363" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201025091638462" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlycopy/icon [[My Adventure]] [[Plugin Library]]" modified="20201025091638463" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12475,7 +12482,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic3</pre>
+<pre>$:/plugins/ajh/luckypic/pic2</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -12960,7 +12967,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>12:59:16 AM</pre>
+<pre>2:28:10 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
