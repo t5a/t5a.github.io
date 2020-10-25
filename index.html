@@ -11086,21 +11086,25 @@ This plugin comprises:
     &quot;list-before&quot;: &quot;&quot;
 } } }</pre>
 </div>
-<div created="20201020061102659" creator="Andrew Harrison" modified="20201025065902578" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlycopy/icon">
-<pre>&lt;svg class='tc-image-tiddlycopy tc-image-button' fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0f3' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;
+<div created="20201020061102659" creator="Andrew Harrison" modified="20201025075903692" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlycopy/icon">
+<pre> &lt;svg class='tc-image-tiddlycopy tc-image-button' fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0f3' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;
 {{$:/core/images/copy-clipboard}}
 &lt;g fill=&quot;#0f3&quot;&gt;
-&lt;rect width=&quot;11&quot; height=&quot;16&quot; x=&quot;9&quot; y=&quot;9&quot; rx=&quot;0&quot;/&gt;&lt;rect width=&quot;11&quot; height=&quot;4&quot; x=&quot;19&quot; y=&quot;14.5&quot; rx=&quot;0&quot;/&gt;&lt;/g&gt;&lt;g fill='#30f'&gt;
+&lt;rect width=&quot;11&quot; height=&quot;16&quot; x=&quot;9&quot; y=&quot;9&quot; rx=&quot;0&quot;/&gt;&lt;rect width=&quot;11&quot; height=&quot;4&quot; x=&quot;19&quot; y=&quot;14.5&quot; rx=&quot;0&quot;/&gt;&lt;/g&gt;
+
+&lt;g fill='#30f'&gt;
+    &lt;animate attributeName=&quot;opacity&quot;
+             values=&quot;0;1;0&quot; dur=&quot;1s&quot;
+             repeatCount=&quot;indefinite&quot;&gt;
 {{$:/core/images/preview-open}}
-&lt;animateTransform
-   attributeName=&quot;transform&quot;
-   attributeType=&quot;XML&quot;
-   type=&quot;rotate&quot;
-   from=&quot;360&quot;
-   to=&quot;0&quot;
-   begin=&quot;0s&quot;
-   dur=&quot;5s&quot;
-   repeatCount=&quot;indefinite&quot;/&gt;
+&lt;/animate&gt;
+            &lt;animate
+          attributeName=&quot;d&quot;
+          dur=&quot;1s&quot;
+          repeatCount=&quot;indefinite&quot;
+                values={{$:/core/images/preview-open}};{{$:/core/images/preview-closed}};
+            /&gt;
+        &lt;/path&gt;
 &lt;/g&gt;
 &lt;animateTransform
    attributeName=&quot;transform&quot;
@@ -11497,7 +11501,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201025063635009" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlycopy/icon $:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20201025065145692" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201025063635009" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlycopy/icon $:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20201025071944363" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12956,7 +12960,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:59:46 PM</pre>
+<pre>12:59:16 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
