@@ -12848,7 +12848,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>5:41:30 PM</pre>
+<pre>5:44:25 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
@@ -13130,7 +13130,7 @@ add the link to all plugins and update github files</pre>
 <div created="20141130074410181" creator="Andrew Harrison" modified="20151031182308609" modifier="Andrew Harrison" tags="New" title="Andrew Harrison">
 <pre>andrew.j.harrison84@gmail.com</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201107004127138" modifier="Andrew Harrison" title="animationclock.svg" type="image/svg+xml">
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201107004418966" modifier="Andrew Harrison" title="animationclock.svg" type="image/svg+xml">
 <pre>&lt;svg
    xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
    xmlns:cc=&quot;http://creativecommons.org/ns#&quot;
@@ -13142,99 +13142,6 @@ add the link to all plugins and update github files</pre>
    width=&quot;100%&quot;
    height=&quot;100%&quot;
    viewBox=&quot;0 0 680 680&quot;&gt;
-  
-  &lt;script type=&quot;application/x-javascript&quot;&gt;&lt;![CDATA[
-    var Clock = new function()
-    {
-      window.addEventListener(&quot;load&quot;, setClock);
-
-      function setClock()
-      {
-        var sec;
-        var min;
-        var hr;
-        var deg;
-        var node;
-        
-        var dt = new Date();
-        var deg=0;
-      
-        min = dt.getMinutes();
-        sec = dt.getSeconds();
-        ms = dt.getMilliseconds();
-
-        deg = (360/60)*(sec+ms/1000);
-        node = document.getElementById(&quot;seconds&quot;);
-        deg %= 360;
-        node.setAttribute(&quot;transform&quot;,&quot;rotate(&quot;+deg+&quot;,367.3,487.5)&quot;);
-
-        deg = (360/3600)*(60*min+sec);
-        node = document.getElementById(&quot;minutes&quot;);
-        deg %= 360;
-        node.setAttribute(&quot;transform&quot;,&quot;rotate(&quot;+deg+&quot;,367.3,487.5)&quot;);
-        
-        hr = dt.getHours();
-        deg = 30*hr + 30/60*min;
-        var node = document.getElementById(&quot;hours&quot;);
-        deg-=150;
-        deg %= 360;
-        node.setAttribute(&quot;transform&quot;,&quot;rotate(&quot;+deg+&quot;,367.3,487.5)&quot;);
-        
-        document.getElementById(&quot;asec&quot;).beginElement();
-        document.getElementById(&quot;amin&quot;).beginElement();
-        document.getElementById(&quot;ahr&quot;).beginElement();
-        
-        var timeout = ((60-dt.getSeconds())%60)*1000;
-        timeout-=dt.getMilliseconds/1000;
-        
-        setTimeout(setClock,timeout);
-      }
-    }();
-  ]]&gt;
-  &lt;/script&gt;
-  
-  &lt;defs
-     id=&quot;defs4&quot;&gt;
-    &lt;inkscape:path-effect
-       effect=&quot;powerstroke&quot;
-       id=&quot;path-effect4463&quot;
-       is_visible=&quot;true&quot;
-       offset_points=&quot;0.17982456,2.2841785&quot;
-       sort_points=&quot;true&quot;
-       interpolator_type=&quot;Linear&quot;
-       interpolator_beta=&quot;0.2&quot;
-       start_linecap_type=&quot;zerowidth&quot;
-       linejoin_type=&quot;round&quot;
-       miter_limit=&quot;4&quot;
-       end_linecap_type=&quot;zerowidth&quot;
-       cusp_linecap_type=&quot;round&quot; /&gt;
-    &lt;inkscape:path-effect
-       effect=&quot;powerstroke&quot;
-       id=&quot;path-effect4459&quot;
-       is_visible=&quot;true&quot;
-       offset_points=&quot;0,0.5&quot;
-       sort_points=&quot;true&quot;
-       interpolator_type=&quot;Linear&quot;
-       interpolator_beta=&quot;0.2&quot;
-       start_linecap_type=&quot;zerowidth&quot;
-       linejoin_type=&quot;round&quot;
-       miter_limit=&quot;4&quot;
-       end_linecap_type=&quot;zerowidth&quot;
-       cusp_linecap_type=&quot;round&quot; /&gt;
-    &lt;inkscape:path-effect
-       effect=&quot;powerstroke&quot;
-       id=&quot;path-effect4463-8&quot;
-       is_visible=&quot;true&quot;
-       offset_points=&quot;0.17982456,1.9548752&quot;
-       sort_points=&quot;true&quot;
-       interpolator_type=&quot;Linear&quot;
-       interpolator_beta=&quot;0.2&quot;
-       start_linecap_type=&quot;zerowidth&quot;
-       linejoin_type=&quot;round&quot;
-       miter_limit=&quot;4&quot;
-       end_linecap_type=&quot;zerowidth&quot;
-       cusp_linecap_type=&quot;round&quot; /&gt;
-  &lt;/defs&gt;
   &lt;sodipodi:namedview
      id=&quot;base&quot;
      pagecolor=&quot;#ffffff&quot;
