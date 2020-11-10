@@ -11045,7 +11045,7 @@ This plugin comprises:
 &quot;$:/plugins/ajh/tiddlytime/time.js&quot;: { &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/ajh/tiddlytime/time.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget time to update $:/temp/time once every 1000 milliseconds using local computer time. $:/temp/time can then be transcluded to have multiple instances or no visible instances (without error) of a time clock with seconds. This is not the exact time unless your computer is set a little ahead of a time server or if you are lucky. Mine is within a second and I am OK with living in the past just a little.\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;time\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.before = [\&quot;rootwidget\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n var timer=setInterval(function(){\n var d=new Date();\n var t=d.toLocaleTimeString();\n $tw.wiki.addTiddler(new $tw.Tiddler({title: \&quot;$:/temp/time\&quot;, text: t}));\n},1000);\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlytime/time.js&quot;, &quot;module-type&quot;: &quot;startup&quot; },
 &quot;$:/time&quot;: { &quot;text&quot;: &quot;&lt;span title=&lt;&lt;dt 'MM/DD (today-78)' '-112320'&gt;&gt;&gt;\n&lt;$button class='tc-btn-invisible tc-time'&gt;&lt;$action-navigate $to='$:/info/timestamp'/&gt;&lt;$transclude tiddler='$:/temp/time' mode='block'/&gt;&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/time&quot;, &quot;tags&quot;: &quot;$:/tags/PageControls&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Time/Hint}}&quot;, &quot;caption&quot;: &quot;{{$:/temp/time}} {{$:/language/Buttons/Time/Caption}}&quot; } } }</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201109182603649" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201110003700575" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
 <pre>\define a()
 &lt;svg viewBox='0 0 680 680'&gt;
 &lt;defs&gt;
@@ -11090,6 +11090,11 @@ This plugin comprises:
 &lt;tspan x=&quot;575&quot; y=&quot;373&quot;&gt;4&lt;/tspan&gt;
 &lt;tspan x=&quot;475&quot; y=&quot;430&quot;&gt;5&lt;/tspan&gt;
 &lt;tspan x=&quot;344&quot; y=&quot;460&quot;&gt;6&lt;/tspan&gt;
+&lt;tspan x=&quot;219&quot; y=&quot;431&quot;&gt;7&lt;/tspan&gt;
+&lt;tspan x=&quot;104&quot; y=&quot;370&quot;&gt;8&lt;/tspan&gt;
+&lt;tspan x=&quot;63&quot; y=&quot;284&quot;&gt;9&lt;/tspan&gt;
+&lt;tspan x=&quot;98&quot; y=&quot;203&quot;&gt;10&lt;/tspan&gt;
+&lt;tspan x=&quot;196&quot; y=&quot;128&quot;&gt;11&lt;/tspan&gt;
 &lt;/text&gt;
           &lt;/g&gt;
 
@@ -12932,7 +12937,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>11:26:13 AM</pre>
+<pre>5:37:02 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
