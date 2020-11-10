@@ -11045,7 +11045,7 @@ This plugin comprises:
 &quot;$:/plugins/ajh/tiddlytime/time.js&quot;: { &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/ajh/tiddlytime/time.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget time to update $:/temp/time once every 1000 milliseconds using local computer time. $:/temp/time can then be transcluded to have multiple instances or no visible instances (without error) of a time clock with seconds. This is not the exact time unless your computer is set a little ahead of a time server or if you are lucky. Mine is within a second and I am OK with living in the past just a little.\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;time\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.before = [\&quot;rootwidget\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n var timer=setInterval(function(){\n var d=new Date();\n var t=d.toLocaleTimeString();\n $tw.wiki.addTiddler(new $tw.Tiddler({title: \&quot;$:/temp/time\&quot;, text: t}));\n},1000);\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlytime/time.js&quot;, &quot;module-type&quot;: &quot;startup&quot; },
 &quot;$:/time&quot;: { &quot;text&quot;: &quot;&lt;span title=&lt;&lt;dt 'MM/DD (today-78)' '-112320'&gt;&gt;&gt;\n&lt;$button class='tc-btn-invisible tc-time'&gt;&lt;$action-navigate $to='$:/info/timestamp'/&gt;&lt;$transclude tiddler='$:/temp/time' mode='block'/&gt;&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/time&quot;, &quot;tags&quot;: &quot;$:/tags/PageControls&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Time/Hint}}&quot;, &quot;caption&quot;: &quot;{{$:/temp/time}} {{$:/language/Buttons/Time/Caption}}&quot; } } }</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201110005436052" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201110043445192" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
 <pre>\define a()
 &lt;svg viewBox='0 0 680 680'&gt;
 &lt;defs&gt;
@@ -11097,7 +11097,7 @@ This plugin comprises:
 &lt;tspan x=&quot;197&quot; y=&quot;131&quot;&gt;11&lt;/tspan&gt;
 &lt;/text&gt;
           &lt;/g&gt;
-&lt;path d='m 337 395.495 l 15.432 -42.977 l -15.429 -196.016 l -15.43 196.016 l 15.432 42.977 z' fill-rule='evenodd' stroke='#ccc' stroke-width='1px'&gt;
+&lt;path d='m337,396l15-43l-15-196l-15,196l15,43z' fill-rule='evenodd' stroke='#ccc' stroke-width='1px'&gt;
 &lt;animateTransform attributeName='transform' from='$(h)$,337.3,337.5' repeatCount='indefinite' to='$(h)$,337.3,337.5' type='rotate'/&gt;
 &lt;/path&gt;
 &lt;path d='m337 407.75c6.0104-20.13 12.021-40.26 18.031-60.39-6.0104-91.812-12.021-183.62-18.031-275.44-6.0104 91.812-12.021 183.62-18.031 275.44 6.0104 20.13 12.021 40.26 18.031 60.39z' fill-rule='evenodd' stroke='#ccc' stroke-width='1px'&gt;
@@ -11478,7 +11478,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201109182048055" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlytime/analogclock.svg [[My Adventure]] [[Plugin Library]]" modified="20201109182048055" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201110042326910" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlytime/analogclock.svg [[My Adventure]] [[Plugin Library]]" modified="20201110042326910" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12452,7 +12452,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic0</pre>
+<pre>$:/plugins/ajh/luckypic/pic1</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -12935,7 +12935,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>5:54:46 PM</pre>
+<pre>9:34:48 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
