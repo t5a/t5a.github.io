@@ -11041,56 +11041,56 @@ This plugin comprises:
 &quot;$:/plugins/ajh/tiddlytime/time.js&quot;: { &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/ajh/tiddlytime/time.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget time to update $:/temp/time once every 1000 milliseconds using local computer time. $:/temp/time can then be transcluded to have multiple instances or no visible instances (without error) of a time clock with seconds. This is not the exact time unless your computer is set a little ahead of a time server or if you are lucky. Mine is within a second and I am OK with living in the past just a little.\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;time\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.before = [\&quot;rootwidget\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n var timer=setInterval(function(){\n var d=new Date();\n var t=d.toLocaleTimeString();\n $tw.wiki.addTiddler(new $tw.Tiddler({title: \&quot;$:/temp/time\&quot;, text: t}));\n},1000);\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlytime/time.js&quot;, &quot;module-type&quot;: &quot;startup&quot; },
 &quot;$:/time&quot;: { &quot;text&quot;: &quot;&lt;span title=&lt;&lt;dt 'MM/DD (today-78)' '-112320'&gt;&gt;&gt;\n&lt;$button class='tc-btn-invisible tc-time'&gt;&lt;$action-navigate $to='$:/info/timestamp'/&gt;&lt;$transclude tiddler='$:/temp/time' mode='block'/&gt;&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/time&quot;, &quot;tags&quot;: &quot;$:/tags/PageControls&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Time/Hint}}&quot;, &quot;caption&quot;: &quot;{{$:/temp/time}} {{$:/language/Buttons/Time/Caption}}&quot; } } }</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201114085623432" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201114090546349" modifier="Andrew Harrison" title="$:/plugins/ajh/tiddlytime/analogclock.svg">
 <pre>\define a()
 &lt;svg viewBox='0 0 680 680'&gt;
 &lt;defs&gt;
-    &lt;g id=&quot;marks&quot; style=&quot;stroke: #800000;stroke-width: 3;&quot;&gt;
-      &lt;line x1=&quot; 300&quot; x2=&quot; 304&quot; /&gt;
-      &lt;line x1=&quot;-300&quot; x2=&quot;-304&quot; /&gt;
-      &lt;line y1=&quot; 300&quot; y2=&quot; 304&quot; /&gt;
-      &lt;line y1=&quot;-300&quot; y2=&quot;-304&quot; /&gt;
+    &lt;g id='marks' style='stroke: #800000;stroke-width: 3;'&gt;
+      &lt;line x1=' 300' x2=' 304' /&gt;
+      &lt;line x1='-300' x2='-304' /&gt;
+      &lt;line y1=' 300' y2=' 304' /&gt;
+      &lt;line y1='-300' y2='-304' /&gt;
     &lt;/g&gt;
-    &lt;g id=&quot;lines&quot; style=&quot;stroke: black;stroke-width: 5;&quot;&gt;
-      &lt;line x1=&quot; 292&quot; x2=&quot; 310&quot; /&gt;
-      &lt;line x1=&quot;-292&quot; x2=&quot;-310&quot; /&gt;
-      &lt;line y1=&quot; 292&quot; y2=&quot; 310&quot; /&gt;
-      &lt;line y1=&quot;-292&quot; y2=&quot;-310&quot; /&gt;
+    &lt;g id='lines' style='stroke: black;stroke-width: 5;'&gt;
+      &lt;line x1=' 292' x2=' 310' /&gt;
+      &lt;line x1='-292' x2='-310' /&gt;
+      &lt;line y1=' 292' y2=' 310' /&gt;
+      &lt;line y1='-292' y2='-310' /&gt;
     &lt;/g&gt;
   &lt;/defs&gt;
 &lt;circle cx='336.75' cy='336.95' r='333' stroke='black' stroke-width='3' fill='red'/&gt;
 &lt;circle cx='336.75' cy='336.95' r='311' stroke='black' stroke-width='3' fill='#fff'/&gt;
-  &lt;g transform=&quot;translate(336.75 336.95)&quot;&gt;
-    &lt;use xlink:href=&quot;#lines&quot; transform=&quot;rotate( 0)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate( 6)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(12)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(18)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(24)&quot;/&gt;
-    &lt;use xlink:href=&quot;#lines&quot; transform=&quot;rotate(30)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(36)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(42)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(48)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(54)&quot;/&gt;
-    &lt;use xlink:href=&quot;#lines&quot; transform=&quot;rotate(60)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(66)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(72)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(78)&quot;/&gt;
-    &lt;use xlink:href=&quot;#marks&quot; transform=&quot;rotate(84)&quot;/&gt;
+  &lt;g transform='translate(336.75 336.95)'&gt;
+    &lt;use xlink:href='#lines' transform='rotate( 0)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate( 6)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(12)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(18)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(24)'/&gt;
+    &lt;use xlink:href='#lines' transform='rotate(30)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(36)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(42)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(48)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(54)'/&gt;
+    &lt;use xlink:href='#lines' transform='rotate(60)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(66)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(72)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(78)'/&gt;
+    &lt;use xlink:href='#marks' transform='rotate(84)'/&gt;
   &lt;/g&gt;
 
-&lt;g fill=&quot;#000&quot; display=&quot;inline-block&quot; font-size=&quot;100&quot; font-weight=&quot;bold&quot; transform=&quot;scale(.9, 1.35)&quot;&gt;&lt;text&gt;
-            &lt;tspan x=&quot;310&quot; y=&quot;103&quot;&gt;12&lt;/tspan&gt;
-&lt;tspan x=&quot;480&quot; y=&quot;133&quot;&gt;1&lt;/tspan&gt;
-&lt;tspan x=&quot;580&quot; y=&quot;193&quot;&gt;2&lt;/tspan&gt;
-&lt;tspan x=&quot;640&quot; y=&quot;283&quot;&gt;3&lt;/tspan&gt;
-&lt;tspan x=&quot;575&quot; y=&quot;373&quot;&gt;4&lt;/tspan&gt;
-&lt;tspan x=&quot;475&quot; y=&quot;430&quot;&gt;5&lt;/tspan&gt;
-&lt;tspan x=&quot;344&quot; y=&quot;460&quot;&gt;6&lt;/tspan&gt;
-&lt;tspan x=&quot;219&quot; y=&quot;431&quot;&gt;7&lt;/tspan&gt;
-&lt;tspan x=&quot;104&quot; y=&quot;370&quot;&gt;8&lt;/tspan&gt;
-&lt;tspan x=&quot;60&quot; y=&quot;284&quot;&gt;9&lt;/tspan&gt;
-&lt;tspan x=&quot;98&quot; y=&quot;203&quot;&gt;10&lt;/tspan&gt;
-&lt;tspan x=&quot;197&quot; y=&quot;131&quot;&gt;11&lt;/tspan&gt;
+&lt;g fill='#000' display='inline-block' font-size='100' font-weight='bold' transform='scale(.9, 1.35)'&gt;&lt;text&gt;
+            &lt;tspan x='310' y='103'&gt;12&lt;/tspan&gt;
+&lt;tspan x='480' y='133'&gt;1&lt;/tspan&gt;
+&lt;tspan x='580' y='193'&gt;2&lt;/tspan&gt;
+&lt;tspan x='640' y='283'&gt;3&lt;/tspan&gt;
+&lt;tspan x='575' y='373'&gt;4&lt;/tspan&gt;
+&lt;tspan x='475' y='430'&gt;5&lt;/tspan&gt;
+&lt;tspan x='344' y='460'&gt;6&lt;/tspan&gt;
+&lt;tspan x='219' y='431'&gt;7&lt;/tspan&gt;
+&lt;tspan x='104' y='370'&gt;8&lt;/tspan&gt;
+&lt;tspan x='60' y='284'&gt;9&lt;/tspan&gt;
+&lt;tspan x='98' y='203'&gt;10&lt;/tspan&gt;
+&lt;tspan x='197' y='131'&gt;11&lt;/tspan&gt;
 &lt;/text&gt;
           &lt;/g&gt;
 &lt;path d='m337,396,15-43-15-196-15,196,15,43z' fill-rule='evenodd' stroke='#ccc' stroke-width='1px'&gt;
@@ -12931,7 +12931,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:56:37 AM</pre>
+<pre>2:05:51 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
