@@ -422,6 +422,8 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/tiddlytime/analogclock</li>
 
+<li>$:/plugins/ajh/tiddlytime/analogclock2</li>
+
 <li>$:/plugins/ajh/tiddlytime/icon</li>
 
 <li>$:/plugins/ajh/tiddlytime/stylesheet</li>
@@ -463,6 +465,8 @@ Error message and password prompt
 <li>$:/state/folded/$:/plugins/ajh/copy</li>
 
 <li>$:/state/folded/$:/plugins/ajh/favorites</li>
+
+<li>$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet</li>
 
 <li>$:/state/folded/Plugin Library</li>
 
@@ -10925,7 +10929,7 @@ This plugin comprises:
 <div created="20200523232029662" creator="Andrew Harrison" description="Favorites of views frequently accessed" list="readme license" modified="20200614230605949" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/language/Buttons/Choose/Caption&quot;:{&quot;text&quot;:&quot;choose&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Caption&quot;},&quot;$:/language/Buttons/Choose/Hint&quot;:{&quot;text&quot;:&quot;Add to favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Hint&quot;},&quot;$:/language/Buttons/Favorites/Caption&quot;:{&quot;text&quot;:&quot;favorite&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Caption&quot;},&quot;$:/language/Buttons/Favorites/Hint&quot;:{&quot;text&quot;:&quot;Remove from favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Hint&quot;},&quot;$:/language/SideBar/Favorites/Caption&quot;:{&quot;text&quot;:&quot;Favorites&quot;,&quot;title&quot;:&quot;$:/language/SideBar/Favorites/Caption&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/favorites/icon&quot;:{&quot;text&quot;:&quot;&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&quot;,&quot;type&quot;:&quot;application/x-tiddler&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/favorites/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/favorites/readme&quot;:{&quot;text&quot;:&quot;\\define a()&lt;span class='tc-image-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;\n&lt;style&gt;.tc-image-favorites svg {stroke:#000;stroke-width:2;fill:#ff0;}&lt;/style&gt;This plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;a&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;a&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;a&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;a&gt;&gt; ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/readme&quot;},&quot;$:/plugins/ajh/favorites/sidebar&quot;:{&quot;text&quot;:&quot;\\define d()&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;d&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/sidebar&quot;,&quot;tags&quot;:&quot;$:/tags/SideBar&quot;,&quot;list-before&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot;},&quot;$:/plugins/ajh/favorites/stylesheet&quot;:{&quot;text&quot;:&quot;.tc-tab-buttons + .tc-favorites-hidden {display:none;}.tc-tab-buttons button.tc-tab-selected {fill:{{!!tab-icon-selected-color}};stroke: {{!!tab-icon-outline-color}};}.tc-tab-buttons button:not(.tc-tab-selected) {fill:{{!!tab-icon-unselected-color}};}html .tc-tiddler-controls .tc-image-favorites svg {fill:{{!!button-color}} !important;overflow:visible;stroke:{{!!button-outline-color}};stroke-linejoin:round;stroke-width:2;}.tc-image-star-filled {height:1em;width:1em;}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;tab-icon-unselected-color&quot;:&quot;#999&quot;,&quot;tab-icon-selected-color&quot;:&quot;#ff0&quot;,&quot;tab-icon-outline-color&quot;:&quot;#000&quot;,&quot;caption&quot;:&quot;Favorites&quot;,&quot;button-outline-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#ff0&quot;},&quot;$:/plugins/ajh/favorites/template&quot;:{&quot;text&quot;:&quot;\\define add()[[$(currentTiddler)$]]\n\\define remove()-[[$(currentTiddler)$]]\n\\define a()&lt;svg class='tc-image-favorites tc-image-button' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;&lt;a&gt;&gt;&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;{{$:/core/images/star-filled}}&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/template&quot;,&quot;tags&quot;:&quot;$:/tags/ViewToolbar&quot;,&quot;list-after&quot;:&quot;$:/core/ui/Buttons/more-tiddler-actions&quot;,&quot;description&quot;:&quot;{{$:/language/Buttons/Favorites/Hint}}&quot;,&quot;caption&quot;:&quot;{{$:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;}}}</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/swirl/image206 [[Tiddlywiki 5 Adventure]] $:/mysidetitle $:/plugins/ajh/tiddlytime/icon $:/plugins/ajh/tiddlytime/analogclock" modified="20201114162451979" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/swirl/image206 [[Tiddlywiki 5 Adventure]] $:/mysidetitle $:/plugins/ajh/tiddlytime/icon $:/plugins/ajh/tiddlytime/analogclock $:/plugins/ajh/tiddlytime/stylesheet $:/plugins/ajh/tiddlytime/analogclock2" modified="20201121213244351" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -11052,11 +11056,32 @@ This plugin comprises:
 <pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;defs&gt;&lt;g id='lines' style='stroke: #000;stroke-width: 5;'&gt;&lt;line x1='292' x2='310'/&gt;&lt;line x1='-292' x2='-310'/&gt;&lt;line y1='292' y2='310'/&gt;&lt;line y1='-292' y2='-310'/&gt;&lt;/g&gt;&lt;g id='marks' style='stroke: #900;stroke-width: 3;'&gt;&lt;line x1='300' x2='304'/&gt;&lt;line x1='-300' x2='-304'/&gt;&lt;line y1='300' y2='304'/&gt;&lt;line y1='-300' y2='-304'/&gt;&lt;/g&gt;&lt;/defs&gt;&lt;g stroke-width='3' stroke='#000'&gt;&lt;circle cx='337' cy='337' r='333' fill='red'/&gt;&lt;circle cx='337' cy='337' r='311' fill='#fff'/&gt;&lt;/g&gt;&lt;g transform='translate(337 337)'&gt;&lt;use xlink:href='#lines' transform='rotate(0)'/&gt;&lt;use xlink:href='#marks' transform='rotate(6)'/&gt;&lt;use xlink:href='#marks' transform='rotate(12)'/&gt;&lt;use xlink:href='#marks' transform='rotate(18)'/&gt;&lt;use xlink:href='#marks' transform='rotate(24)'/&gt;&lt;use xlink:href='#lines' transform='rotate(30)'/&gt;&lt;use xlink:href='#marks' transform='rotate(36)'/&gt;&lt;use xlink:href='#marks' transform='rotate(42)'/&gt;&lt;use xlink:href='#marks' transform='rotate(48)'/&gt;&lt;use xlink:href='#marks' transform='rotate(54)'/&gt;&lt;use xlink:href='#lines' transform='rotate(60)'/&gt;&lt;use xlink:href='#marks' transform='rotate(66)'/&gt;&lt;use xlink:href='#marks' transform='rotate(72)'/&gt;&lt;use xlink:href='#marks' transform='rotate(78)'/&gt;&lt;use xlink:href='#marks' transform='rotate(84)'/&gt;&lt;/g&gt;&lt;g font-size='100' font-weight='bold' transform='scale(.9, 1.35)'&gt;&lt;text&gt;&lt;tspan x='310' y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480' y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580' y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640' y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575' y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475' y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344' y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219' y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104' y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60' y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98' y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197' y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g stroke='#ccc'&gt;&lt;g stroke-width='1px'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform' type='rotate' from='$(h)$,337,337' to='$(h2)$,337,337' dur='43200s' repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform' type='rotate' from='$(m)$,337,337' to='$(m2)$,337,337' dur='3600s' repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;path d='m337,407,3-62-3-300-3,300z' fill='#f00' stroke-width='.5px'&gt;&lt;animateTransform attributeName='transform' type='rotate' from='$(s)$,337,337' to='$(s2)$,337,337' dur='60s' calcMode='discrete' repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;circle cx='337' cy='337' r='7' fill='#fff'/&gt;
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
+<div created="20201121211340783" creator="Andrew Harrison" modified="20201121213646991" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/tiddlytime/analogclock2">
+<pre>&lt;svg viewBox=&quot;0 0 40 40&quot; class=&quot;tc-time&quot; &gt;
+  &lt;circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;19&quot; /&gt;
+&lt;g class=&quot;marks&quot;&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+
+{{!!resource}}</pre>
+</div>
 <div created="20201108212353986" creator="Andrew Harrison" modified="20201109004643979" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlytime/icon">
 <pre>\define a()&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g stroke-width='5' fill='#f90'&gt;&lt;path stroke='#c0f' d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;g stroke-linecap='round'&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' from='$(h)$,64,64' repeatCount='indefinite' to='$(h)$,64,64' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' from='$(m)$,64,64' repeatCount='indefinite' to='$(m)$,64,64' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201121210029658" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
+<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201121213234625" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
 <pre>/* TOPBAR TIME */
 html .tc-time {
  color: {{!!button-color}};
@@ -11070,7 +11095,14 @@ html .tc-time:hover {
  color: {{!!button-hover-color}} !important;
 }
 
-/* ANALOG CLOCK2 */</pre>
+/* ANALOG CLOCK2 */
+svg.tc-time {
+  width: 400px;
+  fill: #fff !important;
+  stroke: black;
+  stroke-width: 1;
+  stroke-linecap: round;
+}</pre>
 </div>
 <div core-version="&gt;=5.1.11" dependents="$:/plugins/ajh/tiddlyviewer/icon $:/plugins/ajh/tiddlyviewer/readme $:/plugins/ajh/tiddlyviewer/stylesheet $:/plugins/ajh/tiddlyviewer/template" description="Tiddly Viewer" list="readme" plugin-type="plugin" source="https://github.com/Infurnoape/infurnoape.github.io/blob/master/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ftiddlyviewer.json" title="$:/plugins/ajh/tiddlyviewer" type="application/json" version="0.0.15">
 <pre>{ &quot;tiddlers&quot;: { &quot;$:/plugins/ajh/tiddlyviewer/icon&quot;: { &quot;text&quot;: &quot;&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path fill='#ff0' stroke='#30f' stroke-width='5' d='m9,34.7l55,-32l55,32v58.2l-55,32l-55,-32v-58.2z'/&gt;&lt;path fill='#30f' d='m48,44c-17.7,5.2 -31.4,15.6 -27.5,20.7c1.7,2.3 3.1,2.1 7.1,-1.2c4.1,-3.4 16.7,-10.2 18.9,-10.2c1.2,0 1.4,1.1 1.2,5.1c-0.6,9.3 5.9,16.8 15,17.4c4.2,0.3 6.2,-0.1 9.3,-2.1c5.2,-3.3 8.8,-10.7 8,-16.5c-0.4,-3.1 -0.2,-4 0.9,-4c2.4,0 10.2,4 16.8,8.6c6.8,4.9 8,5.2 9.8,2.8c2.7,-3.6 -1.8,-8.6 -13.8,-15.6c-12.2,-6.6 -33.2,-9.3 -45.7,-5zm-13,32.7c-0.9,2.7 0.3,3.8 7.1,6.1c10.7,3.6 21.7,4.8 31.4,3.4c10.9,-1.5 21.5,-5.5 21.9,-8c0.6,-3.2 -2.5,-3.4 -10.1,-0.8c-10.9,3.8 -25.8,4.3 -36.8,1.1c-13,-3.7 -12.8,-3.7 -13.5,-1.8z'/&gt;&lt;/svg&gt;&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlyviewer/icon&quot;, &quot;tags&quot;: &quot;$:/tags/Image&quot; },
@@ -11201,13 +11233,16 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200724044902721" creator="Andrew Harrison" modified="20200724044905245" modifier="Andrew Harrison" title="$:/state/folded/$:/AdvancedSearch">
 <pre>show</pre>
 </div>
-<div created="20200525080628326" creator="Andrew Harrison" modified="20201020051038813" modifier="Andrew Harrison" title="$:/state/folded/$:/ControlPanel">
+<div created="20200525080628326" creator="Andrew Harrison" modified="20201121213423312" modifier="Andrew Harrison" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
 </div>
 <div created="20201019232411017" creator="Andrew Harrison" modified="20201019232411017" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/copy">
 <pre>hide</pre>
 </div>
 <div created="20200613185004096" creator="Andrew Harrison" modified="20200613185017745" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/favorites">
+<pre>show</pre>
+</div>
+<div created="20201121212149133" creator="Andrew Harrison" modified="20201121212152162" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet">
 <pre>show</pre>
 </div>
 <div created="20200525080629068" creator="Andrew Harrison" modified="20200526023459971" modifier="Andrew Harrison" title="$:/state/folded/Plugin Library">
@@ -11231,11 +11266,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200523211357554" creator="Andrew Harrison" modified="20200615001625764" modifier="Andrew Harrison" title="$:/state/plugin-info--1907371462-$:/plugins/ajh/favorites---1696265336">
 <pre>contents</pre>
 </div>
-<div created="20200524215219779" creator="Andrew Harrison" modified="20201019232413312" modifier="Andrew Harrison" title="$:/state/plugin-info--283461186-$:/plugins/ajh/copy">
-<pre>yes</pre>
+<div created="20200524215219779" creator="Andrew Harrison" modified="20201121213355813" modifier="Andrew Harrison" title="$:/state/plugin-info--283461186-$:/plugins/ajh/copy">
+<pre>no</pre>
 </div>
-<div created="20200524214652174" creator="Andrew Harrison" modified="20201019233851007" modifier="Andrew Harrison" title="$:/state/plugin-info--283461186-$:/plugins/ajh/copy---2108329964">
-<pre>contents</pre>
+<div created="20200524214652174" creator="Andrew Harrison" modified="20201121213353072" modifier="Andrew Harrison" title="$:/state/plugin-info--283461186-$:/plugins/ajh/copy---2108329964">
+<pre>readme</pre>
 </div>
 <div created="20200526063548773" creator="Andrew Harrison" modified="20200714041016916" modifier="Andrew Harrison" title="$:/state/plugin-info--720549506-$:/plugins/ajh/tiddlycopy">
 <pre>yes</pre>
@@ -11249,70 +11284,70 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200524032210573" creator="Andrew Harrison" modified="20200524032224952" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20200524032206810" creator="Andrew Harrison" modified="20201025053803727" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
+<div created="20200524032206810" creator="Andrew Harrison" modified="20201121213405044" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy">
 <pre>no</pre>
 </div>
-<div created="20200524214432901" creator="Andrew Harrison" modified="20201020040253301" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
-<pre>contents</pre>
-</div>
-<div created="20200520024203868" creator="Andrew Harrison" modified="20200614032303631" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
-<pre>no</pre>
-</div>
-<div created="20200520024205362" creator="Andrew Harrison" modified="20200613193906562" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
+<div created="20200524214432901" creator="Andrew Harrison" modified="20201121213316451" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/copy---2098342083">
 <pre>readme</pre>
 </div>
-<div created="20200524032154731" creator="Andrew Harrison" modified="20200706012534136" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
+<div created="20200520024203868" creator="Andrew Harrison" modified="20201121213407433" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites">
 <pre>no</pre>
 </div>
-<div created="20200525000801528" creator="Andrew Harrison" modified="20200706012152129" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
+<div created="20200520024205362" creator="Andrew Harrison" modified="20201121213311552" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/favorites---1990950475">
 <pre>readme</pre>
 </div>
-<div created="20201019232115654" creator="Andrew Harrison" modified="20201019232126456" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/luckypic">
+<div created="20200524032154731" creator="Andrew Harrison" modified="20201121213410279" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations">
 <pre>no</pre>
 </div>
-<div created="20200524032151487" creator="Andrew Harrison" modified="20201019231827761" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
+<div created="20200525000801528" creator="Andrew Harrison" modified="20201121213320971" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/locations--1989495374">
+<pre>readme</pre>
+</div>
+<div created="20201019232115654" creator="Andrew Harrison" modified="20201121213428791" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/luckypic">
+<pre>no</pre>
+</div>
+<div created="20200524032151487" creator="Andrew Harrison" modified="20201121213430821" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall">
 <pre>no</pre>
 </div>
 <div created="20200526052535764" creator="Andrew Harrison" modified="20200607233124376" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/openall--606513205">
 <pre>readme</pre>
 </div>
-<div created="20200522075743996" creator="Andrew Harrison" modified="20201025093840669" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
+<div created="20200522075743996" creator="Andrew Harrison" modified="20201121213433624" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools">
 <pre>no</pre>
 </div>
-<div created="20200522075747463" creator="Andrew Harrison" modified="20201025093817359" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
-<pre>contents</pre>
+<div created="20200522075747463" creator="Andrew Harrison" modified="20201121213333091" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintools---1930541660">
+<pre>readme</pre>
 </div>
-<div created="20200523212449601" creator="Andrew Harrison" modified="20201020040308237" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks">
+<div created="20200523212449601" creator="Andrew Harrison" modified="20201121213435946" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks">
 <pre>no</pre>
 </div>
-<div created="20200523212450948" creator="Andrew Harrison" modified="20201019232146542" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks--1637054872">
-<pre>contents</pre>
+<div created="20200523212450948" creator="Andrew Harrison" modified="20201121213337198" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/plugintweaks--1637054872">
+<pre>readme</pre>
 </div>
-<div created="20200523212417788" creator="Andrew Harrison" modified="20201025053800251" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce">
+<div created="20200523212417788" creator="Andrew Harrison" modified="20201121213438676" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce">
 <pre>no</pre>
 </div>
-<div created="20200523212419116" creator="Andrew Harrison" modified="20201020051045023" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce---900664340">
-<pre>contents</pre>
+<div created="20200523212419116" creator="Andrew Harrison" modified="20201121213341250" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/reduce---900664340">
+<pre>readme</pre>
 </div>
-<div created="20200524032132612" creator="Andrew Harrison" modified="20201030080248147" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/showfields">
+<div created="20200524032132612" creator="Andrew Harrison" modified="20201121213441495" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/showfields">
 <pre>no</pre>
 </div>
-<div created="20201020040808227" creator="Andrew Harrison" modified="20201030075907124" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/showfields--1882725852">
-<pre>license</pre>
+<div created="20201020040808227" creator="Andrew Harrison" modified="20201121213346406" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/showfields--1882725852">
+<pre>readme</pre>
 </div>
-<div created="20200524032130171" creator="Andrew Harrison" modified="20201025053756234" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlycopy">
+<div created="20200524032130171" creator="Andrew Harrison" modified="20201121213446011" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlycopy">
 <pre>no</pre>
 </div>
-<div created="20201020040333231" creator="Andrew Harrison" modified="20201025053449791" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlycopy--621799099">
-<pre>contents</pre>
+<div created="20201020040333231" creator="Andrew Harrison" modified="20201121213444628" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlycopy--621799099">
+<pre>readme</pre>
 </div>
-<div created="20200524032127211" creator="Andrew Harrison" modified="20201121082402913" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlytime">
-<pre>yes</pre>
+<div created="20200524032127211" creator="Andrew Harrison" modified="20201121213451877" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlytime">
+<pre>no</pre>
 </div>
-<div created="20201121083647431" creator="Andrew Harrison" modified="20201121083647431" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlytime--83737699">
-<pre>contents</pre>
+<div created="20201121083647431" creator="Andrew Harrison" modified="20201121213449215" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlytime--83737699">
+<pre>readme</pre>
 </div>
-<div created="20200524032121675" creator="Andrew Harrison" modified="20200524032126349" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlyviewer">
+<div created="20200524032121675" creator="Andrew Harrison" modified="20201121213455113" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/ajh/tiddlyviewer">
 <pre>no</pre>
 </div>
 <div created="20200604045850715" creator="Andrew Harrison" modified="20200607222508115" modifier="Andrew Harrison" title="$:/state/plugin-info--896887961-$:/plugins/tiddlywiki/mobiledragdrop">
@@ -11336,11 +11371,11 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200528054439613" creator="Andrew Harrison" modified="20200608064623770" modifier="Andrew Harrison" title="$:/state/plugin-info-463856414-$:/plugins/ajh/plugintweaks--585504527">
 <pre>contents</pre>
 </div>
-<div created="20200715023034928" creator="Andrew Harrison" modified="20200715063100407" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields">
-<pre>no</pre>
+<div created="20200715023034928" creator="Andrew Harrison" modified="20201121212640416" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields">
+<pre>yes</pre>
 </div>
-<div created="20200712063204864" creator="Andrew Harrison" modified="20200715063057248" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields---75215981">
-<pre>readme</pre>
+<div created="20200712063204864" creator="Andrew Harrison" modified="20201121212641703" modifier="Andrew Harrison" title="$:/state/plugin-info-500185566-$:/plugins/ajh/showfields---75215981">
+<pre>contents</pre>
 </div>
 <div created="20200715022515230" creator="Andrew Harrison" modified="20201102023845657" modifier="Andrew Harrison" title="$:/state/plugin-info-698995806-$:/plugins/ajh/reduce">
 <pre>yes</pre>
@@ -11378,8 +11413,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200708005739327" creator="Andrew Harrison" modified="20200727064650391" modifier="Andrew Harrison" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20200518201426438" creator="Andrew Harrison" modified="20201121210854807" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20200518201426438" creator="Andrew Harrison" modified="20201121211543493" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200524183251949" creator="Andrew Harrison" modified="20200524183251949" modifier="Andrew Harrison" title="$:/state/tab-1803318191">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -11402,8 +11437,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201121210908947" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201121211046943" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -11417,7 +11452,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201121204230101" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/tiddlytime/stylesheet [[My Adventure]] [[Plugin Library]]" modified="20201121205630881" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201121211053971" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/tiddlytime/stylesheet $:/plugins/ajh/tiddlytime/analogclock2 [[My Adventure]] [[Plugin Library]]" modified="20201121213350573" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12874,7 +12909,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>2:09:14 PM</pre>
+<pre>2:36:56 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
