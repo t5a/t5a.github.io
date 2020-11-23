@@ -11085,14 +11085,24 @@ repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;
 \end
 &lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201123045732388" creator="Andrew Harrison" modified="20201123045819860" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/" tags="" title="$:/plugins/ajh/tiddlytime/analogclock3">
-<pre></pre>
+<div created="20201123045732388" creator="Andrew Harrison" modified="20201123054908321" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/" tags="" title="$:/plugins/ajh/tiddlytime/analogclock3">
+<pre>&lt;article class=&quot;clock&quot;&gt;
+  &lt;div class=&quot;hours-container&quot;&gt;
+    &lt;div class=&quot;hours&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;minutes-container&quot;&gt;
+    &lt;div class=&quot;minutes&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;seconds-container&quot;&gt;
+    &lt;div class=&quot;seconds&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
 </div>
 <div created="20201108212353986" creator="Andrew Harrison" modified="20201109004643979" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlytime/icon">
 <pre>\define a()&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g stroke-width='5' fill='#f90'&gt;&lt;path stroke='#c0f' d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;g stroke-linecap='round'&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' from='$(h)$,64,64' repeatCount='indefinite' to='$(h)$,64,64' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' from='$(m)$,64,64' repeatCount='indefinite' to='$(m)$,64,64' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201123045930986" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
+<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201123060133235" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
 <pre>/* TOPBAR TIME */
 html .tc-time {
  color: {{!!button-color}};
@@ -11107,6 +11117,76 @@ html .tc-time:hover {
 }
 
 /* ANALOG CLOCK3 */
+.clock {
+  border-radius: 50%;
+  background: #fff url(/images/posts/clocks/ios_clock.svg) no-repeat center;
+  background-size: 88%;
+  height: 20em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 20em;
+}
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: &quot;&quot;;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+.seconds {
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+}
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
+}
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 
 /* ANALOG CLOCK2 */
 svg.tc-clock2 {
@@ -11531,7 +11611,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201123045554626" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20201123045826609" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201123045554626" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlytime/stylesheet $:/plugins/ajh/tiddlytime/analogclock3 [[My Adventure]] [[Plugin Library]]" modified="20201123054915003" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12988,7 +13068,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>9:59:51 PM</pre>
+<pre>11:02:17 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
