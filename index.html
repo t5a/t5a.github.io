@@ -11062,37 +11062,8 @@ This plugin comprises:
 <pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g stroke-width='3'stroke='#000'&gt;&lt;circle cx='337'cy='337'r='333'fill='red'/&gt;&lt;g fill='#fff'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;circle cx='337'cy='337'r='300'stroke-width='10'stroke='#900'stroke-dasharray='6 25.4'/&gt;&lt;/g&gt;&lt;g stroke-width='20'stroke-dasharray='6 151'&gt;&lt;circle cx='337'cy='337'r='300'fill='#fff'/&gt;&lt;/g&gt;&lt;g font-size='100'font-weight='bold'transform='scale(.9, 1.35)'&gt;&lt;text&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g stroke='#ccc'&gt;&lt;g stroke-width='1px'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'fill='#f00'stroke-width='.5px'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'fill='#fff'/&gt;
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201121211340783" creator="Andrew Harrison" modified="20201127210950026" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/tiddlytime/analogclock2">
-<pre>\define a()
-&lt;svg viewBox=&quot;0 0 40 40&quot; class=&quot;tc-clock2&quot; &gt;
-  &lt;circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;19&quot;/&gt;
-&lt;!--
-&lt;circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;15.5&quot; stroke-width=&quot;1.2&quot; stroke=&quot;#000&quot; stroke-dasharray=&quot;.1 8.01&quot;/&gt;
---&gt;
-&lt;circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;15.5&quot; stroke-width=&quot;1.5&quot; stroke=&quot;#000&quot; stroke-dasharray=&quot;.43 23.72 .43 23.79 .43 23.79 .43 23.79 .43 23.79 .43 23.79&quot;/&gt;
-&lt;g stroke-width=&quot;1&quot;
- stroke-linecap=&quot;round&quot;&gt;
-&lt;g class=&quot;tc-clock2-marks&quot;&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-    &lt;line x1=&quot;15&quot; y1=&quot;0&quot; x2=&quot;16&quot; y2=&quot;0&quot; /&gt;
-&lt;/g&gt;
-&lt;text x=&quot;0&quot; y=&quot;0&quot; class=&quot;tc-clock2-tiaText&quot;&gt;#TIA&lt;/text&gt;&lt;g class='tc-clock2-hours'&gt;
-&lt;path d='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform' type='rotate' values='$(h)$,20,20;$(h2)$,20,20' dur='43200s' repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-minutes'&gt;&lt;path d='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform' type='rotate' values='$(m)$,20,20;$(m2)$,20,20' dur='3600s' repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-seconds'&gt;&lt;path d='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform' type='rotate' values='$(s)$,20,20;$(s2)$,20,20' dur='60s'
-calcMode='discrete'
-repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;
-&lt;circle cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;0.7&quot; class=&quot;tc-clock2-pin&quot; /&gt;
-&lt;/svg&gt;
-\end
+<div created="20201121211340783" creator="Andrew Harrison" modified="20201128084810341" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/tiddlytime/analogclock2">
+<pre>\define a()&lt;svg viewBox='0 0 40 40'class='tc-clock2'&gt;&lt;circle cx='20'cy='20'r='19'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.2'stroke='#000'stroke-dasharray='.1 8.01'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.5'stroke='#000'stroke-dasharray='.43 23.9 .43 23.9 .43 23.9'/&gt;&lt;g stroke-width='1'stroke-linecap='round'&gt;&lt;text x='0'y='0'class='tc-clock2-tiaText'&gt;#TIA&lt;/text&gt;&lt;g class='tc-clock2-hours'&gt;&lt;path d='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-minutes'&gt;&lt;path d='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-seconds'&gt;&lt;path d='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'calcMode='discrete'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;circle cx='20'cy='20'r='0.7'class='tc-clock2-pin'/&gt;&lt;/svg&gt;
 &lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
 <div created="20201123045732388" creator="Andrew Harrison" modified="20201123092110820" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="" title="$:/plugins/ajh/tiddlytime/analogclock3">
@@ -11186,7 +11157,7 @@ repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;
 <pre>\define a()&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g stroke-width='5' fill='#f90'&gt;&lt;path stroke='#c0f' d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;g stroke-linecap='round'&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' from='$(h)$,64,64' repeatCount='indefinite' to='$(h)$,64,64' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' from='$(m)$,64,64' repeatCount='indefinite' to='$(m)$,64,64' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201127204532713" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
+<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201128083750271" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
 <pre>/* TOPBAR TIME */
 html .tc-time {
  color: {{!!button-color}};
@@ -11322,52 +11293,7 @@ html .tc-time:hover {
 svg.tc-clock2 {
   width: 400px;
   fill: #fff;
-  stroke: #f00;
-}
-.tc-clock2-marks {
-  transform: translate(20px, 20px);
-  stroke-width: 0.2;
-}
-.tc-clock2-marks &gt; line:nth-child(1) {
-  /* There are 12 marks, so we rotate by 30deg (12 * 30 = 360) */
-  transform: rotate(30deg); 
-}
-.tc-clock2-marks &gt; line:nth-child(2) {
-  transform: rotate(60deg);
-}
-.tc-clock2-marks &gt; line:nth-child(3) {
-  transform: rotate(calc(3 * 30deg));
-  stroke-width: 0.5;
-}
-.tc-clock2-marks &gt; line:nth-child(4) {
-  transform: rotate(calc(4 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(5) {
-  transform: rotate(calc(5 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(6) {
-  transform: rotate(calc(6 * 30deg));
-  stroke-width: 0.5;
-}
-.tc-clock2-marks &gt; line:nth-child(7) {
-  transform: rotate(calc(7 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(8) {
-  transform: rotate(calc(8 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(9) {
-  transform: rotate(calc(9 * 30deg));
-  stroke-width: 0.5;
-}
-.tc-clock2-marks &gt; line:nth-child(10) {
-  transform: rotate(calc(10 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(11) {
-  transform: rotate(calc(11 * 30deg));
-}
-.tc-clock2-marks &gt; line:nth-child(12) {
-  transform: rotate(calc(12 * 30deg));
-  stroke-width: 0.5;
+  stroke: #000;
 }
 .tc-clock2-tiaText {
   font-size: 1px;
@@ -11532,8 +11458,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200613185004096" creator="Andrew Harrison" modified="20200613185017745" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/favorites">
 <pre>show</pre>
 </div>
-<div created="20201121212149133" creator="Andrew Harrison" modified="20201123115049898" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet">
-<pre>show</pre>
+<div created="20201121212149133" creator="Andrew Harrison" modified="20201128083752879" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet">
+<pre>hide</pre>
 </div>
 <div created="20200525080629068" creator="Andrew Harrison" modified="20200526023459971" modifier="Andrew Harrison" title="$:/state/folded/Plugin Library">
 <pre>show</pre>
@@ -11742,7 +11668,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201127204407859" creator="Andrew Harrison" list="$:/plugins/ajh/tiddlytime/stylesheet $:/plugins/ajh/tiddlytime/analogclock2 [[My Adventure]] [[Plugin Library]]" modified="20201127204426986" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201128083208028" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20201128083325463" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12716,7 +12642,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic1</pre>
+<pre>$:/plugins/ajh/luckypic/pic3</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13199,7 +13125,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>2:10:01 PM</pre>
+<pre>1:48:24 AM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
