@@ -11058,8 +11058,8 @@ This plugin comprises:
 &quot;$:/plugins/ajh/tiddlytime/time.js&quot;: { &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/ajh/tiddlytime/time.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget time to update $:/temp/time once every 1000 milliseconds using local computer time. $:/temp/time can then be transcluded to have multiple instances or no visible instances (without error) of a time clock with seconds. This is not the exact time unless your computer is set a little ahead of a time server or if you are lucky. Mine is within a second and I am OK with living in the past just a little.\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;time\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.before = [\&quot;rootwidget\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n var timer=setInterval(function(){\n var d=new Date();\n var t=d.toLocaleTimeString();\n $tw.wiki.addTiddler(new $tw.Tiddler({title: \&quot;$:/temp/time\&quot;, text: t}));\n},1000);\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlytime/time.js&quot;, &quot;module-type&quot;: &quot;startup&quot; },
 &quot;$:/time&quot;: { &quot;text&quot;: &quot;&lt;span title=&lt;&lt;dt 'MM/DD (today-78)' '-112320'&gt;&gt;&gt;\n&lt;$button class='tc-btn-invisible tc-time'&gt;&lt;$action-navigate $to='$:/info/timestamp'/&gt;&lt;$transclude tiddler='$:/temp/time' mode='block'/&gt;&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/time&quot;, &quot;tags&quot;: &quot;$:/tags/PageControls&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Time/Hint}}&quot;, &quot;caption&quot;: &quot;{{$:/temp/time}} {{$:/language/Buttons/Time/Caption}}&quot; } } }</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201128090410380" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/tiddlytime/analogclock">
-<pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g stroke-width='3'stroke='#000'&gt;&lt;circle cx='337'cy='337'r='333'fill='red'/&gt;&lt;g fill='#fff'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;circle cx='337'cy='337'r='300'stroke-width='10'stroke='#900'stroke-dasharray='6 25.4'/&gt;&lt;/g&gt;&lt;g stroke-width='20'stroke-dasharray='6 151'&gt;&lt;circle cx='337'cy='337'r='300'fill='#fff'/&gt;&lt;/g&gt;&lt;g font-size='100'font-weight='bold'transform='scale(.9, 1.35)'&gt;&lt;text&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g stroke='#ccc'&gt;&lt;g stroke-width='1px'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'fill='#f00'stroke-width='.5px'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'fill='#fff'/&gt;
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201129201839391" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/tiddlytime/analogclock">
+<pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g class='tc-clk1-cir1'&gt;&lt;circle cx='337'cy='337'r='333'/&gt;&lt;g class='tc-clk1-cir2'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;g class='tc-clk1-cir3'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;g class='tc-clk1-cir4'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;text class='tc-clk1-fnt'&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;g class='tc-clk1-hm'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'class='tc-clk1-ss'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'class='tc-clk1-cir5'/&gt;
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
 <div created="20201121211340783" creator="Andrew Harrison" modified="20201128084810341" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/tiddlytime/analogclock2">
@@ -11157,7 +11157,7 @@ This plugin comprises:
 <pre>\define a()&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g stroke-width='5' fill='#f90'&gt;&lt;path stroke='#c0f' d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;g stroke-linecap='round'&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' from='$(h)$,64,64' repeatCount='indefinite' to='$(h)$,64,64' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' from='$(m)$,64,64' repeatCount='indefinite' to='$(m)$,64,64' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201128090405535" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
+<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201129201832023" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
 <pre>/* TOPBAR TIME */
 html .tc-time {
  color: {{!!button-color}};
@@ -11169,6 +11169,43 @@ html .tc-time {
 }
 html .tc-time:hover {
  color: {{!!button-hover-color}} !important;
+}
+
+/* ANALOG CLOCK1 */
+.tc-clk1-cir1 {
+  fill:red;
+  stroke: #000;
+  stroke-width: 3;
+}
+.tc-clk1-cir2 {
+  fill:#fff;
+}
+.tc-clk1-cir3 {
+  stroke: #900;
+  stroke-width: 10;
+  stroke-dasharray: 6 25.4;
+}
+.tc-clk1-cir4 {
+  stroke-width: 20;
+  stroke-dasharray: 6 151;
+}
+.tc-clk1-cir5 {
+  fill: #fff;
+  stroke: #f00;
+}
+.tc-clk1-fnt {
+  fill: #000;
+  font-size: 100px;
+  font-weight: bold;
+  transform: scale(.9, 1.35);
+}
+.tc-clk1-hm {
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+.tc-clk1-ss {
+  fill: #f00;
+  stroke-width: .5px;
 }
 
 /* ANALOG CLOCK2 */
@@ -11668,7 +11705,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201128083208028" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20201128090211430" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201129195618609" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20201129201847016" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12642,7 +12679,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic3</pre>
+<pre>$:/plugins/ajh/luckypic/pic2</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13125,7 +13162,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>2:04:15 AM</pre>
+<pre>1:19:30 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
