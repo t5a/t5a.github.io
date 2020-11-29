@@ -356,6 +356,16 @@ Error message and password prompt
 
 <li>$:/pluginlibrary/tobibeer/official</li>
 
+<li>$:/plugins/ajh/analogclocks/clock</li>
+
+<li>$:/plugins/ajh/analogclocks/clock2</li>
+
+<li>$:/plugins/ajh/analogclocks/clock3</li>
+
+<li>$:/plugins/ajh/analogclocks/clock4</li>
+
+<li>$:/plugins/ajh/analogclocks/stylesheet</li>
+
 <li>$:/plugins/ajh/batchtools/batchtools/delete/</li>
 
 <li>$:/plugins/ajh/batchtools/delete</li>
@@ -420,14 +430,6 @@ Error message and password prompt
 
 <li>$:/plugins/ajh/tiddlytime</li>
 
-<li>$:/plugins/ajh/tiddlytime/analogclock</li>
-
-<li>$:/plugins/ajh/tiddlytime/analogclock2</li>
-
-<li>$:/plugins/ajh/tiddlytime/analogclock3</li>
-
-<li>$:/plugins/ajh/tiddlytime/analogclock4</li>
-
 <li>$:/plugins/ajh/tiddlytime/icon</li>
 
 <li>$:/plugins/ajh/tiddlytime/stylesheet</li>
@@ -467,6 +469,8 @@ Error message and password prompt
 <li>$:/state/folded/$:/AdvancedSearch</li>
 
 <li>$:/state/folded/$:/ControlPanel</li>
+
+<li>$:/state/folded/$:/plugins/ajh/analogclocks/stylesheet</li>
 
 <li>$:/state/folded/$:/plugins/ajh/copy</li>
 
@@ -10781,6 +10785,285 @@ For more information about the plugins see [[http://inmysocks.tiddlyspot.com/#My
 <div bag="default" caption="Official Plugin Library by Tobias Beer" created="20170610171020382" creator="Andrew Harrison" list="" modified="20200724045149349" modifier="Andrew Harrison" revision="0" tags="Examples New $:/tags/PluginLibrary" title="$:/pluginlibrary/tobibeer/official" url="http://tobibeer.github.io/tw5-plugins/library/index.html">
 <pre>The plugin library for the latest and greatest plugins from [ext[tobibeer/plugins|http://tobibeer.github.io/tw5-plugins]]; officially released versions of plugins by [ext[tobibeer|https://github.com/tobibeer]].</pre>
 </div>
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201129212513962" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/analogclocks/clock">
+<pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g class='tc-clk1-cir1'&gt;&lt;circle cx='337'cy='337'r='333'/&gt;&lt;g class='tc-clk1-cir2'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;g class='tc-clk1-cir3'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;g class='tc-clk1-cir4'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;text class='tc-clk1-fnt'&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;g class='tc-clk1-hm'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'class='tc-clk1-ss'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'class='tc-clk1-cir5'/&gt;
+&lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
+</div>
+<div created="20201121211340783" creator="Andrew Harrison" modified="20201129212322580" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/analogclocks/clock2">
+<pre>\define a()&lt;svg viewBox='0 0 40 40'class='tc-clock2'&gt;&lt;circle cx='20'cy='20'r='19'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.2'stroke='#000'stroke-dasharray='.1 8.01'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.5'stroke='#000'stroke-dasharray='.43 23.9 .43 23.9 .43 23.9'/&gt;&lt;g stroke-width='1'stroke-linecap='round'&gt;&lt;text x='0'y='0'class='tc-clock2-tiaText'&gt;#TIA&lt;/text&gt;&lt;g class='tc-clock2-hours'&gt;&lt;path d='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-minutes'&gt;&lt;path d='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-seconds'&gt;&lt;path d='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'calcMode='discrete'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;circle cx='20'cy='20'r='0.7'class='tc-clock2-pin'/&gt;&lt;/svg&gt;
+&lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
+</div>
+<div created="20201123045732388" creator="Andrew Harrison" modified="20201129212603638" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="" title="$:/plugins/ajh/analogclocks/clock3">
+<pre>&lt;article class=&quot;clock3&quot;&gt;
+  &lt;div class=&quot;line-wrapper&quot;&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+    &lt;div class=&quot;line&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;hours-container&quot;&gt;
+    &lt;div class=&quot;hours&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;minutes-container&quot;&gt;
+    &lt;div class=&quot;minutes&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;seconds-container&quot;&gt;
+    &lt;div class=&quot;seconds&quot;/&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
+</div>
+<div created="20201127174433884" creator="Andrew Harrison" modified="20201129212423683" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/analogclocks/clock4">
+<pre>\define a()
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 200 200&quot;&gt;
+&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;94&quot; style=&quot;fill:#000;stroke:#555;stroke-width:3;&quot;/&gt;  
+&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;80&quot; style=&quot;fill:#eee;stroke:#555;stroke-width:1;&quot;/&gt;
+		&lt;text x=&quot;96&quot; y=&quot;36&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;0&lt;/text&gt;
+		&lt;text x=&quot;113&quot; y=&quot;38&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;1&lt;/text&gt;
+		&lt;text x=&quot;130&quot; y=&quot;45&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;2&lt;/text&gt;
+		&lt;text x=&quot;145&quot; y=&quot;55&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;3&lt;/text&gt;
+		&lt;text x=&quot;156&quot; y=&quot;70&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;4&lt;/text&gt;
+		&lt;text x=&quot;164&quot; y=&quot;88&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;5&lt;/text&gt;
+		&lt;text x=&quot;166&quot; y=&quot;105&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;6&lt;/text&gt;
+		&lt;text x=&quot;165&quot; y=&quot;123&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;7&lt;/text&gt;
+		&lt;text x=&quot;157&quot; y=&quot;139&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;8&lt;/text&gt;
+		&lt;text x=&quot;147&quot; y=&quot;153&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;9&lt;/text&gt;
+		&lt;text x=&quot;127&quot; y=&quot;164&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;10&lt;/text&gt;
+		&lt;text x=&quot;111&quot; y=&quot;171&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;11&lt;/text&gt;	
+		&lt;text x=&quot;93&quot; y=&quot;174&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;12&lt;/text&gt;
+		&lt;text x=&quot;77&quot; y=&quot;172&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;13&lt;/text&gt;
+		&lt;text x=&quot;60&quot; y=&quot;165&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;14&lt;/text&gt;
+		&lt;text x=&quot;44&quot; y=&quot;154&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;15&lt;/text&gt;
+		&lt;text x=&quot;33&quot; y=&quot;140&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;16&lt;/text&gt;
+		&lt;text x=&quot;25&quot; y=&quot;123&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;17&lt;/text&gt;
+		&lt;text x=&quot;23&quot; y=&quot;106&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;18&lt;/text&gt;
+		&lt;text x=&quot;25&quot; y=&quot;87&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;19&lt;/text&gt;
+		&lt;text x=&quot;34&quot; y=&quot;71&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;20&lt;/text&gt;
+		&lt;text x=&quot;44&quot; y=&quot;57&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;21&lt;/text&gt;
+		&lt;text x=&quot;59&quot; y=&quot;46&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;22&lt;/text&gt;
+		&lt;text x=&quot;76&quot; y=&quot;38&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;23&lt;/text&gt;
+		&lt;text x=&quot;97&quot; y=&quot;17&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;0&lt;/text&gt;
+		&lt;text x=&quot;141&quot; y=&quot;29&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;5&lt;/text&gt;
+		&lt;text x=&quot;171&quot; y=&quot;62&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;10&lt;/text&gt;
+		&lt;text x=&quot;181&quot; y=&quot;102&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;15&lt;/text&gt;
+		&lt;text x=&quot;171&quot; y=&quot;146&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;20&lt;/text&gt;
+		&lt;text x=&quot;138&quot; y=&quot;179&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;25&lt;/text&gt;
+		&lt;text x=&quot;95&quot; y=&quot;190&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;30&lt;/text&gt;
+		&lt;text x=&quot;52&quot; y=&quot;179&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;35&lt;/text&gt;
+		&lt;text x=&quot;20&quot; y=&quot;147&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;40&lt;/text&gt;
+		&lt;text x=&quot;8&quot; y=&quot;103&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;45&lt;/text&gt;
+		&lt;text x=&quot;19&quot; y=&quot;61&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;50&lt;/text&gt;
+		&lt;text x=&quot;52&quot; y=&quot;28&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;55&lt;/text&gt;
+	&lt;g transform=&quot;translate(100 100)&quot;&gt;		
+	&lt;g&gt;
+		&lt;circle r=&quot;57&quot; fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke=&quot;#555&quot; stroke-dasharray=&quot;2,12.98&quot; transform=&quot;rotate(-1.8)&quot;/&gt;
+		&lt;circle r=&quot;78&quot; fill=&quot;none&quot; stroke-width=&quot;2&quot; stroke=&quot;#f00&quot; stroke-dasharray=&quot;1,7.17&quot; transform=&quot;rotate(-0.9)&quot;/&gt;
+		&lt;circle r=&quot;78&quot; fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke=&quot;#000&quot; stroke-dasharray=&quot;2,38.8&quot; transform=&quot;rotate(-0.9)&quot;/&gt;	
+	&lt;/g&gt;	
+		&lt;g id=&quot;hours&quot;&gt;
+		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-52&quot; style=&quot;stroke-width:4;stroke:#555;stroke-linecap:round;&quot;&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;86400s&quot; from=&quot;$(h)$,0,0&quot; to=&quot;$(h2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
+		&lt;g id=&quot;minutes&quot;&gt;
+		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-74&quot; style=&quot;stroke-width:2;stroke:black;stroke-linecap:round;&quot;&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;3600s&quot; from=&quot;$(m)$,0,0&quot; to=&quot;$(m2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
+		&lt;g id=&quot;seconds&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-76&quot; style=&quot;stroke-width:1;stroke:#f00;stroke-linecap:round;&quot;&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;60s&quot; from=&quot;$(s)$,0,0&quot; to=&quot;$(s2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;&lt;/g&gt;
+		&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;2&quot; style=&quot;fill:#f00;stroke:#f00;&quot;/&gt;
+&lt;/svg&gt;
+\end
+&lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
+</div>
+<div caption="Analog Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201129211903719" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/analogclocks/stylesheet">
+<pre>/* ANALOG CLOCK1 */
+.tc-clk1-cir1 {
+  fill: red;
+  stroke: #000;
+  stroke-width: 3;
+}
+.tc-clk1-cir2 {
+  fill:#fff;
+}
+.tc-clk1-cir3 {
+  stroke: #900;
+  stroke-width: 10;
+  stroke-dasharray: 6 25.4;
+}
+.tc-clk1-cir4 {
+  stroke-width: 20;
+  stroke-dasharray: 6 151;
+}
+.tc-clk1-cir5 {
+  fill: #fff;
+  stroke: #f00;
+}
+.tc-clk1-fnt {
+  fill: #000;
+  font-size: 100px;
+  font-weight: bold;
+  transform: scale(.9, 1.35);
+}
+.tc-clk1-hm {
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+.tc-clk1-ss {
+  fill: red;
+  stroke-width: .5px;
+}
+
+/* ANALOG CLOCK2 */
+svg.tc-clock2 {
+  width: 400px;
+  fill: #fff;
+  stroke: #000;
+}
+.tc-clock2-tiaText {
+  font-size: 1px;
+  font-family: sans-serif;
+  transform: translate(19px, 26px) rotate(0deg);
+  fill: #dfdfdf;
+  stroke: none;
+}
+.tc-clock2-seconds {
+  stroke-width: 0.3;
+  stroke: #f00;
+}
+.tc-clock2-minutes {
+  stroke-width: 0.6;
+}
+.tc-clock2-hours {
+  stroke-width: 1;
+}
+.tc-clock2-pin {
+  stroke: #f00;
+  stroke-width: 0.2;
+}
+
+/* ANALOG CLOCK3 */
+.line {
+    width: 5px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 150px;
+}
+
+.line:nth-child(1) {transform: translateY(-150px);}
+.line:nth-child(2) {transform: translateY(-150px) rotateZ(calc(360deg / 12));}
+.line:nth-child(3) {transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));}
+.line:nth-child(4) {transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));}
+.line:nth-child(5) {transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));}
+.line:nth-child(6) {transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));}
+.line:nth-child(7) {transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));}
+.line:nth-child(8) {transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));}
+.line:nth-child(9) {transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));}
+.line:nth-child(10) {transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));}
+.line:nth-child(11) {transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));}
+.line:nth-child(12) {transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));}
+
+
+.line::after {
+    font-size: 32px;
+    display: inline-block;
+    margin: 10px 0 0 -5px;
+}
+
+/* .line is already rotated, rotate reverse */ 
+.line:nth-child(1)::after {content: &quot;12&quot;; transform: translateX(-10px);}
+.line:nth-child(2)::after {content: &quot;1&quot;; transform: rotateZ(calc(-360deg / 12));}
+.line:nth-child(3)::after {content: &quot;2&quot;; transform: rotateZ(calc(-2 * 360deg / 12));}
+.line:nth-child(4)::after {content: &quot;3&quot;; transform: rotateZ(calc(-3 * 360deg / 12));}
+.line:nth-child(5)::after {content: &quot;4&quot;; transform: rotateZ(calc(-4 * 360deg / 12));}
+.line:nth-child(6)::after {content: &quot;5&quot;; transform: rotateZ(calc(-5 * 360deg / 12));}
+.line:nth-child(7)::after {content: &quot;6&quot;; transform: rotateZ(calc(-6 * 360deg / 12));}
+.line:nth-child(8)::after {content: &quot;7&quot;; transform: rotateZ(calc(-7 * 360deg / 12));}
+.line:nth-child(9)::after {content: &quot;8&quot;; transform: rotateZ(calc(-8 * 360deg / 12));}
+.line:nth-child(10)::after {content: &quot;9&quot;; transform: rotateZ(calc(-9 * 360deg / 12));}
+.line:nth-child(11)::after {content: &quot;10&quot;; transform: rotateZ(calc(-10 * 360deg / 12));}
+.line:nth-child(12)::after {content: &quot;11&quot;; transform: rotateZ(calc(-11 * 360deg / 12));}
+.clock3 {
+  border-radius: 50%;
+  background: #fff;
+  background-size: 88%;
+  height: 20em;
+  padding-bottom: 31%;
+  position: relative;
+  width: 20em;
+}
+.clock3.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: &quot;&quot;;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+  transform: rotate(calc(&lt;&lt;now 'hh12'&gt;&gt; * 30deg));
+}
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+  transform: rotate(calc(&lt;&lt;now 'mm'&gt;&gt; * 6deg));
+}
+.seconds {
+  background: #f00;
+  height: 50%;
+  left: 49.5%;
+  position: absolute;
+  top: 9%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+  transform: rotate(calc(&lt;&lt;now 'ss'&gt;&gt; * 6deg));
+}
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
+}
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}</pre>
+</div>
 <div created="20170908002841814" creator="Andrew Harrison" list="" modified="20170908134023203" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/batchtools/delete/">
 <pre></pre>
 </div>
@@ -10935,7 +11218,7 @@ This plugin comprises:
 <div created="20200523232029662" creator="Andrew Harrison" description="Favorites of views frequently accessed" list="readme license" modified="20200614230605949" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/language/Buttons/Choose/Caption&quot;:{&quot;text&quot;:&quot;choose&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Caption&quot;},&quot;$:/language/Buttons/Choose/Hint&quot;:{&quot;text&quot;:&quot;Add to favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Hint&quot;},&quot;$:/language/Buttons/Favorites/Caption&quot;:{&quot;text&quot;:&quot;favorite&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Caption&quot;},&quot;$:/language/Buttons/Favorites/Hint&quot;:{&quot;text&quot;:&quot;Remove from favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Hint&quot;},&quot;$:/language/SideBar/Favorites/Caption&quot;:{&quot;text&quot;:&quot;Favorites&quot;,&quot;title&quot;:&quot;$:/language/SideBar/Favorites/Caption&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/favorites/icon&quot;:{&quot;text&quot;:&quot;&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&quot;,&quot;type&quot;:&quot;application/x-tiddler&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/favorites/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/favorites/readme&quot;:{&quot;text&quot;:&quot;\\define a()&lt;span class='tc-image-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;\n&lt;style&gt;.tc-image-favorites svg {stroke:#000;stroke-width:2;fill:#ff0;}&lt;/style&gt;This plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;a&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;a&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;a&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;a&gt;&gt; ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/readme&quot;},&quot;$:/plugins/ajh/favorites/sidebar&quot;:{&quot;text&quot;:&quot;\\define d()&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;d&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/sidebar&quot;,&quot;tags&quot;:&quot;$:/tags/SideBar&quot;,&quot;list-before&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot;},&quot;$:/plugins/ajh/favorites/stylesheet&quot;:{&quot;text&quot;:&quot;.tc-tab-buttons + .tc-favorites-hidden {display:none;}.tc-tab-buttons button.tc-tab-selected {fill:{{!!tab-icon-selected-color}};stroke: {{!!tab-icon-outline-color}};}.tc-tab-buttons button:not(.tc-tab-selected) {fill:{{!!tab-icon-unselected-color}};}html .tc-tiddler-controls .tc-image-favorites svg {fill:{{!!button-color}} !important;overflow:visible;stroke:{{!!button-outline-color}};stroke-linejoin:round;stroke-width:2;}.tc-image-star-filled {height:1em;width:1em;}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;tab-icon-unselected-color&quot;:&quot;#999&quot;,&quot;tab-icon-selected-color&quot;:&quot;#ff0&quot;,&quot;tab-icon-outline-color&quot;:&quot;#000&quot;,&quot;caption&quot;:&quot;Favorites&quot;,&quot;button-outline-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#ff0&quot;},&quot;$:/plugins/ajh/favorites/template&quot;:{&quot;text&quot;:&quot;\\define add()[[$(currentTiddler)$]]\n\\define remove()-[[$(currentTiddler)$]]\n\\define a()&lt;svg class='tc-image-favorites tc-image-button' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;&lt;a&gt;&gt;&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;{{$:/core/images/star-filled}}&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/template&quot;,&quot;tags&quot;:&quot;$:/tags/ViewToolbar&quot;,&quot;list-after&quot;:&quot;$:/core/ui/Buttons/more-tiddler-actions&quot;,&quot;description&quot;:&quot;{{$:/language/Buttons/Favorites/Hint}}&quot;,&quot;caption&quot;:&quot;{{$:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;}}}</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/swirl/image206 [[Tiddlywiki 5 Adventure]] $:/mysidetitle $:/plugins/ajh/tiddlytime/icon $:/plugins/ajh/tiddlytime/analogclock2 $:/plugins/ajh/tiddlytime/stylesheet $:/plugins/ajh/tiddlytime/analogclock3 $:/plugins/ajh/tiddlytime/analogclock $:/plugins/ajh/tiddlytime/analogclock4" modified="20201127182340012" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/swirl/image206 [[Tiddlywiki 5 Adventure]] $:/mysidetitle $:/plugins/ajh/tiddlytime/icon $:/plugins/ajh/analogclocks/stylesheet $:/plugins/ajh/analogclocks/clock2 $:/plugins/ajh/analogclocks/clock4 $:/plugins/ajh/analogclocks/clock $:/plugins/ajh/analogclocks/clock3" modified="20201129212610468" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -11058,106 +11341,11 @@ This plugin comprises:
 &quot;$:/plugins/ajh/tiddlytime/time.js&quot;: { &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/ajh/tiddlytime/time.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget time to update $:/temp/time once every 1000 milliseconds using local computer time. $:/temp/time can then be transcluded to have multiple instances or no visible instances (without error) of a time clock with seconds. This is not the exact time unless your computer is set a little ahead of a time server or if you are lucky. Mine is within a second and I am OK with living in the past just a little.\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Export name and synchronous status\nexports.name = \&quot;time\&quot;;\nexports.platforms = [\&quot;browser\&quot;];\nexports.after = [\&quot;startup\&quot;];\nexports.before = [\&quot;rootwidget\&quot;];\nexports.synchronous = true;\n\nexports.startup = function() {\n var timer=setInterval(function(){\n var d=new Date();\n var t=d.toLocaleTimeString();\n $tw.wiki.addTiddler(new $tw.Tiddler({title: \&quot;$:/temp/time\&quot;, text: t}));\n},1000);\n};\n\n})();&quot;, &quot;type&quot;: &quot;application/javascript&quot;, &quot;title&quot;: &quot;$:/plugins/ajh/tiddlytime/time.js&quot;, &quot;module-type&quot;: &quot;startup&quot; },
 &quot;$:/time&quot;: { &quot;text&quot;: &quot;&lt;span title=&lt;&lt;dt 'MM/DD (today-78)' '-112320'&gt;&gt;&gt;\n&lt;$button class='tc-btn-invisible tc-time'&gt;&lt;$action-navigate $to='$:/info/timestamp'/&gt;&lt;$transclude tiddler='$:/temp/time' mode='block'/&gt;&lt;/$button&gt;&lt;/span&gt;&quot;, &quot;title&quot;: &quot;$:/time&quot;, &quot;tags&quot;: &quot;$:/tags/PageControls&quot;, &quot;list-before&quot;: &quot;&quot;, &quot;description&quot;: &quot;{{$:/language/Buttons/Time/Hint}}&quot;, &quot;caption&quot;: &quot;{{$:/temp/time}} {{$:/language/Buttons/Time/Caption}}&quot; } } }</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201129201839391" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/tiddlytime/analogclock">
-<pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g class='tc-clk1-cir1'&gt;&lt;circle cx='337'cy='337'r='333'/&gt;&lt;g class='tc-clk1-cir2'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;g class='tc-clk1-cir3'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;g class='tc-clk1-cir4'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;text class='tc-clk1-fnt'&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;g class='tc-clk1-hm'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'class='tc-clk1-ss'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'class='tc-clk1-cir5'/&gt;
-&lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
-</div>
-<div created="20201121211340783" creator="Andrew Harrison" modified="20201128084810341" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/tiddlytime/analogclock2">
-<pre>\define a()&lt;svg viewBox='0 0 40 40'class='tc-clock2'&gt;&lt;circle cx='20'cy='20'r='19'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.2'stroke='#000'stroke-dasharray='.1 8.01'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.5'stroke='#000'stroke-dasharray='.43 23.9 .43 23.9 .43 23.9'/&gt;&lt;g stroke-width='1'stroke-linecap='round'&gt;&lt;text x='0'y='0'class='tc-clock2-tiaText'&gt;#TIA&lt;/text&gt;&lt;g class='tc-clock2-hours'&gt;&lt;path d='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-minutes'&gt;&lt;path d='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clock2-seconds'&gt;&lt;path d='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'calcMode='discrete'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;circle cx='20'cy='20'r='0.7'class='tc-clock2-pin'/&gt;&lt;/svg&gt;
-&lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
-</div>
-<div created="20201123045732388" creator="Andrew Harrison" modified="20201123092110820" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="" title="$:/plugins/ajh/tiddlytime/analogclock3">
-<pre>&lt;article class=&quot;clock3&quot;&gt;
-  &lt;div class=&quot;line-wrapper&quot;&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-    &lt;div class=&quot;line&quot;/&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;hours-container&quot;&gt;
-    &lt;div class=&quot;hours&quot;/&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;minutes-container&quot;&gt;
-    &lt;div class=&quot;minutes&quot;/&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;seconds-container&quot;&gt;
-    &lt;div class=&quot;seconds&quot;/&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
-</div>
-<div created="20201127174433884" creator="Andrew Harrison" modified="20201127182315614" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/tiddlytime/analogclock4">
-<pre>\define a()
-&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 200 200&quot;&gt;
-&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;94&quot; style=&quot;fill:#000;stroke:#555;stroke-width:3;&quot;/&gt;  
-&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;80&quot; style=&quot;fill:#eee;stroke:#555;stroke-width:1;&quot;/&gt;
-		&lt;text x=&quot;96&quot; y=&quot;36&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;0&lt;/text&gt;
-		&lt;text x=&quot;113&quot; y=&quot;38&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;1&lt;/text&gt;
-		&lt;text x=&quot;130&quot; y=&quot;45&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;2&lt;/text&gt;
-		&lt;text x=&quot;145&quot; y=&quot;55&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;3&lt;/text&gt;
-		&lt;text x=&quot;156&quot; y=&quot;70&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;4&lt;/text&gt;
-		&lt;text x=&quot;164&quot; y=&quot;88&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;5&lt;/text&gt;
-		&lt;text x=&quot;166&quot; y=&quot;105&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;6&lt;/text&gt;
-		&lt;text x=&quot;165&quot; y=&quot;123&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;7&lt;/text&gt;
-		&lt;text x=&quot;157&quot; y=&quot;139&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;8&lt;/text&gt;
-		&lt;text x=&quot;147&quot; y=&quot;153&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;9&lt;/text&gt;
-		&lt;text x=&quot;127&quot; y=&quot;164&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;10&lt;/text&gt;
-		&lt;text x=&quot;111&quot; y=&quot;171&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;11&lt;/text&gt;	
-		&lt;text x=&quot;93&quot; y=&quot;174&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;12&lt;/text&gt;
-		&lt;text x=&quot;77&quot; y=&quot;172&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;13&lt;/text&gt;
-		&lt;text x=&quot;60&quot; y=&quot;165&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;14&lt;/text&gt;
-		&lt;text x=&quot;44&quot; y=&quot;154&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;15&lt;/text&gt;
-		&lt;text x=&quot;33&quot; y=&quot;140&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;16&lt;/text&gt;
-		&lt;text x=&quot;25&quot; y=&quot;123&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;17&lt;/text&gt;
-		&lt;text x=&quot;23&quot; y=&quot;106&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;18&lt;/text&gt;
-		&lt;text x=&quot;25&quot; y=&quot;87&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;19&lt;/text&gt;
-		&lt;text x=&quot;34&quot; y=&quot;71&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;20&lt;/text&gt;
-		&lt;text x=&quot;44&quot; y=&quot;57&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;21&lt;/text&gt;
-		&lt;text x=&quot;59&quot; y=&quot;46&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;22&lt;/text&gt;
-		&lt;text x=&quot;76&quot; y=&quot;38&quot; font-size=&quot;15px&quot; fill=&quot;#555&quot;&gt;23&lt;/text&gt;
-		&lt;text x=&quot;97&quot; y=&quot;17&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;0&lt;/text&gt;
-		&lt;text x=&quot;141&quot; y=&quot;29&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;5&lt;/text&gt;
-		&lt;text x=&quot;171&quot; y=&quot;62&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;10&lt;/text&gt;
-		&lt;text x=&quot;181&quot; y=&quot;102&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;15&lt;/text&gt;
-		&lt;text x=&quot;171&quot; y=&quot;146&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;20&lt;/text&gt;
-		&lt;text x=&quot;138&quot; y=&quot;179&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;25&lt;/text&gt;
-		&lt;text x=&quot;95&quot; y=&quot;190&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;30&lt;/text&gt;
-		&lt;text x=&quot;52&quot; y=&quot;179&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;35&lt;/text&gt;
-		&lt;text x=&quot;20&quot; y=&quot;147&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;40&lt;/text&gt;
-		&lt;text x=&quot;8&quot; y=&quot;103&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;45&lt;/text&gt;
-		&lt;text x=&quot;19&quot; y=&quot;61&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;50&lt;/text&gt;
-		&lt;text x=&quot;52&quot; y=&quot;28&quot; font-size=&quot;10px&quot; fill=&quot;#f00&quot;&gt;55&lt;/text&gt;
-	&lt;g transform=&quot;translate(100 100)&quot;&gt;		
-	&lt;g&gt;
-		&lt;circle r=&quot;57&quot; fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke=&quot;#555&quot; stroke-dasharray=&quot;2,12.98&quot; transform=&quot;rotate(-1.8)&quot;/&gt;
-		&lt;circle r=&quot;78&quot; fill=&quot;none&quot; stroke-width=&quot;2&quot; stroke=&quot;#f00&quot; stroke-dasharray=&quot;1,7.17&quot; transform=&quot;rotate(-0.9)&quot;/&gt;
-		&lt;circle r=&quot;78&quot; fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke=&quot;#000&quot; stroke-dasharray=&quot;2,38.8&quot; transform=&quot;rotate(-0.9)&quot;/&gt;	
-	&lt;/g&gt;	
-		&lt;g id=&quot;hours&quot;&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-52&quot; style=&quot;stroke-width:4;stroke:#555;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;86400s&quot; from=&quot;$(h)$,0,0&quot; to=&quot;$(h2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
-		&lt;g id=&quot;minutes&quot;&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-74&quot; style=&quot;stroke-width:2;stroke:black;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;3600s&quot; from=&quot;$(m)$,0,0&quot; to=&quot;$(m2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
-		&lt;g id=&quot;seconds&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-76&quot; style=&quot;stroke-width:1;stroke:#f00;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;60s&quot; from=&quot;$(s)$,0,0&quot; to=&quot;$(s2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;&lt;/g&gt;
-		&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;2&quot; style=&quot;fill:#f00;stroke:#f00;&quot;/&gt;
-&lt;/svg&gt;
-\end
-&lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
-</div>
 <div created="20201108212353986" creator="Andrew Harrison" modified="20201109004643979" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/tiddlytime/icon">
 <pre>\define a()&lt;svg class='tc-image-tiddlyviewer ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;g stroke-width='5' fill='#f90'&gt;&lt;path stroke='#c0f' d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;g stroke-linecap='round'&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' from='$(h)$,64,64' repeatCount='indefinite' to='$(h)$,64,64' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' from='$(m)$,64,64' repeatCount='indefinite' to='$(m)$,64,64' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201129201832023" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
+<div button-color="#9cf; -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1))" button-hover-color="#04b" button-size="" caption="Tiddlytime Button" created="20170901122559964" creator="Andrew Harrison" modified="20201129212017167" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/tiddlytime/stylesheet" weight="bold">
 <pre>/* TOPBAR TIME */
 html .tc-time {
  color: {{!!button-color}};
@@ -11169,189 +11357,6 @@ html .tc-time {
 }
 html .tc-time:hover {
  color: {{!!button-hover-color}} !important;
-}
-
-/* ANALOG CLOCK1 */
-.tc-clk1-cir1 {
-  fill:red;
-  stroke: #000;
-  stroke-width: 3;
-}
-.tc-clk1-cir2 {
-  fill:#fff;
-}
-.tc-clk1-cir3 {
-  stroke: #900;
-  stroke-width: 10;
-  stroke-dasharray: 6 25.4;
-}
-.tc-clk1-cir4 {
-  stroke-width: 20;
-  stroke-dasharray: 6 151;
-}
-.tc-clk1-cir5 {
-  fill: #fff;
-  stroke: #f00;
-}
-.tc-clk1-fnt {
-  fill: #000;
-  font-size: 100px;
-  font-weight: bold;
-  transform: scale(.9, 1.35);
-}
-.tc-clk1-hm {
-  stroke: #ccc;
-  stroke-width: 1px;
-}
-.tc-clk1-ss {
-  fill: #f00;
-  stroke-width: .5px;
-}
-
-/* ANALOG CLOCK2 */
-svg.tc-clock2 {
-  width: 400px;
-  fill: #fff;
-  stroke: #000;
-}
-.tc-clock2-tiaText {
-  font-size: 1px;
-  font-family: sans-serif;
-  transform: translate(19px, 26px) rotate(0deg);
-  fill: #dfdfdf;
-  stroke: none;
-}
-.tc-clock2-seconds {
-  stroke-width: 0.3;
-  stroke: #f00;
-}
-.tc-clock2-minutes {
-  stroke-width: 0.6;
-}
-.tc-clock2-hours {
-  stroke-width: 1;
-}
-.tc-clock2-pin {
-  stroke: #f00;
-  stroke-width: 0.2;
-}
-
-/* ANALOG CLOCK3 */
-.line {
-    width: 5px;
-    height: 5px;
-    background-color: #000000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform-origin: 0 150px;
-}
-
-.line:nth-child(1) {transform: translateY(-150px);}
-.line:nth-child(2) {transform: translateY(-150px) rotateZ(calc(360deg / 12));}
-.line:nth-child(3) {transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));}
-.line:nth-child(4) {transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));}
-.line:nth-child(5) {transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));}
-.line:nth-child(6) {transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));}
-.line:nth-child(7) {transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));}
-.line:nth-child(8) {transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));}
-.line:nth-child(9) {transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));}
-.line:nth-child(10) {transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));}
-.line:nth-child(11) {transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));}
-.line:nth-child(12) {transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));}
-
-
-.line::after {
-    font-size: 32px;
-    display: inline-block;
-    margin: 10px 0 0 -5px;
-}
-
-/* .line is already rotated, rotate reverse */ 
-.line:nth-child(1)::after {content: &quot;12&quot;; transform: translateX(-10px);}
-.line:nth-child(2)::after {content: &quot;1&quot;; transform: rotateZ(calc(-360deg / 12));}
-.line:nth-child(3)::after {content: &quot;2&quot;; transform: rotateZ(calc(-2 * 360deg / 12));}
-.line:nth-child(4)::after {content: &quot;3&quot;; transform: rotateZ(calc(-3 * 360deg / 12));}
-.line:nth-child(5)::after {content: &quot;4&quot;; transform: rotateZ(calc(-4 * 360deg / 12));}
-.line:nth-child(6)::after {content: &quot;5&quot;; transform: rotateZ(calc(-5 * 360deg / 12));}
-.line:nth-child(7)::after {content: &quot;6&quot;; transform: rotateZ(calc(-6 * 360deg / 12));}
-.line:nth-child(8)::after {content: &quot;7&quot;; transform: rotateZ(calc(-7 * 360deg / 12));}
-.line:nth-child(9)::after {content: &quot;8&quot;; transform: rotateZ(calc(-8 * 360deg / 12));}
-.line:nth-child(10)::after {content: &quot;9&quot;; transform: rotateZ(calc(-9 * 360deg / 12));}
-.line:nth-child(11)::after {content: &quot;10&quot;; transform: rotateZ(calc(-10 * 360deg / 12));}
-.line:nth-child(12)::after {content: &quot;11&quot;; transform: rotateZ(calc(-11 * 360deg / 12));}
-.clock3 {
-  border-radius: 50%;
-  background: #fff;
-  background-size: 88%;
-  height: 20em;
-  padding-bottom: 31%;
-  position: relative;
-  width: 20em;
-}
-.clock3.simple:after {
-  background: #000;
-  border-radius: 50%;
-  content: &quot;&quot;;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 5%;
-  height: 5%;
-  z-index: 10;
-}
-.minutes-container, .hours-container, .seconds-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.hours {
-  background: #000;
-  height: 20%;
-  left: 48.75%;
-  position: absolute;
-  top: 30%;
-  transform-origin: 50% 100%;
-  width: 2.5%;
-  transform: rotate(calc(&lt;&lt;now 'hh12'&gt;&gt; * 30deg));
-}
-.minutes {
-  background: #000;
-  height: 40%;
-  left: 49%;
-  position: absolute;
-  top: 10%;
-  transform-origin: 50% 100%;
-  width: 2%;
-  transform: rotate(calc(&lt;&lt;now 'mm'&gt;&gt; * 6deg));
-}
-.seconds {
-  background: #f00;
-  height: 50%;
-  left: 49.5%;
-  position: absolute;
-  top: 9%;
-  transform-origin: 50% 80%;
-  width: 1%;
-  z-index: 8;
-  transform: rotate(calc(&lt;&lt;now 'ss'&gt;&gt; * 6deg));
-}
-.hours-container {
-  animation: rotate 43200s infinite linear;
-}
-.minutes-container {
-  animation: rotate 3600s infinite steps(60);
-}
-.seconds-container {
-  animation: rotate 60s infinite steps(60);
-}
-@keyframes rotate {
-  100% {
-    transform: rotateZ(360deg);
-  }
 }</pre>
 </div>
 <div core-version="&gt;=5.1.11" dependents="$:/plugins/ajh/tiddlyviewer/icon $:/plugins/ajh/tiddlyviewer/readme $:/plugins/ajh/tiddlyviewer/stylesheet $:/plugins/ajh/tiddlyviewer/template" description="Tiddly Viewer" list="readme" plugin-type="plugin" source="https://github.com/Infurnoape/infurnoape.github.io/blob/master/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ftiddlyviewer.json" title="$:/plugins/ajh/tiddlyviewer" type="application/json" version="0.0.15">
@@ -11480,14 +11485,17 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200523051003758" creator="Andrew Harrison" modified="20201030174904339" modifier="Andrew Harrison" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/pluginlibrary/ajh/released</pre>
 </div>
-<div created="20201127182213322" creator="Andrew Harrison" modified="20201127182226483" modifier="Andrew Harrison" title="$:/state/editpreviewtype">
-<pre>$:/core/ui/EditTemplate/body/preview/output</pre>
+<div created="20201127182213322" creator="Andrew Harrison" modified="20201129211946441" modifier="Andrew Harrison" title="$:/state/editpreviewtype">
+<pre>$:/core/ui/EditTemplate/body/preview/diffs-shadow</pre>
 </div>
 <div created="20200724044902721" creator="Andrew Harrison" modified="20200724044905245" modifier="Andrew Harrison" title="$:/state/folded/$:/AdvancedSearch">
 <pre>show</pre>
 </div>
 <div created="20200525080628326" creator="Andrew Harrison" modified="20201121213423312" modifier="Andrew Harrison" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
+</div>
+<div created="20201129212328432" creator="Andrew Harrison" modified="20201129212328432" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/analogclocks/stylesheet">
+<pre>hide</pre>
 </div>
 <div created="20201019232411017" creator="Andrew Harrison" modified="20201019232411017" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/copy">
 <pre>hide</pre>
@@ -11690,8 +11698,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201122061052886" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>$:/plugins/ajh/favorites/sidebar</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201129212751774" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>Table of Contents</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -11705,7 +11713,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201129195618609" creator="Andrew Harrison" list="$:/ControlPanel [[My Adventure]] [[Plugin Library]]" modified="20201129201847016" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201129211256990" creator="Andrew Harrison" list="$:/plugins/ajh/analogclocks/stylesheet $:/plugins/ajh/analogclocks/clock2" modified="20201129212650644" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12678,8 +12686,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic2</pre>
+<div attachment="scroll" size="auto" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic4</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13162,7 +13170,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>1:19:30 PM</pre>
+<pre>2:27:55 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
