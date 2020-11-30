@@ -356,18 +356,6 @@ Error message and password prompt
 
 <li>$:/pluginlibrary/tobibeer/official</li>
 
-<li>$:/plugins/ajh/analogclocks/clock</li>
-
-<li>$:/plugins/ajh/analogclocks/clock2</li>
-
-<li>$:/plugins/ajh/analogclocks/clock3</li>
-
-<li>$:/plugins/ajh/analogclocks/clock4</li>
-
-<li>$:/plugins/ajh/analogclocks/icon</li>
-
-<li>$:/plugins/ajh/analogclocks/stylesheet</li>
-
 <li>$:/plugins/ajh/batchtools/batchtools/delete/</li>
 
 <li>$:/plugins/ajh/batchtools/delete</li>
@@ -383,6 +371,18 @@ Error message and password prompt
 <li>$:/plugins/ajh/batchtools/tags</li>
 
 <li>$:/plugins/ajh/batchtools/titles</li>
+
+<li>$:/plugins/ajh/clocks/clock1</li>
+
+<li>$:/plugins/ajh/clocks/clock2</li>
+
+<li>$:/plugins/ajh/clocks/clock3</li>
+
+<li>$:/plugins/ajh/clocks/clock4</li>
+
+<li>$:/plugins/ajh/clocks/icon</li>
+
+<li>$:/plugins/ajh/clocks/stylesheet</li>
 
 <li>$:/plugins/ajh/copy</li>
 
@@ -469,8 +469,6 @@ Error message and password prompt
 <li>$:/state/folded/$:/AdvancedSearch</li>
 
 <li>$:/state/folded/$:/ControlPanel</li>
-
-<li>$:/state/folded/$:/plugins/ajh/analogclocks/stylesheet</li>
 
 <li>$:/state/folded/$:/plugins/ajh/copy</li>
 
@@ -10783,15 +10781,152 @@ For more information about the plugins see [[http://inmysocks.tiddlyspot.com/#My
 <div bag="default" caption="Official Plugin Library by Tobias Beer" created="20170610171020382" creator="Andrew Harrison" list="" modified="20200724045149349" modifier="Andrew Harrison" revision="0" tags="Examples New $:/tags/PluginLibrary" title="$:/pluginlibrary/tobibeer/official" url="http://tobibeer.github.io/tw5-plugins/library/index.html">
 <pre>The plugin library for the latest and greatest plugins from [ext[tobibeer/plugins|http://tobibeer.github.io/tw5-plugins]]; officially released versions of plugins by [ext[tobibeer|https://github.com/tobibeer]].</pre>
 </div>
-<div created="20201105081955655" creator="Andrew Harrison" modified="20201129220722134" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/analogclocks/clock">
+<div created="20170908002841814" creator="Andrew Harrison" list="" modified="20170908134023203" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/batchtools/delete/">
+<pre></pre>
+</div>
+<div created="20170918041918629" creator="Andrew Harrison" list="" modified="20170919125639009" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/delete">
+<pre>\define check() -[[$(currentTiddler)$]]
+\define uncheck() [[$(currentTiddler)$]]
+
+This lets you search/preview with title/tag/field/filter and deselect/delete any/all selected tiddlers.
+
+&lt;tr&gt;&lt;th&gt;Tiddler&lt;/th&gt;&lt;th&gt;Delete?&lt;/th&gt;&lt;/tr&gt;
+&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/tags]tagging[]prefix{$:/temp/batchtools/delete!!prefix}]&quot;&quot;&quot;&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;$list filter=&quot;&quot;&quot;[list[$:/temp/batchtools/delete]is[current]]&quot;&quot;&quot;&gt;
+&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/temp/batchtools/delete' $field='list' $subfilter=&lt;&lt;check&gt;&gt;/&gt;
+&lt;input type='checkbox'&gt;
+&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;$list filter=&quot;&quot;&quot;[all[current]!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;&gt;
+&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/temp/batchtools/delete' $field='list' $subfilter=&lt;&lt;uncheck&gt;&gt;/&gt;
+&lt;input type='checkbox' checked='checked'&gt;
+&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field='title'/&gt;&lt;/$link&gt;
+&lt;$list filter=&quot;&quot;&quot;[all[current]!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;&gt;
+{{||$:/core/ui/Buttons/delete}}
+&lt;/$list&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/$list&gt;
+&lt;$button tooltip={{$:/language/Buttons/BatchDelete/Hint}} message=&quot;tm-modal&quot; param=&quot;$:/plugins/ajh/batchtools/modal&quot; id=&quot;poop&quot;&gt;Delete Selected&lt;/$button&gt;</pre>
+</div>
+<div created="20170908234203920" creator="Andrew Harrison" list="" modified="20170908234447992" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/delete/">
+<pre></pre>
+</div>
+<div bag="" created="20170918022219010" creator="Andrew Harrison" icon-color="" list="" modified="20170921000424706" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/fields">
+<pre>\define remove() -[[$(currentTiddler)$]]
+\define lingo-base() $:/language/EditTemplate/
+
+&lt;$list filter='[list[$:/plugins/ajh/batchtools/fields]]'&gt;
+&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/fields' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
+&lt;input type='checkbox' checked='checked'&gt;
+&lt;/$button&gt;
+ &lt;$link to={{!!title}}&gt;
+&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;
+&lt;/$list&gt;
+
+&lt;div class='tc-edit-field-add'&gt;
+&lt;em class='tc-edit'&gt;
+{{$:/language/showfields/hint}}
+&lt;/em&gt;
+&lt;span class='tc-edit-field-add-name'&gt;
+&lt;$edit-text tiddler='$:/temp/newfieldname' tag='input' default='' placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-edit-texteditor tc-popup-handle'/&gt;
+&lt;/span&gt;
+&lt;$button popup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-btn-invisible tc-btn-dropdown' tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;
+&lt;$reveal state=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; type='nomatch' text='' default=''&gt;
+&lt;div class='tc-block-dropdown tc-edit-type-dropdown'&gt;
+&lt;$linkcatcher to='$:/temp/newfieldname'&gt;
+&lt;div class='tc-dropdown-item'&gt;
+&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;
+&lt;/div&gt;
+&lt;$list filter='[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]]'  variable='currentField'&gt;
+&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
+&lt;&lt;currentField&gt;&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+&lt;div class='tc-dropdown-item'&gt;
+&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;
+&lt;/div&gt;
+&lt;$list filter='[fields[]search:title{$:/temp/newfieldname}sort[]] -[!is[shadow]!is[system]fields[]]' variable='currentField'&gt;
+&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
+&lt;&lt;currentField&gt;&gt;
+&lt;/$link&gt;
+&lt;/$list&gt;
+&lt;/$linkcatcher&gt;
+&lt;/div&gt;
+&lt;/$reveal&gt;
+&lt;$button&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/fields' $field='list' $subfilter={{$:/temp/newfieldname}}/&gt;
+&lt;$action-deletetiddler $tiddler=&quot;$:/temp/newfieldname&quot;/&gt;
+&lt;&lt;lingo Fields/Add/Button&gt;&gt;
+&lt;/$button&gt;
+&lt;/div&gt;</pre>
+</div>
+<div created="20170913130725950" creator="Andrew Harrison" footer="&lt;$button class='tc-btn-invisible tc-tiddlylink tc-batchtools' message='tm-close-tiddler'&gt;''CANCEL''&lt;/$button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;$button class='tc-btn-invisible tc-tiddlylink' tooltip={{$:/language/Buttons/BatchDelete/Hint}} aria-label={{$:/language/Buttons/Delete/Caption}}&gt;''OK''&lt;$action-sendmessage $message='tm-close-tiddler'/&gt;&lt;$action-deletetiddler $filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/delete]tagging[]prefix{$:/temp/batchtools/delete!!prefix}!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;/&gt;&lt;/$button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;" modified="20170917154727583" modifier="Andrew Harrison" subtitle="''{{$:/info/url/hostname}} says:''" tags="" title="$:/plugins/ajh/batchtools/modal" wrapper="tc-batchtools">
+<pre>Do you wish to delete selected tiddler(s)?</pre>
+</div>
+<div created="20170915062825849" creator="Andrew Harrison" modified="20170917193318542" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/batchtools/stylesheet">
+<pre>.tc-modal {
+top: 16%;
+border-radius: 3px;
+}
+.tc-modal-footer {
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+}</pre>
+</div>
+<div created="20170902210956844" creator="Andrew Harrison" list="" modified="20170919053322537" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/tags">
+<pre>\define add() [&lt;tag&gt;]
+\define remove() -[{!!title}]
+
+\define tag-styles()
+background-color:$(backgroundColor)$;
+fill:$(foregroundColor)$;
+color:$(foregroundColor)$;
+\end
+
+\define tag-body-inner(colour,fallbackTarget,colourA,colourB)
+&lt;$vars foregroundColor=&lt;&lt;contrastcolour target:&quot;&quot;&quot;$colour$&quot;&quot;&quot; fallbackTarget:&quot;&quot;&quot;$fallbackTarget$&quot;&quot;&quot; colourA:&quot;&quot;&quot;$colourA$&quot;&quot;&quot; colourB:&quot;&quot;&quot;$colourB$&quot;&quot;&quot;&gt;&gt; backgroundColor=&quot;&quot;&quot;$colour$&quot;&quot;&quot;&gt;
+&lt;span style=&lt;&lt;tag-styles&gt;&gt; class=&quot;tc-tag-label&quot;&gt;
+&lt;$view field=&quot;title&quot; format=&quot;text&quot; /&gt;
+&lt;$button class=&quot;tc-btn-invisible tc-remove-tag-button&quot;&gt;
+&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/tags' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
+&amp;times;&lt;/$button&gt;
+&lt;/span&gt;
+&lt;/$vars&gt;
+\end
+
+\define tag-body(colour,palette)
+&lt;$macrocall $name=&quot;tag-body-inner&quot; colour=&quot;&quot;&quot;$colour$&quot;&quot;&quot; fallbackTarget={{$palette$##tag-background}} colourA={{$palette$##foreground}} colourB={{$palette$##background}}/&gt;
+\end
+
+\define tag-picker-actions()
+&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/tags' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;
+\end
+
+&lt;div class=&quot;tc-edit-tags&quot;&gt;
+&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/tags]]&quot;&quot;&quot; storyview=&quot;pop&quot;&gt;
+&lt;$macrocall $name=&quot;tag-body&quot; colour={{!!color}} palette={{$:/palette}}/&gt;
+&lt;/$list&gt;&lt;$button&gt;&lt;$action-deletefield $field=&quot;list&quot;/&gt;Clear All&lt;/$button&gt;
+&lt;$macrocall $name=&quot;tag-picker&quot; actions=&lt;&lt;tag-picker-actions&gt;&gt;/&gt;
+&lt;/div&gt;</pre>
+</div>
+<div created="20170918022607560" creator="Andrew Harrison" modified="20170919025940459" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/titles">
+<pre>Only Titles Starting With: &lt;$edit-text tiddler='$:/temp/batchtools/delete' field='prefix' class='tc-edit-texteditor'/&gt;</pre>
+</div>
+<div created="20201105081955655" creator="Andrew Harrison" modified="20201130042609524" modifier="Andrew Harrison" resource="https://freesvg.org/wall-analog-clock" title="$:/plugins/ajh/clocks/clock1">
 <pre>\define a()&lt;svg viewBox='0 0 680 680'&gt;&lt;g class='tc-clk1-cir1'&gt;&lt;circle cx='337'cy='337'r='333'/&gt;&lt;g class='tc-clk1-cir2'&gt;&lt;circle cx='337'cy='337'r='311'/&gt;&lt;g class='tc-clk1-cir3'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;g class='tc-clk1-cir4'&gt;&lt;circle cx='337'cy='337'r='300'/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;text class='tc-clk1-fnt'&gt;&lt;tspan x='310'y='103'&gt;12&lt;/tspan&gt;&lt;tspan x='480'y='133'&gt;1&lt;/tspan&gt;&lt;tspan x='580'y='193'&gt;2&lt;/tspan&gt;&lt;tspan x='640'y='283'&gt;3&lt;/tspan&gt;&lt;tspan x='575'y='373'&gt;4&lt;/tspan&gt;&lt;tspan x='475'y='430'&gt;5&lt;/tspan&gt;&lt;tspan x='344'y='460'&gt;6&lt;/tspan&gt;&lt;tspan x='219'y='431'&gt;7&lt;/tspan&gt;&lt;tspan x='104'y='370'&gt;8&lt;/tspan&gt;&lt;tspan x='60'y='284'&gt;9&lt;/tspan&gt;&lt;tspan x='98'y='203'&gt;10&lt;/tspan&gt;&lt;tspan x='197'y='131'&gt;11&lt;/tspan&gt;&lt;/text&gt;&lt;g class='tc-clk1-hm'&gt;&lt;path d='m337,396,15-43-15-196-15,196,15,43z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,337,337;$(h2)$,337,337'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,408,18-60-18-275-18,275,18,60z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,337,337;$(m2)$,337,337'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path d='m337,407,3-62-3-300-3,300z'class='tc-clk1-ss'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,337,337;$(s2)$,337,337'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle cx='337'cy='337'r='7'class='tc-clk1-cir5'/&gt;
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201121211340783" creator="Andrew Harrison" modified="20201129222100529" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/analogclocks/clock2">
+<div created="20201121211340783" creator="Andrew Harrison" modified="20201130042640712" modifier="Andrew Harrison" resource="https://medium.com/the-andela-way/create-a-pure-css-clock-with-svg-f123bcc41e46" tags="" title="$:/plugins/ajh/clocks/clock2">
 <pre>\define a()&lt;svg viewBox='0 0 40 40'class='tc-clk2'&gt;&lt;circle cx='20'cy='20'r='19'/&gt;&lt;circle class='tc-clk2-cir1'cx='20'cy='20'r='15.5'/&gt;&lt;circle cx='20'cy='20'r='15.5'stroke-width='1.5'stroke='#000'stroke-dasharray='.43 23.9 .43 23.9 .43 23.9'/&gt;&lt;g stroke-width='1'&gt;&lt;text x='0'y='0'class='tc-clk2-tiaText'&gt;#TIA&lt;/text&gt;&lt;g class='tc-clk2-hh'&gt;&lt;path d='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clk2-mm'&gt;&lt;path d='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class='tc-clk2-ss'&gt;&lt;path d='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'calcMode='discrete'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;/g&gt;&lt;circle cx='20'cy='20'r='0.7'class='tc-cl2-pin'/&gt;&lt;/svg&gt;
 &lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201123045732388" creator="Andrew Harrison" modified="20201129212603638" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="" title="$:/plugins/ajh/analogclocks/clock3">
+<div created="20201123045732388" creator="Andrew Harrison" modified="20201130042408176" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="" title="$:/plugins/ajh/clocks/clock3">
 <pre>&lt;article class=&quot;clock3&quot;&gt;
   &lt;div class=&quot;line-wrapper&quot;&gt;
     &lt;div class=&quot;line&quot;/&gt;
@@ -10818,7 +10953,7 @@ For more information about the plugins see [[http://inmysocks.tiddlyspot.com/#My
   &lt;/div&gt;
 &lt;/article&gt;</pre>
 </div>
-<div created="20201127174433884" creator="Andrew Harrison" modified="20201129212423683" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/analogclocks/clock4">
+<div created="20201127174433884" creator="Andrew Harrison" modified="20201130042655382" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/clocks/clock4">
 <pre>\define a()
 &lt;svg width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 200 200&quot;&gt;
 &lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;94&quot; style=&quot;fill:#000;stroke:#555;stroke-width:3;&quot;/&gt;  
@@ -10878,11 +11013,11 @@ For more information about the plugins see [[http://inmysocks.tiddlyspot.com/#My
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201108212353986" creator="Andrew Harrison" modified="20201129220522406" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/analogclocks/icon">
-<pre>\define a()&lt;svg class='tc-image-analogclocks ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' values='$(h)$,64,64;$(h)$,64,64' repeatCount='indefinite' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' values='$(m)$,64,64;$(m)$,64,64' repeatCount='indefinite' type='rotate'/&gt;
+<div created="20201108212353986" creator="Andrew Harrison" modified="20201130042141408" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/clocks/icon">
+<pre>\define a()&lt;svg class='tc-image-clocks ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' values='$(h)$,64,64;$(h)$,64,64' repeatCount='indefinite' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' values='$(m)$,64,64;$(m)$,64,64' repeatCount='indefinite' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div caption="Analog Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201129221931204" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/analogclocks/stylesheet">
+<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201130042327439" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
 <pre>/* ANALOG CLOCK1 */
 .tc-clk1-cir1 {
   fill: red;
@@ -11039,7 +11174,7 @@ For more information about the plugins see [[http://inmysocks.tiddlyspot.com/#My
 }
 
 /* ANALOG CLOCK ICON */
-.tc-image-analogclocks {
+.tc-image-clocks {
   fill: #cf0;
   stroke: #30f;
   stroke-width: 5;
@@ -11078,143 +11213,6 @@ svg.tc-clk2 {
   stroke-width: 0.2;
 }</pre>
 </div>
-<div created="20170908002841814" creator="Andrew Harrison" list="" modified="20170908134023203" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/batchtools/delete/">
-<pre></pre>
-</div>
-<div created="20170918041918629" creator="Andrew Harrison" list="" modified="20170919125639009" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/delete">
-<pre>\define check() -[[$(currentTiddler)$]]
-\define uncheck() [[$(currentTiddler)$]]
-
-This lets you search/preview with title/tag/field/filter and deselect/delete any/all selected tiddlers.
-
-&lt;tr&gt;&lt;th&gt;Tiddler&lt;/th&gt;&lt;th&gt;Delete?&lt;/th&gt;&lt;/tr&gt;
-&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/tags]tagging[]prefix{$:/temp/batchtools/delete!!prefix}]&quot;&quot;&quot;&gt;
-&lt;tr&gt;&lt;td&gt;
-&lt;$list filter=&quot;&quot;&quot;[list[$:/temp/batchtools/delete]is[current]]&quot;&quot;&quot;&gt;
-&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/temp/batchtools/delete' $field='list' $subfilter=&lt;&lt;check&gt;&gt;/&gt;
-&lt;input type='checkbox'&gt;
-&lt;/$button&gt;
-&lt;/$list&gt;
-&lt;$list filter=&quot;&quot;&quot;[all[current]!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;&gt;
-&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/temp/batchtools/delete' $field='list' $subfilter=&lt;&lt;uncheck&gt;&gt;/&gt;
-&lt;input type='checkbox' checked='checked'&gt;
-&lt;/$button&gt;
-&lt;/$list&gt;
-&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field='title'/&gt;&lt;/$link&gt;
-&lt;$list filter=&quot;&quot;&quot;[all[current]!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;&gt;
-{{||$:/core/ui/Buttons/delete}}
-&lt;/$list&gt;
-&lt;/td&gt;&lt;/tr&gt;
-&lt;/$list&gt;
-&lt;$button tooltip={{$:/language/Buttons/BatchDelete/Hint}} message=&quot;tm-modal&quot; param=&quot;$:/plugins/ajh/batchtools/modal&quot; id=&quot;poop&quot;&gt;Delete Selected&lt;/$button&gt;</pre>
-</div>
-<div created="20170908234203920" creator="Andrew Harrison" list="" modified="20170908234447992" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/delete/">
-<pre></pre>
-</div>
-<div bag="" created="20170918022219010" creator="Andrew Harrison" icon-color="" list="" modified="20170921000424706" modifier="Andrew Harrison" title="$:/plugins/ajh/batchtools/fields">
-<pre>\define remove() -[[$(currentTiddler)$]]
-\define lingo-base() $:/language/EditTemplate/
-
-&lt;$list filter='[list[$:/plugins/ajh/batchtools/fields]]'&gt;
-&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/fields' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
-&lt;input type='checkbox' checked='checked'&gt;
-&lt;/$button&gt;
- &lt;$link to={{!!title}}&gt;
-&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;
-&lt;/$list&gt;
-
-&lt;div class='tc-edit-field-add'&gt;
-&lt;em class='tc-edit'&gt;
-{{$:/language/showfields/hint}}
-&lt;/em&gt;
-&lt;span class='tc-edit-field-add-name'&gt;
-&lt;$edit-text tiddler='$:/temp/newfieldname' tag='input' default='' placeholder={{$:/language/EditTemplate/Fields/Add/Name/Placeholder}} focusPopup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-edit-texteditor tc-popup-handle'/&gt;
-&lt;/span&gt;
-&lt;$button popup=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; class='tc-btn-invisible tc-btn-dropdown' tooltip={{$:/language/EditTemplate/Field/Dropdown/Hint}} aria-label={{$:/language/EditTemplate/Field/Dropdown/Caption}}&gt;{{$:/core/images/down-arrow}}&lt;/$button&gt;
-&lt;$reveal state=&lt;&lt;qualify '$:/state/popup/field-dropdown'&gt;&gt; type='nomatch' text='' default=''&gt;
-&lt;div class='tc-block-dropdown tc-edit-type-dropdown'&gt;
-&lt;$linkcatcher to='$:/temp/newfieldname'&gt;
-&lt;div class='tc-dropdown-item'&gt;
-&lt;&lt;lingo Fields/Add/Dropdown/User&gt;&gt;
-&lt;/div&gt;
-&lt;$list filter='[!is[shadow]!is[system]fields[]search:title{$:/temp/newfieldname}sort[]]'  variable='currentField'&gt;
-&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
-&lt;&lt;currentField&gt;&gt;
-&lt;/$link&gt;
-&lt;/$list&gt;
-&lt;div class='tc-dropdown-item'&gt;
-&lt;&lt;lingo Fields/Add/Dropdown/System&gt;&gt;
-&lt;/div&gt;
-&lt;$list filter='[fields[]search:title{$:/temp/newfieldname}sort[]] -[!is[shadow]!is[system]fields[]]' variable='currentField'&gt;
-&lt;$link to=&lt;&lt;currentField&gt;&gt;&gt;
-&lt;&lt;currentField&gt;&gt;
-&lt;/$link&gt;
-&lt;/$list&gt;
-&lt;/$linkcatcher&gt;
-&lt;/div&gt;
-&lt;/$reveal&gt;
-&lt;$button&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/fields' $field='list' $subfilter={{$:/temp/newfieldname}}/&gt;
-&lt;$action-deletetiddler $tiddler=&quot;$:/temp/newfieldname&quot;/&gt;
-&lt;&lt;lingo Fields/Add/Button&gt;&gt;
-&lt;/$button&gt;
-&lt;/div&gt;</pre>
-</div>
-<div created="20170913130725950" creator="Andrew Harrison" footer="&lt;$button class='tc-btn-invisible tc-tiddlylink tc-batchtools' message='tm-close-tiddler'&gt;''CANCEL''&lt;/$button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;$button class='tc-btn-invisible tc-tiddlylink' tooltip={{$:/language/Buttons/BatchDelete/Hint}} aria-label={{$:/language/Buttons/Delete/Caption}}&gt;''OK''&lt;$action-sendmessage $message='tm-close-tiddler'/&gt;&lt;$action-deletetiddler $filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/delete]tagging[]prefix{$:/temp/batchtools/delete!!prefix}!list[$:/temp/batchtools/delete]]&quot;&quot;&quot;/&gt;&lt;/$button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;" modified="20170917154727583" modifier="Andrew Harrison" subtitle="''{{$:/info/url/hostname}} says:''" tags="" title="$:/plugins/ajh/batchtools/modal" wrapper="tc-batchtools">
-<pre>Do you wish to delete selected tiddler(s)?</pre>
-</div>
-<div created="20170915062825849" creator="Andrew Harrison" modified="20170917193318542" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/batchtools/stylesheet">
-<pre>.tc-modal {
-top: 16%;
-border-radius: 3px;
-}
-.tc-modal-footer {
-border-bottom-left-radius: 3px;
-border-bottom-right-radius: 3px;
-}</pre>
-</div>
-<div created="20170902210956844" creator="Andrew Harrison" list="" modified="20170919053322537" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/tags">
-<pre>\define add() [&lt;tag&gt;]
-\define remove() -[{!!title}]
-
-\define tag-styles()
-background-color:$(backgroundColor)$;
-fill:$(foregroundColor)$;
-color:$(foregroundColor)$;
-\end
-
-\define tag-body-inner(colour,fallbackTarget,colourA,colourB)
-&lt;$vars foregroundColor=&lt;&lt;contrastcolour target:&quot;&quot;&quot;$colour$&quot;&quot;&quot; fallbackTarget:&quot;&quot;&quot;$fallbackTarget$&quot;&quot;&quot; colourA:&quot;&quot;&quot;$colourA$&quot;&quot;&quot; colourB:&quot;&quot;&quot;$colourB$&quot;&quot;&quot;&gt;&gt; backgroundColor=&quot;&quot;&quot;$colour$&quot;&quot;&quot;&gt;
-&lt;span style=&lt;&lt;tag-styles&gt;&gt; class=&quot;tc-tag-label&quot;&gt;
-&lt;$view field=&quot;title&quot; format=&quot;text&quot; /&gt;
-&lt;$button class=&quot;tc-btn-invisible tc-remove-tag-button&quot;&gt;
-&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/tags' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;
-&amp;times;&lt;/$button&gt;
-&lt;/span&gt;
-&lt;/$vars&gt;
-\end
-
-\define tag-body(colour,palette)
-&lt;$macrocall $name=&quot;tag-body-inner&quot; colour=&quot;&quot;&quot;$colour$&quot;&quot;&quot; fallbackTarget={{$palette$##tag-background}} colourA={{$palette$##foreground}} colourB={{$palette$##background}}/&gt;
-\end
-
-\define tag-picker-actions()
-&lt;$action-listops $tiddler='$:/plugins/ajh/batchtools/tags' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;
-\end
-
-&lt;div class=&quot;tc-edit-tags&quot;&gt;
-&lt;$list filter=&quot;&quot;&quot;[list[$:/plugins/ajh/batchtools/tags]]&quot;&quot;&quot; storyview=&quot;pop&quot;&gt;
-&lt;$macrocall $name=&quot;tag-body&quot; colour={{!!color}} palette={{$:/palette}}/&gt;
-&lt;/$list&gt;&lt;$button&gt;&lt;$action-deletefield $field=&quot;list&quot;/&gt;Clear All&lt;/$button&gt;
-&lt;$macrocall $name=&quot;tag-picker&quot; actions=&lt;&lt;tag-picker-actions&gt;&gt;/&gt;
-&lt;/div&gt;</pre>
-</div>
-<div created="20170918022607560" creator="Andrew Harrison" modified="20170919025940459" modifier="Andrew Harrison" tags="[[Under Construction]]" title="$:/plugins/ajh/batchtools/titles">
-<pre>Only Titles Starting With: &lt;$edit-text tiddler='$:/temp/batchtools/delete' field='prefix' class='tc-edit-texteditor'/&gt;</pre>
-</div>
 <div created="20200504072825917" creator="Andrew Harrison" description="Copy specified text to the clipboard" list="readme license" modified="20200613183538206" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/copy&quot;:{&quot;text&quot;:&quot;&lt;span id={{!!title}}&gt;&lt;$transclude tiddler={{!!title}}/&gt;&lt;/span&gt; &lt;span class='tc-image-copy'&gt;&lt;$button param={{!!title}} message='tm-copy' tooltip={{$:/language/Buttons/Copy/Hint}} aria-label={{$:/language/Buttons/Copy/Caption}} class='tc-btn-invisible'&gt;&lt;$action-sendmessage $message='tm-notify' $param='$:/language/Buttons/Copy/Notification'/&gt;{{$:/core/images/copy-clipboard}}&lt;/$button&gt;&lt;/span&gt;&quot;,&quot;title&quot;:&quot;$:/copy&quot;},&quot;$:/language/Buttons/Copy/Caption&quot;:{&quot;text&quot;:&quot;copy&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Caption&quot;},&quot;$:/language/Buttons/Copy/Hint&quot;:{&quot;text&quot;:&quot;Copy to the clipboard&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Hint&quot;},&quot;$:/language/Buttons/Copy/Notification&quot;:{&quot;text&quot;:&quot;Copied&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Copy/Notification&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/copy/copy.js&quot;:{&quot;text&quot;:&quot;/*\\\n$:/plugins/ajh/copy/copy.js\ntype: application/javascript\nmodule-type: startup\n\nSetup the root widget handler that can be used to copy transcluded tiddler to the Clipboard.\n\n&lt;span id='TiddlerTitle'&gt;&lt;$transclude tiddler='TiddlerTitle'/&gt;&lt;/span&gt;&amp;nbsp;&lt;$button param='TiddlerTitle' message='tm-copy'&gt;COPY&lt;/$button&gt;\n\n\\*/\n(function () {\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n'use strict';\n\n// Export name and synchronous status\nexports.name = 'copy';\nexports.platforms = ['browser'];\nexports.after = ['rootwidget'];\nexports.synchronous = true;\n\nexports.startup = function () {\n // Install the tiddler copy message mechanism\n $tw.rootWidget.addEventListener('tm-copy', function (event) {\n if (event) { \n try {\n var copyDiv = document.getElementById(event.param);\n copyDiv.contentEditable = true;\n copyDiv.focus();\n document.execCommand('SelectAll',false,null);\n document.execCommand('Copy', false, null);\n document.execCommand('Unselect');\n copyDiv.blur();\n return;\n } catch(e) {\n // Rethrow exception if it's not a SecurityError. Note that SecurityError\n // exception is specific to Firefox.\n if(e.name !== 'SecurityError')\n throw e;\n alert('Feature not available in older browsers!');\n return;\n }\n }\n });\n};\n\n})();&quot;,&quot;type&quot;:&quot;application/javascript&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/copy.js&quot;,&quot;module-type&quot;:&quot;startup&quot;},&quot;$:/plugins/ajh/copy/icon&quot;:{&quot;text&quot;:&quot;&lt;svg fill='#000' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#0ff' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/copy-clipboard}}&lt;/svg&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/copy/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/copy/readme&quot;:{&quot;text&quot;:&quot;This plugin button like the internal [[copy-to-clipboard Macro|https://tiddlywiki.com/#copy-to-clipboard%20Macro]] displays a{{$:/core/images/copy-clipboard}}button that copies specified text to the clipboard. This plugin button extends the format and function to be called by transcluding a tiddler using the `$:/copy` template. Example usage: `{{Tiddler title to transclude||$:/copy}}`.\n\nThis plugin comprises:\n\n* JavaScript code module\n* Icon\n* Template\n* Stylesheet\n* Caption, hint, and notification&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/readme&quot;},&quot;$:/plugins/ajh/copy/stylesheet&quot;:{&quot;text&quot;:&quot;html .tc-image-copy button svg {height:{{!!button-size}};width:{{!!button-size}};}.tc-image-copy {fill:{{!!button-color}};}.tc-image-copy:hover {fill:{{!!button-hover-color}} !important;}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/copy/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;caption&quot;:&quot;Copy Button&quot;,&quot;button-size&quot;:&quot;1.4em&quot;,&quot;button-hover-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#888&quot;}}}</pre>
 </div>
@@ -11232,7 +11230,7 @@ This plugin comprises:
 <div created="20200523232029662" creator="Andrew Harrison" description="Favorites of views frequently accessed" list="readme license" modified="20200614230605949" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/language/Buttons/Choose/Caption&quot;:{&quot;text&quot;:&quot;choose&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Caption&quot;},&quot;$:/language/Buttons/Choose/Hint&quot;:{&quot;text&quot;:&quot;Add to favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Hint&quot;},&quot;$:/language/Buttons/Favorites/Caption&quot;:{&quot;text&quot;:&quot;favorite&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Caption&quot;},&quot;$:/language/Buttons/Favorites/Hint&quot;:{&quot;text&quot;:&quot;Remove from favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Hint&quot;},&quot;$:/language/SideBar/Favorites/Caption&quot;:{&quot;text&quot;:&quot;Favorites&quot;,&quot;title&quot;:&quot;$:/language/SideBar/Favorites/Caption&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/favorites/icon&quot;:{&quot;text&quot;:&quot;&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&quot;,&quot;type&quot;:&quot;application/x-tiddler&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/favorites/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/favorites/readme&quot;:{&quot;text&quot;:&quot;\\define a()&lt;span class='tc-image-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;\n&lt;style&gt;.tc-image-favorites svg {stroke:#000;stroke-width:2;fill:#ff0;}&lt;/style&gt;This plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;a&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;a&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;a&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;a&gt;&gt; ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/readme&quot;},&quot;$:/plugins/ajh/favorites/sidebar&quot;:{&quot;text&quot;:&quot;\\define d()&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;d&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/sidebar&quot;,&quot;tags&quot;:&quot;$:/tags/SideBar&quot;,&quot;list-before&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot;},&quot;$:/plugins/ajh/favorites/stylesheet&quot;:{&quot;text&quot;:&quot;.tc-tab-buttons + .tc-favorites-hidden {display:none;}.tc-tab-buttons button.tc-tab-selected {fill:{{!!tab-icon-selected-color}};stroke: {{!!tab-icon-outline-color}};}.tc-tab-buttons button:not(.tc-tab-selected) {fill:{{!!tab-icon-unselected-color}};}html .tc-tiddler-controls .tc-image-favorites svg {fill:{{!!button-color}} !important;overflow:visible;stroke:{{!!button-outline-color}};stroke-linejoin:round;stroke-width:2;}.tc-image-star-filled {height:1em;width:1em;}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;tab-icon-unselected-color&quot;:&quot;#999&quot;,&quot;tab-icon-selected-color&quot;:&quot;#ff0&quot;,&quot;tab-icon-outline-color&quot;:&quot;#000&quot;,&quot;caption&quot;:&quot;Favorites&quot;,&quot;button-outline-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#ff0&quot;},&quot;$:/plugins/ajh/favorites/template&quot;:{&quot;text&quot;:&quot;\\define add()[[$(currentTiddler)$]]\n\\define remove()-[[$(currentTiddler)$]]\n\\define a()&lt;svg class='tc-image-favorites tc-image-button' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;&lt;a&gt;&gt;&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;{{$:/core/images/star-filled}}&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/template&quot;,&quot;tags&quot;:&quot;$:/tags/ViewToolbar&quot;,&quot;list-after&quot;:&quot;$:/core/ui/Buttons/more-tiddler-actions&quot;,&quot;description&quot;:&quot;{{$:/language/Buttons/Favorites/Hint}}&quot;,&quot;caption&quot;:&quot;{{$:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;}}}</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/analogclocks/stylesheet $:/plugins/ajh/analogclocks/clock2 $:/plugins/ajh/analogclocks/clock4 $:/plugins/ajh/analogclocks/clock $:/plugins/ajh/analogclocks/clock3 $:/plugins/ajh/analogclocks/icon" modified="20201129221016394" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/clocks/icon $:/plugins/ajh/clocks/stylesheet $:/plugins/ajh/clocks/clock3 $:/plugins/ajh/clocks/clock1 $:/plugins/ajh/clocks/clock2" modified="20201130042647423" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -11504,9 +11502,6 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200525080628326" creator="Andrew Harrison" modified="20201121213423312" modifier="Andrew Harrison" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
 </div>
-<div created="20201129212328432" creator="Andrew Harrison" modified="20201129212328432" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/analogclocks/stylesheet">
-<pre>hide</pre>
-</div>
 <div created="20201019232411017" creator="Andrew Harrison" modified="20201019232411017" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/copy">
 <pre>hide</pre>
 </div>
@@ -11723,7 +11718,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201129212850885" creator="Andrew Harrison" list="$:/plugins/ajh/analogclocks/stylesheet $:/plugins/ajh/analogclocks/clock2" modified="20201129221054359" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201130042116258" creator="Andrew Harrison" list="" modified="20201130042645644" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12632,8 +12627,8 @@ color:$(foregroundColor)$;
 
 &lt;$macrocall $name='tag-body' palette={{$:/palette}}/&gt;</pre>
 </div>
-<div created="20200523195707213" creator="Andrew Harrison" modified="20201123114740401" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
-<pre>analog</pre>
+<div created="20200523195707213" creator="Andrew Harrison" modified="20201130042431240" modifier="Andrew Harrison" title="$:/temp/advancedsearch">
+<pre>clock</pre>
 </div>
 <div created="20200524180944580" creator="Andrew Harrison" modified="20200524180954018" modifier="Andrew Harrison" title="$:/temp/Copy2Text Toggle Tags Example">
 <pre>Type the text for the tiddler '$:/temp/Copy2Text Toggle Tags Example'</pre>
@@ -12697,7 +12692,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic0</pre>
+<pre>$:/plugins/ajh/luckypic/pic3</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13180,7 +13175,7 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 <pre>loaded</pre>
 </div>
 <div title="$:/temp/time">
-<pre>3:21:11 PM</pre>
+<pre>9:27:02 PM</pre>
 </div>
 <div created="20151013003856671" creator="Andrew Harrison" modified="20151013003856671" modifier="Andrew Harrison" title="$:/theme">
 <pre>$:/themes/tiddlywiki/tight</pre>
