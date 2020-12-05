@@ -10910,7 +10910,7 @@ color:$(foregroundColor)$;
 <pre>\define a()&lt;svg viewBox='0 0 40 40'class='tc-clk2'&gt;&lt;circle cx='20'cy='20'r='19'/&gt;&lt;circle class='tc-clk2-cir1'cx='20'cy='20'r='15.5'/&gt;&lt;circle class='tc-clk2-cir2'cx='20'cy='20'r='15.5'/&gt;&lt;text class='tc-clk2-tiaText'x='0'y='0'&gt;#TIA&lt;/text&gt;&lt;path class='tc-clk2-hh'd='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk2-mm'd='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk2-ss'd='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle class='tc-clk2-pin'cx='20'cy='20'r='0.7'/&gt;&lt;/svg&gt;
 &lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201123045732388" creator="Andrew Harrison" modified="20201205230243766" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock3">
+<div created="20201123045732388" creator="Andrew Harrison" modified="20201205230420474" modifier="Andrew Harrison" resource="https://cssanimation.rocks/clocks/&lt;br&gt;https://erdoganbavas.medium.com/creating-an-analog-clock-with-css-and-javascript-167467276419 " tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock3">
 <pre>\define a()&lt;div class=&quot;line&quot;/&gt;
 \define b()&lt;svg viewBox='0 0 40 40'class='tc-clk3'&gt;&lt;path class='tc-clk3-hh'd='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-mm'd='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-ss'd='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle class='tc-clk3-pin'cx='20'cy='20'r='0.7'/&gt;&lt;/svg&gt;
 &lt;article class=&quot;clock3&quot;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/article&gt;</pre>
@@ -10979,7 +10979,7 @@ color:$(foregroundColor)$;
 <pre>\define a()&lt;svg class='tc-image-clocks ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' values='$(h)$,64,64;$(h)$,64,64' repeatCount='indefinite' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' values='$(m)$,64,64;$(m)$,64,64' repeatCount='indefinite' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201205230151270" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
+<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201205230821055" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
 <pre>/* ANALOG CLOCK3 */
 svg.tc-clk3 {
   stroke: #000;
@@ -11007,6 +11007,7 @@ svg.tc-clk3 {
 .line:nth-child(11) {transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));}
 .line:nth-child(12) {transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));}
 .line::after {
+  color: #000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 32px;
   display: inline-block;
@@ -11043,6 +11044,7 @@ svg.tc-clk3 {
   stroke-width: 1;
 }
 .tc-clk3-pin {
+  fill: #000;
   stroke: #f00;
   stroke-width: 0.2;
 }
@@ -11627,7 +11629,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201205230250236" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201205230843680" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
 <pre>Table of Contents</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
@@ -11642,7 +11644,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201205224943902" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock3 $:/plugins/ajh/clocks/stylesheet" modified="20201205230154189" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201205230330156" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/stylesheet [[My Adventure]] [[Plugin Library]]" modified="20201205230440096" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
