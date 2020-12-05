@@ -10979,77 +10979,8 @@ color:$(foregroundColor)$;
 <pre>\define a()&lt;svg class='tc-image-clocks ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' values='$(h)$,64,64;$(h)$,64,64' repeatCount='indefinite' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' values='$(m)$,64,64;$(m)$,64,64' repeatCount='indefinite' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201205230821055" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
-<pre>/* ANALOG CLOCK3 */
-svg.tc-clk3 {
-  stroke: #000;
-  width: 100%;
-}
-.line {
-  width: 5px;
-  height: 5px;
-  background-color: #000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: 0 150px;
-}
-.line:nth-child(1) {transform: translateY(-150px);}
-.line:nth-child(2) {transform: translateY(-150px) rotateZ(calc(360deg / 12));}
-.line:nth-child(3) {transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));}
-.line:nth-child(4) {transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));}
-.line:nth-child(5) {transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));}
-.line:nth-child(6) {transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));}
-.line:nth-child(7) {transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));}
-.line:nth-child(8) {transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));}
-.line:nth-child(9) {transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));}
-.line:nth-child(10) {transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));}
-.line:nth-child(11) {transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));}
-.line:nth-child(12) {transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));}
-.line::after {
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 32px;
-  display: inline-block;
-  margin: 10px 0 0 -5px;
-}
-/* .line is already rotated, rotate reverse */ 
-.line:nth-child(1)::after {content: &quot;12&quot;; transform: translateX(-10px);}
-.line:nth-child(2)::after {content: &quot;1&quot;; transform: rotateZ(calc(-360deg / 12));}
-.line:nth-child(3)::after {content: &quot;2&quot;; transform: rotateZ(calc(-2 * 360deg / 12));}
-.line:nth-child(4)::after {content: &quot;3&quot;; transform: rotateZ(calc(-3 * 360deg / 12));}
-.line:nth-child(5)::after {content: &quot;4&quot;; transform: rotateZ(calc(-4 * 360deg / 12));}
-.line:nth-child(6)::after {content: &quot;5&quot;; transform: rotateZ(calc(-5 * 360deg / 12));}
-.line:nth-child(7)::after {content: &quot;6&quot;; transform: rotateZ(calc(-6 * 360deg / 12));}
-.line:nth-child(8)::after {content: &quot;7&quot;; transform: rotateZ(calc(-7 * 360deg / 12));}
-.line:nth-child(9)::after {content: &quot;8&quot;; transform: rotateZ(calc(-8 * 360deg / 12));}
-.line:nth-child(10)::after {content: &quot;9&quot;; transform: rotateZ(calc(-9 * 360deg / 12));}
-.line:nth-child(11)::after {content: &quot;10&quot;; transform: rotateZ(calc(-10 * 360deg / 12));}
-.line:nth-child(12)::after {content: &quot;11&quot;; transform: rotateZ(calc(-11 * 360deg / 12));}
-.clock3 {
-  border-radius: 50%;
-  background: #fff;
-  background-size: 100%;
-  position: relative;
-  width: 100%;
-}
-.tc-clk3-ss {
-  stroke-width: 0.3;
-  stroke: #f00;
-}
-.tc-clk3-mm {
-  stroke-width: 0.6;
-}
-.tc-clk3-hh {
-  stroke-width: 1;
-}
-.tc-clk3-pin {
-  fill: #000;
-  stroke: #f00;
-  stroke-width: 0.2;
-}
-
-/* ANALOG CLOCK1 */
+<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201205231057611" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
+<pre>/* ANALOG CLOCK1 */
 .tc-clk1-cir1 {
   fill: red;
   stroke: #000;
@@ -11122,6 +11053,75 @@ svg.tc-clk2 {
   stroke-width: 1;
 }
 .tc-clk2-pin {
+  stroke: #f00;
+  stroke-width: 0.2;
+}
+
+/* ANALOG CLOCK3 */
+svg.tc-clk3 {
+  stroke: #000;
+  width: 100%;
+}
+.line {
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 150px;
+}
+.line:nth-child(1) {transform: translateY(-150px);}
+.line:nth-child(2) {transform: translateY(-150px) rotateZ(calc(360deg / 12));}
+.line:nth-child(3) {transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));}
+.line:nth-child(4) {transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));}
+.line:nth-child(5) {transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));}
+.line:nth-child(6) {transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));}
+.line:nth-child(7) {transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));}
+.line:nth-child(8) {transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));}
+.line:nth-child(9) {transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));}
+.line:nth-child(10) {transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));}
+.line:nth-child(11) {transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));}
+.line:nth-child(12) {transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));}
+.line::after {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  display: inline-block;
+  margin: 10px 0 0 -5px;
+}
+/* .line is already rotated, rotate reverse */ 
+.line:nth-child(1)::after {content: &quot;12&quot;; transform: translateX(-10px);}
+.line:nth-child(2)::after {content: &quot;1&quot;; transform: rotateZ(calc(-360deg / 12));}
+.line:nth-child(3)::after {content: &quot;2&quot;; transform: rotateZ(calc(-2 * 360deg / 12));}
+.line:nth-child(4)::after {content: &quot;3&quot;; transform: rotateZ(calc(-3 * 360deg / 12));}
+.line:nth-child(5)::after {content: &quot;4&quot;; transform: rotateZ(calc(-4 * 360deg / 12));}
+.line:nth-child(6)::after {content: &quot;5&quot;; transform: rotateZ(calc(-5 * 360deg / 12));}
+.line:nth-child(7)::after {content: &quot;6&quot;; transform: rotateZ(calc(-6 * 360deg / 12));}
+.line:nth-child(8)::after {content: &quot;7&quot;; transform: rotateZ(calc(-7 * 360deg / 12));}
+.line:nth-child(9)::after {content: &quot;8&quot;; transform: rotateZ(calc(-8 * 360deg / 12));}
+.line:nth-child(10)::after {content: &quot;9&quot;; transform: rotateZ(calc(-9 * 360deg / 12));}
+.line:nth-child(11)::after {content: &quot;10&quot;; transform: rotateZ(calc(-10 * 360deg / 12));}
+.line:nth-child(12)::after {content: &quot;11&quot;; transform: rotateZ(calc(-11 * 360deg / 12));}
+.clock3 {
+  border-radius: 50%;
+  background: #fff;
+  background-size: 100%;
+  position: relative;
+  width: 100%;
+}
+.tc-clk3-ss {
+  stroke-width: 0.3;
+  stroke: #f00;
+}
+.tc-clk3-mm {
+  stroke-width: 0.6;
+}
+.tc-clk3-hh {
+  stroke-width: 1;
+}
+.tc-clk3-pin {
+  fill: #000;
   stroke: #f00;
   stroke-width: 0.2;
 }
@@ -11629,7 +11629,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201205230843680" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201205231100622" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
 <pre>Table of Contents</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
