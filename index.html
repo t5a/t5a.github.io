@@ -10915,7 +10915,7 @@ color:$(foregroundColor)$;
 \define b()&lt;svg viewBox='0 0 40 40'class='tc-clk3'&gt;&lt;path class='tc-clk3-hh'd='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-mm'd='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-ss'd='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle class='tc-clk3-pin'cx='20'cy='20'r='0.7'/&gt;&lt;/svg&gt;
 &lt;article class='clock3'&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/article&gt;</pre>
 </div>
-<div created="20201127174433884" creator="Andrew Harrison" modified="20201206093028037" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/clocks/clock4">
+<div created="20201127174433884" creator="Andrew Harrison" modified="20201207073926306" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/clocks/clock4">
 <pre>\define a()
 &lt;svg class=&quot;tc-clk4&quot; viewBox=&quot;0 0 200 200&quot;&gt;
 &lt;circle class=&quot;tc-clk4-cir1&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;94&quot;/&gt;  
@@ -10964,17 +10964,15 @@ color:$(foregroundColor)$;
 	&lt;g&gt;
 		&lt;circle class=&quot;tc-clk4-cir3 r=&quot;57&quot;/&gt;
 		&lt;circle class=&quot;tc-clk4-cir4&quot; r=&quot;78&quot;/&gt;
-		&lt;circle r=&quot;78&quot; fill=&quot;none&quot; stroke-width=&quot;3&quot; stroke=&quot;#000&quot; stroke-dasharray=&quot;2,38.8&quot; transform=&quot;rotate(-0.9)&quot;/&gt;	
-	&lt;/g&gt;	
-		&lt;g id=&quot;hours&quot;&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-52&quot; style=&quot;stroke-width:4;stroke:#555;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;86400s&quot; values=&quot;$(h)$,0,0;$(h2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
-		&lt;g id=&quot;minutes&quot;&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-74&quot; style=&quot;stroke-width:2;stroke:black;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;3600s&quot; values=&quot;$(m)$,0,0;$(m2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;
-		&lt;g id=&quot;seconds&quot;&gt;&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-76&quot; style=&quot;stroke-width:1;stroke:#f00;stroke-linecap:round;&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;60s&quot; values=&quot;$(s)$,0,0;$(s2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;&lt;/g&gt;&lt;/g&gt;
-		&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;2&quot; style=&quot;fill:#f00;stroke:#f00;&quot;/&gt;
+		&lt;circle class=&quot;tc-clk4-cir5&quot; r=&quot;78&quot;/&gt;	
+	&lt;/g&gt;
+		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-52&quot; class=&quot;tc-clk4-hh&quot;&gt;&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;86400s&quot; values=&quot;$(h)$,0,0;$(h2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;
+		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-74&quot; class=&quot;tc-clk4-mm&quot;&gt;
+&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;3600s&quot; values=&quot;$(m)$,0,0;$(m2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;
+		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-76&quot; class=&quot;tc-clk4-ss&quot;&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;60s&quot; values=&quot;$(s)$,0,0;$(s2)$,0,0&quot; repeatCount=&quot;indefinite&quot;
+/&gt;&lt;/line&gt;&lt;/g&gt;
+		&lt;circle class=&quot;tc-clk4-cir6&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;2&quot;/&gt;
 &lt;/svg&gt;
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
@@ -10983,7 +10981,7 @@ color:$(foregroundColor)$;
 <pre>\define a()&lt;svg class='tc-image-clocks ic-image-button' width='22pt' height='22pt' viewBox='0 0 128 128'&gt;&lt;path d='m9,34.7l55-32l55,32v58.2l-55,32l-55-32v-58.2z'/&gt;&lt;g stroke='#000'&gt;&lt;circle cx='64' cy='64' r='45'/&gt;&lt;path d='m24,64h7zm40-40v7zm0,73v7zm33-33h7z'/&gt;&lt;path d='M64,64V34Z'&gt;&lt;animateTransform attributeName='transform' values='$(h)$,64,64;$(h)$,64,64' repeatCount='indefinite' type='rotate'/&gt;&lt;/path&gt;&lt;path d='M64,64V26Z'&gt;&lt;animateTransform attributeName='transform' values='$(m)$,64,64;$(m)$,64,64' repeatCount='indefinite' type='rotate'/&gt;
 &lt;$vars m2=&lt;&lt;now '0mm'&gt;&gt; h2=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars m={{{ [&lt;m2&gt;multiply[6]] }}} h={{{ [&lt;h2&gt;multiply[30]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201206093020299" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
+<div caption="Clocks" created="20201129211634407" creator="Andrew Harrison" modified="20201207073317039" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet">
 <pre>/* ANALOG CLOCK1 */
 .tc-clk1-cir1 {
   fill: red;
@@ -11159,6 +11157,17 @@ svg.tc-clk3 {
   stroke-dasharray: 1,7.17;
   transform: rotate(-0.9);
 }
+.tc-clk4-cir5 {
+  fill: none;
+  stroke-width: 3;
+  stroke: #000;
+  stroke-dasharray: 2,38.8;
+  transform: rotate(-0.9);
+}
+.tc-clk4-cir6 {
+  fill: #f00;
+  stroke: #f00;
+}
 .tc-clk4-fnt1 {
   font-size: 15px;
   fill: #555;
@@ -11168,14 +11177,19 @@ svg.tc-clk3 {
   fill: #f00;
 }
 .tc-clk4-ss {
-  stroke-width: 0.3;
+  stroke-width: 1;
   stroke: #f00;
+  stroke-linecap: round;
 }
 .tc-clk4-mm {
-  stroke-width: 0.6;
+  stroke-width: 2;
+  stroke: #000;
+  stroke-linecap: round;
 }
 .tc-clk4-hh {
-  stroke-width: 1;
+  stroke-width: 4;
+  stroke: #555;
+  stroke-linecap:round;
 }
 
 /* ANALOG CLOCK ICON */
@@ -11657,8 +11671,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200708005739327" creator="Andrew Harrison" modified="20200727064650391" modifier="Andrew Harrison" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20200518201426438" creator="Andrew Harrison" modified="20201129213541865" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20200518201426438" creator="Andrew Harrison" modified="20201207073953373" modifier="Andrew Harrison" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20200524183251949" creator="Andrew Harrison" modified="20200524183251949" modifier="Andrew Harrison" title="$:/state/tab-1803318191">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -11681,8 +11695,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201206093109852" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201207070301057" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -11696,7 +11710,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201206080648434" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock1 $:/plugins/ajh/clocks/clock4" modified="20201206083715442" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201207074030779" creator="Andrew Harrison" list="$:/ControlPanel $:/plugins/ajh/clocks/clock4 [[My Adventure]] [[Plugin Library]]" modified="20201207074134778" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12624,19 +12638,19 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://t5a.github.io/&quot;
+            &quot;text&quot;: &quot;file:///storage/emulated/0/Download/tiddlywiki%20(12).html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;t5a.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;t5a.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -12644,7 +12658,7 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/&quot;
+            &quot;text&quot;: &quot;/storage/emulated/0/Download/tiddlywiki%20(12).html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -12652,7 +12666,7 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://t5a.github.io&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -12669,8 +12683,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="scroll" size="auto" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic4</pre>
+<div attachment="fixed" size="cover" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic0</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
