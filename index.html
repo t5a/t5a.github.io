@@ -10977,16 +10977,16 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[4]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201214055507816" creator="Andrew Harrison" modified="20201219035711008" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
-<pre> &lt;svg id='clock' viewBox='0 36 122 36' xmlns='http://www.w3.org/2000/svg'&gt;
+<div created="20201214055507816" creator="Andrew Harrison" modified="20201219040646478" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
+<pre>&lt;svg id='clock' viewBox='0 36 122 36' xmlns='http://www.w3.org/2000/svg'&gt;
 &lt;defs&gt;
 &lt;path fill='green' id='f1' d='m0,0l3,3h6l3-3c0,0-1-1-3-1h-6c-2,0-3,1-3,1z'/&gt;
 &lt;path fill='blue' id='f2' d='m0,0l3,3v7l-3,3c0,0-1-1-1-3v-7c0-2,1-3,1-3z'/&gt;
 &lt;path fill='red' id='f3' d='m0,0l-3,3v7l3,3c0,0,1-1,1-3v-7c0-2-1-3-1-3z'/&gt;
 &lt;path fill='#0ff' id='f4' d='m0,0l8,0l2,2l-2,2l-8,0l-2-2z'/&gt;
-&lt;path fill='#f0f' id='f7' d='m0,0l3-3h6l3,3c0,0-1,1-3,1h-6c-2,0-3-1-3-1z'/&gt;
+&lt;path fill='#f0f' id='f5' d='m0,0l3-3h6l3,3c0,0-1,1-3,1h-6c-2,0-3-1-3-1z'/&gt;
 &lt;g id='s1'&gt;
-&lt;use x='106' y='69' href='#f7' /&gt; 
+&lt;use x='106' y='69' href='#f5' /&gt; 
 &lt;/g&gt;
 &lt;/defs&gt;
         &lt;g id='seconds'&gt;
@@ -11003,7 +11003,7 @@ color:$(foregroundColor)$;
           &lt;/g&gt;
 
           &lt;g&gt;
-            &lt;use x='88' y='69' href='#f7' /&gt; 
+            &lt;use x='88' y='69' href='#f5' /&gt; 
             &lt;use x='101' y='55' href='#f3' /&gt;
             &lt;use x='87' y='55' href='#f2' /&gt;
             &lt;use x='90' y='52' href='#f4' /&gt;
@@ -11014,7 +11014,7 @@ color:$(foregroundColor)$;
         &lt;/g&gt;
         &lt;g id='minutes'&gt;
           &lt;g&gt;
-            &lt;use x='64' y='69' href='#f7' /&gt; 
+            &lt;use x='64' y='69' href='#f5' /&gt; 
             &lt;use x='77' y='55' href='#f3' /&gt;
             &lt;use x='63' y='55' href='#f2' /&gt;
             &lt;use x='66' y='52' href='#f4' /&gt;
@@ -11023,7 +11023,7 @@ color:$(foregroundColor)$;
             &lt;use x='64' y='39' href='#f1' /&gt;
           &lt;/g&gt;
           &lt;g&gt;
-            &lt;use x='46' y='69' href='#f7' /&gt; 
+            &lt;use x='46' y='69' href='#f5' /&gt; 
             &lt;use x='59' y='55' href='#f3' /&gt;
             &lt;use x='45' y='55' href='#f2' /&gt;
             &lt;use x='48' y='52' href='#f4' /&gt;
@@ -11034,7 +11034,7 @@ color:$(foregroundColor)$;
         &lt;/g&gt;
         &lt;g id='hours'&gt;
           &lt;g&gt;
-            &lt;use x='22' y='69' href='#f7' /&gt; 
+            &lt;use x='22' y='69' href='#f5' /&gt; 
             &lt;use x='35' y='55' href='#f3' /&gt;
             &lt;use x='21' y='55' href='#f2' /&gt;
             &lt;use x='24' y='52' href='#f4' /&gt;
@@ -11043,7 +11043,7 @@ color:$(foregroundColor)$;
             &lt;use x='22' y='39' href='#f1' /&gt;
           &lt;/g&gt;
           &lt;g&gt;
-            &lt;use x='4' y='69' href='#f7' /&gt; 
+            &lt;use x='4' y='69' href='#f5' /&gt; 
             &lt;use x='17' y='55' href='#f3' /&gt;
         &lt;use x='3' y='55' href='#f2' /&gt;
             &lt;use x='6' y='52' href='#f4' /&gt;
