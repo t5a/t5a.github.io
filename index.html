@@ -10979,7 +10979,7 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[4]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201214055507816" creator="Andrew Harrison" modified="20201221090342051" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
+<div created="20201214055507816" creator="Andrew Harrison" modified="20201221092000823" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
 <pre>\define a()
 &lt;svg id='clock' viewBox='0 36 122 36'&gt;
 &lt;defs&gt;
@@ -11055,12 +11055,8 @@ color:$(foregroundColor)$;
  &lt;/defs&gt;
 &lt;g id='hours'&gt;
 &lt;use x='0' y='0'&gt;
-&lt;animate attributeName='href' values='#a$(n0)$' dur='$(n6)$min' id='hoursten'/&gt;
-&lt;animate attributeName='href' values='#a$(n1)$;#a$(n2)$;#a$(n3)$;#a$(n4)$;#a$(n5)$;#a$(n0)$' begin='hoursten.end' dur='60min' repeatCount='indefinite'/&gt;
-&lt;/use&gt;
-&lt;use x='18' y='0'&gt;
-&lt;animate attributeName='href' values='#d$(m0)$' dur='$(m10)$s' id='minutesone'/&gt;
-&lt;animate attributeName='href' values='#d$(m1)$;#d$(m2)$;#d$(m3)$;#d$(m4)$;#d$(m5)$;#d$(m6)$;#d$(m7)$;#d$(m8)$;#d$(m9)$;#d$(m0)$' begin='minutesone.end' dur='10min' repeatCount='indefinite'/&gt;
+&lt;animate attributeName='href' values='#b$(n1)$' dur='$(n6)$min' id='hoursten'/&gt;
+&lt;animate attributeName='href' values='#b$(n2)$;#b$(n3)$;#b$(n4)$;#b$(n5)$;#b$(n6)$;#b$(n7)$;#b$(n8)$;#b$(n9)$;#b$(n10)$;#b$(n11)$;#b$(n12)$;#b$(n1)$' begin='hoursten.end' dur='12h' repeatCount='indefinite'/&gt;
 &lt;/use&gt;
 &lt;/g&gt;
 &lt;g id='minutes'&gt;
