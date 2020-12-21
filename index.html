@@ -10979,7 +10979,7 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[4]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201214055507816" creator="Andrew Harrison" modified="20201221010740212" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
+<div created="20201214055507816" creator="Andrew Harrison" modified="20201221013953894" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
 <pre>\define a()
 &lt;svg id='clock' viewBox='0 36 122 36'&gt;
 &lt;defs&gt;
@@ -11037,12 +11037,17 @@ color:$(foregroundColor)$;
 &lt;/g&gt;
 &lt;g id='minutes'&gt;
 &lt;use x='42' y='0'&gt;
-&lt;animate attributeName='href' values='#$(m)$;#$(m2)$' dur='3600s' repeatCount='indefinite'/&gt;
+&lt;animate attributeName='href' values='#c$(n0)$' dur='$(n6)$s' id='minutesten'/&gt;
+&lt;animate attributeName='href' values='#c$(n1)$;#c$(n2)$;#c$(n3)$;#c$(n4)$;#c$(n5)$;#c$(n0)$' begin='minutesten.end' dur='60min' repeatCount='indefinite'/&gt;
+&lt;/use&gt;
+&lt;use x='60' y='0'&gt;
+&lt;animate attributeName='href' values='#d$(m0)$' dur='$(m10)$s' repeatCount='indefinite' id='minutesone'/&gt;
+&lt;animate attributeName='href' values='#d$(m1)$;#d$(m2)$;#d$(m3)$;#d$(m4)$;#d$(m5)$;#d$(m6)$;#d$(m7)$;#d$(m8)$;#d$(m9)$;#d$(m0)$' begin='minutesone.end' dur='10min' repeatCount='indefinite'/&gt;
 &lt;/use&gt;
 &lt;/g&gt;
 &lt;g id='seconds'&gt;
 &lt;use x='84' y='0'&gt;
-&lt;animate attributeName='href' values='#c$(t0)$' dur='$(s10)$s' id='secondsten'/&gt;
+&lt;animate attributeName='href' values='#c$(t0)$' dur='$(t6)$s' id='secondsten'/&gt;
 &lt;animate attributeName='href' values='#c$(t1)$;#c$(t2)$;#c$(t3)$;#c$(t4)$;#c$(t5)$;#c$(t0)$' begin='secondsten.end' dur='60s' repeatCount='indefinite'/&gt;
 &lt;/use&gt;
 &lt;use x='102' y='0'&gt;&lt;animate attributeName='href' values='#d$(s0)$;#d$(s1)$;#d$(s2)$;#d$(s3)$;#d$(s4)$;#d$(s5)$;#d$(s6)$;#d$(s7)$;#d$(s8)$;#d$(s9)$' dur='10s' repeatCount='indefinite'/&gt;
@@ -11060,7 +11065,7 @@ color:$(foregroundColor)$;
         &lt;/g&gt;
       &lt;/svg&gt;
 \end
-&lt;$vars s=&lt;&lt;now '0ss'&gt;&gt; m=&lt;&lt;now '0mm'&gt;&gt; h=&lt;&lt;now '0hh12'&gt;&gt;&gt;&lt;$vars t={{{ [&lt;s&gt;divide[10]trunc[]multiply[10]] }}} u={{{ [&lt;s&gt;divide[10]trunc[]] }}} m2={{{ [&lt;m&gt;add[60]] }}} h2={{{ [&lt;h&gt;multiply[3600]] }}}&gt;&lt;$vars s0={{{ [&lt;s&gt;subtract&lt;t&gt;add[0]] }}} s1={{{ [&lt;s&gt;subtract&lt;t&gt;add[1]] }}} s2={{{ [&lt;s&gt;subtract&lt;t&gt;add[2]] }}} s3={{{ [&lt;s&gt;subtract&lt;t&gt;add[3]] }}} s4={{{ [&lt;s&gt;subtract&lt;t&gt;add[4]] }}} s5={{{ [&lt;s&gt;subtract&lt;t&gt;add[5]] }}} s6={{{ [&lt;s&gt;subtract&lt;t&gt;add[6]] }}} s7={{{ [&lt;s&gt;subtract&lt;t&gt;add[7]] }}} s8={{{ [&lt;s&gt;subtract&lt;t&gt;add[8]] }}} s9={{{ [&lt;s&gt;subtract&lt;t&gt;add[9]] }}} s10={{{ [&lt;s&gt;subtract&lt;t&gt;subtract[10]negate[]] }}} t0={{{ [&lt;u&gt;add[0]] }}} t1={{{ [&lt;u&gt;add[1]] }}} t2={{{ [&lt;u&gt;add[2]] }}} t3={{{ [&lt;u&gt;add[3]] }}} t4={{{ [&lt;u&gt;add[4]] }}} t5={{{ [&lt;u&gt;add[5]] }}}&gt;&lt;&lt;a&gt;&gt; s &lt;&lt;s&gt;&gt; u &lt;&lt;u&gt;&gt; t &lt;&lt;t&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;
+&lt;$vars s=&lt;&lt;now '0ss'&gt;&gt; m=&lt;&lt;now '0mm'&gt;&gt; h=&lt;&lt;now '0hh12'&gt;&gt;&gt;&lt;$vars n={{{ [&lt;m&gt;divide[10]trunc[]multiply[10]] }}} o={{{ [&lt;m&gt;divide[10]trunc[]] }}} t={{{ [&lt;s&gt;divide[10]trunc[]multiply[10]] }}} u={{{ [&lt;s&gt;divide[10]trunc[]] }}} h2={{{ [&lt;h&gt;multiply[3600]] }}}&gt;&lt;$vars m0={{{ [&lt;s&gt;subtract&lt;t&gt;add[0]] }}} m1={{{ [&lt;s&gt;subtract&lt;t&gt;add[1]] }}} m2={{{ [&lt;s&gt;subtract&lt;t&gt;add[2]] }}} m3={{{ [&lt;s&gt;subtract&lt;t&gt;add[3]] }}} m4={{{ [&lt;s&gt;subtract&lt;t&gt;add[4]] }}} m5={{{ [&lt;s&gt;subtract&lt;t&gt;add[5]] }}} m6={{{ [&lt;s&gt;subtract&lt;t&gt;add[6]] }}} m7={{{ [&lt;s&gt;subtract&lt;t&gt;add[7]] }}} m8={{{ [&lt;s&gt;subtract&lt;t&gt;add[8]] }}} m9={{{ [&lt;s&gt;subtract&lt;t&gt;add[9]] }}} o0={{{ [&lt;u&gt;add[0]] }}} o1={{{ [&lt;u&gt;add[1]] }}} o2={{{ [&lt;u&gt;add[2]] }}} o3={{{ [&lt;u&gt;add[3]] }}} o4={{{ [&lt;u&gt;add[4]] }}} o5={{{ [&lt;u&gt;add[5]] }}} o6={{{ [&lt;s&gt;subtract&lt;t&gt;subtract[10]negate[]] }}} s0={{{ [&lt;s&gt;subtract&lt;t&gt;add[0]] }}} s1={{{ [&lt;s&gt;subtract&lt;t&gt;add[1]] }}} s2={{{ [&lt;s&gt;subtract&lt;t&gt;add[2]] }}} s3={{{ [&lt;s&gt;subtract&lt;t&gt;add[3]] }}} s4={{{ [&lt;s&gt;subtract&lt;t&gt;add[4]] }}} s5={{{ [&lt;s&gt;subtract&lt;t&gt;add[5]] }}} s6={{{ [&lt;s&gt;subtract&lt;t&gt;add[6]] }}} s7={{{ [&lt;s&gt;subtract&lt;t&gt;add[7]] }}} s8={{{ [&lt;s&gt;subtract&lt;t&gt;add[8]] }}} s9={{{ [&lt;s&gt;subtract&lt;t&gt;add[9]] }}} t0={{{ [&lt;u&gt;add[0]] }}} t1={{{ [&lt;u&gt;add[1]] }}} t2={{{ [&lt;u&gt;add[2]] }}} t3={{{ [&lt;u&gt;add[3]] }}} t4={{{ [&lt;u&gt;add[4]] }}} t5={{{ [&lt;u&gt;add[5]] }}} t6={{{ [&lt;s&gt;subtract&lt;t&gt;subtract[10]negate[]] }}}&gt;&lt;&lt;a&gt;&gt; s &lt;&lt;s&gt;&gt; u &lt;&lt;u&gt;&gt; t &lt;&lt;t&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;
 
 
 </pre>
