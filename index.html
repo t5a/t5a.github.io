@@ -10979,7 +10979,7 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[4]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20201214055507816" creator="Andrew Harrison" modified="20201221092000823" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
+<div created="20201214055507816" creator="Andrew Harrison" modified="20201222023401360" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
 <pre>\define a()
 &lt;svg id='clock' viewBox='0 36 122 36'&gt;
 &lt;defs&gt;
@@ -11055,8 +11055,8 @@ color:$(foregroundColor)$;
  &lt;/defs&gt;
 &lt;g id='hours'&gt;
 &lt;use x='0' y='0'&gt;
-&lt;animate attributeName='href' values='#b$(n1)$' dur='$(n6)$min' id='hoursten'/&gt;
-&lt;animate attributeName='href' values='#b$(n2)$;#b$(n3)$;#b$(n4)$;#b$(n5)$;#b$(n6)$;#b$(n7)$;#b$(n8)$;#b$(n9)$;#b$(n10)$;#b$(n11)$;#b$(n12)$;#b$(n1)$' begin='hoursten.end' dur='12h' repeatCount='indefinite'/&gt;
+&lt;animate attributeName='href' values='#b$(h)$' dur='$(n6)$min' id='hoursten'/&gt;
+&lt;animate attributeName='href' values='#b$(h1)$;#b$(h2)$;#b$(h3)$;#b$(h4)$;#b$(h5)$;#b$(h6)$;#b$(h7)$;#b$(h8)$;#b$(h9)$;#b$(h10)$;#b$(h11)$;#b$(h)$' begin='hoursten.end' dur='12h' repeatCount='indefinite'/&gt;
 &lt;/use&gt;
 &lt;/g&gt;
 &lt;g id='minutes'&gt;
@@ -11089,7 +11089,7 @@ color:$(foregroundColor)$;
         &lt;/g&gt;
       &lt;/svg&gt;
 \end
-&lt;$vars s=&lt;&lt;now '0ss'&gt;&gt; m=&lt;&lt;now '0mm'&gt;&gt; h=&lt;&lt;now '0hh12'&gt;&gt;&gt;&lt;$vars n={{{ [&lt;m&gt;divide[10]trunc[]multiply[10]] }}} o={{{ [&lt;m&gt;divide[10]trunc[]] }}} t={{{ [&lt;s&gt;divide[10]trunc[]multiply[10]] }}} u={{{ [&lt;s&gt;divide[10]trunc[]] }}}&gt;&lt;$vars m0={{{ [&lt;m&gt;subtract&lt;n&gt;add[0]] }}} m1={{{ [&lt;m&gt;subtract&lt;n&gt;add[1]] }}} m2={{{ [&lt;m&gt;subtract&lt;n&gt;add[2]] }}} m3={{{ [&lt;m&gt;subtract&lt;n&gt;add[3]] }}} m4={{{ [&lt;m&gt;subtract&lt;n&gt;add[4]] }}} m5={{{ [&lt;m&gt;subtract&lt;n&gt;add[5]] }}} m6={{{ [&lt;m&gt;subtract&lt;n&gt;add[6]] }}} m7={{{ [&lt;m&gt;subtract&lt;n&gt;add[7]] }}} m8={{{ [&lt;m&gt;subtract&lt;n&gt;add[8]] }}} m9={{{ [&lt;m&gt;subtract&lt;n&gt;add[9]] }}} m10={{{ [&lt;m&gt;subtract[60]negate[]] }}} n0={{{ [&lt;o&gt;add[0]] }}} n1={{{ [&lt;o&gt;add[1]] }}} n2={{{ [&lt;o&gt;add[2]] }}} n3={{{ [&lt;o&gt;add[3]] }}} n4={{{ [&lt;o&gt;add[4]] }}} n5={{{ [&lt;o&gt;add[5]] }}} n6={{{ [&lt;m&gt;subtract&lt;n&gt;subtract[10]negate[]] }}} s0={{{ [&lt;s&gt;subtract&lt;t&gt;add[0]] }}} s1={{{ [&lt;s&gt;subtract&lt;t&gt;add[1]] }}} s2={{{ [&lt;s&gt;subtract&lt;t&gt;add[2]] }}} s3={{{ [&lt;s&gt;subtract&lt;t&gt;add[3]] }}} s4={{{ [&lt;s&gt;subtract&lt;t&gt;add[4]] }}} s5={{{ [&lt;s&gt;subtract&lt;t&gt;add[5]] }}} s6={{{ [&lt;s&gt;subtract&lt;t&gt;add[6]] }}} s7={{{ [&lt;s&gt;subtract&lt;t&gt;add[7]] }}} s8={{{ [&lt;s&gt;subtract&lt;t&gt;add[8]] }}} s9={{{ [&lt;s&gt;subtract&lt;t&gt;add[9]] }}} t0={{{ [&lt;u&gt;add[0]] }}} t1={{{ [&lt;u&gt;add[1]] }}} t2={{{ [&lt;u&gt;add[2]] }}} t3={{{ [&lt;u&gt;add[3]] }}} t4={{{ [&lt;u&gt;add[4]] }}} t5={{{ [&lt;u&gt;add[5]] }}} t6={{{ [&lt;s&gt;subtract&lt;t&gt;subtract[10]negate[]] }}}&gt;&lt;$vars n6={{{ [&lt;m&gt;subtract&lt;n&gt;subtract[10]negate[]add&lt;t6&gt;] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;
+&lt;$vars s=&lt;&lt;now '0ss'&gt;&gt; m=&lt;&lt;now '0mm'&gt;&gt; h=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars h1={{{ [&lt;h&gt;add[1]] }}} h2={{{ [&lt;h&gt;add[2]] }}} h3={{{ [&lt;h&gt;add[3]] }}} h4={{{ [&lt;h&gt;add[4]] }}} h5={{{ [&lt;h&gt;add[5]] }}} h6={{{ [&lt;h&gt;add[6]] }}} h7={{{ [&lt;h&gt;add[7]] }}} h8={{{ [&lt;h&gt;add[8]] }}} h9={{{ [&lt;h&gt;add[9]] }}} h10={{{ [&lt;h&gt;add[10]] }}} h11={{{ [&lt;h&gt;add[11]] }}} h12={{{ [&lt;h&gt;add[12]] }}} n={{{ [&lt;m&gt;divide[10]trunc[]multiply[10]] }}} o={{{ [&lt;m&gt;divide[10]trunc[]] }}} t={{{ [&lt;s&gt;divide[10]trunc[]multiply[10]] }}} u={{{ [&lt;s&gt;divide[10]trunc[]] }}}&gt;&lt;$vars m0={{{ [&lt;m&gt;subtract&lt;n&gt;add[0]] }}} m1={{{ [&lt;m&gt;subtract&lt;n&gt;add[1]] }}} m2={{{ [&lt;m&gt;subtract&lt;n&gt;add[2]] }}} m3={{{ [&lt;m&gt;subtract&lt;n&gt;add[3]] }}} m4={{{ [&lt;m&gt;subtract&lt;n&gt;add[4]] }}} m5={{{ [&lt;m&gt;subtract&lt;n&gt;add[5]] }}} m6={{{ [&lt;m&gt;subtract&lt;n&gt;add[6]] }}} m7={{{ [&lt;m&gt;subtract&lt;n&gt;add[7]] }}} m8={{{ [&lt;m&gt;subtract&lt;n&gt;add[8]] }}} m9={{{ [&lt;m&gt;subtract&lt;n&gt;add[9]] }}} m10={{{ [&lt;m&gt;subtract[60]negate[]] }}} n0={{{ [&lt;o&gt;add[0]] }}} n1={{{ [&lt;o&gt;add[1]] }}} n2={{{ [&lt;o&gt;add[2]] }}} n3={{{ [&lt;o&gt;add[3]] }}} n4={{{ [&lt;o&gt;add[4]] }}} n5={{{ [&lt;o&gt;add[5]] }}} n6={{{ [&lt;m&gt;subtract&lt;n&gt;subtract[10]negate[]] }}} s0={{{ [&lt;s&gt;subtract&lt;t&gt;add[0]] }}} s1={{{ [&lt;s&gt;subtract&lt;t&gt;add[1]] }}} s2={{{ [&lt;s&gt;subtract&lt;t&gt;add[2]] }}} s3={{{ [&lt;s&gt;subtract&lt;t&gt;add[3]] }}} s4={{{ [&lt;s&gt;subtract&lt;t&gt;add[4]] }}} s5={{{ [&lt;s&gt;subtract&lt;t&gt;add[5]] }}} s6={{{ [&lt;s&gt;subtract&lt;t&gt;add[6]] }}} s7={{{ [&lt;s&gt;subtract&lt;t&gt;add[7]] }}} s8={{{ [&lt;s&gt;subtract&lt;t&gt;add[8]] }}} s9={{{ [&lt;s&gt;subtract&lt;t&gt;add[9]] }}} t0={{{ [&lt;u&gt;add[0]] }}} t1={{{ [&lt;u&gt;add[1]] }}} t2={{{ [&lt;u&gt;add[2]] }}} t3={{{ [&lt;u&gt;add[3]] }}} t4={{{ [&lt;u&gt;add[4]] }}} t5={{{ [&lt;u&gt;add[5]] }}} t6={{{ [&lt;s&gt;subtract&lt;t&gt;subtract[10]negate[]] }}}&gt;&lt;$vars n6={{{ [&lt;m&gt;subtract&lt;n&gt;subtract[10]negate[]add&lt;t6&gt;] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;
 
 
 </pre>
@@ -11830,7 +11830,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201221060925238" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock5" modified="20201221060925238" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201222021852648" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock5 [[My Adventure]] [[Plugin Library]]" modified="20201222021852649" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12807,11 +12807,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1536&quot;
+            &quot;text&quot;: &quot;360&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;864&quot;
+            &quot;text&quot;: &quot;740&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12821,7 +12821,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic1</pre>
+<pre>$:/plugins/ajh/luckypic/pic0</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
