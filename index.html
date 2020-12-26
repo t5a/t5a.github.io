@@ -10926,64 +10926,8 @@ color:$(foregroundColor)$;
 \define b()&lt;svg viewBox='0 0 40 40'class='tc-clk3'&gt;&lt;path class='tc-clk3-hh'd='m20,23,0-15z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-mm'd='m20,24,0-20z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;path class='tc-clk3-ss'd='m20,24,0-22z'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/path&gt;&lt;circle class='tc-clk3-pin'cx='20'cy='20'r='0.7'/&gt;&lt;/svg&gt;
 &lt;article class='clock3'&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;&lt;a&gt;&gt;&lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/article&gt;</pre>
 </div>
-<div created="20201127174433884" creator="Andrew Harrison" modified="20201219231046977" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/clocks/clock4">
-<pre>\define a()
-&lt;svg class=&quot;tc-clk4&quot; viewBox=&quot;0 0 200 200&quot;&gt;
-&lt;circle class=&quot;tc-clk4-cir1&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;94&quot;/&gt;  
-&lt;circle class=&quot;tc-clk4-cir2&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;80&quot;/&gt;
-&lt;text class=&quot;tc-clk4-fnt1&quot;&gt;
-		&lt;tspan x=&quot;96&quot; y=&quot;36&quot;&gt;0&lt;/tspan&gt;
-		&lt;tspan x=&quot;113&quot; y=&quot;38&quot;&gt;1&lt;/tspan&gt;
-		&lt;tspan x=&quot;130&quot; y=&quot;45&quot;&gt;2&lt;/tspan&gt;
-		&lt;tspan x=&quot;145&quot; y=&quot;55&quot;&gt;3&lt;/tspan&gt;
-		&lt;tspan x=&quot;156&quot; y=&quot;70&quot;&gt;4&lt;/tspan&gt;
-		&lt;tspan x=&quot;164&quot; y=&quot;88&quot;&gt;5&lt;/tspan&gt;
-		&lt;tspan x=&quot;166&quot; y=&quot;105&quot;&gt;6&lt;/tspan&gt;
-		&lt;tspan x=&quot;165&quot; y=&quot;123&quot;&gt;7&lt;/tspan&gt;
-		&lt;tspan x=&quot;157&quot; y=&quot;139&quot;&gt;8&lt;/tspan&gt;
-		&lt;tspan x=&quot;147&quot; y=&quot;153&quot;&gt;9&lt;/tspan&gt;
-		&lt;tspan x=&quot;127&quot; y=&quot;164&quot;&gt;10&lt;/tspan&gt;
-		&lt;tspan x=&quot;111&quot; y=&quot;171&quot;&gt;11&lt;/tspan&gt;	
-		&lt;tspan x=&quot;93&quot; y=&quot;174&quot;&gt;12&lt;/tspan&gt;
-		&lt;tspan x=&quot;77&quot; y=&quot;172&quot;&gt;13&lt;/tspan&gt;
-		&lt;tspan x=&quot;60&quot; y=&quot;165&quot;&gt;14&lt;/tspan&gt;
-		&lt;tspan x=&quot;44&quot; y=&quot;154&quot;&gt;15&lt;/tspan&gt;
-		&lt;tspan x=&quot;33&quot; y=&quot;140&quot;&gt;16&lt;/tspan&gt;
-		&lt;tspan x=&quot;25&quot; y=&quot;123&quot;&gt;17&lt;/tspan&gt;
-		&lt;tspan x=&quot;23&quot; y=&quot;106&quot;&gt;18&lt;/tspan&gt;
-		&lt;tspan x=&quot;25&quot; y=&quot;87&quot;&gt;19&lt;/tspan&gt;
-		&lt;tspan x=&quot;34&quot; y=&quot;71&quot;&gt;20&lt;/tspan&gt;
-		&lt;tspan x=&quot;44&quot; y=&quot;57&quot;&gt;21&lt;/tspan&gt;
-		&lt;tspan x=&quot;59&quot; y=&quot;46&quot;&gt;22&lt;/tspan&gt;
-		&lt;tspan x=&quot;76&quot; y=&quot;38&quot;&gt;23&lt;/tspan&gt;
-&lt;/text&gt;
-&lt;text class=&quot;tc-clk4-fnt2&quot;&gt;
-		&lt;tspan x=&quot;97&quot; y=&quot;17&quot;&gt;0&lt;/tspan&gt;
-		&lt;tspan x=&quot;141&quot; y=&quot;29&quot;&gt;5&lt;/tspan&gt;
-		&lt;tspan x=&quot;171&quot; y=&quot;62&quot;&gt;10&lt;/tspan&gt;
-		&lt;tspan x=&quot;181&quot; y=&quot;102&quot;&gt;15&lt;/tspan&gt;
-		&lt;tspan x=&quot;171&quot; y=&quot;146&quot;&gt;20&lt;/tspan&gt;
-		&lt;tspan x=&quot;138&quot; y=&quot;179&quot;&gt;25&lt;/tspan&gt;
-		&lt;tspan x=&quot;95&quot; y=&quot;190&quot;&gt;30&lt;/tspan&gt;
-		&lt;tspan x=&quot;52&quot; y=&quot;179&quot;&gt;35&lt;/tspan&gt;
-		&lt;tspan x=&quot;20&quot; y=&quot;147&quot;&gt;40&lt;/tspan&gt;
-		&lt;tspan x=&quot;8&quot; y=&quot;103&quot;&gt;45&lt;/tspan&gt;
-		&lt;tspan x=&quot;19&quot; y=&quot;61&quot;&gt;50&lt;/tspan&gt;
-		&lt;tspan x=&quot;52&quot; y=&quot;28&quot;&gt;55&lt;/tspan&gt;
-&lt;/text&gt;
-	&lt;g transform=&quot;translate(100 100)&quot;&gt;
-		&lt;circle class=&quot;tc-clk4-cir3 r=&quot;57&quot;/&gt;
-		&lt;circle class=&quot;tc-clk4-cir4&quot; r=&quot;78&quot;/&gt;
-		&lt;circle class=&quot;tc-clk4-cir5&quot; r=&quot;78&quot;/&gt;	
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-52&quot; class=&quot;tc-clk4-hh&quot;&gt;&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;86400s&quot; values=&quot;$(h)$,0,0;$(h2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-74&quot; class=&quot;tc-clk4-mm&quot;&gt;
-&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;3600s&quot; values=&quot;$(m)$,0,0;$(m2)$,0,0&quot; repeatCount=&quot;indefinite&quot;/&gt;&lt;/line&gt;
-		&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;-76&quot; class=&quot;tc-clk4-ss&quot;&gt;
-		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; dur=&quot;60s&quot; values=&quot;$(s)$,0,0;$(s2)$,0,0&quot; repeatCount=&quot;indefinite&quot;
-/&gt;&lt;/line&gt;&lt;/g&gt;
-		&lt;circle class=&quot;tc-clk4-cir6&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;2&quot;/&gt;
-&lt;/svg&gt;
-\end
+<div created="20201127174433884" creator="Andrew Harrison" modified="20201226041707637" modifier="Andrew Harrison" resource="https://code.sololearn.com/W20UQqMVpXA5/#html" tags="" title="$:/plugins/ajh/clocks/clock4">
+<pre>\define a()&lt;svg class='tc-clk4'viewBox='0 0 200 200'&gt;&lt;circle class='tc-clk4-cir1'cx='100'cy='100'r='94'/&gt;&lt;circle class='tc-clk4-cir2'cx='100'cy='100'r='80'/&gt;&lt;text class='tc-clk4-fnt1'&gt;&lt;tspan x='96'y='36'&gt;0&lt;/tspan&gt;&lt;tspan x='113'y='38'&gt;1&lt;/tspan&gt;&lt;tspan x='130'y='45'&gt;2&lt;/tspan&gt;&lt;tspan x='145'y='55'&gt;3&lt;/tspan&gt;&lt;tspan x='156'y='70'&gt;4&lt;/tspan&gt;&lt;tspan x='164'y='88'&gt;5&lt;/tspan&gt;&lt;tspan x='166'y='105'&gt;6&lt;/tspan&gt;&lt;tspan x='165'y='123'&gt;7&lt;/tspan&gt;&lt;tspan x='157'y='139'&gt;8&lt;/tspan&gt;&lt;tspan x='147'y='153'&gt;9&lt;/tspan&gt;&lt;tspan x='127'y='164'&gt;10&lt;/tspan&gt;&lt;tspan x='111'y='171'&gt;11&lt;/tspan&gt;&lt;tspan x='93'y='174'&gt;12&lt;/tspan&gt;&lt;tspan x='77'y='172'&gt;13&lt;/tspan&gt;&lt;tspan x='60'y='165'&gt;14&lt;/tspan&gt;&lt;tspan x='44'y='154'&gt;15&lt;/tspan&gt;&lt;tspan x='33'y='140'&gt;16&lt;/tspan&gt;&lt;tspan x='25'y='123'&gt;17&lt;/tspan&gt;&lt;tspan x='23'y='106'&gt;18&lt;/tspan&gt;&lt;tspan x='25'y='87'&gt;19&lt;/tspan&gt;&lt;tspan x='34'y='71'&gt;20&lt;/tspan&gt;&lt;tspan x='44'y='57'&gt;21&lt;/tspan&gt;&lt;tspan x='59'y='46'&gt;22&lt;/tspan&gt;&lt;tspan x='76'y='38'&gt;23&lt;/tspan&gt;&lt;/text&gt;&lt;text class='tc-clk4-fnt2'&gt;&lt;tspan x='97'y='17'&gt;0&lt;/tspan&gt;&lt;tspan x='141'y='29'&gt;5&lt;/tspan&gt;&lt;tspan x='171'y='62'&gt;10&lt;/tspan&gt;&lt;tspan x='181'y='102'&gt;15&lt;/tspan&gt;&lt;tspan x='171'y='146'&gt;20&lt;/tspan&gt;&lt;tspan x='138'y='179'&gt;25&lt;/tspan&gt;&lt;tspan x='95'y='190'&gt;30&lt;/tspan&gt;&lt;tspan x='52'y='179'&gt;35&lt;/tspan&gt;&lt;tspan x='20'y='147'&gt;40&lt;/tspan&gt;&lt;tspan x='8'y='103'&gt;45&lt;/tspan&gt;&lt;tspan x='19'y='61'&gt;50&lt;/tspan&gt;&lt;tspan x='52'y='28'&gt;55&lt;/tspan&gt;&lt;/text&gt;&lt;g transform='translate(100 100)'&gt;&lt;circle class='tc-clk4-cir3'r='57'/&gt;&lt;circle class='tc-clk4-cir4'r='78'/&gt;&lt;circle class='tc-clk4-cir5'r='78'/&gt;&lt;line x1='0'y1='0'x2='0'y2='-52'class='tc-clk4-hh'&gt;&lt;animateTransform attributeName='transform'type='rotate'dur='86400s'values='$(h)$,0,0;$(h2)$,0,0'repeatCount='indefinite'/&gt;&lt;/line&gt;&lt;line x1='0'y1='0'x2='0'y2='-74'class='tc-clk4-mm'&gt;&lt;animateTransform attributeName='transform'type='rotate'dur='3600s'values='$(m)$,0,0;$(m2)$,0,0'repeatCount='indefinite'/&gt;&lt;/line&gt;&lt;line x1='0'y1='0'x2='0'y2='-76'class='tc-clk4-ss'&gt;&lt;animateTransform attributeName='transform'type='rotate'dur='60s'values='$(s)$,0,0;$(s2)$,0,0'repeatCount='indefinite'/&gt;&lt;/line&gt;&lt;/g&gt;&lt;circle class='tc-clk4-cir6'cx='100'cy='100'r='2'/&gt;&lt;/svg&gt;
 &lt;$vars s3=&lt;&lt;now '0ss'&gt;&gt; m5=&lt;&lt;now '0mm'&gt;&gt; h5=&lt;&lt;now 'hh'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[15]] }}} h4={{{ [&lt;m5&gt;divide[4]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
 <div created="20201214055507816" creator="Andrew Harrison" modified="20201226035848447" modifier="Andrew Harrison" tags="$:/tags/PageControls" title="$:/plugins/ajh/clocks/clock5">
@@ -11716,8 +11660,8 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20200604031011552" creator="Andrew Harrison" modified="20201020070310869" modifier="Andrew Harrison" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20200520023941930" creator="Andrew Harrison" modified="20201226035853653" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
-<pre>Table of Contents</pre>
+<div created="20200520023941930" creator="Andrew Harrison" modified="20201226040033153" modifier="Andrew Harrison" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/ajh/favorites/sidebar</pre>
 </div>
 <div created="20200805080648868" creator="Andrew Harrison" modified="20200805080653999" modifier="Andrew Harrison" title="$:/state/toc/Contents-Under Construction--565514155">
 <pre>close</pre>
@@ -11731,7 +11675,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20201226035009647" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock5 [[My Adventure]] [[Plugin Library]]" modified="20201226035556284" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20201226040035007" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20201226040035007" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12722,7 +12666,7 @@ color:$(foregroundColor)$;
 }</pre>
 </div>
 <div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic0</pre>
+<pre>$:/plugins/ajh/luckypic/pic1</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
