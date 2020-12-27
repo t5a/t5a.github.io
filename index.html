@@ -482,6 +482,8 @@ Error message and password prompt
 
 <li>$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet</li>
 
+<li>$:/state/folded/Clock6</li>
+
 <li>$:/state/folded/My Adventure</li>
 
 <li>$:/state/folded/Plugin Library</li>
@@ -11526,6 +11528,9 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20201121212149133" creator="Andrew Harrison" modified="20201128090213713" modifier="Andrew Harrison" title="$:/state/folded/$:/plugins/ajh/tiddlytime/stylesheet">
 <pre>show</pre>
 </div>
+<div created="20201227005205367" creator="Andrew Harrison" modified="20201227005205367" modifier="Andrew Harrison" title="$:/state/folded/Clock6">
+<pre>hide</pre>
+</div>
 <div created="20201219092656727" creator="Andrew Harrison" modified="20201225044529575" modifier="Andrew Harrison" title="$:/state/folded/My Adventure">
 <pre>show</pre>
 </div>
@@ -11739,7 +11744,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div list="$:/plugins/ajh/clocks/clock6 [[My Adventure]] [[Plugin Library]]" title="$:/StoryList">
+<div created="20201227005051206" creator="Andrew Harrison" list="Clock6 $:/plugins/ajh/clocks/clock6 [[My Adventure]] [[Plugin Library]]" modified="20201227005113573" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12729,8 +12734,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic1</pre>
+<div attachment="scroll" size="auto" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic4</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13502,17 +13507,15 @@ I need to check it out</pre>
 
 @@display:block;text-align:center;[img[...]]@@</pre>
 </div>
-<div created="20201226062215820" creator="Andrew Harrison" modified="20201226062352358" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="Clock6">
-<pre>HTML CSS JS Result Skip Results Iframe
-body { font-size:62.5%; margin:1em; background:#232425 }
-ul { list-style:none; margin:0; padding:0 }
+<div created="20201226062215820" creator="Andrew Harrison" modified="20201227010416646" modifier="Andrew Harrison" tags="Stylesheet $:/tags/Stylesheet" title="Clock6">
+<pre>ul { list-style:none; margin:0; padding:0 }
 #watch { font-size:1em; position:relative }
 #watch .frame-face {
   position:relative;
-  width:30em;
-  height:30em;
-  margin:2em auto;
-  border-radius:15em;
+  width:15em;
+  height:15em;
+  margin:1em auto;
+  border-radius:7.5em;
   background:-webkit-linear-gradient(top, #f9f9f9,#666);
   background:-moz-linear-gradient(top, #f9f9f9,#666);
   background:linear-gradient(to bottom, #f9f9f9,#666);
@@ -13520,11 +13523,11 @@ ul { list-style:none; margin:0; padding:0 }
 }
 #watch .frame-face:before {
   content:'';
-  width:29.4em;
-  height:29.4em;
-  border-radius:14.7em;
+  width:14.8em;
+  height:14.8em;
+  border-radius:7.35em;
   position:absolute;
-  top:.3em; left:.3em;
+  top:.15em; left:.15em;
   background:
     -webkit-linear-gradient(135deg, rgba(246,248,249,0) 0%,rgba(229,235,238,1) 50%,rgba(205,212,217,1) 51%,rgba(245,247,249,0) 100%),
     -webkit-radial-gradient(center, ellipse cover, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 65%,rgba(205,212,217,1) 66%,rgba(245,247,249,1) 100%);
@@ -13537,94 +13540,94 @@ ul { list-style:none; margin:0; padding:0 }
 }
 #watch .frame-face:after {
   content:'';
-  width:28em;
-  height:28em;
-  border-radius:14.2em;
+  width:14em;
+  height:14em;
+  border-radius:7.1em;
   position:absolute;
-  top:.9em; left:.9em;
-  box-shadow:inset rgba(0,0,0,.2) .2em .2em 1em;
-  border:.1em solid rgba(0,0,0,.2);
+  top:.45em; left:.45em;
+  box-shadow:inset rgba(0,0,0,.2) .1em .1em .5em;
+  border:.05em solid rgba(0,0,0,.2);
   background:-webkit-linear-gradient(top, #fff, #ccc);
   background:-moz-linear-gradient(top, #fff, #ccc);
   background:linear-gradient(to bottom, #fff, #ccc);
 }
 #watch .minute-marks li {
   display:block;
-  width:.2em;
-  height:.6em;
+  width:.1em;
+  height:.3em;
   background:#929394;
   position:absolute;
   top:50%; left:50%;
-  margin:-.4em 0 0 -.1em;
+  margin:-.2em 0 0 -.05em;
 }
-#watch .minute-marks li:first-child {transform:rotate(6deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(2) {transform:rotate(12deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(3) {transform:rotate(18deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(4) {transform:rotate(24deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(5) {transform:rotate(36deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(6) {transform:rotate(42deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(7) {transform:rotate(48deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(8) {transform:rotate(54deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(9) {transform:rotate(66deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(10) {transform:rotate(72deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(11) {transform:rotate(78deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(12) {transform:rotate(84deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(13) {transform:rotate(96deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(14) {transform:rotate(102deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(15) {transform:rotate(108deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(16) {transform:rotate(114deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(17) {transform:rotate(126deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(18) {transform:rotate(132deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(19) {transform:rotate(138deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(20) {transform:rotate(144deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(21) {transform:rotate(156deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(22) {transform:rotate(162deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(23) {transform:rotate(168deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(24) {transform:rotate(174deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(25) {transform:rotate(186deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(26) {transform:rotate(192deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(27) {transform:rotate(198deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(28) {transform:rotate(204deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(29) {transform:rotate(216deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(30) {transform:rotate(222deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(31) {transform:rotate(228deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(32) {transform:rotate(234deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(33) {transform:rotate(246deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(34) {transform:rotate(252deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(35) {transform:rotate(258deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(36) {transform:rotate(264deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(37) {transform:rotate(276deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(38) {transform:rotate(282deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(39) {transform:rotate(288deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(40) {transform:rotate(294deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(41) {transform:rotate(306deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(42) {transform:rotate(312deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(43) {transform:rotate(318deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(44) {transform:rotate(324deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(45) {transform:rotate(336deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(46) {transform:rotate(342deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(47) {transform:rotate(348deg) translateY(-12.7em)}
-#watch .minute-marks li:nth-child(48) {transform:rotate(354deg) translateY(-12.7em)}
+#watch .minute-marks li:first-child {transform:rotate(6deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(2) {transform:rotate(12deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(3) {transform:rotate(18deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(4) {transform:rotate(24deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(5) {transform:rotate(36deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(6) {transform:rotate(42deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(7) {transform:rotate(48deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(8) {transform:rotate(54deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(9) {transform:rotate(66deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(10) {transform:rotate(72deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(11) {transform:rotate(78deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(12) {transform:rotate(84deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(13) {transform:rotate(96deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(14) {transform:rotate(102deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(15) {transform:rotate(108deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(16) {transform:rotate(114deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(17) {transform:rotate(126deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(18) {transform:rotate(132deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(19) {transform:rotate(138deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(20) {transform:rotate(144deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(21) {transform:rotate(156deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(22) {transform:rotate(162deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(23) {transform:rotate(168deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(24) {transform:rotate(174deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(25) {transform:rotate(186deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(26) {transform:rotate(192deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(27) {transform:rotate(198deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(28) {transform:rotate(204deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(29) {transform:rotate(216deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(30) {transform:rotate(222deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(31) {transform:rotate(228deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(32) {transform:rotate(234deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(33) {transform:rotate(246deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(34) {transform:rotate(252deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(35) {transform:rotate(258deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(36) {transform:rotate(264deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(37) {transform:rotate(276deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(38) {transform:rotate(282deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(39) {transform:rotate(288deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(40) {transform:rotate(294deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(41) {transform:rotate(306deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(42) {transform:rotate(312deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(43) {transform:rotate(318deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(44) {transform:rotate(324deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(45) {transform:rotate(336deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(46) {transform:rotate(342deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(47) {transform:rotate(348deg) translateY(-6.35em)}
+#watch .minute-marks li:nth-child(48) {transform:rotate(354deg) translateY(-6.35em)}
 #watch .digits {
-  width:30em;
-  height:30em;
-  border-radius:15em;
+  width:15em;
+  height:15em;
+  border-radius:7.5em;
   position:absolute;
   top:0; left:50%;
-  margin-left:-15em;
+  margin-left:-7.5em;
 }
 #watch .digits li {
-  font-size:1.6em;
+  font-size:.8em;
   display:block;
-  width:1.6em;
-  height:1.6em;
+  width:.8em;
+  height:.8em;
   position:absolute;
   top:50%; left:50%;
-  line-height:1.6em;
+  line-height:.8em;
   text-align:center;
-  margin:-.8em 0 0 -.8em;
+  margin:-.4em 0 0 -.4em;
   font-weight:bold;
-}
+} ---
 #watch .digits li:nth-child(1) { transform:translate(3.9em, -6.9em) }
 #watch .digits li:nth-child(2) { transform:translate(6.9em, -4em) }
 #watch .digits li:nth-child(3) { transform:translate(8em, 0) }
