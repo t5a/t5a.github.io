@@ -760,6 +760,12 @@ Error message and password prompt
 
 <li>$:/Wish List Icon</li>
 
+<li>12.svg</li>
+
+<li>14.svg</li>
+
+<li>15.svg</li>
+
 <li>A transcluding template that transcludes fields from a transcluding tiddler which lists and tanscludes indexed data from another tiddler</li>
 
 <li>A2</li>
@@ -895,6 +901,8 @@ Error message and password prompt
 <li>Reveal macro example</li>
 
 <li>Rotated Text</li>
+
+<li>Rubiks top layer</li>
 
 <li>Show Fields</li>
 
@@ -11249,7 +11257,7 @@ This plugin comprises:
 <div created="20200523232029662" creator="Andrew Harrison" description="Favorites of views frequently accessed" list="readme license" modified="20200614230605949" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5a.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Ffavorites.json" title="$:/plugins/ajh/favorites" type="application/json" version="3.0.6">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/language/Buttons/Choose/Caption&quot;:{&quot;text&quot;:&quot;choose&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Caption&quot;},&quot;$:/language/Buttons/Choose/Hint&quot;:{&quot;text&quot;:&quot;Add to favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Choose/Hint&quot;},&quot;$:/language/Buttons/Favorites/Caption&quot;:{&quot;text&quot;:&quot;favorite&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Caption&quot;},&quot;$:/language/Buttons/Favorites/Hint&quot;:{&quot;text&quot;:&quot;Remove from favorites list&quot;,&quot;title&quot;:&quot;$:/language/Buttons/Favorites/Hint&quot;},&quot;$:/language/SideBar/Favorites/Caption&quot;:{&quot;text&quot;:&quot;Favorites&quot;,&quot;title&quot;:&quot;$:/language/SideBar/Favorites/Caption&quot;},&quot;$:/pluginlibrary/ajh/released&quot;:{&quot;text&quot;:&quot;The plugin library for the latest and greatest plugins from [ext[t5a|https://github.com/t5a/t5a.github.io.git]]; most recent released versions of plugins by [ext[Andrew|http://t5a.github.io/#Andrew%20Harrison]].&quot;,&quot;url&quot;:&quot;https://t5a.github.io/plugins&quot;,&quot;title&quot;:&quot;$:/pluginlibrary/ajh/released&quot;,&quot;tags&quot;:&quot;$:/tags/PluginLibrary&quot;,&quot;caption&quot;:&quot;Tiddlywiki Library for Plugins by Andrew Harrison&quot;},&quot;$:/plugins/ajh/favorites/icon&quot;:{&quot;text&quot;:&quot;&lt;svg stroke='#000' stroke-width='2' stroke-linejoin='round' fill='#ff0' height='24pt' width='24pt' viewBox='-10 -10 50 50'&gt;&lt;path fill='#f08' stroke='#30f' stroke-width='2' d='m-5,6l20,-12l20,12v21l-20,12l-20,-12v-21z'/&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;&quot;,&quot;type&quot;:&quot;application/x-tiddler&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/icon&quot;,&quot;tags&quot;:&quot;$:/tags/Image&quot;},&quot;$:/plugins/ajh/favorites/license&quot;:{&quot;text&quot;:&quot;This is free and unencumbered software released into the public domain.\n\nAnyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.\n\nIn jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nFor more information, please refer to &lt;https://unlicense.org&gt;&quot;,&quot;url&quot;:&quot;https://github.com/t5a/t5a.github.io/blob/master/LICENSE&quot;,&quot;type&quot;:&quot;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/license&quot;,&quot;tags&quot;:&quot;$:/tags/License&quot;,&quot;license-type&quot;:&quot;Unlicense&quot;},&quot;$:/plugins/ajh/favorites/readme&quot;:{&quot;text&quot;:&quot;\\define a()&lt;span class='tc-image-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;\n&lt;style&gt;.tc-image-favorites svg {stroke:#000;stroke-width:2;fill:#ff0;}&lt;/style&gt;This plugin adds the {{$:/core/images/star-filled}} ''choose'' button to the View Toolbar and also the &lt;&lt;a&gt;&gt; ''Favorites'' tab to the Sidebar. The button becomes &lt;&lt;a&gt;&gt; ''favorite'' when selected and then the tiddler appears in the list on the &lt;&lt;a&gt;&gt; ''Favorites'' tab.  The list can be sorted using drag and drop. To drag an item, select it, then hold down the mouse or track-pad button while you drag it to a new location in the list. Release the button to drop the item into place. Unneeded favorites can be removed from the list by using the &lt;&lt;a&gt;&gt; ''favorite'' button in the tiddler.\n\nThis plugin comprises:\n\n* Icon\n* Template\n* Stylesheet\n* Sidebar tab\n* Caption and hint&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/readme&quot;},&quot;$:/plugins/ajh/favorites/sidebar&quot;:{&quot;text&quot;:&quot;\\define d()&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler&lt;actionTiddler&gt;]'/&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]]'&gt;&lt;div style='position: relative;'&gt;&lt;$droppable actions=&lt;&lt;d&gt;&gt;&gt;&lt;div class='tc-droppable-placeholder'&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;$link to={{!!title}}&gt;&lt;$view field='caption'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;/div&gt;&lt;/$droppable&gt;&lt;/div&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/sidebar&quot;,&quot;tags&quot;:&quot;$:/tags/SideBar&quot;,&quot;list-before&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&lt;span class='tc-tab-buttons' title={{$:/language/SideBar/Favorites/Caption}}&gt;{{$:/core/images/star-filled}}&lt;/span&gt;&lt;span class='tc-favorites-hidden'&gt;{{$:/language/SideBar/Favorites/Caption}}&lt;/span&gt;&quot;},&quot;$:/plugins/ajh/favorites/stylesheet&quot;:{&quot;text&quot;:&quot;.tc-tab-buttons + .tc-favorites-hidden {display:none;}.tc-tab-buttons button.tc-tab-selected {fill:{{!!tab-icon-selected-color}};stroke: {{!!tab-icon-outline-color}};}.tc-tab-buttons button:not(.tc-tab-selected) {fill:{{!!tab-icon-unselected-color}};}html .tc-tiddler-controls .tc-image-favorites svg {fill:{{!!button-color}} !important;overflow:visible;stroke:{{!!button-outline-color}};stroke-linejoin:round;stroke-width:2;}.tc-image-star-filled {height:1em;width:1em;}&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/stylesheet&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;tab-icon-unselected-color&quot;:&quot;#999&quot;,&quot;tab-icon-selected-color&quot;:&quot;#ff0&quot;,&quot;tab-icon-outline-color&quot;:&quot;#000&quot;,&quot;caption&quot;:&quot;Favorites&quot;,&quot;button-outline-color&quot;:&quot;#000&quot;,&quot;button-color&quot;:&quot;#ff0&quot;},&quot;$:/plugins/ajh/favorites/template&quot;:{&quot;text&quot;:&quot;\\define add()[[$(currentTiddler)$]]\n\\define remove()-[[$(currentTiddler)$]]\n\\define a()&lt;svg class='tc-image-favorites tc-image-button' height='10pt' width='10pt' viewBox='-0.3 0 30 30'&gt;{{$:/core/images/star-filled}}&lt;/svg&gt;\n&lt;$list filter='[list[$:/plugins/ajh/favorites/list]is[current]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Favorites/Hint}} aria-label={{$:/language/Buttons/Favorites/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;remove&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;&lt;&lt;a&gt;&gt;&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Favorites/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&lt;$list filter='[all[current]!list[$:/plugins/ajh/favorites/list]]'&gt;&lt;$button tooltip={{$:/language/Buttons/Choose/Hint}} aria-label={{$:/language/Buttons/Choose/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;&lt;$action-listops $tiddler='$:/plugins/ajh/favorites/list' $field='list' $subfilter=&lt;&lt;add&gt;&gt;/&gt;&lt;$list filter='[&lt;tv-config-toolbar-icons&gt;prefix[yes]]'&gt;{{$:/core/images/star-filled}}&lt;/$list&gt;&lt;$list filter='[&lt;tv-config-toolbar-text&gt;prefix[yes]]'&gt;&lt;span class='tc-btn-text'&gt;&lt;$text text={{$:/language/Buttons/Choose/Caption}}/&gt;&lt;/span&gt;&lt;/$list&gt;&lt;/$button&gt;&lt;/$list&gt;&quot;,&quot;title&quot;:&quot;$:/plugins/ajh/favorites/template&quot;,&quot;tags&quot;:&quot;$:/tags/ViewToolbar&quot;,&quot;list-after&quot;:&quot;$:/core/ui/Buttons/more-tiddler-actions&quot;,&quot;description&quot;:&quot;{{$:/language/Buttons/Favorites/Hint}}&quot;,&quot;caption&quot;:&quot;{{$:/core/images/star-filled}} {{$:/language/Buttons/Favorites/Caption}}&quot;}}}</pre>
 </div>
-<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/clocks/icon $:/plugins/ajh/clocks/stylesheet $:/plugins/ajh/clocks/clock3 $:/plugins/ajh/clocks/clock1 $:/plugins/ajh/clocks/clock2 $:/plugins/ajh/clocks/clock4 $:/plugins/ajh/clocks/clock5 Clock6 $:/plugins/ajh/clocks/clock6" modified="20201226062505855" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
+<div created="20170521204328039" creator="Andrew Harrison" list="[[Create color SVG icon from gif]] [[Batch Tags]] $:/core/ui/EditTemplate/tags $:/plugins/ajh/batchtools/modal $:/plugins/ajh/batchtools/stylesheet $:/language/Buttons/BatchDelete/Hint $:/plugins/ajh/batchtools/fields $:/plugins/ajh/batchtools/tags $:/plugins/ajh/batchtools/titles $:/plugins/ajh/batchtools/delete [[Color boxes]] $:/styles/tablecells [[JSON Editor Online]] [[SVG Editors]] $:/plugins/ajh/clocks/icon $:/plugins/ajh/clocks/stylesheet $:/plugins/ajh/clocks/clock3 $:/plugins/ajh/clocks/clock1 $:/plugins/ajh/clocks/clock2 $:/plugins/ajh/clocks/clock4 $:/plugins/ajh/clocks/clock5 Clock6 $:/plugins/ajh/clocks/clock6 [[Rubiks top layer]]" modified="20210106072511134" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/favorites/list">
 <pre></pre>
 </div>
 <div created="20150925023022993" creator="Andrew Harrison" modified="20170521213540317" modifier="Andrew Harrison" tags="New" title="$:/plugins/ajh/flipswitch/button">
@@ -11749,7 +11757,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20210103203829461" creator="Andrew Harrison" list="Clock6 $:/plugins/ajh/clocks/clock6 [[My Adventure]] [[Plugin Library]]" modified="20210103203930375" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20210106072457629" creator="Andrew Harrison" list="[[My Adventure]] [[Plugin Library]]" modified="20210106072457629" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12726,11 +12734,11 @@ color:$(foregroundColor)$;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1536&quot;
+            &quot;text&quot;: &quot;360&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;864&quot;
+            &quot;text&quot;: &quot;740&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12739,8 +12747,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="fixed" size="cover" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic1</pre>
+<div attachment="scroll" size="auto" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic4</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
@@ -13381,6 +13389,582 @@ CC-BY-NC-SA - {{$:/themes/wikilabs/slant-01/license}}" requires-reload="no" serv
 </div>
 <div created="20170723061643367" creator="Andrew Harrison" modified="20170723062333203" modifier="Andrew Harrison" tags="$:/tags/Image New" title="$:/Wish List Icon">
 <pre>&lt;span class='tc-favorites'&gt;{{$:/core/images/star-filled}}&lt;/span&gt;</pre>
+</div>
+<div created="20210106071054069" creator="Andrew Harrison" modified="20210106071123856" modifier="Andrew Harrison" tags="" title="12.svg">
+<pre>&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+	width='150' height='150'
+	viewBox='-0.9 -0.9 1.8 1.8'&gt;
+	&lt;g style='stroke-width:0.1;stroke-linejoin:round;opacity:1'&gt;
+		&lt;polygon fill='#000000' stroke='#000000' points='-4.9165444344952E-17,-0.71734170954349 0.70405037145575,-0.41272706360467 6.3108540577985E-17,-0.021725090572532 -0.70405037145575,-0.41272706360467'/&gt;
+		&lt;polygon fill='#000000' stroke='#000000' points='6.3108540577985E-17,-0.021725090572532 0.70405037145575,-0.41272706360467 0.62948028357061,0.36901272915735 5.5589468959362E-17,0.81107056444244'/&gt;
+		&lt;polygon fill='#000000' stroke='#000000' points='-0.70405037145575,-0.41272706360467 6.3108540577985E-17,-0.021725090572532 5.5589468959362E-17,0.81107056444244 -0.62948028357061,0.36901272915735'/&gt;
+	&lt;/g&gt;
+	&lt;g style='opacity:1;stroke-opacity:0.5;stroke-width:0;stroke-linejoin:round'&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='-4.9439549272153E-17,-0.74757064564692 0.19598754651203,-0.66277461469571 -1.6979580126642E-17,-0.57123720961754 -0.19598754651203,-0.66277461469571'/&gt;
+		&lt;polygon fill='#FFFF00' stroke='#000000'  points='0.23200530924361,-0.64654708450724 0.44357407294753,-0.55500967942906 0.24823152717746,-0.45589370157761 0.03601776273158,-0.55500967942906'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='0.48258385553552,-0.53743199405155 0.71166883865722,-0.4383160162001 0.51778341539206,-0.3306396536664 0.28724130976545,-0.43831601620009'/&gt;
+		&lt;polygon fill='#FFFF00' stroke='#000000'  points='-0.23200530924361,-0.64654708450724 -0.03601776273158,-0.55500967942906 -0.24823152717746,-0.45589370157761 -0.44357407294753,-0.55500967942906'/&gt;
+		&lt;polygon fill='#FFFF00' stroke='#000000'  points='-1.1906711768916E-17,-0.53743199405155 0.21221376444588,-0.43831601620009 1.3125827139793E-17,-0.3306396536664 -0.21221376444588,-0.43831601620009'/&gt;
+		&lt;polygon fill='#FFFF00' stroke='#000000'  points='0.25135344771691,-0.4192120352454 0.48189555334352,-0.31153567271171 0.27050899589682,-0.1941398664099 0.03913968327103,-0.31153567271171'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='-0.48258385553552,-0.53743199405155 -0.28724130976545,-0.43831601620009 -0.51778341539206,-0.3306396536664 -0.71166883865722,-0.43831601620009'/&gt;
+		&lt;polygon fill='#FFFF00' stroke='#000000'  points='-0.25135344771691,-0.4192120352454 -0.03913968327103,-0.31153567271171 -0.27050899589682,-0.1941398664099 -0.48189555334352,-0.31153567271171'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='1.9219742927126E-17,-0.29069716027551 0.23136931262579,-0.1733013539737 6.3251582941518E-17,-0.044807908897155 -0.23136931262579,-0.1733013539737'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='0.019572311898468,-0.01096266104553 0.25094162452426,-0.13945610612208 0.24139184674777,0.12672756322786 0.019572311898468,0.26171620101574'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='0.28930534489087,-0.16171652284677 0.50069190233757,-0.27911232914857 0.48317508531013,-0.019324131300046 0.27975556711438,0.10446714650317'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='0.53586287162127,-0.29952357725519 0.72974829488643,-0.40719993978888 0.70556381569579,-0.15366705164652 0.51834605459384,-0.039735379406663'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.018796486168384,0.30740091161998 0.24061602101769,0.1724122738321 0.23182332941007,0.41749346528561 0.018796486168384,0.55752511994163'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.27748498154717,0.14913168479738 0.48090449974292,0.025340406994164 0.46472097442439,0.26535483831193 0.26869228993956,0.39421287625089'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.51482272047627,0.0039202514920256 0.70204048157822,-0.11001142074783 0.6796261786066,0.12496419825545 0.49863919515774,0.24393468280979'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.018079821190449,0.59957070958542 0.23110666443214,0.4595390549294 0.22298446134887,0.68593152923737 0.018079821190449,0.82982754001392'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.26659321028119,0.43546258559693 0.46262189476603,0.30660454765797 0.44762501691219,0.52902006212629 0.25847100719792,0.6618550599049'/&gt;
+		&lt;polygon fill='#0077FF' stroke='#000000'  points='0.49537315323635,0.28438159074811 0.67636013668521,0.16541110619376 0.65552852022793,0.38379496484358 0.4803762753825,0.50679710521643'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='-0.73033661801848,-0.40664800069716 -0.53645119475332,-0.29897163816347 -0.51893437772588,-0.039183440314942 -0.70615213882784,-0.1531151125548'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='-0.50139487638912,-0.27854802283962 -0.29000831894242,-0.16115221653782 -0.28045854116593,0.10503145281212 -0.48387805936169,-0.018759824991097'/&gt;
+		&lt;polygon fill='#888888' stroke='#000000'  points='-0.25178425197513,-0.13888300088285 -0.020414939349334,-0.010389555806295 -0.020414939349334,0.26228930625497 -0.24223447419864,0.12730066846709'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.70259025607703,-0.10956681966126 -0.51537249497507,0.0043648525785978 -0.49918896965654,0.24437928389636 -0.68017595310541,0.12540879934202'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.48155663212918,0.025787474064964 -0.27813711393343,0.14957875186818 -0.26934442232581,0.39465994332169 -0.46537310681065,0.26580190538273'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.24139184674777,0.17285724590871 -0.019572311898468,0.30784588369658 -0.019572311898468,0.55797009201823 -0.23259915514016,0.41793843736221'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.67687496656198,0.16576684053069 -0.49588798311312,0.28473732508503 -0.48089110525928,0.50715283955335 -0.6560433501047,0.38415069918051'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.46322848371637,0.30695545587912 -0.26719979923154,0.43581349381808 -0.25907759614827,0.66220596812605 -0.44823160586253,0.52937097034744'/&gt;
+		&lt;polygon fill='#FFA500' stroke='#000000'  points='-0.23182332941007,0.45988002752827 -0.018796486168384,0.59991168218429 -0.018796486168384,0.83016851261279 -0.2237011263268,0.68627250183624'/&gt;
+	&lt;/g&gt;
+&lt;/svg&gt;</pre>
+</div>
+<div created="20210106064751476" creator="Andrew Harrison" modified="20210106064836616" modifier="Andrew Harrison" tags="" title="14.svg">
+<pre>&lt;svg
+   xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+   xmlns:cc=&quot;http://creativecommons.org/ns#&quot;
+   xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+   xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;
+   xmlns=&quot;http://www.w3.org/2000/svg&quot;
+   xmlns:sodipodi=&quot;http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd&quot;
+   xmlns:inkscape=&quot;http://www.inkscape.org/namespaces/inkscape&quot;
+   version=&quot;1.1&quot;
+   width=&quot;150&quot;
+   height=&quot;150&quot;
+   viewBox=&quot;-0.9 -0.9 1.8 1.8&quot;
+   id=&quot;svg462&quot;
+   sodipodi:docname=&quot;14.svg&quot;
+   inkscape:version=&quot;0.92.2 (5c3e80d, 2017-08-06)&quot;&gt;
+  &lt;metadata
+     id=&quot;metadata468&quot;&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=&quot;&quot;&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource=&quot;http://purl.org/dc/dcmitype/StillImage&quot; /&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;defs
+     id=&quot;defs466&quot; /&gt;
+  &lt;sodipodi:namedview
+     pagecolor=&quot;#ffffff&quot;
+     bordercolor=&quot;#666666&quot;
+     borderopacity=&quot;1&quot;
+     objecttolerance=&quot;10&quot;
+     gridtolerance=&quot;10&quot;
+     guidetolerance=&quot;10&quot;
+     inkscape:pageopacity=&quot;0&quot;
+     inkscape:pageshadow=&quot;2&quot;
+     inkscape:window-width=&quot;1920&quot;
+     inkscape:window-height=&quot;1147&quot;
+     id=&quot;namedview464&quot;
+     showgrid=&quot;false&quot;
+     inkscape:zoom=&quot;1.5733333&quot;
+     inkscape:cx=&quot;78.921937&quot;
+     inkscape:cy=&quot;7.7627072&quot;
+     inkscape:window-x=&quot;-8&quot;
+     inkscape:window-y=&quot;-8&quot;
+     inkscape:window-maximized=&quot;1&quot;
+     inkscape:current-layer=&quot;svg462&quot; /&gt;
+  &lt;g
+     style=&quot;stroke-width:0.1;stroke-linejoin:round;opacity:1&quot;
+     id=&quot;g404&quot;&gt;
+    &lt;polygon
+       fill=&quot;#000000&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-4.9165444344952E-17,-0.71734170954349 0.70405037145575,-0.41272706360467 6.3108540577985E-17,-0.021725090572532 -0.70405037145575,-0.41272706360467&quot;
+       id=&quot;polygon398&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#000000&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;6.3108540577985E-17,-0.021725090572532 0.70405037145575,-0.41272706360467 0.62948028357061,0.36901272915735 5.5589468959362E-17,0.81107056444244&quot;
+       id=&quot;polygon400&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#000000&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.70405037145575,-0.41272706360467 6.3108540577985E-17,-0.021725090572532 5.5589468959362E-17,0.81107056444244 -0.62948028357061,0.36901272915735&quot;
+       id=&quot;polygon402&quot; /&gt;
+  &lt;/g&gt;
+  &lt;g
+     style=&quot;opacity:1;stroke-opacity:0.5;stroke-width:0;stroke-linejoin:round&quot;
+     id=&quot;g460&quot;&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-4.9439549272153E-17,-0.74757064564692 0.19598754651203,-0.66277461469571 -1.6979580126642E-17,-0.57123720961754 -0.19598754651203,-0.66277461469571&quot;
+       id=&quot;polygon406&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.23200530924361,-0.64654708450724 0.44357407294753,-0.55500967942906 0.24823152717746,-0.45589370157761 0.03601776273158,-0.55500967942906&quot;
+       id=&quot;polygon408&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.48258385553552,-0.53743199405155 0.71166883865722,-0.4383160162001 0.51778341539206,-0.3306396536664 0.28724130976545,-0.43831601620009&quot;
+       id=&quot;polygon410&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.23200530924361,-0.64654708450724 -0.03601776273158,-0.55500967942906 -0.24823152717746,-0.45589370157761 -0.44357407294753,-0.55500967942906&quot;
+       id=&quot;polygon412&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-1.1906711768916E-17,-0.53743199405155 0.21221376444588,-0.43831601620009 1.3125827139793E-17,-0.3306396536664 -0.21221376444588,-0.43831601620009&quot;
+       id=&quot;polygon414&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.25135344771691,-0.4192120352454 0.48189555334352,-0.31153567271171 0.27050899589682,-0.1941398664099 0.03913968327103,-0.31153567271171&quot;
+       id=&quot;polygon416&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.48258385553552,-0.53743199405155 -0.28724130976545,-0.43831601620009 -0.51778341539206,-0.3306396536664 -0.71166883865722,-0.43831601620009&quot;
+       id=&quot;polygon418&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.25135344771691,-0.4192120352454 -0.03913968327103,-0.31153567271171 -0.27050899589682,-0.1941398664099 -0.48189555334352,-0.31153567271171&quot;
+       id=&quot;polygon420&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;1.9219742927126E-17,-0.29069716027551 0.23136931262579,-0.1733013539737 6.3251582941518E-17,-0.044807908897155 -0.23136931262579,-0.1733013539737&quot;
+       id=&quot;polygon422&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.019572311898468,-0.01096266104553 0.25094162452426,-0.13945610612208 0.24139184674777,0.12672756322786 0.019572311898468,0.26171620101574&quot;
+       id=&quot;polygon424&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.28930534489087,-0.16171652284677 0.50069190233757,-0.27911232914857 0.48317508531013,-0.019324131300046 0.27975556711438,0.10446714650317&quot;
+       id=&quot;polygon426&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.53586287162127,-0.29952357725519 0.72974829488643,-0.40719993978888 0.70556381569579,-0.15366705164652 0.51834605459384,-0.039735379406663&quot;
+       id=&quot;polygon428&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.018796486168384,0.30740091161998 0.24061602101769,0.1724122738321 0.23182332941007,0.41749346528561 0.018796486168384,0.55752511994163&quot;
+       id=&quot;polygon430&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.27748498154717,0.14913168479738 0.48090449974292,0.025340406994164 0.46472097442439,0.26535483831193 0.26869228993956,0.39421287625089&quot;
+       id=&quot;polygon432&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.51482272047627,0.0039202514920256 0.70204048157822,-0.11001142074783 0.6796261786066,0.12496419825545 0.49863919515774,0.24393468280979&quot;
+       id=&quot;polygon434&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.018079821190449,0.59957070958542 0.23110666443214,0.4595390549294 0.22298446134887,0.68593152923737 0.018079821190449,0.82982754001392&quot;
+       id=&quot;polygon436&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.26659321028119,0.43546258559693 0.46262189476603,0.30660454765797 0.44762501691219,0.52902006212629 0.25847100719792,0.6618550599049&quot;
+       id=&quot;polygon438&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.49537315323635,0.28438159074811 0.67636013668521,0.16541110619376 0.65552852022793,0.38379496484358 0.4803762753825,0.50679710521643&quot;
+       id=&quot;polygon440&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.73033661801848,-0.40664800069716 -0.53645119475332,-0.29897163816347 -0.51893437772588,-0.039183440314942 -0.70615213882784,-0.1531151125548&quot;
+       id=&quot;polygon442&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#00DD00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.50139487638912,-0.27854802283962 -0.29000831894242,-0.16115221653782 -0.28045854116593,0.10503145281212 -0.48387805936169,-0.018759824991097&quot;
+       id=&quot;polygon444&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.25178425197513,-0.13888300088285 -0.020414939349334,-0.010389555806295 -0.020414939349334,0.26228930625497 -0.24223447419864,0.12730066846709&quot;
+       id=&quot;polygon446&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.70259025607703,-0.10956681966126 -0.51537249497507,0.0043648525785978 -0.49918896965654,0.24437928389636 -0.68017595310541,0.12540879934202&quot;
+       id=&quot;polygon448&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.48155663212918,0.025787474064964 -0.27813711393343,0.14957875186818 -0.26934442232581,0.39465994332169 -0.46537310681065,0.26580190538273&quot;
+       id=&quot;polygon450&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.24139184674777,0.17285724590871 -0.019572311898468,0.30784588369658 -0.019572311898468,0.55797009201823 -0.23259915514016,0.41793843736221&quot;
+       id=&quot;polygon452&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.67687496656198,0.16576684053069 -0.49588798311312,0.28473732508503 -0.48089110525928,0.50715283955335 -0.6560433501047,0.38415069918051&quot;
+       id=&quot;polygon454&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.46322848371637,0.30695545587912 -0.26719979923154,0.43581349381808 -0.25907759614827,0.66220596812605 -0.44823160586253,0.52937097034744&quot;
+       id=&quot;polygon456&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.23182332941007,0.45988002752827 -0.018796486168384,0.59991168218429 -0.018796486168384,0.83016851261279 -0.2237011263268,0.68627250183624&quot;
+       id=&quot;polygon458&quot; /&gt;
+  &lt;/g&gt;
+  &lt;path
+     style=&quot;fill:#ffffff;stroke-width:0.012&quot;
+     id=&quot;path480&quot;
+     d=&quot;m -0.28163165,-0.54085574 c -0.005634,-6.6192e-4 -0.0107789,0.001553 -0.0160842,0.002956 -0.001477,0.001051 -0.003078,0.002013 -0.004894,0.002336 -6.6864e-4,1.188e-4 -0.001375,-1.56e-5 -0.002031,1.6188e-4 -0.001147,3.102e-4 -0.002156,0.001009 -0.003282,0.001387 -6.0276e-4,1.2648e-4 -0.001227,1.7604e-4 -0.001808,3.7932e-4 -0.001151,4.0248e-4 -0.004442,0.001999 -0.003383,0.001393 0.11215998,-0.0642812 0.0805541,-0.0443945 0.0587856,-0.0333511 -0.001101,6.7956e-4 -0.001622,0.001936 -0.002581,0.002748 -4.5444e-4,3.8508e-4 -0.001034,5.9196e-4 -0.001549,8.9076e-4 -0.0215228,0.0124796 -0.0430602,0.0249343 -0.0645653,0.0374445 -0.020063,0.0116713 0.0788697,-0.048733 0.0603354,-0.0347608 -0.001675,2.6748e-4 -0.002298,0.001848 -0.00354,0.002721 -3.7224e-4,2.6136e-4 -8.688e-4,2.94e-4 -0.001257,5.31e-4 -0.002765,0.001689 4.9728e-4,3.1488e-4 -0.002343,0.001381 -3.4836e-4,3.204e-4 -6.3612e-4,7.23e-4 -0.001045,9.6108e-4 -0.0215033,0.0125142 -0.0431279,0.0248189 -0.0646628,0.0372786 -4.6464e-4,2.688e-4 -0.001796,0.001175 -0.001332,9.0492e-4 0.0205539,-0.0119422 0.0410142,-0.0240455 0.0616048,-0.0359244 6.48e-4,-3.7392e-4 -0.001172,0.001032 -0.002566,0.002121 -0.001805,0.002578 -0.004348,0.005285 -0.006926,0.007097 -5.2968e-4,0.001537 -0.002512,0.001653 -0.003439,0.002703 -4.2036e-4,4.7604e-4 -5.3268e-4,0.001172 -9.456e-4,0.001654 -3.642e-4,4.2552e-4 -8.9256e-4,6.7668e-4 -0.001339,0.001015 -3.8856e-4,5.0988e-4 -7.7712e-4,0.00102 -0.001166,0.00153 -0.001204,0.001778 -0.003107,0.003088 -0.004391,0.004777 -2.7132e-4,3.5676e-4 -0.0014,0.002656 -0.001576,0.003008 -3.3672e-4,3.0936e-4 -7.0824e-4,5.8464e-4 -0.00101,9.2808e-4 -3.4176e-4,3.8868e-4 -5.4336e-4,8.9292e-4 -9.1104e-4,0.001257 -8.4288e-4,8.3508e-4 -0.002448,0.00104 -0.003148,0.002012 -3.4152e-4,4.7388e-4 -4.4172e-4,0.001082 -6.6264e-4,0.001622 -5.9028e-4,0.002074 -0.001987,0.003817 -0.002817,0.005759 -0.001558,0.003647 3.7344e-4,6.408e-4 -0.001622,0.003431 -4.5708e-4,0.001744 -0.002117,0.002227 -0.003166,0.003417 -3.516e-4,3.99e-4 -5.0484e-4,9.456e-4 -8.5008e-4,0.00135 -3.1092e-4,3.6432e-4 -7.3044e-4,6.198e-4 -0.001096,9.2976e-4 -3.0528e-4,3.9408e-4 -6.1044e-4,7.8828e-4 -9.1572e-4,0.001182 -8.7612e-4,0.003184 -0.003105,0.005719 -0.004272,0.008725 -8.1336e-4,0.001888 -0.002515,0.00338 -0.003384,0.005216 -0.003401,0.007192 0.001688,-0.002097 -0.001787,0.00407 -0.00228,0.003045 -0.003295,0.006669 -0.00458,0.0101861 -8.7096e-4,0.003837 -0.001469,0.007691 -0.002411,0.0115178 -6.2544e-4,0.003498 -0.001964,0.006719 -0.002507,0.0102599 -5.88e-5,0.003647 -9.66e-4,0.007135 -0.001718,0.0106776 -6.0852e-4,0.003986 -6.5748e-4,0.008029 -7.0992e-4,0.0120528 -1.14e-4,0.004394 -6e-5,0.008791 -3.48e-5,0.0131861 -1.5276e-4,0.003766 7.0452e-4,0.007456 0.001209,0.0111677 -5.16e-5,0.003234 0.001319,0.005938 0.002412,0.008865 0.001695,0.002575 0.00305,0.005409 0.005136,0.0077 0.00233,0.002773 0.003325,0.006269 0.004424,0.009646 0.001107,0.002643 0.002472,0.005229 0.004047,0.007626 0.001402,0.002172 0.003694,0.00398 0.005854,0.005463 0.001809,0.002866 0.004702,0.004623 0.007002,0.007016 0.001417,0.001148 0.002041,0.003845 0.00369,0.00472 2.1804e-4,1.152e-4 4.932e-4,2.52e-5 7.398e-4,3.72e-5 4.4352e-4,3.0588e-4 8.8704e-4,6.1176e-4 0.001331,9.1776e-4 0.003353,0.001457 0.005752,0.004241 0.007947,0.007085 0.002092,0.002189 0.004235,0.004201 0.007168,0.005078 0.003042,0.001752 0.006328,0.002656 0.009087,0.004891 4.7628e-4,9.0228e-4 0.001598,5.7948e-4 0.002263,0.001088 6.1584e-4,4.7052e-4 0.001019,0.001175 0.001602,0.001686 0.001172,0.001028 0.00271,0.001448 0.004164,0.001868 0.003092,0.001714 0.006394,0.002634 0.009165,0.004895 0.001541,0.001358 0.003588,7.812e-4 0.00541,0.001249 0.001208,3.1032e-4 0.002328,9.0156e-4 0.003516,0.001281 0.003144,7.8816e-4 0.005962,0.002493 0.008861,0.003895 0.001475,0.001598 0.003316,0.002023 0.005392,0.002292 5.3388e-4,6.96e-5 0.001111,-5.04e-5 0.001607,1.5864e-4 7.6284e-4,3.2064e-4 0.001374,9.222e-4 0.002061,0.001383 0.002477,0.001864 0.00523,0.002168 0.0082,0.002416 0,0 -0.0603536,0.0421815 -0.0603536,0.0421815 v 0 c -0.003296,-8.928e-4 -0.006304,-0.002285 -0.00932,-0.00387 -0.00348,-3.2388e-4 -0.006281,-0.002382 -0.009278,-0.003945 -0.00258,-0.001312 -0.00537,-0.002172 -0.008141,-0.002987 -0.003549,-0.001095 -0.007233,-0.001703 -0.0101644,-0.00424 -0.002811,-0.001216 -0.005535,-0.002606 -0.008317,-0.003891 -0.003089,-0.001712 -0.005846,-0.003831 -0.008867,-0.005637 -0.002865,-0.00126 -0.005643,-0.002687 -0.008419,-0.004138 -0.003369,-0.0021 -0.006426,-0.004676 -0.008949,-0.007758 -0.00194,-0.002221 -0.004276,-0.003736 -0.006813,-0.005226 -0.002695,-0.001788 -0.004534,-0.004239 -0.00649,-0.006762 -0.002303,-0.002036 -0.004479,-0.004197 -0.006607,-0.006405 -0.0026,-0.002306 -0.005467,-0.004499 -0.007166,-0.007598 -0.001801,-0.00298 -0.00348,-0.006048 -0.004869,-0.009244 -8.0796e-4,-0.002525 -0.001414,-0.005204 -0.003124,-0.007287 -0.002332,-0.003132 -0.004267,-0.00652 -0.006318,-0.009837 -0.001174,-0.003437 -0.003246,-0.0066 -0.003123,-0.0103938 -4.0116e-4,-0.004012 -0.001465,-0.007934 -0.00157,-0.0119504 1.44e-5,-0.004415 4.68e-5,-0.00883 -2.52e-5,-0.0132441 2.52e-5,-0.004268 7.32e-5,-0.008537 3.0732e-4,-0.0127991 9.84e-5,-0.001884 2.4396e-4,-0.003697 7.0332e-4,-0.005534 2.508e-4,-0.001003 8.0832e-4,-0.001922 9.9216e-4,-0.00294 1.2432e-4,-6.8796e-4 6.36e-5,-0.001397 9.48e-5,-0.002095 2.436e-4,-0.003626 1.5924e-4,-0.007643 0.002164,-0.0107957 6.1248e-4,-0.004053 0.002237,-0.007786 0.002366,-0.0119169 6.3576e-4,-0.004054 0.002138,-0.008311 0.003629,-0.0121274 3.5316e-4,-5.5944e-4 6.4968e-4,-0.001159 0.00106,-0.001678 3.5484e-4,-4.4952e-4 9.7296e-4,-6.93e-4 0.00122,-0.00121 3.2676e-4,-6.8304e-4 2.1444e-4,-0.001504 4.2612e-4,-0.002231 4.7004e-4,-0.001614 0.001642,-0.002642 0.002239,-0.004183 0.001619,-0.001615 3.9576e-4,-1.176e-4 0.001461,-0.002573 0.001499,-0.003454 -5.88e-5,4.8756e-4 0.001788,-0.002316 3.2112e-4,-4.8744e-4 4.4832e-4,-0.001078 6.7248e-4,-0.001617 2.9112e-4,-4.3884e-4 5.8212e-4,-8.7768e-4 8.7324e-4,-0.001317 1.4928e-4,-6.2124e-4 7.5144e-4,-0.003345 0.001099,-0.003946 2.3556e-4,-4.0728e-4 7.7844e-4,-5.616e-4 0.001044,-9.5028e-4 0.001,-0.001466 0.001084,-0.003101 0.003093,-0.003675 3.4824e-4,-4.044e-4 6.174e-4,-8.9364e-4 0.001045,-0.001213 3.7464e-4,-2.802e-4 0.001,-1.758e-4 0.001296,-5.3784e-4 7.104e-4,-8.6796e-4 6.2904e-4,-0.002193 0.00126,-0.00312 2.664e-4,-3.918e-4 7.2528e-4,-6.3828e-4 9.5544e-4,-0.001052 2.9268e-4,-5.2656e-4 3.8724e-4,-0.001141 5.8092e-4,-0.001711 2.4744e-4,-4.71e-4 6.042e-4,-8.9928e-4 7.4232e-4,-0.001413 4.77e-4,-0.001776 1.044e-4,-0.003758 0.001717,-0.005117 3.3876e-4,-2.8548e-4 8.6088e-4,-2.7624e-4 0.001211,-5.4744e-4 3.864e-4,-2.9904e-4 6.2952e-4,-7.4724e-4 9.4428e-4,-0.001121 0.002049,-7.6632e-4 0.001996,-0.00139 0.00297,-0.00327 8.8812e-4,-0.001715 0.002568,-0.002326 0.003297,-0.004149 0.001772,-0.001682 0.001009,-6.9636e-4 0.002224,-0.003005 3.4272e-4,-3.5328e-4 0.00103,-2.1408e-4 0.001357,-5.8188e-4 0.001107,-0.001245 7.6776e-4,-0.003297 0.003,-0.003869 0.002626,-0.003221 -4.9788e-4,2.718e-4 0.002498,-0.00213 8.5284e-4,-6.8376e-4 0.001314,-0.001794 0.002203,-0.002429 4.1844e-4,-2.988e-4 9.8904e-4,-3.2052e-4 0.001422,-5.982e-4 4.548e-4,-2.9184e-4 8.022e-4,-7.2408e-4 0.001203,-0.001086 4.9704e-4,-8.9652e-4 0.001203,-0.002478 0.002168,-0.003063 0.0212948,-0.0129081 0.0427253,-0.0255913 0.0641512,-0.0382806 4.8396e-4,-2.8668e-4 0.002048,-9.222e-4 0.001562,-6.3792e-4 -0.0205478,0.012038 -0.04118,0.0239312 -0.061764,0.0359071 -3.8544e-4,2.2428e-4 7.788e-4,-4.3476e-4 0.001168,-6.5208e-4 0.001983,-0.002703 -2.5776e-4,-7.8e-5 0.002183,-0.001826 4.1196e-4,-2.9508e-4 6.2124e-4,-8.3556e-4 0.001059,-0.001091 0.001483,-8.6412e-4 0.002703,-3.1032e-4 0.003699,-0.002444 0.0222638,-0.012145 0.0456911,-0.0249066 0.0657748,-0.0383994 0.0196692,-0.0132144 -0.0409555,0.0238465 -0.061479,0.0356905 -5.2908e-4,3.0528e-4 9.2712e-4,-8.2752e-4 0.001488,-0.00107 0.003818,-0.001652 -7.56e-5,0.001158 0.003094,-0.001407 8.6112e-4,-0.001246 0.001242,-0.002106 0.0026,-0.002887 0.0420204,-0.0241697 0.0435694,-0.0299275 0.0702628,-0.0387276 0.002299,-7.866e-4 0.001107,-4.6512e-4 0.00358,-9.4656e-4 0.002301,-7.578e-4 0.00427,-0.002484 0.006854,-0.002381 0.005658,-0.001368 0.0114305,-0.001483 0.0172325,-0.001535 0,0 -0.0595815,0.0432885 -0.0595815,0.0432885 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#ffffff;stroke-width:0.012&quot;
+     id=&quot;path484&quot;
+     d=&quot;m -0.34951242,-0.57651714 c 0.006087,-1.4868e-4 0.0124341,9.1932e-4 0.0184123,-4.4796e-4 0.002904,-0.001014 0.006178,-5.1972e-4 0.009109,-0.001248 0.001135,-2.8212e-4 0.002144,-9.4248e-4 0.003247,-0.001332 0.003872,-9.3036e-4 0.00792,-7.494e-4 0.011881,-8.0556e-4 7.0464e-4,-5.13e-6 0.00145,2.2068e-4 0.002114,-1.56e-5 5.6256e-4,-2.0004e-4 8.5008e-4,-8.43e-4 0.001323,-0.001207 4.6428e-4,-3.5724e-4 9.5892e-4,-6.7944e-4 0.001479,-9.492e-4 0.001844,-9.5664e-4 0.003,-7.7496e-4 0.004677,-0.002147 0.003582,-0.001613 0.007821,-4.5852e-4 0.0112843,-0.002106 5.232e-4,-1.716e-4 0.001102,-2.2392e-4 0.001569,-5.1468e-4 0.001882,-0.00117 1.068e-4,-0.001135 0.002305,-0.001832 0.002179,-6.9012e-4 0.002956,-8.6e-7 0.005206,-0.00131 0.003178,-0.001823 0.007155,-4.5288e-4 0.0102538,-0.002114 0.003828,-9.4404e-4 0.007791,-0.001055 0.0117127,-0.001152 0.001196,-0.00134 0.003585,-7.0608e-4 0.004923,-0.001414 5.4948e-4,-2.9064e-4 7.5396e-4,-9.9876e-4 0.001219,-0.001411 0.001116,-9.9108e-4 0.00196,-0.001222 0.003308,-0.001799 -0.0205637,0.0117911 -0.041113,0.0236073 -0.061691,0.0353733 -4.8828e-4,2.7912e-4 9.3204e-4,-6.3168e-4 0.00142,-9.1164e-4 0.021555,-0.0123761 0.0430358,-0.0248835 0.0647066,-0.0370556 5.2344e-4,-2.94e-4 0.001221,-6.36e-5 0.001778,-2.8764e-4 4.71e-4,-1.8972e-4 8.1024e-4,-6.1212e-4 0.001215,-9.1812e-4 4.7532e-4,-1.9092e-4 9.5076e-4,-3.8172e-4 0.001426,-5.7264e-4 0.003925,-6.1836e-4 0.007981,-5.3904e-4 0.0119601,-5.766e-4 0.001635,7.92e-5 0.003734,-2.436e-4 0.005181,-0.001124 4.2864e-4,-2.6064e-4 0.001471,-0.00134 0.001034,-0.001094 -0.0607891,0.0342721 -0.0806898,0.0509108 -0.060999,0.0345678 4.5432e-4,-2.2392e-4 9.462e-4,-3.84e-4 0.001363,-6.7176e-4 3.33e-4,-2.2992e-4 0.002175,-0.002039 0.002442,-0.002298 0.0216152,-0.0122786 0.0430303,-0.0249163 0.0648457,-0.0368357 9.924e-4,-5.4216e-4 0.003341,0.001275 0.003853,0.001599 0.003059,0.002826 0.004799,0.006969 0.00325,0.0109595 -6.198e-4,0.004216 -0.002805,0.00788 -0.004042,0.0119043 -0.00147,0.003237 -0.002747,0.006545 -0.003992,0.009882 -7.056e-4,0.003156 -0.002109,0.00603 -0.002793,0.009203 -5.514e-4,0.004035 -5.3616e-4,0.00812 -5.5452e-4,0.0121841 -1.8e-5,0.004192 -1.4316e-4,0.008394 5.4e-5,0.0125829 3.708e-4,0.003342 0.001629,0.006469 0.002446,0.009711 3.7116e-4,0.003175 0.002123,0.005827 0.003741,0.008493 0.002086,0.002459 0.003495,0.005418 0.005231,0.008123 0.001328,9.8052e-4 0.002263,0.002428 0.003563,0.00343 6.792e-4,5.232e-4 0.001545,7.512e-4 0.002272,0.001206 0,0 -0.0620495,0.0398438 -0.0620495,0.0398438 v 0 c -0.002971,-0.001981 -0.005498,-0.004505 -0.007606,-0.00739 -0.001671,-0.002791 -0.003241,-0.005638 -0.005266,-0.008207 -0.001945,-0.003288 -0.004171,-0.006772 -0.004793,-0.0105676 -7.1052e-4,-0.003544 -0.00229,-0.006783 -0.002793,-0.0103741 -7.6452e-4,-0.004432 -2.064e-4,-0.008952 -4.356e-4,-0.0134342 8.19e-6,-0.004295 2.76e-5,-0.00859 1.7184e-4,-0.0128823 9.72e-5,-0.003483 2.7252e-4,-0.007171 0.00227,-0.0101577 3.4752e-4,-0.00192 7.026e-4,-0.003799 0.001526,-0.005587 2.4168e-4,-5.2464e-4 6.4428e-4,-9.7368e-4 8.328e-4,-0.00152 0.002379,-0.006887 -0.001356,0.001909 0.001181,-0.003847 0.00115,-0.001844 0.001467,-0.003757 0.002318,-0.005746 2.6724e-4,-6.2472e-4 5.4312e-4,-0.001251 8.9808e-4,-0.00183 2.802e-4,-4.5732e-4 8.0124e-4,-7.6368e-4 9.9684e-4,-0.001263 2.3136e-4,-5.91e-4 1.5828e-4,-0.001259 2.3748e-4,-0.001889 4.6212e-4,-0.003226 0.001819,-0.003206 0.002788,-3.606e-4 -2.5428e-4,6.4932e-4 -0.001767,0.002085 -0.00116,0.001741 0.0206853,-0.0117372 0.0412493,-0.0236869 0.061874,-0.0355303 -0.001705,5.0712e-4 -0.002968,9.8244e-4 -0.003928,0.002608 -0.0249045,0.0129587 -0.0449538,0.039319 -0.0733318,0.0381431 -0.003667,3.2592e-4 -0.007317,7.2624e-4 -0.0104183,0.0029 -0.001813,9.2124e-4 -8.49e-4,5.5104e-4 -0.002901,0.001084 -4.8024e-4,2.1408e-4 -0.001767,0.001138 -0.001311,8.766e-4 0.0206008,-0.0118297 0.0411694,-0.023715 0.0617488,-0.0355819 4.8972e-4,-2.8236e-4 -9.864e-4,5.5236e-4 -0.00148,8.2848e-4 -0.0215642,0.01241 -0.0431283,0.02482 -0.0646925,0.0372301 -0.002863,0.001557 -0.00262,0.001248 -0.005709,0.001697 -0.001826,2.652e-4 -0.003527,0.001105 -0.005442,6.6996e-4 -0.00375,4.2288e-4 -0.007427,0.001166 -0.0110514,0.002226 -0.003476,7.56e-5 -0.006535,0.001468 -0.009732,0.002721 -0.001846,3.3804e-4 -0.001788,1.7316e-4 -0.003423,0.001065 -0.001213,6.6132e-4 -0.001414,0.001153 -0.002777,0.001451 -5.6436e-4,1.2348e-4 -0.001156,5.04e-5 -0.001728,1.2936e-4 -5.6244e-4,7.8e-5 -0.001113,2.2704e-4 -0.001669,3.4056e-4 -0.003725,1.6752e-4 -0.007178,0.001432 -0.0103784,0.003335 -0.002318,4.9368e-4 -0.004471,0.001964 -0.006875,0.002036 -7.728e-4,2.4e-5 -0.001536,-2.0136e-4 -0.002309,-2.2176e-4 -6.7956e-4,-1.8e-5 -0.001358,7.08e-5 -0.002037,1.068e-4 -0.003774,2.9736e-4 -0.007451,8.8488e-4 -0.0110412,0.00213 -0.004228,7.6488e-4 -0.008615,8.4108e-4 -0.0128804,0.001434 -0.006309,-2.1204e-4 -0.01263,-1.8756e-4 -0.0189387,8.17e-6 0,0 0.0595815,-0.0432885 0.0595815,-0.0432885 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#ffffff;stroke-width:0.012&quot;
+     id=&quot;path486&quot;
+     d=&quot;m -0.25312938,-0.4250161 c 7.0656e-4,0.006585 0.002079,0.0130322 0.0037,0.0194404 9.4608e-4,0.004252 0.001463,0.008558 0.002437,0.0128069 6.366e-4,0.002064 5.076e-4,0.004361 0.001348,0.006372 2.304e-4,5.5128e-4 7.8408e-4,9.0228e-4 0.001158,0.001369 0.002023,0.003505 0.003389,0.007369 0.004736,0.0111786 9.6816e-4,0.003339 0.001605,0.006768 0.002625,0.0100943 9.798e-4,0.002807 0.00199,0.005637 0.003385,0.00827 6.2688e-4,0.001779 0.001993,0.0023 0.003015,0.003806 0.001785,0.002632 3.4536e-4,0.001081 0.001934,0.002646 0.002155,0.002237 0.004248,0.00466 0.006707,0.006576 0.001111,0.001513 0.002828,0.002513 0.004023,0.003921 7.9008e-4,9.3072e-4 0.001402,0.002002 0.002179,0.002944 0.001787,0.002426 0.004239,0.004547 0.006707,0.006313 0.001556,0.001155 0.002667,0.003072 0.004366,0.004033 0.002465,0.001394 -0.001143,-0.001376 0.002135,0.001356 0.002865,0.001495 0.004772,0.004087 0.007557,0.005758 0.001778,0.002546 0.004934,0.002216 0.007233,0.003759 0.0145388,0.0248037 0.003494,0.003491 -0.0620762,0.0426961 -3.7824e-4,2.2608e-4 -0.006909,-2.352e-4 -0.007818,-2.484e-4 -0.00346,0.001634 -0.007258,0.001587 -0.0109948,0.001742 -0.004266,1.6656e-4 -0.008536,1.092e-4 -0.0128036,9e-5 -0.002855,3.6348e-4 -0.005918,-4.8e-4 -0.008754,3.46e-6 -0.001097,1.8708e-4 -0.002084,7.8624e-4 -0.003144,0.001125 -0.003922,7.5396e-4 -0.007984,7.1736e-4 -0.0119721,7.8756e-4 -0.002057,2.7876e-4 -0.004229,-2.7624e-4 -0.006277,1.79e-6 -0.001825,2.478e-4 -0.003726,0.001044 -0.005568,0.001379 -0.003982,6.0348e-4 -0.008014,5.1672e-4 -0.0120266,5.2176e-4 -0.00433,-3.6924e-4 -0.00835,0.001177 -0.0126401,0.001513 -0.002965,5.9556e-4 -0.006158,-1.4616e-4 -0.009111,3.8352e-4 -0.001144,2.052e-4 -0.002181,8.07e-4 -0.003291,0.001151 -0.00155,9.6888e-4 -0.003882,1.56e-5 -0.005442,6.222e-4 -5.7612e-4,2.2428e-4 -8.6484e-4,8.9136e-4 -0.001362,0.001258 -0.001234,9.0948e-4 -0.002037,0.001106 -0.003452,0.00165 -0.001848,8.2596e-4 -0.003956,5.34e-4 -0.005866,9.762e-4 -5.9736e-4,1.3836e-4 -0.001122,5.0736e-4 -0.001713,6.7056e-4 -8.5536e-4,2.3628e-4 -0.003555,5.9604e-4 -0.004394,7.1712e-4 -7.6476e-4,8.28e-5 -0.001549,5.88e-5 -0.002294,2.4876e-4 -0.001237,3.1584e-4 -0.002338,0.001048 -0.003567,0.00139 -0.002034,5.6556e-4 -0.003169,3.2352e-4 -0.004978,0.001526 -0.002273,0.001035 -0.004894,9.618e-4 -0.007352,0.001124 0,0 0.0589483,-0.0441964 0.0589483,-0.0441964 v 0 c 0.002304,-5.6868e-4 0.004446,-0.001416 0.006666,-0.002221 0.003713,-3.5208e-4 0.007421,-0.002037 0.0112365,-0.002293 0.003804,-9.9456e-4 0.007697,-0.00167 0.0112032,-0.00354 0.001128,-4.9164e-4 0.002458,-0.001161 0.003697,-0.00133 7.6152e-4,-1.044e-4 0.001541,6.48e-5 0.002306,-1.44e-5 0.001738,-1.8036e-4 0.0034,-9.648e-4 0.005146,-0.001128 0.004173,-4.5168e-4 0.008449,-7.2e-5 0.0125964,-9.9588e-4 0.004358,-7.7844e-4 0.008663,-0.001009 0.0130897,-9.2952e-4 0.003859,-2.0412e-4 0.007698,-6.2616e-4 0.0114845,-0.001418 0.004102,-6.492e-4 0.008216,-3.078e-4 0.012352,-6.1932e-4 0.003865,-2.7936e-4 0.007681,-7.8696e-4 0.0114537,-0.001683 0.00415,-2.8776e-4 0.008357,3.2712e-4 0.0125257,4.68e-5 0.004176,-5.88e-5 0.008359,-1.5336e-4 0.0125157,-5.9112e-4 0.003792,-4.8048e-4 0.007534,-0.001741 0.0113799,-0.001257 0.001939,-2.4e-5 0.003909,4.9e-6 0.005837,-2.3676e-4 5.5428e-4,-6.96e-5 0.002117,-6.0096e-4 0.001649,-2.9532e-4 -0.0616461,0.0402998 -0.0743534,0.018901 -0.0592251,0.0419476 -0.002869,-3.189e-4 -0.005072,-0.003414 -0.007428,-0.004784 -0.002527,-0.002043 -0.005078,-0.003996 -0.007771,-0.005821 -0.002458,-0.001588 -0.004369,-0.003822 -0.006605,-0.00569 -0.002631,-0.00238 -0.005442,-0.004649 -0.007486,-0.007583 -0.001703,-0.002122 -0.003677,-0.00398 -0.005634,-0.005867 -0.002418,-0.002404 -0.004887,-0.004768 -0.007092,-0.007374 -0.002068,-0.00255 -0.0044,-0.004957 -0.005909,-0.007889 -0.001561,-0.002975 -0.00278,-0.006131 -0.003848,-0.009313 -0.001208,-0.00329 -0.002016,-0.006737 -0.002682,-0.0101692 -9.1595e-4,-0.003066 -0.00201,-0.006186 -0.003532,-0.008984 -0.002546,-0.003393 -0.003733,-0.006406 -0.00404,-0.0106445 -8.58e-4,-0.004277 -0.00169,-0.008508 -0.002159,-0.012851 -0.00133,-0.006522 -0.002504,-0.0130615 -0.003884,-0.0195682 0,0 0.0648628,-0.0346786 0.0648628,-0.0346786 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#000000;stroke-width:0.012&quot;
+     id=&quot;path492&quot;
+     d=&quot;m -0.27838342,-0.30130315 c -0.006308,4.9416e-4 -0.0126143,9.8532e-4 -0.0189359,0.001267 -0.004921,1.2312e-4 -0.009844,1.5696e-4 -0.0147668,1.7124e-4 -0.004307,-1.608e-4 -0.008686,4.2252e-4 -0.0129139,-4.9716e-4 -0.003401,-7.2336e-4 -0.006389,-0.00263 -0.00942,-0.004237 -4.4292e-4,-9.84e-5 -9.2892e-4,-8.16e-5 -0.001329,-2.9616e-4 -0.002305,-0.001236 -0.005749,-0.004302 -0.007625,-0.006209 -0.002397,-0.001507 -0.004504,-0.003415 -0.006838,-0.005014 -0.003,-9.0312e-4 -0.005902,-0.002725 -0.00827,-0.00479 -0.002724,-0.001724 -0.003838,-0.005072 -0.00651,-0.006858 -3.816e-4,-3.6396e-4 -7.1376e-4,-7.8792e-4 -0.001145,-0.001092 -3.2664e-4,-2.3016e-4 -7.5456e-4,-2.7816e-4 -0.001095,-4.8684e-4 -0.001927,-0.00118 -0.00366,-0.003112 -0.00515,-0.004794 -0.00258,-0.002315 -0.004114,-0.00562 -0.00588,-0.008584 -0.002456,-0.002675 -0.003539,-0.006028 -0.004762,-0.009349 -0.0012,-0.003029 -0.001531,-0.006583 -0.003328,-0.009348 -0.002147,-0.002976 -0.004074,-0.005885 -0.005306,-0.009362 -9.36e-4,-0.003657 -0.001375,-0.007391 -0.002225,-0.0110702 -9.3936e-4,-0.003906 -8.6184e-4,-0.007944 -0.00128,-0.0119142 -8.7408e-4,-0.0038 -0.001331,-0.007648 -0.00161,-0.0115309 -2.8812e-4,-0.0043 -2.7348e-4,-0.008609 -2.7348e-4,-0.0129151 2.69e-6,-0.00433 -4.56e-5,-0.00866 1.04e-6,-0.0129905 -2.64e-5,-0.004231 -1.512e-4,-0.00843 5.7768e-4,-0.0126087 7.0752e-4,-0.003668 0.001027,-0.007373 0.001829,-0.0110234 8.88e-5,-0.002643 0.001834,-0.004509 0.002927,-0.006745 0.002024,-0.004141 -6.2232e-4,6.4728e-4 0.001425,-0.002957 0.001884,-0.003046 0.002285,-0.006721 0.003168,-0.0101435 0.001392,-0.002666 0.002156,-0.005706 0.004145,-0.007998 0.002094,-0.002649 0.002972,-0.006239 0.005406,-0.008548 0.002681,-0.001882 0.004587,-0.004633 0.006188,-0.007459 0.001817,-0.002806 0.003669,-0.005521 0.006005,-0.007917 0.001778,-0.002605 0.003286,-0.005238 0.005122,-0.007805 0.002588,-0.002008 0.004197,-0.004894 0.006042,-0.007525 3.8088e-4,-0.001477 0.00169,-0.002321 0.002454,-0.00354 8.6604e-4,-0.00138 0.001171,-0.002615 0.002362,-0.003786 3.5244e-4,-4.794e-4 6.1668e-4,-0.001038 0.001057,-0.001438 0.004201,-0.003811 -0.001266,0.002208 0.002745,-0.001848 0.001254,-0.001268 0.00207,-0.002754 0.003417,-0.003958 0.00173,-0.002326 0.004557,-0.003571 0.006133,-0.005971 0.001335,-9.1416e-4 0.001523,-0.00275 0.002623,-0.00384 3.9936e-4,-3.96e-4 9.8928e-4,-5.3748e-4 0.001461,-8.4312e-4 0.001567,-0.001015 0.00128,-8.964e-4 0.002522,-0.002349 0.00187,-0.002661 0.004583,-0.004244 0.007441,-0.005632 0.001636,-0.002464 0.004251,-0.003845 0.006158,-0.006017 0.0933512,-0.0535434 0.040967,-0.0235144 0.00299,-0.001667 -4.7064e-4,2.7072e-4 9.972e-4,-4.542e-4 0.001426,-7.8756e-4 0.001252,-9.7392e-4 0.002406,-0.002411 0.003342,-0.003677 0.001395,-0.001422 7.4472e-4,-6.4428e-4 0.001935,-0.002347 0,0 0.0524082,-0.0219115 0.0524082,-0.0219115 v 0 c -0.001553,0.0012 -8.6268e-4,4.6728e-4 -0.00201,0.002255 -0.00248,0.002241 1.5156e-4,-3.3612e-4 -0.002104,0.002607 -3.5304e-4,4.6068e-4 -8.6364e-4,7.866e-4 -0.001209,0.001253 -4.0476e-4,5.4792e-4 -4.4124e-4,0.001416 -0.001024,0.001769 -0.007471,0.004524 -0.12150454,0.0705703 -0.00287,0.001811 -0.002818,8.2632e-4 -2.1396e-4,-2.4324e-4 -0.002314,0.001585 -3.3192e-4,2.8896e-4 -8.2296e-4,3.4416e-4 -0.001165,6.2088e-4 -3.7224e-4,3.0108e-4 -5.574e-4,7.9956e-4 -9.4284e-4,0.001084 -0.004168,0.003073 0.001702,-0.002248 -0.002218,0.001452 -0.001668,0.003326 -0.00443,0.004033 -0.007522,0.005687 -4.1208e-4,4.1208e-4 -8.8308e-4,7.7256e-4 -0.001236,0.001236 -5.2392e-4,6.882e-4 -0.001332,0.00265 -0.002198,0.003139 -0.001478,8.3508e-4 -0.002112,-7.2936e-4 -0.00323,0.002245 -0.001828,0.001853 -1.092e-4,-1.2444e-4 -0.001572,0.002498 -0.001146,0.002055 -5.214e-4,5.472e-4 -0.002102,0.001993 -0.002836,0.002593 8.9172e-4,5.52e-5 -0.002292,0.002055 -0.001148,0.001303 -0.002697,0.001998 -0.003688,0.00343 -5.2992e-4,7.6572e-4 -0.001219,0.002716 -0.002062,0.00332 -4.0464e-4,2.9028e-4 -9.7296e-4,2.1324e-4 -0.001459,3.1992e-4 -0.00225,0.002606 4.998e-4,-2.6568e-4 -0.00207,0.001538 -0.00165,0.001158 -0.001267,0.003805 -0.003273,0.004704 -2.5164e-4,4.8828e-4 -5.034e-4,9.7668e-4 -7.5504e-4,0.001465 -3.2424e-4,3.936e-4 -7.182e-4,7.3884e-4 -9.726e-4,0.001181 -3.1728e-4,5.5092e-4 -4.3632e-4,0.001197 -7.2348e-4,0.001765 -8.5464e-4,0.001689 -0.002407,0.002642 -0.003014,0.004473 -0.003927,0.002476 0.001405,-0.001067 -0.002262,0.001999 -3.4584e-4,2.892e-4 -9.2112e-4,2.7492e-4 -0.001195,6.3276e-4 -8.6784e-4,0.001133 -5.7804e-4,0.003191 -0.002173,0.003937 -0.001382,0.003242 -0.00429,0.005124 -0.006003,0.008175 -0.002217,0.00258 -0.003428,0.006081 -0.00558,0.008749 -4.2936e-4,3.3696e-4 -8.586e-4,6.7404e-4 -0.001288,0.001011 -5.0328e-4,1.2108e-4 -0.001069,9.24e-5 -0.00151,3.6324e-4 -0.001853,0.001137 -0.001266,0.004363 -0.003321,0.00543 -0.001529,0.00392 3.5016e-4,-6.48e-5 -0.001619,0.002386 -9.1128e-4,0.001134 -0.00149,0.002489 -0.002051,0.003802 -1.956e-4,4.584e-4 -4.6524e-4,8.8164e-4 -6.9792e-4,0.001322 -0.002353,0.002935 -0.002115,0.006918 -0.003039,0.0104225 -2.3724e-4,4.8372e-4 -4.7448e-4,9.6756e-4 -7.1172e-4,0.001451 -3.006e-4,3.9756e-4 -6.7488e-4,7.4892e-4 -9.0168e-4,0.001193 -0.00103,0.002017 -0.00135,0.00435 -0.003476,0.005659 -3.48e-4,0.001737 -0.001037,0.003505 -0.00131,0.005238 -2.9196e-4,0.001855 -2.28e-5,0.003823 -5.4888e-4,0.005659 -3.2292e-4,0.001619 -9.7608e-4,0.003342 -0.001153,0.004975 -2.418e-4,0.002227 1.7256e-4,0.004526 -4.12e-6,0.006759 4.08e-5,0.004328 -2.4e-5,0.008656 -1.92e-5,0.0129842 1.44e-5,0.0042 2.76e-5,0.008401 1.5732e-4,0.0125989 1.8204e-4,0.00372 4.9524e-4,0.007428 0.001432,0.0110484 7.0872e-4,0.003815 3.7044e-4,0.007731 0.001147,0.0115494 7.5072e-4,0.003532 0.001516,0.007007 0.00191,0.0105999 9.096e-4,0.003099 0.002981,0.005495 0.004703,0.008192 0.001884,0.003155 0.002825,0.006732 0.00387,0.0102432 0.001182,0.003007 0.001876,0.006072 0.004207,0.008517 0.0016,0.002635 0.003036,0.005429 0.005342,0.007513 0.002198,0.002176 0.004725,0.003848 0.007069,0.00585 0.002177,0.002161 0.003787,0.004857 0.00636,0.006598 0.002685,0.001705 0.005573,0.003003 0.008251,0.004709 0.002357,0.001906 0.00496,0.003502 0.007138,0.005623 0.002478,0.002177 0.005075,0.004012 0.008181,0.005184 0.002514,0.001374 0.005201,0.002428 0.008093,0.002549 0.004162,-3.72e-5 0.008325,-1.44e-5 0.0124875,-2.4e-5 0.004829,-7.28e-6 0.00966,-2.04e-5 0.014483,-2.8308e-4 0.006307,-3.228e-4 0.0126154,-7.6944e-4 0.0188713,-0.001661 0,0 -0.0454579,0.0338019 -0.0454579,0.0338019 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#000000;stroke-width:0.012&quot;
+     id=&quot;path494&quot;
+     d=&quot;m -0.36401432,-0.56580197 c 0.006515,-9.72e-5 0.0131552,7.2324e-4 0.0196063,-3.5364e-4 0.003885,-8.6556e-4 0.008306,-0.001432 0.0117127,-0.003587 0.001156,-6.5772e-4 0.002542,-5.3604e-4 0.003749,-0.001002 5.5104e-4,-2.1264e-4 9.978e-4,-6.366e-4 0.001526,-9.0108e-4 0.001628,-8.1528e-4 0.00332,-0.001136 0.005095,-0.001439 0.001142,-0.001254 0.002935,-0.001101 0.004311,-0.001761 5.6064e-4,-2.6916e-4 9.7068e-4,-7.848e-4 0.001507,-0.0011 0.001319,-7.7556e-4 0.002581,-0.001154 0.004011,-0.00167 0.003254,-0.002555 0.007145,-0.003187 0.0111577,-0.003339 0.001861,-4.5804e-4 0.003368,-0.001093 0.004987,-0.002037 4.7004e-4,-2.7408e-4 0.001941,-9.8196e-4 0.001469,-7.1148e-4 -0.050713,0.0290495 -0.0628682,0.0365975 -0.0462139,0.0262843 0.0166453,-0.009581 0.0332905,-0.019162 0.0499358,-0.028743 5.328e-4,-1.02e-4 0.001099,-9.24e-5 0.001599,-3.0468e-4 0.002741,-0.001163 -5.4576e-4,-6.576e-4 0.002485,-0.001422 2.9172e-4,-7.32e-5 0.003513,-4.1664e-4 0.003742,-4.4196e-4 6.7044e-4,-5.4e-5 0.001356,-1.084e-5 0.002011,-1.632e-4 0.001119,-2.6016e-4 0.002123,-8.9892e-4 0.003234,-0.00119 0.001736,-4.542e-4 0.003506,-6.0636e-4 0.005287,-7.59e-4 6.132e-4,-3.12e-5 0.001273,1.4208e-4 0.00184,-9.48e-5 5.0484e-4,-2.1168e-4 7.08e-4,-8.5368e-4 0.00116,-0.001162 0.001603,-0.001095 0.001822,-5.3568e-4 0.003573,-0.001396 0.002022,-0.001406 9.6756e-4,-7.8732e-4 0.003161,-0.001859 0.001071,-7.0212e-4 0.002407,-4.8924e-4 0.003547,-9.3228e-4 4.9416e-4,-1.9212e-4 8.7084e-4,-6.1056e-4 0.001341,-8.5464e-4 0.001529,-7.9296e-4 0.002811,-7.9788e-4 0.004177,-0.001896 5.4528e-4,-1.5468e-4 0.001128,-2.1156e-4 0.001636,-4.6404e-4 4.8588e-4,-2.4168e-4 8.2824e-4,-7.0848e-4 0.001291,-9.9168e-4 4.7448e-4,-2.9028e-4 0.001987,-9.978e-4 0.001506,-7.1916e-4 -0.0152893,0.008852 -0.0613255,0.035116 -0.0459968,0.0263322 0.0166098,-0.009518 0.0332638,-0.0189588 0.0498956,-0.0284382 0.004419,0.001902 0.005297,0.006606 0.005702,0.0109009 2.736e-4,0.004386 2.8152e-4,0.008784 7.8e-5,0.013172 -6.1824e-4,0.004481 -0.001077,0.008987 -0.001763,0.0134582 -0.001267,0.004201 -0.002576,0.008361 -0.003288,0.0126984 -2.8416e-4,0.003989 -0.001182,0.00788 -0.001807,0.0118202 -3.8592e-4,0.003718 -5.8764e-4,0.007395 -0.001309,0.0110666 -7.8996e-4,0.003801 -0.001008,0.007677 -0.001203,0.0115437 5.24e-6,0.003392 -4.9584e-4,0.007173 9.5004e-4,0.0103644 9.468e-4,0.001575 4.0716e-4,8.9772e-4 0.001566,0.002072 0,0 -0.048643,0.0292623 -0.048643,0.0292623 v 0 c -0.001678,-0.002156 -9.276e-4,-0.00105 -0.002267,-0.003309 -0.001981,-0.003968 -0.002302,-0.008416 -0.002124,-0.0128185 1.44e-5,-0.004103 1.7184e-4,-0.008214 7.6356e-4,-0.0122793 2.7348e-4,-0.001681 8.688e-4,-0.003358 0.00113,-0.005008 3.0096e-4,-0.001897 -8.52e-5,-0.003908 2.8824e-4,-0.005807 4.1508e-4,-0.004007 0.001532,-0.00786 0.001848,-0.0118479 4.6368e-4,-0.004574 0.001299,-0.009098 0.003032,-0.0133818 0.001695,-0.003933 9.6636e-4,-0.008536 0.002151,-0.0126653 6.9972e-4,-0.004026 2.4552e-4,-0.008163 2.8284e-4,-0.0122369 -3e-5,-6.0864e-4 -5.6244e-4,-0.003231 -1.9272e-4,-0.003839 2.2992e-4,-3.7812e-4 4.2888e-4,8.1228e-4 4.3332e-4,0.001255 3.01e-6,2.9568e-4 -1.578e-4,5.7e-4 -2.3664e-4,8.55e-4 0.015875,-0.009153 0.0317449,-0.0183138 0.0476251,-0.0274575 4.4496e-4,-2.562e-4 -8.754e-4,5.3688e-4 -0.001319,7.95e-4 -0.0166267,0.009666 -0.0332534,0.0193326 -0.0498921,0.0289782 -0.001481,8.5836e-4 -0.003087,0.001212 -0.004531,0.002135 -0.00311,7.8624e-4 -0.006095,0.002271 -0.008987,0.003634 -0.001753,8.6484e-4 -0.005248,0.002508 -0.007102,0.002844 -0.001217,2.202e-4 -0.002512,-2.5488e-4 -0.003697,3.2004e-4 -0.003431,7.8972e-4 -0.006775,0.001883 -0.0102507,0.002439 -0.0174132,0.006565 -0.0542999,0.0370093 0.0402944,-0.0240207 -0.0185836,0.0118672 -0.036398,0.0280121 -0.0585255,0.0310163 -0.003646,0.001036 -0.006786,0.002976 -0.0102558,0.004439 -0.00333,0.001652 -0.006765,0.00318 -0.0103902,0.004019 -0.003326,0.001332 -0.006642,0.002553 -0.009997,0.003804 -0.004147,8.4048e-4 -0.008199,0.002149 -0.0124961,0.002094 -0.00668,5.95e-6 -0.0133631,-9.96e-5 -0.0200418,1.02e-4 0,0 0.0458319,-0.0332988 0.0458319,-0.0332988 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#000000;stroke-width:0.012&quot;
+     id=&quot;path498&quot;
+     d=&quot;m -0.34303975,-0.32173417 c 0.006787,2.3232e-4 0.013581,1.248e-4 0.0203705,6.84e-5 0.004386,8.2728e-4 0.008783,0.001428 0.0132385,0.001693 0.004169,1.7556e-4 0.008344,1.7904e-4 0.0125158,1.794e-4 0.003821,5.4e-5 0.007489,0.001271 0.0113094,0.001635 0.00269,3.9888e-4 0.005486,-9.48e-5 0.00817,2.46e-4 0.001336,1.6944e-4 0.002618,6.3396e-4 0.003928,9.4884e-4 0.003759,9.678e-4 0.007666,4.5756e-4 0.011399,0.001435 0.003551,0.00108 0.007244,0.001239 0.0109233,0.001368 0.003598,0.001098 0.007289,0.001619 0.0110316,0.001842 0.004016,-2.3088e-4 0.007802,0.0011 0.0117413,0.001635 0.002865,7.7256e-4 0.006692,-2.1684e-4 0.009452,4.0512e-4 8.2716e-4,1.8636e-4 0.001564,6.5556e-4 0.002346,9.834e-4 0.003509,0.001122 0.006377,0.003435 0.009967,0.004296 0.003221,0.001869 0.006944,0.002633 0.0102478,0.004306 0.001358,0.001509 0.005654,8.2488e-4 0.006838,0.00221 5.6964e-4,6.6648e-4 9.3228e-4,0.001485 0.001398,0.002228 -0.0148393,0.008614 -0.0424481,0.0432613 -0.0585238,0.0227855 -0.001917,-0.00261 -0.003999,-0.005085 -0.005963,-0.007655 -0.001533,-0.002689 -0.003579,-0.004947 -0.004916,-0.007741 -0.001956,-0.002601 -0.003836,-0.005252 -0.005847,-0.007811 -0.001887,-0.002479 -0.003697,-0.00498 -0.005121,-0.007765 -0.001476,-0.003101 -0.002564,-0.006335 -0.003759,-0.009545 -6.1896e-4,-0.001614 -0.002205,-0.002007 -0.003256,-0.003191 -8.9796e-4,-0.001011 -0.001613,-0.002173 -0.002467,-0.003221 -0.002233,-0.002701 -0.002975,-0.006217 -0.004824,-0.009133 -0.002283,-0.003093 -0.003281,-0.006755 -0.004555,-0.0103135 -0.001242,-0.002688 -0.001681,-0.006041 -0.003537,-0.008404 -0.002653,-0.003322 -0.003709,-0.007502 -0.00445,-0.0116022 -2.8788e-4,-0.003848 -0.001018,-0.007625 -0.001623,-0.0114299 -3.3504e-4,-0.002537 -1.4076e-4,-0.001372 -5.4924e-4,-0.003501 0,0 0.0499435,-0.0268911 0.0499435,-0.0268911 v 0 c 6.8388e-4,0.002645 4.5468e-4,0.001334 7.1616e-4,0.003926 5.184e-4,0.003819 0.001586,0.007537 0.00161,0.0114092 3.9852e-4,0.003365 9.9792e-4,0.006669 0.003298,0.009309 0.001934,0.002961 0.00306,0.006342 0.004175,0.00969 0.001197,0.003217 0.0019,0.00655 0.004108,0.009303 0.001626,0.002766 0.002474,0.005893 0.004355,0.008498 0.002189,0.002696 0.005106,0.004711 0.006655,0.007909 0.001205,0.002986 0.001985,0.006137 0.003459,0.009027 0.001311,0.002484 0.003019,0.004679 0.004653,0.006953 0.002126,0.002952 0.004404,0.005777 0.00642,0.008809 0.001094,0.002402 0.003139,0.004264 0.004324,0.006637 0.001961,0.002475 0.003805,0.005034 0.005755,0.007515 0.001108,0.001149 0.002236,0.001707 0.0037,0.002385 0.0197531,0.00916 0.0134298,-0.001933 -0.0437855,0.0317204 4.2468e-4,6.2616e-4 9.5808e-4,0.001191 0.001274,0.001879 1.117e-5,2.4e-5 -2.4276e-4,1.32e-5 -0.001645,-4.812e-4 -0.001719,-6.0588e-4 -0.001801,-6.5676e-4 -0.00346,-0.001382 -5.3808e-4,-2.3508e-4 -0.001074,-4.7604e-4 -0.00161,-7.14e-4 -0.003395,-0.001204 -0.006688,-0.002661 -0.0100566,-0.003925 -0.003159,-0.001404 -0.006126,-0.003275 -0.009581,-0.003917 -0.003881,4.6e-7 -0.007766,-2.4648e-4 -0.0115837,-9.774e-4 -0.003831,-7.3476e-4 -0.00763,-0.001213 -0.0115355,-0.001347 -0.003627,-5.0568e-4 -0.00718,-0.001493 -0.0108366,-0.001712 -0.003824,-3.3264e-4 -0.007559,-0.001047 -0.0113149,-0.001819 -0.003873,-2.04e-4 -0.00772,-6.5184e-4 -0.0115045,-0.001524 -0.003943,-5.484e-4 -0.00798,-2.0556e-4 -0.0119173,-9.2292e-4 -0.003582,-6.0696e-4 -0.007115,-0.001435 -0.0107803,-0.001125 -0.004277,-4.32e-5 -0.008562,-6.36e-5 -0.0128193,-5.2764e-4 -0.004257,-4.7928e-4 -0.00848,-0.00137 -0.0127706,-0.001429 -0.006852,-5.76e-5 -0.0137088,-1.5888e-4 -0.0205592,6.84e-5 0,0 0.0458319,-0.0332988 0.0458319,-0.0332988 z&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+&lt;/svg&gt;</pre>
+</div>
+<div created="20210106061658050" creator="Andrew Harrison" modified="20210106062018172" modifier="Andrew Harrison" tags="" title="15.svg">
+<pre>&lt;svg
+   xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+   xmlns:cc=&quot;http://creativecommons.org/ns#&quot;
+   xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+   xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;
+   xmlns=&quot;http://www.w3.org/2000/svg&quot;
+   xmlns:sodipodi=&quot;http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd&quot;
+   xmlns:inkscape=&quot;http://www.inkscape.org/namespaces/inkscape&quot;
+   version=&quot;1.1&quot;
+   width=&quot;150&quot;
+   height=&quot;150&quot;
+   viewBox=&quot;-0.9 -0.9 1.8 1.8&quot;
+   id=&quot;svg146&quot;
+   sodipodi:docname=&quot;15.svg&quot;
+   inkscape:version=&quot;0.92.2 (5c3e80d, 2017-08-06)&quot;&gt;
+  &lt;metadata
+     id=&quot;metadata152&quot;&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=&quot;&quot;&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource=&quot;http://purl.org/dc/dcmitype/StillImage&quot; /&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;defs
+     id=&quot;defs150&quot; /&gt;
+  &lt;sodipodi:namedview
+     pagecolor=&quot;#ffffff&quot;
+     bordercolor=&quot;#666666&quot;
+     borderopacity=&quot;1&quot;
+     objecttolerance=&quot;10&quot;
+     gridtolerance=&quot;10&quot;
+     guidetolerance=&quot;10&quot;
+     inkscape:pageopacity=&quot;0&quot;
+     inkscape:pageshadow=&quot;2&quot;
+     inkscape:window-width=&quot;1920&quot;
+     inkscape:window-height=&quot;1147&quot;
+     id=&quot;namedview148&quot;
+     showgrid=&quot;false&quot;
+     inkscape:zoom=&quot;18.441345&quot;
+     inkscape:cx=&quot;74.240278&quot;
+     inkscape:cy=&quot;108.59408&quot;
+     inkscape:window-x=&quot;-8&quot;
+     inkscape:window-y=&quot;-8&quot;
+     inkscape:window-maximized=&quot;1&quot;
+     inkscape:current-layer=&quot;svg146&quot; /&gt;
+  &lt;g
+     style=&quot;opacity:1;stroke-width:0.1;stroke-linejoin:round&quot;
+     id=&quot;g88&quot;
+     transform=&quot;translate(0.00130142,0.00780854)&quot;&gt;
+    &lt;polygon
+       points=&quot;0.70405037,-0.41272706 6.3108541e-017,-0.021725091 -0.70405037,-0.41272706 -4.9165444e-017,-0.71734171 &quot;
+       id=&quot;polygon82&quot;
+       style=&quot;fill:#000000;stroke:#000000&quot; /&gt;
+    &lt;polygon
+       points=&quot;0.70405037,-0.41272706 0.62948028,0.36901273 5.5589469e-017,0.81107056 6.3108541e-017,-0.021725091 &quot;
+       id=&quot;polygon84&quot;
+       style=&quot;fill:#000000;stroke:#000000&quot; /&gt;
+    &lt;polygon
+       points=&quot;6.3108541e-017,-0.021725091 5.5589469e-017,0.81107056 -0.62948028,0.36901273 -0.70405037,-0.41272706 &quot;
+       id=&quot;polygon86&quot;
+       style=&quot;fill:#000000;stroke:#000000&quot; /&gt;
+  &lt;/g&gt;
+  &lt;g
+     style=&quot;opacity:1;stroke-opacity:0.5;stroke-width:0;stroke-linejoin:round&quot;
+     id=&quot;g144&quot;&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-4.9439549272153E-17,-0.74757064564692 0.19598754651203,-0.66277461469571 -1.6979580126642E-17,-0.57123720961754 -0.19598754651203,-0.66277461469571&quot;
+       id=&quot;polygon90&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.23200530924361,-0.64654708450724 0.44357407294753,-0.55500967942906 0.24823152717746,-0.45589370157761 0.03601776273158,-0.55500967942906&quot;
+       id=&quot;polygon92&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.48258385553552,-0.53743199405155 0.71166883865722,-0.4383160162001 0.51778341539206,-0.3306396536664 0.28724130976545,-0.43831601620009&quot;
+       id=&quot;polygon94&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.23200530924361,-0.64654708450724 -0.03601776273158,-0.55500967942906 -0.24823152717746,-0.45589370157761 -0.44357407294753,-0.55500967942906&quot;
+       id=&quot;polygon96&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-1.1906711768916E-17,-0.53743199405155 0.21221376444588,-0.43831601620009 1.3125827139793E-17,-0.3306396536664 -0.21221376444588,-0.43831601620009&quot;
+       id=&quot;polygon98&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.25135344771691,-0.4192120352454 0.48189555334352,-0.31153567271171 0.27050899589682,-0.1941398664099 0.03913968327103,-0.31153567271171&quot;
+       id=&quot;polygon100&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.48258385553552,-0.53743199405155 -0.28724130976545,-0.43831601620009 -0.51778341539206,-0.3306396536664 -0.71166883865722,-0.43831601620009&quot;
+       id=&quot;polygon102&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.25135344771691,-0.4192120352454 -0.03913968327103,-0.31153567271171 -0.27050899589682,-0.1941398664099 -0.48189555334352,-0.31153567271171&quot;
+       id=&quot;polygon104&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;1.9219742927126E-17,-0.29069716027551 0.23136931262579,-0.1733013539737 6.3251582941518E-17,-0.044807908897155 -0.23136931262579,-0.1733013539737&quot;
+       id=&quot;polygon106&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.019572311898468,-0.01096266104553 0.25094162452426,-0.13945610612208 0.24139184674777,0.12672756322786 0.019572311898468,0.26171620101574&quot;
+       id=&quot;polygon108&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.28930534489087,-0.16171652284677 0.50069190233757,-0.27911232914857 0.48317508531013,-0.019324131300046 0.27975556711438,0.10446714650317&quot;
+       id=&quot;polygon110&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.53586287162127,-0.29952357725519 0.72974829488643,-0.40719993978888 0.70556381569579,-0.15366705164652 0.51834605459384,-0.039735379406663&quot;
+       id=&quot;polygon112&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.018796486168384,0.30740091161998 0.24061602101769,0.1724122738321 0.23182332941007,0.41749346528561 0.018796486168384,0.55752511994163&quot;
+       id=&quot;polygon114&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.27748498154717,0.14913168479738 0.48090449974292,0.025340406994164 0.46472097442439,0.26535483831193 0.26869228993956,0.39421287625089&quot;
+       id=&quot;polygon116&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.51482272047627,0.0039202514920256 0.70204048157822,-0.11001142074783 0.6796261786066,0.12496419825545 0.49863919515774,0.24393468280979&quot;
+       id=&quot;polygon118&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.018079821190449,0.59957070958542 0.23110666443214,0.4595390549294 0.22298446134887,0.68593152923737 0.018079821190449,0.82982754001392&quot;
+       id=&quot;polygon120&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.26659321028119,0.43546258559693 0.46262189476603,0.30660454765797 0.44762501691219,0.52902006212629 0.25847100719792,0.6618550599049&quot;
+       id=&quot;polygon122&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#0077FF&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;0.49537315323635,0.28438159074811 0.67636013668521,0.16541110619376 0.65552852022793,0.38379496484358 0.4803762753825,0.50679710521643&quot;
+       id=&quot;polygon124&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#888888&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.73033661801848,-0.40664800069716 -0.53645119475332,-0.29897163816347 -0.51893437772588,-0.039183440314942 -0.70615213882784,-0.1531151125548&quot;
+       id=&quot;polygon126&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.50139487638912,-0.27854802283962 -0.29000831894242,-0.16115221653782 -0.28045854116593,0.10503145281212 -0.48387805936169,-0.018759824991097&quot;
+       id=&quot;polygon128&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFFF00&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.25178425197513,-0.13888300088285 -0.020414939349334,-0.010389555806295 -0.020414939349334,0.26228930625497 -0.24223447419864,0.12730066846709&quot;
+       id=&quot;polygon130&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.70259025607703,-0.10956681966126 -0.51537249497507,0.0043648525785978 -0.49918896965654,0.24437928389636 -0.68017595310541,0.12540879934202&quot;
+       id=&quot;polygon132&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.48155663212918,0.025787474064964 -0.27813711393343,0.14957875186818 -0.26934442232581,0.39465994332169 -0.46537310681065,0.26580190538273&quot;
+       id=&quot;polygon134&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.24139184674777,0.17285724590871 -0.019572311898468,0.30784588369658 -0.019572311898468,0.55797009201823 -0.23259915514016,0.41793843736221&quot;
+       id=&quot;polygon136&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.67687496656198,0.16576684053069 -0.49588798311312,0.28473732508503 -0.48089110525928,0.50715283955335 -0.6560433501047,0.38415069918051&quot;
+       id=&quot;polygon138&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.46322848371637,0.30695545587912 -0.26719979923154,0.43581349381808 -0.25907759614827,0.66220596812605 -0.44823160586253,0.52937097034744&quot;
+       id=&quot;polygon140&quot; /&gt;
+    &lt;polygon
+       fill=&quot;#FFA500&quot;
+       stroke=&quot;#000000&quot;
+       points=&quot;-0.23182332941007,0.45988002752827 -0.018796486168384,0.59991168218429 -0.018796486168384,0.83016851261279 -0.2237011263268,0.68627250183624&quot;
+       id=&quot;polygon142&quot; /&gt;
+  &lt;/g&gt;
+  &lt;text
+     xml:space=&quot;preserve&quot;
+     style=&quot;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.192px;line-height:1.25;font-family:'Showcard Gothic';-inkscape-font-specification:'Showcard Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.012&quot;
+     x=&quot;-0.11042944&quot;
+     y=&quot;-0.14723927&quot;
+     id=&quot;text156&quot;&gt;&lt;tspan
+       sodipodi:role=&quot;line&quot;
+       id=&quot;tspan154&quot;
+       x=&quot;-0.11042944&quot;
+       y=&quot;0.029854484&quot;
+       style=&quot;stroke-width:0.012&quot; /&gt;&lt;/text&gt;
+  &lt;text
+     xml:space=&quot;preserve&quot;
+     style=&quot;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.20878908px;line-height:1.25;font-family:'Showcard Gothic';-inkscape-font-specification:'Showcard Gothic';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.01304932&quot;
+     x=&quot;-0.1527718&quot;
+     y=&quot;-0.10171887&quot;
+     id=&quot;text160&quot;
+     transform=&quot;scale(1.0388554,0.96259788)&quot;&gt;&lt;tspan
+       sodipodi:role=&quot;line&quot;
+       id=&quot;tspan158&quot;
+       x=&quot;-0.1527718&quot;
+       y=&quot;-0.10171887&quot;
+       style=&quot;fill:#ffffff;stroke-width:0.01304932&quot;&gt;OK&lt;/tspan&gt;&lt;/text&gt;
+  &lt;path
+     style=&quot;fill:#ffffff;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;M 0.49809889,-0.47876081 0.07226829,-0.65628293&quot;
+     id=&quot;path90&quot;
+     inkscape:connector-curvature=&quot;0&quot;
+     sodipodi:nodetypes=&quot;cc&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.45231031,-0.43005484 0.89277655,-0.0182199&quot;
+     id=&quot;path92&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.08010318,-0.67472246 -0.43207261,0.19521352&quot;
+     id=&quot;path94&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;M 0.50245404,-0.49509203 0.08282209,-0.67269938&quot;
+     id=&quot;path96&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.06993865,-0.6607362 -0.42791411,0.19969326&quot;
+     id=&quot;path98&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:#ffffff;stroke:#000000;stroke-width:0.01397994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.45355619,-0.40984919 0.88686695,-0.027485&quot;
+     id=&quot;path100&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;M 0.0793212,-0.66496178 0.49772892,-0.4886189&quot;
+     id=&quot;path102&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;M -0.50501796,-0.47104968 -0.0755482,-0.66691392&quot;
+     id=&quot;path104&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.45231031,-0.43005484 0.88952299,-0.001301&quot;
+     id=&quot;path106&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#000000;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;M -0.4516596,-0.42094488 0.44046624,-0.4391648&quot;
+     id=&quot;path108&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#FFFFFF;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m -0.48809946,-0.47950894 0.39693418,-0.18089787&quot;
+     id=&quot;path110&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#FFFFFF;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m 0.09428758,-0.65780396 0.38912558,0.16332865&quot;
+     id=&quot;path112&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+  &lt;path
+     style=&quot;fill:none;stroke:#FFFFFF;stroke-width:0.012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1&quot;
+     d=&quot;m 0.42289704,-0.44046623 -0.85503528,0.0208228&quot;
+     id=&quot;path114&quot;
+     inkscape:connector-curvature=&quot;0&quot; /&gt;
+&lt;/svg&gt;
+</pre>
 </div>
 <div created="20151121180856489" creator="Andrew Harrison" list="" modified="20170630033741710" modifier="Andrew Harrison" resource="https://groups.google.com/forum/#!searchin/tiddlywiki/transclude$20field$20of$20variable/tiddlywiki/RiexkBExCF0/gdRteZFxyj8J" show-field="resource" tags="Examples New" title="A transcluding template that transcludes fields from a transcluding tiddler which lists and tanscludes indexed data from another tiddler">
 <pre>```
@@ -14299,6 +14883,18 @@ I need to change the tiddler name for controls to config and add it as a tab in 
 
 Displays like this:
 @@display:inline-block;transform: rotate(-185deg); your text here @@</pre>
+</div>
+<div created="20210106061616088" creator="Andrew Harrison" modified="20210106072311543" modifier="Andrew Harrison" tags="" title="Rubiks top layer">
+<pre>FRUR'U'F' repeat until
+
+{{12.svg}}
+RUR'URU2R'U
+
+{{14.svg}}
+URU'L'UR'U'L
+
+{{15.svg}}
+</pre>
 </div>
 <div created="20170603175111336" creator="Andrew Harrison" modified="20170603175140356" modifier="Andrew Harrison" tags="New Contents" title="Show Fields">
 <pre>{{$:/plugins/ajh/showfields/readme}}</pre>
