@@ -11002,7 +11002,7 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s3=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s3&gt;multiply[6]add[2]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s3&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}} m2={{{ [&lt;m&gt;add[360]] }}} h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20210115073259971" creator="Andrew Harrison" modified="20210123235036351" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
+<div created="20210115073259971" creator="Andrew Harrison" modified="20210124053439402" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
 <pre>\define a()
 &lt;style&gt;
 .clk7 seconds:before { 
@@ -11013,14 +11013,14 @@ color:$(foregroundColor)$;
 .clk7 minutes:before { 
         content: &quot;00&quot;; 
         animation: animate infinite 3600s; 
-        animation-delay: $(m2)$s;
+        animation-delay: $(m3)$s;
     } 
 &lt;/style&gt;
 &lt;div class=&quot;clk7&quot;&gt;
 &lt;h1&gt;&lt;minutes/&gt;:&lt;seconds/&gt;&lt;/h1&gt;
 &lt;/div&gt;
 \end
-&lt;$vars s=&lt;&lt;now 'ss'&gt;&gt; m=&lt;&lt;now 'mm'&gt;&gt;&gt;&lt;$vars s2={{{ [&lt;s&gt;negate[]] }}} m2={{{ [&lt;m&gt;multiply[60]add&lt;s&gt;negate[]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
+&lt;$vars s=&lt;&lt;now 'ss'&gt;&gt; m=&lt;&lt;now 'mm'&gt;&gt;&gt;&lt;$vars s2={{{ [&lt;s&gt;negate[]] }}} m2={{{ [&lt;m&gt;multiply[59]] }}}&gt;&lt;$vars m3={{{ [&lt;m2&gt;add&lt;s&gt;negate[]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
 <div created="20210116183206735" creator="Andrew Harrison" modified="20210116183230232" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock8">
 <pre>&lt;div class=&quot;clk8&quot;&gt;
@@ -11779,7 +11779,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20210123233326137" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock5 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210123233547835" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20210124053153690" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock5 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210124053445817" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
