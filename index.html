@@ -10998,19 +10998,19 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s1=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s1&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s1&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s1&gt;multiply[.7514]negate[]] }}} m2={{{ [&lt;m5&gt;multiply[.75]negate[]] }}} h2={{{ [&lt;h5&gt;multiply[.5869]negate[]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20210314063638164" creator="Andrew Harrison" modified="20210314182739349" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
+<div created="20210314063638164" creator="Andrew Harrison" modified="20210314184150124" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
 <pre>\define a()
-&lt;svg class=&quot;spinner&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;svg class=&quot;clk7-spinner-s&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
 &lt;g transform='rotate($(s)$,20,20)'&gt;
-     &lt;circle class=&quot;path&quot; fill=&quot;transparent&quot; stroke-width=&quot;2&quot; cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;18&quot; stroke=&quot;url(#gradient)&quot;/&gt;
+     &lt;circle class=&quot;clk7-path-s&quot; fill=&quot;transparent&quot; stroke-width=&quot;2&quot; cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;18&quot; stroke=&quot;url(#gradient)&quot;/&gt;
        &lt;linearGradient id=&quot;gradient&quot;&gt;
          &lt;stop offset=&quot;50%&quot; stop-color=&quot;#42d179&quot; stop-opacity=&quot;1&quot;/&gt;
          &lt;stop offset=&quot;65%&quot; stop-color=&quot;#42d179&quot; stop-opacity=&quot;.5&quot;/&gt;
          &lt;stop offset=&quot;100%&quot; stop-color=&quot;#42d179&quot; stop-opacity=&quot;0&quot;/&gt;
        &lt;/linearGradient&gt;
     &lt;/circle&gt;
-     &lt;svg class=&quot;spinner-dot dot&quot; width=&quot;3px&quot; height=&quot;3px&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; x=&quot;22.4&quot; y=&quot;.9&quot;&gt;
-       &lt;circle class=&quot;path&quot; fill=&quot;#42d179&quot; cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;18&quot;/&gt;
+     &lt;svg class=&quot;clk7-spinner-dot-s&quot; width=&quot;3px&quot; height=&quot;3px&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; x=&quot;22.4&quot; y=&quot;.9&quot;&gt;
+       &lt;circle class=&quot;clk7-path-s&quot; fill=&quot;#42d179&quot; cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;18&quot;/&gt;
       &lt;/circle&gt;
     &lt;/svg&gt; 
 &lt;/g&gt;
@@ -11247,24 +11247,24 @@ svg.tc-clk5 {
   stroke-width: 5;
 }</pre>
 </div>
-<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210314182812629" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
-<pre>.spinner {
-  animation: rotate 60s linear 2s infinite;
+<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210314184214999" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
+<pre>.clk7-spinner-s {
+  animation: clk7-rotate 60s linear 2s infinite;
   width:100%
   position: relative;
 }
-.spinner-dot {
+.clk7-spinner-dot-s {
   width:166px;
   height:166px;
   position: relative;
   top: 0;
 }
-@keyframes rotate {
+@keyframes clk7-rotate {
   to {
     transform: rotate(360deg);
   }
 }
-.path {
+.clk7-path-s {
   stroke-dasharray: 103;
   stroke-dashoffset: 14;
 }</pre>
@@ -11792,7 +11792,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20210314182359744" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock7 $:/plugins/ajh/clocks/stylesheet7 [[My Adventure]] [[Plugin Library]]" modified="20210314182958461" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20210314183555306" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/stylesheet7 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210314183559959" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
