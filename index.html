@@ -10998,7 +10998,7 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s1=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s1&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s1&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s1&gt;multiply[.7514]negate[]] }}} m2={{{ [&lt;m5&gt;multiply[.75]negate[]] }}} h2={{{ [&lt;h5&gt;multiply[.5869]negate[]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20210314063638164" creator="Andrew Harrison" modified="20210315034647644" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
+<div created="20210314063638164" creator="Andrew Harrison" modified="20210316022530626" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
 <pre>\define a()
 &lt;svg class='clk7' viewBox='0 0 40 40'&gt;
 &lt;defs&gt;
@@ -11008,9 +11008,9 @@ color:$(foregroundColor)$;
          &lt;stop offset='99%' stop-color='blue' stop-opacity='0'/&gt;
        &lt;/linearGradient&gt;
 &lt;linearGradient id='clk7-m'&gt;
-         &lt;stop offset='50%' stop-color='#42d179' stop-opacity='1'/&gt;
-         &lt;stop offset='65%' stop-color='#42d179' stop-opacity='.5'/&gt;
-         &lt;stop offset='99%' stop-color='#42d179' stop-opacity='0'/&gt;
+         &lt;stop offset='50%' stop-color='#3c6' stop-opacity='1'/&gt;
+         &lt;stop offset='65%' stop-color='#2c6' stop-opacity='.5'/&gt;
+         &lt;stop offset='99%' stop-color='#1c6' stop-opacity='0'/&gt;
        &lt;/linearGradient&gt;
 &lt;linearGradient id='clk7-s'&gt;
          &lt;stop offset='50%' stop-color='red' stop-opacity='1'/&gt;
@@ -11018,7 +11018,7 @@ color:$(foregroundColor)$;
          &lt;stop offset='99%' stop-color='red' stop-opacity='0'/&gt;
        &lt;/linearGradient&gt;
 &lt;/defs&gt;
-&lt;circle class='clk7-path-h' fill='transparent' stroke-width='2' cx='20' cy='20' r='10' stroke='url(#clk7-h)'&gt;
+&lt;circle class='clk7-path-h' cx='20' cy='20' r='10'&gt;
    &lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;
 &lt;/circle&gt;
 &lt;circle class='clk7-path-m' fill='transparent' stroke-width='2' cx='20' cy='20' r='14' stroke='url(#clk7-m)'&gt;
@@ -11260,7 +11260,7 @@ svg.tc-clk5 {
   stroke-width: 5;
 }</pre>
 </div>
-<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210315024713939" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
+<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210316022357001" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
 <pre>.clk7 {
   width:100%
   position: relative;
@@ -11274,8 +11274,11 @@ svg.tc-clk5 {
   stroke-dashoffset: 17;
 }
 .clk7-path-h {
+  fill: transparent;
+  stroke: url(#clk7-h);
   stroke-dasharray: 63;
   stroke-dashoffset: 16;
+  stroke-width: 2;
 }</pre>
 </div>
 <div created="20200504072825917" creator="Andrew Harrison" description="Copy specified text to the clipboard" list="readme license" modified="20200613183538206" modifier="Andrew Harrison" plugin-type="plugin" source="https://github.com/t5a/t5s.github.io/blob/master/plugins/recipes/library/tiddlers/%2524%253A%252Fplugins%252Fajh%252Fcopy.json" title="$:/plugins/ajh/copy" type="application/json" version="0.0.26">
@@ -11801,7 +11804,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20210315025033680" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/clock7 $:/plugins/ajh/clocks/stylesheet7 [[My Adventure]] [[Plugin Library]]" modified="20210315025044722" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20210316021320436" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/stylesheet7 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210316021437068" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
@@ -12791,8 +12794,8 @@ color:$(foregroundColor)$;
     }
 }</pre>
 </div>
-<div attachment="scroll" size="auto" title="$:/temp/lucky">
-<pre>$:/plugins/ajh/luckypic/pic4</pre>
+<div attachment="fixed" size="cover" title="$:/temp/lucky">
+<pre>$:/plugins/ajh/luckypic/pic3</pre>
 </div>
 <div created="20200714052246322" creator="Andrew Harrison" modified="20200714064953388" modifier="Andrew Harrison" title="$:/temp/newfieldname">
 <pre></pre>
