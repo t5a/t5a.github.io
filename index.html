@@ -10998,8 +10998,8 @@ color:$(foregroundColor)$;
 \end
 &lt;$vars s1=&lt;&lt;now 'ss'&gt;&gt; m5=&lt;&lt;now 'mm'&gt;&gt; h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s1&gt;multiply[6]] }}} m3={{{ [&lt;m5&gt;multiply[6]] }}} m4={{{ [&lt;s1&gt;divide[10]] }}} h3={{{ [&lt;h5&gt;multiply[30]] }}} h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}} h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s1&gt;multiply[.7514]negate[]] }}} m2={{{ [&lt;m5&gt;multiply[.75]negate[]] }}} h2={{{ [&lt;h5&gt;multiply[.5869]negate[]] }}}&gt;&lt;&lt;b&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
-<div created="20210314063638164" creator="Andrew Harrison" modified="20210316072710684" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
-<pre>\define a()&lt;svg class='tc-clk7'viewBox='0 0 40 40'&gt;&lt;defs&gt;&lt;linearGradient id='clk7h'&gt;&lt;stop offset='50%'stop-color='blue'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='blue'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='blue'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;linearGradient id='clk7m'&gt;&lt;stop offset='50%'stop-color='#3c6'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='#2c6'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='#1c6'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;linearGradient id='clk7s'&gt;&lt;stop offset='50%'stop-color='red'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='red'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='red'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;circle class='tc-clk7h'cx='20'cy='20'r='10'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;circle class='tc-clk7m'cx='20'cy='20'r='14'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;circle class='tc-clk7s'cx='20'cy='20'r='18'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;/svg&gt;
+<div created="20210314063638164" creator="Andrew Harrison" modified="20210317090957597" modifier="Andrew Harrison" tags="" title="$:/plugins/ajh/clocks/clock7">
+<pre>\define a()&lt;svg class='tc-clk7'viewBox='0 0 40 40'&gt;&lt;defs&gt;&lt;linearGradient id='clk7h'&gt;&lt;stop offset='50%'stop-color='blue'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='blue'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='blue'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;linearGradient id='clk7m'&gt;&lt;stop offset='50%'stop-color='#3c6'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='#2c6'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='#1c6'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;linearGradient id='clk7s'&gt;&lt;stop offset='50%'stop-color='red'stop-opacity='1'/&gt;&lt;stop offset='65%'stop-color='red'stop-opacity='.5'/&gt;&lt;stop offset='99%'stop-color='red'stop-opacity='0'/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;circle class='tc-clk7-cir1'cx='20'cy='20'r='16'/&gt;&lt;circle class='tc-clk7-cir2'cx='20'cy='20'r='16'/&gt;&lt;circle class='tc-clk7h'cx='20'cy='20'r='10'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(h)$,20,20;$(h2)$,20,20'dur='43200s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;circle class='tc-clk7m'cx='20'cy='20'r='14'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(m)$,20,20;$(m2)$,20,20'dur='3600s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;circle class='tc-clk7s'cx='20'cy='20'r='18'&gt;&lt;animateTransform attributeName='transform'type='rotate'values='$(s)$,20,20;$(s2)$,20,20'dur='60s'repeatCount='indefinite'/&gt;&lt;/circle&gt;&lt;/svg&gt;
 &lt;$vars s1=&lt;&lt;now '0ss'&gt;&gt;m5=&lt;&lt;now '0mm'&gt;&gt;h5=&lt;&lt;now 'hh12'&gt;&gt;&gt;&lt;$vars s={{{ [&lt;s1&gt;multiply[6]] }}}m3={{{ [&lt;m5&gt;multiply[6]] }}}m4={{{ [&lt;s1&gt;divide[10]] }}}h3={{{ [&lt;h5&gt;multiply[30]] }}}h4={{{ [&lt;m5&gt;divide[2]] }}}&gt;&lt;$vars m={{{ [&lt;m3&gt;add&lt;m4&gt;] }}}h={{{ [&lt;h3&gt;add&lt;h4&gt;] }}}&gt;&lt;$vars s2={{{ [&lt;s&gt;add[360]] }}}m2={{{ [&lt;m&gt;add[360]] }}}h2={{{ [&lt;h&gt;add[360]] }}}&gt;&lt;&lt;a&gt;&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;&lt;/$vars&gt;</pre>
 </div>
 <div created="20201108212353986" creator="Andrew Harrison" modified="20201130042141408" modifier="Andrew Harrison" tags="$:/tags/Image" title="$:/plugins/ajh/clocks/icon">
@@ -11231,12 +11231,22 @@ svg.tc-clk5 {
   stroke-width: 5;
 }</pre>
 </div>
-<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210316071439818" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
+<div caption="Clock7 Stylesheet" created="20210314072935839" creator="Andrew Harrison" modified="20210317090821286" modifier="Andrew Harrison" tags="$:/tags/Stylesheet" title="$:/plugins/ajh/clocks/stylesheet7">
 <pre>.tc-clk7 {
   fill: transparent;
   position: relative;
   stroke-width: 2;
   width:100%
+}
+.tc-clk7-cir1 {
+  stroke-width: 1.2;
+  stroke: #000;
+  stroke-dasharray: .1 8.27;
+}
+.tc-clk7-cir2 {
+  stroke: #000;
+  stroke-dasharray: .43 24.7 .43 24.7 .43 24.7;
+  stroke-width: 1.5;
 }
 .tc-clk7s {
   stroke: url(#clk7s);
@@ -11777,7 +11787,7 @@ html .tc-page-controls button:hover, .tc-page-controls a:hover {
 <div created="20141129170511686" creator="A" modified="20141129170515868" modifier="Andrew Harriso" title="$:/status/UserName">
 <pre>Andrew Harrison</pre>
 </div>
-<div created="20210316061736415" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/stylesheet7 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210316061738492" modifier="Andrew Harrison" title="$:/StoryList">
+<div created="20210317084522788" creator="Andrew Harrison" list="$:/plugins/ajh/clocks/stylesheet7 $:/plugins/ajh/clocks/clock7 [[My Adventure]] [[Plugin Library]]" modified="20210317085841127" modifier="Andrew Harrison" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180802142057357" creator="Andrew Harrison" modified="20180806142049289" modifier="Andrew Harrison" resource="https://www.htmlcsscolor.com/hex/ffffff  and  http://chir.ag/projects/name-that-color/#ffffff and https://www.colorhexa.com/ffffff" tags="$:/tags/Stylesheet" title="$:/styles/tablecells">
